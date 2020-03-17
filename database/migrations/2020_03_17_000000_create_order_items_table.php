@@ -15,8 +15,8 @@ class CreateOrderItemsTable extends Migration
     {
         Schema::create('order_items', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('order_id')->references('id')->on('orders');
-            $table->integer('product_id')->references('id')->on('products');
+            $table->string('order_id')->references('id')->on('orders')->onDelete('cascade');
+            $table->integer('product_id')->references('id')->on('products')->onDelete('cascade');
             $table->string('product_name');
             $table->bigInteger('product_price');
         });
