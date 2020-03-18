@@ -18,3 +18,7 @@ Route::group(['prefix' => 'admin'], function () {
 Route::get('/', function () {
     return view('landing-page/welcome');
 });
+
+Route::get('/home', function () {
+    return view('home-page/home');
+});

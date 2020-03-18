@@ -1,0 +1,457 @@
+
+body{
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 14px;
+}
+
+img{
+    max-width: 100%;
+}
+
+.container{
+    max-width: 1250px;
+}
+
+ ul{
+     padding: 0;
+     list-style-type: none;
+ }
+
+ a{
+     color: #1786be;
+ }
+
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+.panel-default {
+    border-color: #ddd;
+}
+
+.panel-info {
+    border-color: #bce8f1;
+}
+
+.panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.panel-default>.panel-heading {
+    color: #333;
+    background-color: #f5f5f5;
+    border-color: #ddd;
+}
+
+.panel-info>.panel-heading{
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+.panel-body {
+    padding: 15px;
+}
+
+.label {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+
+.label-default {
+    background-color: #777
+}
+
+.label-default[href]:focus,.label-default[href]:hover {
+    background-color: #5e5e5e
+}
+
+.label-primary {
+    background-color: #337ab7
+}
+
+.label-primary[href]:focus,.label-primary[href]:hover {
+    background-color: #286090
+}
+
+.label-success {
+    background-color: #5cb85c
+}
+
+.label-success[href]:focus,.label-success[href]:hover {
+    background-color: #449d44
+}
+
+.label-info {
+    background-color: #5bc0de
+}
+
+.label-info[href]:focus,.label-info[href]:hover {
+    background-color: #31b0d5
+}
+
+.label-warning {
+    background-color: #f0ad4e
+}
+
+.label-warning[href]:focus,.label-warning[href]:hover {
+    background-color: #ec971f
+}
+
+.label-danger {
+    background-color: #d9534f
+}
+
+.label-danger[href]:focus,.label-danger[href]:hover {
+    background-color: #c9302c
+}
+
+
+/*---HEADER---*/
+
+.header-top{
+    background-color: #f2f2f2;
+    height: 38px;
+    font-size: 13px;
+}
+
+
+.header-top a{
+    color: #666;
+}
+
+.header-top a:hover{
+    text-decoration: underline;
+}
+
+.header-top .navbar{
+    padding: 0;
+}
+
+.header-top .navbar .navbar-nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.header-top .navbar .navbar-nav .nav-item:nth-child(7),
+.header-top .navbar .navbar-nav .nav-item:nth-child(8){
+    width:10%;
+    text-align: center;
+}
+
+.header-top .teacher-list{
+    width: 550px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header-top .teacher-list li{
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.header-top .teacher-list li .item-inner{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.header-top .teacher-list li .item-inner .teacher-info{
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.header-top .teacher-list li .item-inner .teacher-info p{
+    margin-bottom: 0;
+}
+
+.header-top .teacher-list li .item-inner .teacher-info .major{
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.header-top .dropdown-menu{
+    background: #f2f2f2;
+    padding: 10px;
+}
+
+.header-top .dropdown-menu .action-box{
+    text-align: center;
+}
+
+.header-top .dropdown-menu .action-box a{
+    color: #1786be;
+}
+
+.header-top .fa-sort-desc{
+    padding-left: 5px;
+    position: relative;
+    bottom: 2px;
+}
+
+.header-top-actions{
+    padding: .3rem 1rem;
+}
+
+.header-top .header-top-actions a.btn{
+    font-size: 13px;
+    padding: 3px 8px;
+    color: #fff;
+}
+
+.header-content .search .input-group{
+    padding: 20px 0;
+}
+
+.header-content .register{
+    padding: 20px 15px;
+    text-align: center;
+}
+
+.header-content .navbar{
+    background: #1786be;
+    color: #fff;
+    padding: 0;
+}
+
+.header-content .navbar a{
+    color: #fff;
+}
+
+.header-content .navbar li a{
+    padding: 10px 15px;
+    display: block;
+    font-weight: 700;
+}
+
+.header-content  .navbar li .dropdown-menu a{
+    color: #8c9195;
+    border-bottom: 1px solid #e2e2e2;
+    padding: 15px 20px;
+    font-size: 13px;
+    background: #f8f8f8;
+    -webkit-transition: all .35s ease;
+    -moz-transition: all .35s ease;
+    -ms-transition: all .35s ease;
+    -o-transition: all .35s ease;
+    transition: all .35s ease;
+}
+
+.header-content  .navbar li .dropdown-menu li:hover > a{
+    background: #f2f2f2;
+    color: #8c9195;
+}
+
+.header-content  .navbar li .dropdown-menu{
+    min-width: 380px;
+    max-width: 100%;
+}
+
+.header-content  .navbar li .dropdown-menu:after{
+    content: '';
+    border: 6px solid transparent;
+    width: 0;
+    height: 0;
+    border-bottom-color: #f2f2f2;
+    position: absolute;
+    top: -12px;
+    left: 30px;
+}
+
+.main-content{
+    padding: 20px 0;
+}
+
+.events-banner{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.test-exam .panel-heading{
+    color: #333;
+    background-color: #f5f5f5;
+    border-color: #ddd;
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.list-courses{
+    margin-bottom: 20px;
+}
+
+.list-courses .courses{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.list-courses .panel-heading,
+.list-books .panel-heading{
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.list-courses .courses .course-item{
+    padding: 0 10px;
+    width: 50%;
+    margin-bottom: 15px;
+}
+
+.list-courses .courses .course-item > a{
+    display: block;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.list-courses .courses .course-item > a:hover{
+    text-decoration: none;
+}
+
+.list-courses .courses .course-item .course-info{
+    padding-left: 20px;
+}
+
+.list-courses .courses .course-item .course-info strong{
+    display: block;
+    margin-bottom: 15px;
+}
+
+.list-courses .courses .course-item .course-info .teacher{
+    color: #666666;
+}
+
+
+.list-books .books{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.list-books .books .book-item{
+    padding: 0 10px;
+    width: 50%;
+    margin-bottom: 25px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.list-books .books .book-item .book-info{
+    padding-left: 20px;
+}
+
+.list-books .books .book-item .book-info .name{
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.list-books .books .book-item .book-info .type,
+.list-books .books .book-item .book-info .stock{
+    margin-bottom: 10px;
+}
+
+.list-books .books .book-item .book-info .stock .status{
+    font-style: italic;
+}
+
+.list-books .books .book-item .book-info .stock .status.instock{
+    color: green;
+}
+
+.list-books .books .book-item .book-info .stock .status.outstock{
+    color: red;
+}
+
+.list-books .books .book-item .book-info .count-page{
+    margin-left: 20px;
+}
+
+.list-books .books .book-item .book-info .price-box .addtocart{
+    float: right;
+    font-size: 12px;
+    padding: 2px 5px;
+}
+
+.list-books .books .book-item .book-info .price-box .price-wrapper .special-price{
+    font-weight: 700;
+    color: red;
+    margin-right: 10px;
+}
+
+.list-books .books .book-item .book-info .price-box .price-wrapper .old-price{
+    text-decoration: line-through;
+}
+
+.chart img{
+    max-width: inherit;
+}
+
+.chart table tr > th,
+.chart table tr > td{
+    padding: 10px;
+    vert-align: middle;
+    border: 0;
+}
+
+/*----FOOTER-----*/
+footer.footer {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.footer{
+    background-color: #262525;
+    padding: 20px;
+    color: #fff;
+}
+
+/*---responsive---*/
+@media (min-width: 1200px){
+    .container {
+        max-width: 1250px;
+    }
+}

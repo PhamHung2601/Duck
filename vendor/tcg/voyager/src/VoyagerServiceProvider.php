@@ -29,6 +29,7 @@ use TCG\Voyager\Policies\SettingPolicy;
 use TCG\Voyager\Providers\VoyagerDummyServiceProvider;
 use TCG\Voyager\Providers\VoyagerEventServiceProvider;
 use TCG\Voyager\Translator\Collection as TranslatorCollection;
+use TCG\Voyager\Models\Menu;
 
 class VoyagerServiceProvider extends ServiceProvider
 {
@@ -63,6 +64,7 @@ class VoyagerServiceProvider extends ServiceProvider
         $this->app->register(DoctrineSupportServiceProvider::class);
 
         $loader = AliasLoader::getInstance();
+        $loader->alias('Menu', Menu::class);
         $loader->alias('Voyager', VoyagerFacade::class);
 
         $this->app->singleton('voyager', function () {
