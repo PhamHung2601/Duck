@@ -22,3 +22,9 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('home-page/home');
 });
+Route::get('/books', function () {
+    return view('book/list');
+});
+Route::get('/books/detail/{id?}', function () {
+    return view('book/detail');
+});
