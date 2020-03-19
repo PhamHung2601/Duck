@@ -38,7 +38,13 @@
                 @include('book.partials.overview_book')
             </div>
             <div class="col-md-4 col-lg-4">
-                @include('book.partials.book_component')
+                <div class="row">
+                    @foreach([1,2,3,4,5,6] as $item)
+                        <div class="col-md-12 col-log-12">
+                            @include('book.partials.book_component')
+                        </div>
+                    @endforeach
+                </div>
             </div>
         </div>
     </div>

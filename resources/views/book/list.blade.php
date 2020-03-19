@@ -34,7 +34,13 @@
             @include('book.partials.top_nav')
         </div>
         <div class="divbSachID" id="divbSachId" style="background-color: #f8f8f8">
-            @include('book.partials.book_component')
+            <div class="row">
+                @foreach([1,2,3,4,5,6] as $item)
+                <div class="col-md-6 col-log-6">
+                    @include('book.partials.book_component')
+                </div>
+                @endforeach
+            </div>
         </div>
     </div>
 </div>
