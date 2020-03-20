@@ -15,8 +15,8 @@
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
-Route::get('/', function () {
-    return view('landing-page/welcome');
+Route::get('/courses', function () {
+    return view('landing-page/course_overview');
 });
 
 Route::get('/home', function () {
