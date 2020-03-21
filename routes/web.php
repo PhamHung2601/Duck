@@ -54,3 +54,7 @@ Route::resource('/success', 'SuccessController');
 Route::resource('/news', 'NewsController');
 Route::get('news/view/{id?}', 'NewsController@view')->name('news.view');
 
+Route::resource('/test', 'TestController');
+Route::get('test/view/{id?}', 'TestController@view')->name('test.view');
+
+
