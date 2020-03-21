@@ -37,9 +37,7 @@ Route::get('/home', [
 Route::get('/books', function () {
     return view('book/list');
 });
-Route::get('/books/detail/{id?}', function () {
-    return view('book/detail');
-});
+Route::get('/books/detail/{id?}', 'BookController@index');
 Route::resource('/cart', 'CartController');
 
 Route::resource('/checkout', 'CheckoutController');
