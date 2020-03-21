@@ -608,7 +608,7 @@ footer.footer {
 
 .form-one{
     float: left;
-    width: 60%;
+    width: 55%;
     margin: 10px;
 }
 .form-two{
@@ -694,4 +694,7 @@ footer.footer {
 }
 .count-title{
     font-size: 10px;
+}
+.success-container{
+    text-align: center;
 }
