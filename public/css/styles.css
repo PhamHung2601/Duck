@@ -1,7 +1,8 @@
 @import url("book_list.css");
 @import url("course.css");
-@import url("overview-course.css");
-@import url("side-course.css");
+/*@import url("overview-course.css");*/
+/*@import url("side-course.css");*/
+/*@import url("news-list.css");*/
 
 body{
     font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
@@ -16,14 +17,14 @@ img{
     max-width: 1250px;
 }
 
- ul{
-     padding: 0;
-     list-style-type: none;
- }
+ul{
+    padding: 0;
+    list-style-type: none;
+}
 
- a{
-     color: #1786be;
- }
+a{
+    color: #1786be;
+}
 
 .panel {
     margin-bottom: 20px;
@@ -614,4 +615,71 @@ footer.footer {
     float: right;
     width: 35%;
     margin: 10px;
+}
+.landing-page-section{
+    padding: 5% 15% 5% 15%;
+}
+.landing-page-section > .section-title{
+    text-align: center;
+}
+.landing-page-section > .section-content{
+   text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    color: black;
+    font-size: 18px;
+}
+.landing-page-section .course-detail{
+    text-align: left;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-left: 2%;
+    color: black;
+    font-size: 15px;
+    border: 1px solid black;
+    border-radius: 15%;
+}
+.landing-page-section > .section-content > ul > li{
+    margin-top: 3%;
+}
+.landing-page-section > .section-add-to-cart-button{
+    margin-left: 40%;
+}
+.landing-page-section .display-flex-content{
+    display: flex;
+}
+.landing-page-section .display-flex-content > ul > li{
+    margin-top: 7%;
+}
+.landing-page-section .display-flex-content > ul > li > p{
+    text-align: left;
+    font-size: 25px;
+}
+.landing-page-section .display-flex-content.display-flex-box > .box{
+    margin-left: 5%;
+}
+.landing-page-section .form-register-course input{
+    width: 80%;
+    border-radius: 30px 30px 30px 30px;
+    margin-bottom: 5%;
+}
+.landing-page-section .form-register-course textarea{
+    width: 80%;
+    height: 100px;
+}
+.landing-page-section .form-register-course .register-course-button{
+    margin-top: 5%;
+}
+.landing-page-section .row-content > .row{
+    margin-bottom: 5%;
+}
+.footer-landing.display-flex-content{
+    padding: 5%;
+    display: flex;
+}
+#deal-detail > ul{
+    margin-top: 10%;
+}
+#deal-detail > ul > li{
+    margin-top: 10%;
 }

@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Product;
-
 use Cart;
+use Illuminate\Http\Request;
 
 /**
  * Class CartController
@@ -39,9 +38,10 @@ class CartController extends Controller
      * @param Request $request
      * @return \Illuminate\Http\RedirectResponse|string
      */
-    public function addCart(Request $request,$id)
+    public function addCart(Request $request)
     {
-        $product = Product::select('id', 'name', 'price', 'special_price', 'stock')->find($id);
+        $productId = $request->product_id;
+        $product = Product::select('id', 'name', 'price', 'special_price', 'stock')->find(2);
         if (!isset($product)) {
             return 'Có lỗi xảy ra';
         }
@@ -49,7 +49,7 @@ class CartController extends Controller
             return 'Không đủ hàng để cung cấp';
         }
         $price = $product->price;
-        if ($product->special_price && $product->special_price > $product->price) {
+        if ($product->special_price && $product->special_price < $product->price) {
             $price = $product->special_price;
         }
         Cart::add([
@@ -79,12 +79,19 @@ class CartController extends Controller
         return redirect()->route('cart.index');
     }
 
-    public function updateCartItem(Request $request,$rowId){
+    public function removeItem($rowId)
+    {
+        Cart::update($rowId, 0);
+        return redirect()->route('cart.index');
+    }
+
+    public function updateCartItem(Request $request, $rowId)
+    {
         $item = Cart::get($rowId);
         $increment = $request->increment;
-        if($increment == 1){
+        if ($increment == 1) {
             $qty = $item->qty + 1;
-        }else{
+        } else {
             $qty = $item->qty - 1;
         }
         $product = Product::select('stock')->find($item->id);
