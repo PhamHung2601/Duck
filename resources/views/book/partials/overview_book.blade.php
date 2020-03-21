@@ -15,7 +15,7 @@
             <p class="hidden-sm hidden-xs ">Số lần tra cứu:<strong> Không giới hạn </strong> </p>
             <p>Giá: <strong style="color:red"> 95.000đ</strong> <span style="text-decoration:line-through;padding-left:10px"> 150.000đ</span></p>
 
-            <p style="padding-top:10px;"> <a class="btn btn-danger" style="height:32px" href="https://moon.vn/sachid/buy.aspx"><span class="glyphicon glyphicon-shopping-cart"></span> Mua sách</a> </p>
+            <p style="padding-top:10px;"> <a class="btn btn-danger" style="height:32px"  href="{{ route('cart.add',1) }}"><span class="glyphicon glyphicon-shopping-cart"></span> Mua sách</a> </p>
         </div></div>
     <div style="font-size:13px">
         <p></p><div align="justify"><b>50 ĐỀ MINH HỌA <a href="/sach-id-mon/sach-id-tu-sach-luyen-thi-dai-hoc-mon-toan-hoc">LUYỆN THI THPT QUỐC GIA 2020 MÔN TOÁN HỌC</a></b> được đội ngũ giáo viên của Moon.vn xây dựng, biên soạn và phát triển. Với kho tàng trắc nghiệm hiện nay, việc soạn thảo một đề thi Toán THPT QG là không mấy khó khăn, thế nhưng về mặt tiêu chí chất lượng thì không phải đề nào cũng đáp ứng được. Sự ra đời của cuốn sách <b>50 ĐỀ LUYỆN THI THỬ THPT QUỐC GIA 2020 MÔN TOÁN HỌC</b> giải quyết vấn đề đó.</div><div style="text-align: center;"> <b><a href="https://www.youtube.com/watch?v=bmyeqyCDV4Q&amp;feature=youtu.be" target="_blank" rel="noopener">Xem cách kích hoạt và tra mã ID tại đây!</a></b><br><p><b><a href="https://drive.google.com/file/d/11q2zw44JD52K85LUkz8vSbre_HEHM4PB/view" target="_blank" rel="noopener">Xem bản đọc thử&nbsp;tại đây!</a></b></p></div><p></p>

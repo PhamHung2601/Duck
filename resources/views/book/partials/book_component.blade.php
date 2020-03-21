@@ -28,7 +28,7 @@
                 <p>
                     <strong style="color:red"> 95.000đ</strong> <span
                             style="text-decoration:line-through;padding-left:10px; margin-right:20px"> 150.000đ</span>
-                    <a href="https://moon.vn/sachid/buy.aspx" class="btn btn-danger"
+                    <a  href="{{ route('cart.add',1) }}" class="btn btn-danger"
                        style="height:25px; font-size:12px;padding:5px; color:white">Đặt mua</a>
 
                 </p>

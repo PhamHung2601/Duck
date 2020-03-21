@@ -29,7 +29,7 @@ class CartController extends Controller
         $productsInCart = [];
 
         foreach (Cart::content() as $key => $value) {
-            $productsInCart[$value->id] = Product::getProductInCart($value->id);
+            $productsInCart[$value->id] = $value;
         }
 
         return view('layouts.cart', ['products' => $productsInCart]);
@@ -39,9 +39,9 @@ class CartController extends Controller
      * @param Request $request
      * @return \Illuminate\Http\RedirectResponse|string
      */
-    public function addCart(Request $request)
+    public function addCart(Request $request,$id)
     {
-        $product = Product::select('id', 'name', 'price', 'special_price', 'stock')->find($request->productId);
+        $product = Product::select('id', 'name', 'price', 'special_price', 'stock')->find($id);
         if (!isset($product)) {
             return 'Có lỗi xảy ra';
         }
@@ -55,8 +55,9 @@ class CartController extends Controller
         Cart::add([
             'id' => $product->id,
             'name' => $product->name,
-            'qty' => (int)$product->stock,
+            'qty' => 1,
             'price' => $price,
+            'weight' => 1
         ]);
         return redirect()->route('cart.index');
     }
@@ -75,6 +76,22 @@ class CartController extends Controller
             }
             Cart::update($rowId, $qty);
         }
+        return redirect()->route('cart.index');
+    }
+
+    public function updateCartItem(Request $request,$rowId){
+        $item = Cart::get($rowId);
+        $increment = $request->increment;
+        if($increment == 1){
+            $qty = $item->qty + 1;
+        }else{
+            $qty = $item->qty - 1;
+        }
+        $product = Product::select('stock')->find($item->id);
+        if ($product->stock < $qty) {
+            return 'Không đủ số lượng hàng trong kho';
+        }
+        Cart::update($rowId, $qty);
         return redirect()->route('cart.index');
     }
 
