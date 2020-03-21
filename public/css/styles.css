@@ -1,3 +1,7 @@
+@import url("book_list.css");
+@import url("course.css");
+@import url("overview-course.css");
+@import url("side-course.css");
 
 body{
     font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;

@@ -20,7 +20,7 @@
 
     <!-- Custom styles for this template -->
     <link href="{{ asset('vendor/landing-page/css/landing-page.min.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo asset('css/course.css')?>" type="text/css">
+    <link rel="stylesheet" href="<?php echo asset('css/styles.css')?>" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="{{ asset('js/jquery.countdown.js') }}"></script>
 
@@ -31,6 +31,7 @@
 @include('landing-page.courses.partials.navigation')
 @yield('content')
 @include('landing-page.courses.partials.footer')
+@include('home-page.partials.scripts')
 
 </body>
 
