@@ -5,23 +5,25 @@ namespace App\Http\Controllers;
 use App\Order;
 use App\OrderItem;
 use Illuminate\Http\Request;
-
-use App\Product;
-
 use Cart;
 
+/**
+ * Class CheckoutController
+ * @package App\Http\Controllers
+ */
 class CheckoutController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     * CheckoutController constructor.
      */
     public function __construct()
     {
         // $this->middleware('auth');
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function index()
     {
         $this->data['title'] = 'Checkout';
@@ -30,8 +32,13 @@ class CheckoutController extends Controller
         return view('layouts.checkout', $this->data);
     }
 
-    public function saveOrder(Request $request) {
-        $cartInfor = Cart::content();
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    public function saveOrder(Request $request)
+    {
+        $cartInfo = Cart::content();
         // validate
         $rule = [
             'fullName' => 'required',
@@ -56,7 +63,6 @@ class CheckoutController extends Controller
             $customer->email = Request::get('email');
             $customer->address = Request::get('address');
             $customer->phone_number = Request::get('phoneNumber');
-            //$customer->note = $request->note;
             $customer->save();
 
             $order = new Order();
@@ -69,8 +75,8 @@ class CheckoutController extends Controller
             $order->payment_method = Request::get('payment_method');
             $order->save();
 
-            if (count($cartInfor) >0) {
-                foreach ($cartInfor as $key => $item) {
+            if (count($cartInfo) > 0) {
+                foreach ($cartInfo as $key => $item) {
                     $orderItem = new OrderItem();
                     $orderItem->order_id = $order->id;
                     $orderItem->product_id = $item->id;
