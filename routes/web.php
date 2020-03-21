@@ -47,5 +47,5 @@ Route::post('cart/updateCart', 'CartController@updateCart')->name('cart.updateCa
 Route::post('cart/deleteCart', 'CartController@deleteCart')->name('cart.deleteCart');
 
 Route::resource('/news', 'NewsController');
-Route::get('news/detail/{id?}', 'CartController@detail')->name('news.detail');
+Route::get('news/view/{id?}', 'NewsController@view')->name('news.view');
 
