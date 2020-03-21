@@ -41,7 +41,7 @@ class CartController extends Controller
     public function addCart(Request $request)
     {
         $productId = $request->product_id;
-        $product = Product::select('id', 'name', 'price', 'special_price', 'stock')->find(2);
+        $product = Product::select('id', 'name', 'price', 'special_price', 'stock')->find($productId);
         if (!isset($product)) {
             return 'Có lỗi xảy ra';
         }
