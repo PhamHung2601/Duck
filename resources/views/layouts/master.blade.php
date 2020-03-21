@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,23 +20,23 @@
 
     <!-- Custom styles for this template -->
     <link href="{{ asset('vendor/landing-page/css/landing-page.min.css') }}" rel="stylesheet">
-      <link rel="stylesheet" href="<?php echo asset('css/overview-course.css')?>" type="text/css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-      <script src="{{ asset('js/jquery.countdown.js') }}"></script>
+    <link href="{{ asset('css/styles.css') }}" rel="stylesheet" type="text/css" >
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-	@include('landing-page.partials.navigation')
+@include('home-page.partials.header')
 
-	@include('landing-page.partials.banner')
+<div class="main-content">
+    <div class="container">
+        @yield('content')
+    </div>
+</div>
 
-	@include('landing-page.partials.course_list')
+@include('home-page.partials.footer')
 
-	@include('landing-page.partials.deal_section')
-
-	@include('landing-page.partials.footer')
-  </body>
+@include('home-page.partials.scripts')
+</body>
 
 </html>
