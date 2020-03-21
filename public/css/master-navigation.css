@@ -1,0 +1,13 @@
+.header-top{
+    background-color: #91d5fb ;
+}
+.header-top .display-flex-content{
+   display: flex;
+}
+.header-top #navbarText > ul{
+    width: 100%;
+}
+.header-top #navbarText > ul >li{
+     width: 20%;
+    margin-left: 5%;
+}

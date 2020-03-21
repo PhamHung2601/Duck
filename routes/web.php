@@ -50,7 +50,11 @@ Route::get('cart/updateCartItem/{rowId?}', 'CartController@updateCartItem')->nam
 Route::post('cart/updateCart', 'CartController@updateCart')->name('cart.updateCart');
 Route::post('cart/deleteCart', 'CartController@deleteCart')->name('cart.deleteCart');
 Route::get('cart/removeItem/{rowId?}', 'CartController@removeItem')->name('cart.removeItem');
-
+Route::resource('/success', 'SuccessController');
 Route::resource('/news', 'NewsController');
 Route::get('news/view/{id?}', 'NewsController@view')->name('news.view');
+
+Route::resource('/test', 'TestController');
+Route::get('test/view/{id?}', 'TestController@view')->name('test.view');
+
 
