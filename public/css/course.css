@@ -1,0 +1,101 @@
+.navbar .static-top{
+    background-color: white;
+    color: black !important;
+}
+a{
+    color: black !important;
+}
+a:hover{
+    text-decoration:none !important;
+}
+.container{
+    height: 80px;
+}
+.logo_container{
+    width: 20%;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 80%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+#et-top-navigation{
+    width: 55%;
+    height: 80%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+#navbarText > ul{
+    width: 100%;
+}
+#navbarText > ul > li{
+    width: 25%;
+}
+.course-item{
+    padding: 10%;
+    display: flex;
+}
+.post-item{
+    display: flex;
+}
+.banner-item > img{
+    width: 100%;
+}
+#course-overview{
+    padding: 10% 20% 10% 20%;
+}
+#course-overview > .title{
+    text-align: center;
+}
+#course-overview > .content{
+    width: 80%;
+    padding-left: 20%;
+    padding-top: 5%;
+}
+#course-overview > .add-to-cart{
+    margin-left: 35%;
+    padding-top: 2%;
+}
+.deal-countdown{
+    display: flex;
+    padding-top: 10%;
+    padding-left: 10%;
+}
+.countdown{
+    display: flex;
+}
+.count-number{
+    background-color: white;
+    width: 15%;
+    margin-right: 10%;
+    border-radius: 10%;
+    text-align: center;
+}
+.count-number > span{
+    font-size: 30px;
+}
+#deal-detail{
+    display: flex;
+}
+.form-info >img{
+    width: 80%;
+}
+.deal-info > ul{
+    list-style-type: none;
+    font-size: 20px;
+    padding-top: 10%;
+}
+.deal-info > ul > li{
+    padding-top: 5%;
+}
+.deal-info-form > div > input{
+    width: 80%;
+    border-radius: 30px 30px 30px 30px;
+}
+.deal-info-form > div{
+    margin: 5%;
+}
+.deal-info-form > .add-to-cart{
+    margin-left: 30%;
+}
+

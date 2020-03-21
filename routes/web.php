@@ -16,7 +16,13 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 Route::get('/courses', function () {
-    return view('landing-page/course_overview');
+    return view('landing-page/courses/course_overview');
+});
+Route::get('/courses/list/overview', function () {
+    return view('landing-page/list/overview');
+});
+Route::get('/courses/list/test-and-express', function () {
+    return view('landing-page/list/sidecourse');
 });
 
 Route::get('/home', function () {
