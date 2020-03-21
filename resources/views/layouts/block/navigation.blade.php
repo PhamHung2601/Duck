@@ -1,9 +1,8 @@
 <nav class="navbar navbar-light static-top">
     <div class="container">
         <div class="logo_container">
-            <span class="logo_helper">Alo1234</span>
-            <a href="https://stepup.edu.vn/">
-                <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E" data-lazy-src="https://cdnstepup.r.worldssl.net/Images/common/logo-master-1.png" alt="Step Up English" id="logo" data-height-percentage="55" /><noscript><img src="https://cdnstepup.r.worldssl.net/Images/common/logo-master-1.png" alt="Step Up English" id="logo" data-height-percentage="55" /></noscript>
+            <a href="http://dac.localhost.com/home">
+                <img src="https://cdnstepup.r.worldssl.net/Images/common/logo-master-1.png" data-lazy-src="https://cdnstepup.r.worldssl.net/Images/common/logo-master-1.png" alt="Step Up English" id="logo" data-height-percentage="55" /><noscript><img src="https://cdnstepup.r.worldssl.net/Images/common/logo-master-1.png" alt="Step Up English" id="logo" data-height-percentage="55" /></noscript>
             </a>
         </div>
         <div id="et-top-navigation">
