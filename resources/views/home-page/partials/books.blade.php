@@ -5,131 +5,40 @@
         </div>
         <div class="panel-body">
             <div class="books">
-                <div class="book-item">
-                    <img class=""  style="width:100px; border:solid 1px #f2f2f2" src="https://moon.vn/BaiGiangVideo/Image/1847-1.png">
-                    <div class="book-info">
-                        <a href="#" class="name"><span> Pro S: Luyện thi THPT Quốc Gia 2020</span></a>
-                        <div class="type">
-                            <span>Môn: <strong>Toán Học</strong></span>
-                            <span class="count-page">Số trang: <strong>300</strong></span>
-                        </div>
-                        <div class="stock">
-                            <span>Kho hang:</span>
-                            <span class="status instock">Còn Sách</span>
-                        </div>
-                        <div class="price-box">
+                @foreach($products as $product)
+                    <div class="book-item">
+                        <img class="" style="width:100px; border:solid 1px #f2f2f2"
+                             src="{{ Voyager::image( $product->media ) }}">
+                        <div class="book-info">
+                            <a href="#" class="name"><span> {{ $product->name }}</span></a>
+                            @foreach($product->category as $cate)
+                                <div class="type">
+                                    <span>Môn: <strong> {{ $cate->name }}</strong></span>
+                                    <span class="count-page">Số trang: <strong>300</strong></span>
+                                </div>
+                            @endforeach
+                            <div class="stock">
+                                <span>Kho hàng:</span>
+                                @if((int)$product->stock > 0)
+                                    <span class="status instock">Còn Sách</span>
+                                @else
+                                    <span class="status outstock">Hết Sách</span>
+                                @endif
+                            </div>
+                            <div class="price-box">
                             <span class="price-wrapper">
                                 <span class="special-price">
-                                    <span class="price">95.000 d</span>
+                                    <span class="price">{{ $product->special_price }} d</span>
                                 </span>
                                    <span class="old-price">
-                                    <span class="price">150.000 d</span>
+                                    <span class="price">{{ $product->price }} d</span>
                                 </span>
                             </span>
-                            <a href="#" class="btn btn-danger addtocart">Đặt mua</a>
+                                <a href="#" class="btn btn-danger addtocart">Đặt mua</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="book-item">
-                    <img class=""  style="width:100px; border:solid 1px #f2f2f2" src="https://moon.vn/BaiGiangVideo/Image/1847-1.png">
-                    <div class="book-info">
-                        <a href="#" class="name"><span> Pro S: Luyện thi THPT Quốc Gia 2020</span></a>
-                        <div class="type">
-                            <span>Môn: <strong>Toán Học</strong></span>
-                            <span class="count-page">Số trang: <strong>300</strong></span>
-                        </div>
-                        <div class="stock">
-                            <span>Kho hang:</span>
-                            <span class="status instock">Còn Sách</span>
-                        </div>
-                        <div class="price-box">
-                            <span class="price-wrapper">
-                                <span class="special-price">
-                                    <span class="price">95.000 d</span>
-                                </span>
-                                   <span class="old-price">
-                                    <span class="price">150.000 d</span>
-                                </span>
-                            </span>
-                            <a href="#" class="btn btn-danger addtocart">Đặt mua</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="book-item">
-                    <img class=""  style="width:100px; border:solid 1px #f2f2f2" src="https://moon.vn/BaiGiangVideo/Image/1847-1.png">
-                    <div class="book-info">
-                        <a href="#" class="name"><span> Pro S: Luyện thi THPT Quốc Gia 2020</span></a>
-                        <div class="type">
-                            <span>Môn: <strong>Toán Học</strong></span>
-                            <span class="count-page">Số trang: <strong>300</strong></span>
-                        </div>
-                        <div class="stock">
-                            <span>Kho hang:</span>
-                            <span class="status instock">Còn Sách</span>
-                        </div>
-                        <div class="price-box">
-                            <span class="price-wrapper">
-                                <span class="special-price">
-                                    <span class="price">95.000 d</span>
-                                </span>
-                                   <span class="old-price">
-                                    <span class="price">150.000 d</span>
-                                </span>
-                            </span>
-                            <a href="#" class="btn btn-danger addtocart">Đặt mua</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="book-item">
-                    <img class=""  style="width:100px; border:solid 1px #f2f2f2" src="https://moon.vn/BaiGiangVideo/Image/1847-1.png">
-                    <div class="book-info">
-                        <a href="#" class="name"><span> Pro S: Luyện thi THPT Quốc Gia 2020</span></a>
-                        <div class="type">
-                            <span>Môn: <strong>Toán Học</strong></span>
-                            <span class="count-page">Số trang: <strong>300</strong></span>
-                        </div>
-                        <div class="stock">
-                            <span>Kho hang:</span>
-                            <span class="status instock">Còn Sách</span>
-                        </div>
-                        <div class="price-box">
-                            <span class="price-wrapper">
-                                <span class="special-price">
-                                    <span class="price">95.000 d</span>
-                                </span>
-                                   <span class="old-price">
-                                    <span class="price">150.000 d</span>
-                                </span>
-                            </span>
-                            <a href="#" class="btn btn-danger addtocart">Đặt mua</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="book-item">
-                    <img class=""  style="width:100px; border:solid 1px #f2f2f2" src="https://moon.vn/BaiGiangVideo/Image/1847-1.png">
-                    <div class="book-info">
-                        <a href="#" class="name"><span> Pro S: Luyện thi THPT Quốc Gia 2020</span></a>
-                        <div class="type">
-                            <span>Môn: <strong>Toán Học</strong></span>
-                            <span class="count-page">Số trang: <strong>300</strong></span>
-                        </div>
-                        <div class="stock">
-                            <span>Kho hang:</span>
-                            <span class="status instock">Còn Sách</span>
-                        </div>
-                        <div class="price-box">
-                            <span class="price-wrapper">
-                                <span class="special-price">
-                                    <span class="price">95.000 d</span>
-                                </span>
-                                   <span class="old-price">
-                                    <span class="price">150.000 d</span>
-                                </span>
-                            </span>
-                            <a href="#" class="btn btn-danger addtocart">Đặt mua</a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
