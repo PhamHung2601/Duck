@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Student;
 use Illuminate\Support\Facades\DB;
 use App\News;
 use App\Product;
@@ -27,6 +28,35 @@ class HomeController extends Controller
     {
         $news = News::orderBy('id', 'desc')->take(6)->get();
         $products = Product::orderBy('id', 'desc')->take(6)->get();
-        return view('home-page/home', compact('news', 'products'));
+        $month = $this->getStudentWithRankingByMonth();
+        $course = $this->getStudentWithRankingByCourse();
+        return view('home-page/home', compact('news', 'products','month','course'));
+    }
+    public function getStudentWithRankingByMonth()
+    {
+        $month = date('m');
+        $student = DB::table('students')
+            ->join('rank_points', 'students.id', '=', 'rank_points.student_id')
+            ->select('students.*','rank_points.*')
+            ->orderBy('rank_points.point','desc')
+            ->where('rank_points.type', '=', '0')
+            ->where('rank_points.type_id', '=', $month)
+            ->limit(10)
+            ->get();
+        return $student;
+    }
+    public function getStudentWithRankingByCourse()
+    {
+        $course = 3;
+        $student = DB::table('students')
+            ->where('rank_points.type', '=', '1')
+            ->where('rank_points.type_id', '=', $course)
+            ->join('rank_points', 'students.id', '=', 'rank_points.student_id')
+            ->select('students.*','rank_points.*')
+            ->orderBy('rank_points.point','desc')
+            ->limit(4)
+            ->get();
+
+        return $student;
     }
 }
