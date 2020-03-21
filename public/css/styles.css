@@ -683,3 +683,15 @@ footer.footer {
 #deal-detail > ul > li{
     margin-top: 10%;
 }
+.count-number{
+    background-color: white;
+    height: 75px;
+    border-radius: 5%;
+    border: 1px solid black;
+}
+.count-numbers{
+    font-size: 30px;
+}
+.count-title{
+    font-size: 10px;
+}

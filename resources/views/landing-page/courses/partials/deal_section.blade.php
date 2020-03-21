@@ -12,17 +12,18 @@
         <div class="col-1"></div>
         <div id="sale-count-down" class="col-5">
             <div class="row">
-                <div class="countdown col-12">
-                    <div class="hours count-number col-3">
-                        <span class="hour-count-number"></span>
+                <div class="col-3"></div>
+                <div class="countdown row">
+                    <div class="hours count-number col-4">
+                        <span class="hour-count-number count-numbers"></span>
                         <p class="count-title">Hours</p>
                     </div>
-                    <div class="min count-number col-3">
-                        <span class="min-count-number"></span>
+                    <div class="min count-number col-4">
+                        <span class="min-count-number count-numbers"></span>
                         <p class="count-title">Minutes</p>
                     </div>
-                    <div class="sec count-number col-3">
-                        <span class="sec-count-number"></span>
+                    <div class="sec count-number col-4">
+                        <span class="sec-count-number count-numbers"></span>
                         <p class="count-title">Seconds</p>
                     </div>
                 </div>
