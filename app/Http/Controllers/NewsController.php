@@ -25,7 +25,6 @@ class NewsController extends Controller
     public function index()
     {
         $news = DB::table('news')->get();
-
         return view('news.list', ['news' => $news]);
     }
 
@@ -33,9 +32,16 @@ class NewsController extends Controller
      * @param Request $request
      * @return \Illuminate\Http\RedirectResponse|string
      */
-    public function detail(Request $request,$id)
+    public function view(Request $request,$id)
     {
-        $news = News::select('id', 'title', 'show_from_date', 'show_to_date', 'stock')->find($id);
+
+
+
+        $news = News::select('id', 'title', 'description')->find($id);
+        if (!isset($news)) {
+            return 'Bản tin không tồn tại';
+        }
+        return view('news.view', ['news' => $news]);
     }
 
 }
