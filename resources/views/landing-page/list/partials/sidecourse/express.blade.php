@@ -1,49 +1,49 @@
-<section id="course-introduction" class="bg-light">
-        <h2 class="title">CUỐN SÁCH NÀY SẼ PHÙ HỢP VỚI AI?</h2>
-    <div class="content">
+<section class="landing-page-section bg-light">
+    <h2 class="section-title">CUỐN SÁCH NÀY SẼ PHÙ HỢP VỚI AI?</h2>
+    <div class="section-content">
         <ul>
-            <li><p>Học sinh cấp 3 đang muốn tăng 1-3 điểm thi THPTQG</p></li>
-            <li><p>Học sinh cấp 3 đang muốn tăng 1-3 điểm thi THPTQG</p></li>
-            <li><p>Học sinh cấp 3 đang muốn tăng 1-3 điểm thi THPTQG</p></li>
+            <li><p><i class="fa fa-location-arrow"> Học sinh cấp 3 đang muốn tăng 1-3 điểm thi THPTQG</i></p></li>
+            <li><p><i class="fa fa-location-arrow"> Học sinh cấp 3 đang muốn tăng 1-3 điểm thi THPTQG</i></p></li>
+            <li><p><i class="fa fa-location-arrow"> Học sinh cấp 3 đang muốn tăng 1-3 điểm thi THPTQG</i></p></li>
         </ul>
     </div>
-    <div class="add-to-cart">
+    <div class="section-add-to-cart-button">
         <button type="button" class="btn btn-success"><a href="#">Tao muon mua luon</a></button>
     </div>
 </section>
-<section id="test-course" class="bg-warning">
-    <h2 class="title">Luyen de voi 69 tu the</h2>
-        <div id="benifit-content">
-            <ul  class="col-5">
-                <li><p>De thi thu cac nam</p></li>
-                <li><p>De thi do tao tu nghi ra</p></li>
-                <li><p>De thi tao di an trom</p></li>
-            </ul>
-            <div id="join-course" class="col-6">
-                <form class="join-course-form">
-                    <div><input type="text" placeholder="Your Name"></div>
-                    <div><input type="text" placeholder="Your Email"></div>
-                    <div><input type="text" placeholder="Your Phone"></div>
-                    <div><input type="textarea" placeholder="Your Address"></div>
-                    <button type="button" class="btn btn-success"><a href="#">Dang Ky Ngay</a></button>
-                </form>
-            </div>
-        </div>
-</section>
-<section id="express-course" class="bg-success">
-    <h2 class="title">Nhanh gon le 2 phut 3 phat</h2>
-    <div id="benifit-content">
-        <ul  class="col-5">
-            <li><p>Supperrrr fast overview</p></li>
-            <li><p>Dam Bao dau ra 9 diem :v </p></li>
+<section class="bg-warning landing-page-section">
+    <h2 class="section-title">Luyen de voi 69 tu the</h2>
+    <div class="section-content display-flex-content">
+        <ul  class="col-7">
+            <li><p><i class="fa fa-arrow-right"> De thi thu cac nam</i></p></li>
+            <li><p><i class="fa fa-arrow-right"> De thi do tao tu nghi ra</i></p></li>
+            <li><p><i class="fa fa-arrow-right"> De thi tao di an trom</i></p></li>
         </ul>
-        <div id="join-course" class="col-6">
-            <form class="join-course-form">
-                <div><input type="text" placeholder="Your Name"></div>
-                <div><input type="text" placeholder="Your Email"></div>
-                <div><input type="text" placeholder="Your Phone"></div>
-                <div><input type="textarea" placeholder="Your Address"></div>
-                <button type="button" class="btn btn-warning"><a href="#">Dang Ky Ngay</a></button>
+        <div class="join-course col-5">
+            <form class="form-register-course">
+                <input type="text" placeholder="Your Name">
+                <input type="text" placeholder="Your Email">
+                <input type="text" placeholder="Your Phone">
+                <textarea placeholder="Your Address"></textarea>
+                <button type="button" class="btn btn-success register-course-button"><a href="#">Dang Ky Ngay</a></button>
+            </form>
+        </div>
+    </div>
+</section>
+<section class="bg-success landing-page-section">
+    <h2 class="section-title">Nhanh gon le</h2>
+    <div class="section-content display-flex-content">
+        <ul class="col-7">
+            <li><p><i class="fa fa-thumbs-up"> Supperrrr fast overview</i></p></li>
+            <li><p><i class="fa fa-thumbs-up"> Dam Bao dau ra 9 diem :v</i></p></li>
+        </ul>
+        <div class="join-course col-5">
+            <form class="form-register-course">
+                <input type="text" placeholder="Your Name">
+                <input type="text" placeholder="Your Email">
+                <input type="text" placeholder="Your Phone">
+                <textarea placeholder="Your Address"></textarea>
+                <button type="button" class="btn btn-default register-course-button"><a href="#">Dang Ky Ngay</a></button>
             </form>
         </div>
     </div>

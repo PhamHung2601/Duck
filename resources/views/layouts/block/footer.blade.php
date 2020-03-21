@@ -1,45 +1,26 @@
-<footer class="footer bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
-                <ul class="list-inline mb-2">
-                    <li class="list-inline-item">
-                        <a href="#">About</a>
-                    </li>
-                    <li class="list-inline-item">&sdot;</li>
-                    <li class="list-inline-item">
-                        <a href="#">Contact</a>
-                    </li>
-                    <li class="list-inline-item">&sdot;</li>
-                    <li class="list-inline-item">
-                        <a href="#">Terms of Use</a>
-                    </li>
-                    <li class="list-inline-item">&sdot;</li>
-                    <li class="list-inline-item">
-                        <a href="#">Privacy Policy</a>
-                    </li>
-                </ul>
-                <p class="text-muted small mb-4 mb-lg-0">&copy; Start Bootstrap 2017. All Rights Reserved.</p>
-            </div>
-            <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
-                <ul class="list-inline mb-0">
-                    <li class="list-inline-item mr-3">
-                        <a href="#">
-                            <i class="fa fa-facebook fa-2x fa-fw"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item mr-3">
-                        <a href="#">
-                            <i class="fa fa-twitter fa-2x fa-fw"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#">
-                            <i class="fa fa-instagram fa-2x fa-fw"></i>
-                        </a>
-                    </li>
+<footer class="footer-landing bg-light display-flex-content">
+            <div class="col-1"></div>
+            <div class="col-4" id="about-section">
+                <h3>Mr.Tung's Geography</h3>
+                <ul>
+                    <li><i class="fa fa-map"> Địa chỉ: Tầng 5, nhà A24 ngõ 120 Hoàng Quốc Việt, P.Cổ Nhuế, Q.Cầu Giấy, Hà Nội</i></li>
+                    <li><i class="fa fa-phone"> SĐT: </i></li>
+                    <li><i class="fa fa-at"> Email: dialyat2013@gmail.com</i></li>
+                    <li><i class="fa fa-facebook"> Facebook: </i></li>
+                    <li><i class="fa fa-youtube"> Youtube: </i></li>
                 </ul>
             </div>
-        </div>
-    </div>
+            <div class="col-4" id="service-section">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li>Địa chỉ: Tầng 5, nhà A24 ngõ 120 Hoàng Quốc Việt, P.Cổ Nhuế, Q.Cầu Giấy, Hà Nội</li>
+                    <li>SĐT: </li>
+                    <li>Email: dialyat2013@gmail.com</li>
+                    <li>Facebook:</li>
+                    <li>Youtube:</li>
+                </ul>
+            </div>
+            <div class="col-3" id="footer-logo">
+                <img src="">
+            </div>
 </footer>
