@@ -2,6 +2,7 @@
 @import url("course.css");
 /*@import url("overview-course.css");*/
 /*@import url("side-course.css");*/
+@import url("news-list.css");
 
 body{
     font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
@@ -470,138 +471,24 @@ footer.footer {
     width: 35%;
     margin: 10px;
 }
-#course-content > .content-detail{
-    display: flex;
+.landing-page-section{
+    padding: 5% 15% 5% 15%;
 }
-section > .title{
-    padding-top: 5%;
+.landing-page-section > .section-title{
     text-align: center;
-    margin-bottom: 5%;
 }
-section > .content{
-    width: 100%;
-    padding-left: 37%;
-    padding-bottom: 5%;
-}
-.add-to-cart{
-    margin-left: 45%;
-    padding-bottom: 5%;
-}
-a{
-    color: black !important;
-}
-.navbar .static-top{
-    background-color: white;
-    color: black !important;
-}
-.container{
-    height: 80px;
-}
-.logo_container{
-    width: 20%;
-    margin-left: 5%;
-    margin-right: 5%;
-    height: 80%;
-    margin-top: 2%;
-    margin-bottom: 5%;
-}
-#et-top-navigation{
-    width: 55%;
-    height: 80%;
-    margin-top: 2%;
-    margin-bottom: 5%;
-}
-#navbarText > ul{
-    width: 100%;
-}
-#navbarText > ul > li{
-    width: 25%;
-}
-#feedback > .feedback-content
-{
-    display: flex;
-    padding-bottom: 5%;
-}
-#feedback > .feedback-content >.card
-{
-    margin-left: 5%;
-}
-#join-course > .title{
-    margin-left: 5%;
-}
-#benifit-content{
-    margin-left: 20%;
-}
-#benifit-content{
-    display: flex;
-    padding-bottom: 5%;
-}
-.join-course-form > div > input{
-    width: 80%;
-    border-radius: 30px 30px 30px 30px;
-    margin-bottom: 5%;
-}
-.faq-content{
-    padding-bottom: 5%;
-}
-.faq-content > .row{
-    margin-bottom: 5%;
-}
-section > .title{
+.landing-page-section > .section-content{
+   text-align: center;
     padding-top: 5%;
-    text-align: center;
-    margin-bottom: 5%;
-}
-section > .content{
-    width: 100%;
-    padding-left: 37%;
     padding-bottom: 5%;
 }
-.add-to-cart{
-    margin-left: 45%;
-    padding-bottom: 5%;
+.landing-page-section > .section-add-to-cart-button{
+    margin-left: 40%;
 }
-a{
-    color: black !important;
+.landing-page-section .display-flex-content{
+   display: flex;
 }
-.navbar .static-top{
-    background-color: white;
-    color: black !important;
-}
-.container{
-    height: 80px;
-}
-.logo_container{
-    width: 20%;
-    margin-left: 5%;
-    margin-right: 5%;
-    height: 80%;
-    margin-top: 2%;
-    margin-bottom: 5%;
-}
-#et-top-navigation{
-    width: 55%;
-    height: 80%;
-    margin-top: 2%;
-    margin-bottom: 5%;
-}
-#navbarText > ul{
-    width: 100%;
-}
-#navbarText > ul > li{
-    width: 25%;
-}
-#join-course > .title{
-    margin-left: 5%;
-}
-#benifit-content{
-    margin-left: 20%;
-}
-#benifit-content{
-    display: flex;
-    padding-bottom: 5%;
-}
-.join-course-form > div > input{
+.landing-page-section .form-register-course input{
     width: 80%;
     border-radius: 30px 30px 30px 30px;
     margin-bottom: 5%;
