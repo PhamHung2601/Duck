@@ -28,12 +28,19 @@ Route::get('/courses/list/test-and-express', function () {
 Route::get('/home', function () {
     return view('home-page/home');
 });
+Route::get('/books', function () {
+    return view('book/list');
+});
+Route::get('/books/detail/{id?}', function () {
+    return view('book/detail');
+});
 Route::resource('/cart', 'CartController');
 
 Route::resource('/checkout', 'CheckoutController');
 Route::post('/checkout/submit', 'CheckoutController@saveOrder');
 
-Route::post('cart/add', 'CartController@addCart')->name('cart.add');
+Route::get('cart/add/{id?}', 'CartController@addCart')->name('cart.add');
+Route::get('cart/updateCartItem/{rowId?}', 'CartController@updateCartItem')->name('cart.updateCart');
 Route::post('cart/updateCart', 'CartController@updateCart')->name('cart.updateCart');
 Route::post('cart/deleteCart', 'CartController@deleteCart')->name('cart.deleteCart');
 

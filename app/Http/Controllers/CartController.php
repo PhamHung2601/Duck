@@ -3,72 +3,75 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Product;
 
 use Cart;
 
+/**
+ * Class CartController
+ * @package App\Http\Controllers
+ */
 class CartController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     * CartController constructor.
      */
     public function __construct()
     {
         // $this->middleware('auth');
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function index()
     {
-        $productsInCart=array();
+        $productsInCart = [];
 
         foreach (Cart::content() as $key => $value) {
-            $productsInCart[$value->id]=Product::getProductInCart($value->id);
+            $productsInCart[$value->id] = $value;
         }
 
-        return view('layouts.cart',['products' => $productsInCart]);
-    }
-    public function addCart(Request $request)
-    {
-        $product=Product::select('id','name','price','special_price','stock')->find($request->productId);
-        // dd($book);
-        if (!isset($product)) {
-            return 'Có lỗi xảy ra';
-        }
-        if ($product->stock<$request->qty) {
-            return 'Không đủ hàng để cung cấp';
-        }
-        $price = $product->price;
-        if($product->special_price && $product->special_price > $product->price){
-            $price = $product->special_price;
-        }
-        Cart::add([
-            'id'        => $product->id,
-            'name'      => $product->name,
-            'qty'       => (int)$product->stock,
-            'price'     => $price,
-            // 'options'   =>['book_image' => $book->book_image]
-        ]);
-        // dd(Cart::content());
-        return redirect()->route('cart.index');
-        //
+        return view('layouts.cart', ['products' => $productsInCart]);
     }
 
     /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse|string
+     */
+    public function addCart(Request $request,$id)
+    {
+        $product = Product::select('id', 'name', 'price', 'special_price', 'stock')->find($id);
+        if (!isset($product)) {
+            return 'Có lỗi xảy ra';
+        }
+        if ($product->stock < $request->qty) {
+            return 'Không đủ hàng để cung cấp';
+        }
+        $price = $product->price;
+        if ($product->special_price && $product->special_price > $product->price) {
+            $price = $product->special_price;
+        }
+        Cart::add([
+            'id' => $product->id,
+            'name' => $product->name,
+            'qty' => 1,
+            'price' => $price,
+            'weight' => 1
+        ]);
+        return redirect()->route('cart.index');
+    }
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse|string
      */
     public function updateCart(Request $request)
     {
         foreach ($request->rowIds as $rowId => $qty) {
-            $id=Cart::get($rowId)->id;
-            $product=Product::select('stock')->find($id);
-            if ($product->stock<$qty) {
+            $id = Cart::get($rowId)->id;
+            $product = Product::select('stock')->find($id);
+            if ($product->stock < $qty) {
                 return 'Không đủ số lượng hàng trong kho';
             }
             Cart::update($rowId, $qty);
@@ -76,11 +79,25 @@ class CartController extends Controller
         return redirect()->route('cart.index');
     }
 
+    public function updateCartItem(Request $request,$rowId){
+        $item = Cart::get($rowId);
+        $increment = $request->increment;
+        if($increment == 1){
+            $qty = $item->qty + 1;
+        }else{
+            $qty = $item->qty - 1;
+        }
+        $product = Product::select('stock')->find($item->id);
+        if ($product->stock < $qty) {
+            return 'Không đủ số lượng hàng trong kho';
+        }
+        Cart::update($rowId, $qty);
+        return redirect()->route('cart.index');
+    }
+
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param $id
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy($id)
     {

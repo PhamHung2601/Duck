@@ -455,3 +455,14 @@ footer.footer {
         max-width: 1250px;
     }
 }
+
+.form-one{
+    float: left;
+    width: 60%;
+    margin: 10px;
+}
+.form-two{
+    float: right;
+    width: 35%;
+    margin: 10px;
+}
