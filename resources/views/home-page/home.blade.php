@@ -8,8 +8,17 @@
     </div>
     <div class="col-sm-12 col-md-4 col-lg-4 sidebar">
       @include('home-page.partials.sidebar-info')
-      @include('home-page.partials.chart')
-      @include('home-page.partials.chart-major')
+      @include('home-page.partials.chart',
+        [
+          'month' => $month
+        ]
+      )
+      @include(
+        'home-page.partials.chart-major',
+        [
+          'course' => $course
+        ]
+       )
     </div>
   </div>
 @endsection
