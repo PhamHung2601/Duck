@@ -18,14 +18,19 @@ Route::group(['prefix' => 'admin'], function () {
 Route::get('/courses', function () {
     return view('landing-page/courses/course_overview');
 });
-Route::get('/home', function () {
-    return view('home-page/home');
-});
 Route::get('/courses/list/overview', function () {
     return view('landing-page/list/overview');
 });
 Route::get('/courses/list/test-and-express', function () {
     return view('landing-page/list/sidecourse');
+});
+
+Route::get('/home', function () {
+    return view('home-page/home');
+});
+
+Route::get('/sach', function () {
+    return view('landing-page/book/book-landing');
 });
 
 //Route::get('/home', [
