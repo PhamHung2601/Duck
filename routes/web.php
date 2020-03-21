@@ -41,10 +41,12 @@ Route::resource('/cart', 'CartController');
 Route::resource('/checkout', 'CheckoutController');
 Route::post('/checkout/submit', 'CheckoutController@saveOrder');
 
-Route::get('cart/add/{id?}', 'CartController@addCart')->name('cart.add');
+Route::post('cart/add/{id?}', 'CartController@addCart')->name('cart.add');
 Route::get('cart/updateCartItem/{rowId?}', 'CartController@updateCartItem')->name('cart.updateCart');
 Route::post('cart/updateCart', 'CartController@updateCart')->name('cart.updateCart');
 Route::post('cart/deleteCart', 'CartController@deleteCart')->name('cart.deleteCart');
+Route::get('cart/removeItem/{rowId?}', 'CartController@removeItem')->name('cart.removeItem');
+
 
 Route::resource('/news', 'NewsController');
 Route::get('news/detail/{id?}', 'CartController@detail')->name('news.detail');

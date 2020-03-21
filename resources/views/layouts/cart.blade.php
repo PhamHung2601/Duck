@@ -41,7 +41,7 @@
                                     <p class="cart_total_price">{{ number_format($item->subtotal)}} VNĐ</p>
                                 </td>t
                                 <td class="cart_delete">
-                                    <a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
+                                    <a class="cart_quantity_delete" href="{{ url("cart/removeItem/$item->rowId") }}"><i class="fa fa-times"></i></a>
                                 </td>
                             </tr>
                         @endforeach
