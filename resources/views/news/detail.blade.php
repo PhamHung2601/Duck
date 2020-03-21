@@ -9,6 +9,6 @@
     <p class="post-meta">  <span class="published">Mar 18, 2020</span></p>
     <div class="post-content">
         <p>{{$new->description}}</p>
-        <a href="/new/detail/{{$new->id}}" class="more-link">Xem thêm</a>
+        <a href="/news/view/{{$new->id}}" class="more-link">Xem thêm</a>
     </div>
 </article>
