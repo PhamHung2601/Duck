@@ -155,6 +155,5 @@
             </div>
             @include('home-page.partials.navigation')
         </div>
-
     </div>
 </div>
