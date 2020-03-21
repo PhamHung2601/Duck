@@ -1,8 +1,8 @@
 @import url("book_list.css");
-@import url("landing-navigation.css");
+/*@import url("landing-navigation.css");*/
 /*@import url("overview-course.css");*/
 /*@import url("side-course.css");*/
-/*@import url("news-list.css");*/
+@import url("news-list.css");
 
 body{
     font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
