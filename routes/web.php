@@ -25,18 +25,14 @@ Route::get('/courses/list/test-and-express', function () {
     return view('landing-page/list/sidecourse');
 });
 
-Route::get('/home', function () {
-    return view('home-page/home');
-});
-
 Route::get('/sach', function () {
     return view('landing-page/book/book-landing');
 });
 
-//Route::get('/home', [
-//    'uses' => 'HomeController@index',
-//    'as' => 'homepage.index'
-//]);
+Route::get('/home', [
+    'uses' => 'HomeController@index',
+    'as' => 'homepage.index'
+]);
 
 Route::get('/books', function () {
     return view('book/list');
