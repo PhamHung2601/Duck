@@ -1,8 +1,8 @@
 @import url("book_list.css");
-@import url("landing-navigation.css");
+/*@import url("landing-navigation.css");*/
 /*@import url("overview-course.css");*/
 /*@import url("side-course.css");*/
-/*@import url("news-list.css");*/
+@import url("news-list.css");
 
 body{
     font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
@@ -682,4 +682,16 @@ footer.footer {
 }
 #deal-detail > ul > li{
     margin-top: 10%;
+}
+.count-number{
+    background-color: white;
+    height: 75px;
+    border-radius: 5%;
+    border: 1px solid black;
+}
+.count-numbers{
+    font-size: 30px;
+}
+.count-title{
+    font-size: 10px;
 }
