@@ -30,7 +30,7 @@
 
 @include('landing-page.courses.partials.navigation')
 @yield('content')
-@include('landing-page.courses.partials.footer')
+@include('home-page.partials.footer')
 @include('home-page.partials.scripts')
 
 </body>
