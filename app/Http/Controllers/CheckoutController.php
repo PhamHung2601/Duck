@@ -46,9 +46,9 @@ class CheckoutController extends Controller
             'fullName' => 'required',
             'email' => 'required|email',
             'address' => 'required',
-            'phoneNumber' => 'required|digits_between:10,12'
+            'phoneNumber' => 'required|digits_between:10,12',
+            'payment_method' => 'required'
         ]);
-
         try {
             $order = new Order();
             $order->customer_name = $validatedData['fullName'];
@@ -56,7 +56,7 @@ class CheckoutController extends Controller
             $order->address = $validatedData['address'];
             $order->phone = $validatedData['phoneNumber'];
             $order->total = Cart::total();
-            $order->message = isset($validatedData['phoneNumber']) ? $validatedData['phoneNumber'] : '';
+            $order->message = $request->message ? : '';
             $order->payment_method = isset($validatedData['payment_method']) ? $validatedData['payment_method'] : '';
             $order->save();
 
@@ -73,7 +73,7 @@ class CheckoutController extends Controller
                 }
             }
             Cart::destroy();
-
+            return redirect('success')->with('order_id', $order->id);
         } catch (Exception $e) {
             echo $e->getMessage();
         }

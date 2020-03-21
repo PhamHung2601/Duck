@@ -50,6 +50,17 @@
                                               rows="7"></textarea>
                                 </div>
                             </div>
+                            <div class="payment-method col-sm-12 clearfix">
+                                <p>Phương thức thanh toán</p>
+                                <div class="input-field">
+                                    <input id="cod" name="payment_method" value="cashondelivery" type="radio">
+                                    <label for="cod">Thanh toán khi nhận hàng</label>
+                                </div>
+                                <div class="input-field">
+                                    <input id="banktransfer" name="payment_method" value="banktransfer" type="radio">
+                                    <label for="banktransfer">Chuyển khoản</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-sm-12">
