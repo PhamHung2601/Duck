@@ -131,6 +131,7 @@ class ComposerStaticInitc879d37fd6e0613d89e8afde04bed811
             'GuzzleHttp\\Psr7\\' => 16,
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
+            'Gloudemans\\Shoppingcart\\' => 24,
         ),
         'F' => 
         array (
@@ -408,6 +409,10 @@ class ComposerStaticInitc879d37fd6e0613d89e8afde04bed811
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
         ),
+        'Gloudemans\\Shoppingcart\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/bumbummen99/shoppingcart/src',
+        ),
         'Fideloper\\Proxy\\' => 
         array (
             0 => __DIR__ . '/..' . '/fideloper/proxy/src',
@@ -512,7 +517,11 @@ class ComposerStaticInitc879d37fd6e0613d89e8afde04bed811
     );
 
     public static $classMap = array (
+        'App\\Banner' => __DIR__ . '/../..' . '/app/Banner.php',
+        'App\\Block' => __DIR__ . '/../..' . '/app/Block.php',
+        'App\\Category' => __DIR__ . '/../..' . '/app/Category.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\CustomerAddress' => __DIR__ . '/../..' . '/app/CustomerAddress.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
@@ -528,6 +537,10 @@ class ComposerStaticInitc879d37fd6e0613d89e8afde04bed811
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\News' => __DIR__ . '/../..' . '/app/News.php',
+        'App\\Order' => __DIR__ . '/../..' . '/app/Order.php',
+        'App\\OrderItem' => __DIR__ . '/../..' . '/app/OrderItem.php',
+        'App\\Product' => __DIR__ . '/../..' . '/app/Product.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
@@ -1723,6 +1736,17 @@ class ComposerStaticInitc879d37fd6e0613d89e8afde04bed811
         'Faker\\ValidGenerator' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/ValidGenerator.php',
         'Fideloper\\Proxy\\TrustProxies' => __DIR__ . '/..' . '/fideloper/proxy/src/TrustProxies.php',
         'Fideloper\\Proxy\\TrustedProxyServiceProvider' => __DIR__ . '/..' . '/fideloper/proxy/src/TrustedProxyServiceProvider.php',
+        'Gloudemans\\Shoppingcart\\CanBeBought' => __DIR__ . '/..' . '/bumbummen99/shoppingcart/src/CanBeBought.php',
+        'Gloudemans\\Shoppingcart\\Cart' => __DIR__ . '/..' . '/bumbummen99/shoppingcart/src/Cart.php',
+        'Gloudemans\\Shoppingcart\\CartItem' => __DIR__ . '/..' . '/bumbummen99/shoppingcart/src/CartItem.php',
+        'Gloudemans\\Shoppingcart\\CartItemOptions' => __DIR__ . '/..' . '/bumbummen99/shoppingcart/src/CartItemOptions.php',
+        'Gloudemans\\Shoppingcart\\Contracts\\Buyable' => __DIR__ . '/..' . '/bumbummen99/shoppingcart/src/Contracts/Buyable.php',
+        'Gloudemans\\Shoppingcart\\Contracts\\InstanceIdentifier' => __DIR__ . '/..' . '/bumbummen99/shoppingcart/src/Contracts/InstanceIdentifier.php',
+        'Gloudemans\\Shoppingcart\\Exceptions\\CartAlreadyStoredException' => __DIR__ . '/..' . '/bumbummen99/shoppingcart/src/Exceptions/CartAlreadyStoredException.php',
+        'Gloudemans\\Shoppingcart\\Exceptions\\InvalidRowIDException' => __DIR__ . '/..' . '/bumbummen99/shoppingcart/src/Exceptions/InvalidRowIDException.php',
+        'Gloudemans\\Shoppingcart\\Exceptions\\UnknownModelException' => __DIR__ . '/..' . '/bumbummen99/shoppingcart/src/Exceptions/UnknownModelException.php',
+        'Gloudemans\\Shoppingcart\\Facades\\Cart' => __DIR__ . '/..' . '/bumbummen99/shoppingcart/src/Facades/Cart.php',
+        'Gloudemans\\Shoppingcart\\ShoppingcartServiceProvider' => __DIR__ . '/..' . '/bumbummen99/shoppingcart/src/ShoppingcartServiceProvider.php',
         'GuzzleHttp\\Client' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Client.php',
         'GuzzleHttp\\ClientInterface' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/ClientInterface.php',
         'GuzzleHttp\\Cookie\\CookieJar' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Cookie/CookieJar.php',

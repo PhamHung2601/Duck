@@ -20,6 +20,9 @@
 
     <!-- Custom styles for this template -->
     <link href="{{ asset('vendor/landing-page/css/landing-page.min.css') }}" rel="stylesheet">
+      <link rel="stylesheet" href="<?php echo asset('css/overview-course.css')?>" type="text/css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="{{ asset('js/jquery.countdown.js') }}"></script>
 
   </head>
 
@@ -27,19 +30,13 @@
 
 	@include('landing-page.partials.navigation')
 
-	@include('landing-page.partials.masthead')
+	@include('landing-page.partials.banner')
 
-	@include('landing-page.partials.icons-grid')
+	@include('landing-page.partials.course_list')
 
-	@include('landing-page.partials.image-showcases')
-
-	@include('landing-page.partials.testimonials')
-
-	@include('landing-page.partials.call-to-action')
+	@include('landing-page.partials.deal_section')
 
 	@include('landing-page.partials.footer')
-
-	@include('landing-page.partials.scripts')
   </body>
 
 </html>
