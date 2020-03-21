@@ -21,6 +21,7 @@
     <!-- Custom styles for this template -->
     <link href="{{ asset('vendor/landing-page/css/landing-page.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet" type="text/css" >
+    <link href="{{ asset('css/master-navigation.css') }}" rel="stylesheet" type="text/css" >
     <link href="{{ asset('css/book_list.css') }}" rel="stylesheet" type="text/css" >
     <script src="{{asset('js/book.js')}}"></script>
 </head>
