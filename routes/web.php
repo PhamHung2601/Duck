@@ -34,8 +34,11 @@ Route::get('/home', [
     'as' => 'homepage.index'
 ]);
 
-Route::get('/books', function () {
+Route::get('/books/reference', function () {
     return view('book/list');
+});
+Route::get('/books/sach-xu-li-nhanh', function () {
+    return view('landing-page/book/book-landing');
 });
 Route::get('/books/detail/{id?}', 'BookController@index');
 Route::resource('/cart', 'CartController');
