@@ -1,0 +1,33 @@
+.navbar .static-top{
+    background-color: white;
+    color: black !important;
+}
+a{
+    color: black !important;
+}
+a:hover{
+    text-decoration:none !important;
+}
+.container{
+    height: 80px;
+}
+.logo_container{
+    width: 20%;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 80%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+#et-top-navigation{
+    width: 55%;
+    height: 80%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+#navbarText > ul{
+    width: 100%;
+}
+#navbarText > ul > li{
+    width: 25%;
+}
