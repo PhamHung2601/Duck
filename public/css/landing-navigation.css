@@ -3,13 +3,10 @@
     color: black !important;
 }
 a{
-    color: black !important;
+    color: black;
 }
 a:hover{
     text-decoration:none !important;
-}
-.container{
-    height: 80px;
 }
 .logo_container{
     width: 20%;
