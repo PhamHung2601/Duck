@@ -18,6 +18,9 @@ Route::group(['prefix' => 'admin'], function () {
 Route::get('/courses', function () {
     return view('landing-page/courses/course_overview');
 });
+Route::get('/home', function () {
+    return view('home-page/home');
+});
 Route::get('/courses/list/overview', function () {
     return view('landing-page/list/overview');
 });
@@ -25,10 +28,10 @@ Route::get('/courses/list/test-and-express', function () {
     return view('landing-page/list/sidecourse');
 });
 
-Route::get('/home', [
-    'uses' => 'HomeController@index',
-    'as' => 'homepage.index'
-]);
+//Route::get('/home', [
+//    'uses' => 'HomeController@index',
+//    'as' => 'homepage.index'
+//]);
 
 Route::get('/books', function () {
     return view('book/list');
@@ -46,6 +49,6 @@ Route::get('cart/updateCartItem/{rowId?}', 'CartController@updateCartItem')->nam
 Route::post('cart/updateCart', 'CartController@updateCart')->name('cart.updateCart');
 Route::post('cart/deleteCart', 'CartController@deleteCart')->name('cart.deleteCart');
 
-Route::resource('/news', 'NewsController');
-Route::get('news/detail/{id?}', 'CartController@detail')->name('news.detail');
+//Route::resource('/news', 'NewsController');
+//Route::get('news/detail/{id?}', 'CartController@detail')->name('news.detail');
 

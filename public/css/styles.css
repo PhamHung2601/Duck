@@ -532,3 +532,9 @@ footer.footer {
     padding: 5%;
     display: flex;
 }
+#deal-detail > ul{
+    margin-top: 10%;
+}
+#deal-detail > ul > li{
+    margin-top: 10%;
+}
