@@ -22,6 +22,7 @@
     <link href="{{ asset('vendor/landing-page/css/landing-page.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet" type="text/css" >
     <link href="{{ asset('css/master-navigation.css') }}" rel="stylesheet" type="text/css" >
+    <link href="{{ asset('css/responsive.css') }}" rel="stylesheet" type="text/css" >
 
 </head>
 

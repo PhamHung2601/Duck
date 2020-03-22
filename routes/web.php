@@ -25,10 +25,6 @@ Route::get('/courses/list/test-and-express', function () {
     return view('landing-page/list/sidecourse');
 });
 
-Route::get('/sach', function () {
-    return view('landing-page/book/book-landing');
-});
-
 Route::get('/home', [
     'uses' => 'HomeController@index',
     'as' => 'homepage.index'
