@@ -1,5 +1,5 @@
 <nav class="navbar navbar-light static-top">
-    <div class="container">
+    <div class="container-landing">
         <div class="logo_container">
             <a href="{{ url('/home') }}">
                 <img src="https://cdnstepup.r.worldssl.net/Images/common/logo-master-1.png" data-lazy-src="https://cdnstepup.r.worldssl.net/Images/common/logo-master-1.png" alt="Step Up English" id="logo" data-height-percentage="55" /><noscript><img src="https://cdnstepup.r.worldssl.net/Images/common/logo-master-1.png" alt="Step Up English" id="logo" data-height-percentage="55" /></noscript>

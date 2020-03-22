@@ -25,10 +25,6 @@ Route::get('/courses/list/test-and-express', function () {
     return view('landing-page/list/sidecourse');
 });
 
-Route::get('/sach', function () {
-    return view('landing-page/book/book-landing');
-});
-
 Route::get('/home', [
     'uses' => 'HomeController@index',
     'as' => 'homepage.index'
@@ -37,12 +33,10 @@ Route::get('/home', [
 Route::get('/books/reference', function () {
     return view('book/list');
 });
-Route::get('/books/detail/{id?}', function () {
-    return view('book/detail');
-});
 Route::get('/books/sach-xu-li-nhanh', function () {
     return view('landing-page/book/book-landing');
 });
+Route::get('/books/detail/{id?}', 'BookController@index');
 Route::resource('/cart', 'CartController');
 
 Route::resource('/checkout', 'CheckoutController');

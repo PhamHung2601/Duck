@@ -11,21 +11,48 @@ a:hover{
 }
 .logo_container{
     width: 20%;
-    margin-left: 5%;
-    margin-right: 5%;
-    height: 80%;
-    margin-top: 2%;
-    margin-bottom: 5%;
+    float: left;
 }
 #et-top-navigation{
     width: 55%;
-    height: 80%;
-    margin-top: 2%;
-    margin-bottom: 5%;
+    float: right;
+    margin-top: 20px;
+}
+#et-top-navigation a{
+    color: rgba(0,0,0,.6);
 }
 #navbarText > ul{
     width: 100%;
 }
 #navbarText > ul > li{
     width: 25%;
+    font-size: 17px;
+    text-align: right;
+}
+
+#et-top-navigation .dropdown-menu{
+    z-index: 9999;
+    width: 240px;
+    border-top: 3px solid #7cc68d;
+    background: #fff;
+    -webkit-box-shadow: 0 2px 5px rgba(0,0,0,.1);
+    -moz-box-shadow: 0 2px 5px rgba(0,0,0,.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,.1);
+    padding: 20px 0;
+    border-radius: 0;
+}
+
+#et-top-navigation .dropdown-menu li{
+    margin: 0;
+}
+
+
+#et-top-navigation .dropdown-menu li a{
+    padding: 6px 20px;
+    display: block;
+}
+
+#et-top-navigation .dropdown-menu li a:hover{
+    opacity: .7;
+    background-color: rgba(0,0,0,.03);
 }
