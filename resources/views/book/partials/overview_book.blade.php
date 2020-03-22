@@ -18,11 +18,13 @@
             <p class="hidden-sm hidden-xs ">Số Trang:<strong> </strong></p>
             <p class="hidden-sm hidden-xs ">Kích thước:<strong> 19x37cm</strong></p>
             <p class="hidden-sm hidden-xs ">Số lần tra cứu:<strong> Không giới hạn </strong></p>
-            <p>Giá: <strong style="color:red"> {{$product->price}}đ</strong>
-                @if($product->special_price && $product->special_price < $product->price)
-                    <span style="text-decoration:line-through;padding-left:10px"> {{$product->special_price}}đ</span>
-                @endif
-            </p>
+            @if($product->special_price && $product->special_price < $product->price)
+                <p>Giá: <strong style="color:red"> {{$product->special_price}}đ</strong>
+                    <span style="text-decoration:line-through;padding-left:10px"> {{$product->price}}đ</span>
+                </p>
+            @else
+                <p>Giá: <strong style="color:red"> {{$product->price}}đ</strong>
+            @endif
 
             <form role="form" id="add-to-cart" method="POST" action="{{ route('cart.add') }}">
                 {{ csrf_field() }}
