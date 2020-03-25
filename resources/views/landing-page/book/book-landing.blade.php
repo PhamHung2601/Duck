@@ -21,7 +21,7 @@
                         <li><span>♦</span> Học sinh cấp 3 đang muốn tăng 1-3 điểm thi THPTQG</li>
                     </ul>
                     <div class="box-action">
-                    <a href="#" class="action-order"><span>MÌNH MUỐN ĐẶT MUA</span></a>
+                    <a href="{{ url('/books/detail/3') }}" class="action-order"><span>MÌNH MUỐN ĐẶT MUA</span></a>
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@
                                 THPTQG, đạt từ 550 TOEIC trở lên và bắt đầu bắt tay vào học những chứng chỉ cao cấp hơn
                                 như IELTS/TOEFL. </p>
                             <div class="box-action">
-                                <a href="#" class="action-order"><span>MÌNH MUỐN ĐẶT MUA</span></a>
+                                <a href="{{ url('/books/detail/3') }}" class="action-order"><span>MÌNH MUỐN ĐẶT MUA</span></a>
                             </div>
                         </div>
                     </div>

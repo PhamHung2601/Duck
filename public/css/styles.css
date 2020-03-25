@@ -546,10 +546,25 @@ footer.footer {
 .landing-page-section > .section-content > ul > li{
     margin-top: 3%;
 }
-.landing-page-section > .section-add-to-cart-button{
-    margin-left: 40%;
+.landing-page-section .section-add-to-cart-button > a{
+    color: #066166!important;
+    border-width: 0px!important;
+    border-color: #e02b20;
+    border-radius: 100px;
+    font-size: 20px;
+    font-weight: 900!important;
+    background-color: #ffd623 !important;
+    padding: .4em 1em;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    box-shadow: 0px 12px 18px -6px rgba(0,0,0,0.3);
+    display: inline-block;
+    transition: all 300ms ease 0ms;
 }
-.landing-page-section .display-flex-content{
+.landing-page-section .display-block-content > a{
+    margin-left: 40%;
+}.landing-page-section .display-flex-content{
     display: flex;
 }
 .landing-page-section .display-flex-content > ul > li{
