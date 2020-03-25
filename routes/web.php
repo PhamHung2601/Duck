@@ -20,11 +20,11 @@ Route::group(['prefix' => 'admin'], function () {
 Route::get('/courses', function () {
     return view('landing-page/courses/course_overview');
 });
-Route::get('/courses/list/overview', function () {
-    return view('landing-page/list/overview');
+Route::get('/courses/list/online', function () {
+    return view('landing-page/list/online');
 });
-Route::get('/courses/list/test-and-express', function () {
-    return view('landing-page/list/sidecourse');
+Route::get('/courses/list/offline', function () {
+    return view('landing-page/list/offline');
 });
 
 Route::get('/home', [
