@@ -7,8 +7,8 @@
             <li><p><i class="fa fa-location-arrow"> Học sinh cấp 3 đang muốn tăng 1-3 điểm thi THPTQG</i></p></li>
         </ul>
     </div>
-    <div class="section-add-to-cart-button">
-        <button type="button" class="btn btn-success"><a href="#">Tao muon mua luon</a></button>
+    <div class="section-add-to-cart-button display-block-content">
+        <a href="#">Tao muon mua luon</a>
     </div>
 </section>
 <section class="bg-warning landing-page-section">
