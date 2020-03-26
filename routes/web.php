@@ -58,5 +58,6 @@ Route::get('test/view/{id?}', 'TestController@view')->name('test.view');
 
 
 Route::get('/send/email', 'MailController@mail');
+Route::post('/search', 'SearchController@search')->name('search.search');
 
 
