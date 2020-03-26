@@ -138,6 +138,15 @@ a:hover{
     margin: 20px 0;
 }
 
+.bx-wrapper{
+    border: 0;
+    margin-bottom: 0;
+}
+
+.banner-manager .bx-wrapper .bx-pager{
+    bottom: 20px;
+}
+
 
 /*---HEADER---*/
 
@@ -726,4 +735,8 @@ footer.footer {
 .checkout-success-icon{
     font-size: 70px;
     color: #1fa67a;
+}
+
+.banner-manager.all-image ul li{
+    text-align: center;
 }

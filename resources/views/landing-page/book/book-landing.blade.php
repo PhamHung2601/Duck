@@ -1,14 +1,10 @@
 @extends('layouts.landing')
-@section('content')
+@section('content-top')
     <div class="landing-banner">
-        <div class="main-banner">
-            <div class="main-banner-wrapper">
-                <a href="#">
-                    <img src="https://cdnstepup.r.worldssl.net/wp-content/uploads/2020/03/banner395_5desktop.jpg"/>
-                </a>
-            </div>
-        </div>
+        @include('banner-manager.banner')
     </div>
+@endsection
+@section('content')
     <div class="landing-content">
         <div class="section-1 section-box box-bg-light">
             <div class="container-landing">

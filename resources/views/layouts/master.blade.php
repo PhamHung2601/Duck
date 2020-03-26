@@ -20,22 +20,26 @@
 
     <!-- Custom styles for this template -->
     <link href="{{ asset('vendor/landing-page/css/landing-page.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/jquery.bxslider.css') }}" rel="stylesheet" type="text/css" >
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet" type="text/css" >
     <link href="{{ asset('css/master-navigation.css') }}" rel="stylesheet" type="text/css" >
     <link href="{{ asset('css/responsive.css') }}" rel="stylesheet" type="text/css" >
+
+    <script src="{{ asset('vendor/landing-page/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.bxslider.js') }}"></script>
 
 </head>
 
 <body>
 
 @include('home-page.partials.header')
-
+@yield('content-top')
 <div class="main-content">
     <div class="container">
         @yield('content')
     </div>
 </div>
-
+@yield('content-bottom')
 @include('home-page.partials.footer')
 
 @include('home-page.partials.scripts')

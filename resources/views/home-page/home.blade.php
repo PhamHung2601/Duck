@@ -1,4 +1,7 @@
 @extends('layouts.master')
+@section('content-top')
+  @include('banner-manager.banner')
+@endsection
 @section('content')
   <div class="row">
     <div class="col-sm-12 col-md-8 col-lg-8 column-main">
