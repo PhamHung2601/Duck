@@ -20,14 +20,15 @@
 
     <!-- Custom styles for this template -->
     <link href="{{ asset('vendor/landing-page/css/landing-page.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/jquery.bxslider.css') }}" rel="stylesheet" type="text/css" >
+    <link href="{{ asset('css/slick.css') }}" rel="stylesheet" type="text/css" >
+    <link href="{{ asset('css/slick-theme.css') }}" rel="stylesheet" type="text/css" >
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet" type="text/css" >
     <link href="{{ asset('css/footer.css') }}" rel="stylesheet" type="text/css" >
     <link href="{{ asset('css/master-navigation.css') }}" rel="stylesheet" type="text/css" >
     <link href="{{ asset('css/responsive.css') }}" rel="stylesheet" type="text/css" >
 
     <script src="{{ asset('vendor/landing-page/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.bxslider.js') }}"></script>
+    <script src="{{ asset('js/slick.min.js') }}"></script>
 
 </head>
 

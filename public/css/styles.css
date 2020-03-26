@@ -173,6 +173,20 @@ a:hover{
 }
 
 
+.banner-manager .slick-next{
+    right: 22px;
+}
+
+.banner-manager .slick-prev{
+    left: 22px;
+    z-index: 2;
+}
+
+.banner-manager .slick-prev:before,
+.banner-manager .slick-next:before{
+    font-size: 25px;
+}
+
 /*---HEADER---*/
 
 .header-content .search .input-group{
