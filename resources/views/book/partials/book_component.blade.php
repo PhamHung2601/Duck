@@ -1,37 +1,59 @@
-
 <div style="padding-bottom:10px">
     <table style="width:100%;border:solid 1px #dddddd; background-color:#ffffff">
         <tbody>
         <tr valign="top">
             <td style="width:100px"><a class="thumbnail" href="#" data-image-id="1" data-toggle="modal"
-                                       data-title="50 Đề Minh họa Luyện thi THPT Quốc gia 2020 môn Toán học"
-                                       data-image="https://moon.vn/BaiGiangVideo/Image/1847-1.png"
+                                       data-title="{{$product->name}}"
+                                       data-image="{{Voyager::image($product->media)}}"
                                        data-target="#image-gallery">
-                    <img class="" data-src="https://moon.vn/BaiGiangVideo/Image/1847-1.png"
+                    <img class="" data-src="{{Voyager::image($product->media)}}"
                          style="width:100%; border:solid 1px #f2f2f2"
-                         src="https://moon.vn/BaiGiangVideo/Image/1847-1.png">
+                         src="{{Voyager::image($product->media)}}">
                 </a></td>
             <td>
                 <p>
-                    <a href="/sach-id/50-de-toan-hoc-2020-1847" style="text-decoration-line:none;"> <strong> 50
-                            Đề Minh họa Luyện thi THPT Quốc gia 2020 môn Toán học</strong>
+                    <a href="{{ url('books/detail', [$product->id]) }}" style="text-decoration-line:none;">
+                        <strong>{{$product->name}}</strong>
 
-                    </a></p>
+                    </a>
+                </p>
                 <p style="font-size:13px">
                     Môn: <strong style="padding-right:20px"> Toán học</strong>
                     Số trang:<strong> </strong>
                 </p>
 
                 <p>
-                    Kho hàng: <i style="color:green">Còn sách</i>
+                    Kho hàng:
+                    @if($product->stock > 0)
+                        <i style="color:green">Còn sách</i>
+                    @else
+                        <i style="color:red">Hết sách</i>
+                    @endif
                 </p>
-                <p>
-                    <strong style="color:red"> 95.000đ</strong> <span
-                            style="text-decoration:line-through;padding-left:10px; margin-right:20px"> 150.000đ</span>
-                    <a  href="{{ route('cart.add',2) }}" class="btn btn-danger"
-                       style="height:25px; font-size:12px;padding:5px; color:white">Đặt mua</a>
-
-                </p>
+                @if($product->special_price && $product->special_price < $product->price)
+                    <p>Giá: <strong style="color:red"> {{$product->special_price}}đ</strong>
+                        <span style="text-decoration:line-through;padding-left:10px"> {{$product->price}}đ</span>
+                    </p>
+                @else
+                    <p>Giá: <strong style="color:red"> {{$product->price}}đ</strong>
+                @endif
+                <form role="form" method="POST" action="{{ route('cart.add') }}">
+                    {{ csrf_field() }}
+                    <input type="text" name="product_id" value="{{$product->id}}" hidden>
+                    <!-- Only for js checking baby milk product -->
+                    <div class="item-product-options">
+                        <!-- BEGIN ADD TO CART -->
+                        <div id="add-cart-action">
+                            <div class="add-cart-action" style="display: block">
+                                <div class="cta-box">
+                                    <button type="sumit" class="btn btn-danger">
+                                        <span class="glyphicon glyphicon-shopping-cart"></span> Mua sách
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </td>
         </tr>
         </tbody>

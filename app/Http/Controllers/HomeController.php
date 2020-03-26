@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Student;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
+use App\Http\Requests;
 use App\News;
 use App\Product;
 
@@ -58,5 +60,21 @@ class HomeController extends Controller
             ->get();
 
         return $student;
+    }
+
+    public function addContactEmail(Request $request)
+    {
+        $validatedData = $request->validate([
+            'email' => 'required|email'
+        ]);
+
+        try {
+            DB::table('contacts')->updateOrInsert(
+                ['email' => $validatedData['email']]
+            );
+            return response()->json(['success'=> 'Bạn đã đăng ký email thành công']);
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
     }
 }
