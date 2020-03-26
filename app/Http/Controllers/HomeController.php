@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Student;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
+use App\Http\Requests;
 use App\News;
 use App\Product;
 
@@ -58,5 +60,22 @@ class HomeController extends Controller
             ->get();
 
         return $student;
+    }
+
+    public function addContactEmail(Request $request)
+    {
+        print_r(123);die();
+        $validatedData = $request->validate([
+            'email' => 'required|email'
+        ]);
+        print_r($validatedData);die();
+
+        try {
+            DB::table('contacts')->updateOrInsert(
+                ['email' => $validatedData['email']]
+            );
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
     }
 }
