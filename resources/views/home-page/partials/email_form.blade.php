@@ -12,6 +12,7 @@
                            class="form-control" aria-label="email@example.com">
                     <button class="submit-email" name="subscribe" id="submit-email">Đăng ký</button>
                 </div>
+                <p class="alert"></p>
             </form>
 
         </div>
@@ -19,48 +20,29 @@
 </div>
 
 <script type="text/javascript">
-    {{--function addContactEmail(e) {--}}
-        {{--e.preventDefault();--}}
-        {{--$.ajaxSetup({--}}
-            {{--headers: {--}}
-                {{--'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')--}}
-            {{--}--}}
-        {{--});--}}
-        {{--var formData = new FormData();--}}
-        {{--formData.append('email', $("#Email").val());--}}
-        {{--$.ajax({--}}
-            {{--type:'POST',--}}
-            {{--url:'{{ url('/account/contact') }}',--}}
-            {{--data: formData,--}}
-            {{--dataType: 'json',--}}
-            {{--success:function(data) {--}}
-                {{--alert(123);--}}
-                {{--// $("#msg").html(data.msg);--}}
-            {{--}--}}
-        {{--});--}}
-    {{--}--}}
-
-    jQuery(document).ready(function(){
-        debugger;
-
-        jQuery('#submit-email').click(function(e){
-            e.preventDefault();
-            debugger;
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
-                }
+            setTimeout(() => {
+        jQuery(document).ready(function(){
+            jQuery('#submit-email').click(function(e){
+                e.preventDefault();
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+                    }
+                });
+                jQuery.ajax({
+                    url: "{{ url('/account/contact') }}",
+                    method: 'post',
+                    data: {
+                        "_token": "{{ csrf_token() }}",
+                        email: jQuery('#Email').val()
+                    },
+                    success: function(result){
+                        jQuery('.alert').html(result.success);
+                        setTimeout(() => {
+                            jQuery('.alert').remove();
+                        },3000)
+                    }});
             });
-            jQuery.ajax({
-                url: "{{ url('/account/contact') }}",
-                method: 'post',
-                data: {
-                    email: jQuery('#Email').val()
-                },
-                success: function(result){
-                    jQuery('.alert').show();
-                    jQuery('.alert').html(result.success);
-                }});
         });
-    });
+    },500);
 </script>

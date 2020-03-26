@@ -64,16 +64,15 @@ class HomeController extends Controller
 
     public function addContactEmail(Request $request)
     {
-        print_r(123);die();
         $validatedData = $request->validate([
             'email' => 'required|email'
         ]);
-        print_r($validatedData);die();
 
         try {
             DB::table('contacts')->updateOrInsert(
                 ['email' => $validatedData['email']]
             );
+            return response()->json(['success'=> 'Bạn đã đăng ký email thành công']);
         } catch (Exception $e) {
             echo $e->getMessage();
         }
