@@ -248,6 +248,27 @@ a:hover{
     left: 30px;
 }
 
+#header-search{
+    width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+#header-search button{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border: 0;
+}
+
+#header-search .input-search{
+    border: 0;
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+}
+
 .main-content{
     padding: 20px 0;
 }

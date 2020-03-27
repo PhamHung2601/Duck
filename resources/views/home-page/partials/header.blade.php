@@ -22,13 +22,14 @@
                     <div class="input-group">
                         <form role="form" id="header-search" method="POST" action="{{ route('search.search') }}">
                             {{ csrf_field() }}
-                            <input name="search_text" type="text" class="form-control" placeholder="Tìm ID" aria-label="Search">
-                            <button type="submit">
-                                <span class="input-group-addon" style="cursor:pointer; "> <span class="fa fa-search"
-                                                                                                style="font-size:15px;font-weight:100"></span> </span>
+                            <input name="search_text" type="text" class="form-control input-search" placeholder="Tìm ID" aria-label="Search">
+                            <button class="btn btn-light" type="submit">
+                                <span style="cursor:pointer; "> <span class="fa fa-search" style="font-size:15px;font-weight:100"></span> </span>
                             </button>
                         </form>
                     </div>
+
+
                 </div>
             </nav>
         </div>
