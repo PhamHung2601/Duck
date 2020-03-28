@@ -26,6 +26,7 @@
     <link href="{{ asset('css/footer.css') }}" rel="stylesheet" type="text/css" >
     <link href="{{ asset('css/master-navigation.css') }}" rel="stylesheet" type="text/css" >
     <link href="{{ asset('css/responsive.css') }}" rel="stylesheet" type="text/css" >
+    <link href="{{ asset('css/blog.css') }}" rel="stylesheet" type="text/css" >
 
     <script src="{{ asset('vendor/landing-page/js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/slick.min.js') }}"></script>

@@ -26,7 +26,7 @@
 /*@import url("landing-navigation.css");*/
 /*@import url("overview-course.css");*/
 /*@import url("side-course.css");*/
-@import url("news-list.css");
+@import url("blog.css");
 @import url("footer.css");
 
 body{
@@ -870,19 +870,6 @@ footer.footer {
     margin-left: 15%;
     margin-top: 5%;
 }
-.who-I-am-section{
-    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
-}
-.who-I-am-section ul{
-    text-align: left;
-    font-size: 30px;
-    margin-left: 5%;
-    margin-top: 10%;
-}
-.who-I-am-section ul i{
-    color: white;
-    padding-right: 2%;
-}
 .hiring-section{
     background-color: #91d5fb;
 }
@@ -906,7 +893,25 @@ footer.footer {
     transition: all 300ms ease 0ms;
     margin-left: 45%;
 }
-
+.about-me-title{
+    position: absolute;
+    margin-top: -20%;
+    padding-left: 15%;
+}
+.me-content .display-flex-content div{
+    margin-left: 10%;
+    font-size: 20px;
+    margin-bottom: 7%;
+}
+.me-content .display-flex-content div i{
+    margin-bottom: 5%;
+    color: #ef911b8c;
+}
+.news-about-me .news{
+    margin-top: 10%;
+    height: 300px;
+}
+/*----*/
 .breadcrumb{
     background: transparent;
     border-bottom: 1px solid #f2f2f2;

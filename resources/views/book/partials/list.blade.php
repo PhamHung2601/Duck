@@ -1,22 +1,32 @@
+<?php
+$specialPrice = $product->special_price;
+$nomalPrice = $product->price;
+$discount = $specialPrice && $specialPrice < $nomalPrice ? ($nomalPrice - $specialPrice) * 100 : null;
+?>
 <div class="product-item">
     <div class="product-item-inner">
         <div class="product-img">
-            <a href="#" class="text-center">
+            <a href="/books/detail/{{$product->id}}" class="text-center">
                 <img
-                     src="//product.hstatic.net/1000245066/product/artboard_8_e91f7f31eb3e4933aa4c7eda4006a49f_compact.jpg"
-                     alt="Tips and Tricks - Mẹo nhỏ có võ dành cho Marketer">
+                        src="{{ Voyager::image( $product->media ) }}"
+                        alt="{{ $product->name }}"
+                >
             </a>
         </div>
         <div class="product-info">
             <div class="product-title">
-                <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</a>
+                <a href="/books/detail/{{$product->id}}">{{$product->name}}</a>
             </div>
             <div class="price-box clearfix">
                 <span class="price-wrapper">
-                       <span class="special-price">
-                    <span class="price">109,000₫</span>
-                </span>
-                <span class="old-price"><span class="price">129,000₫</span></span>
+                   @if($discount)
+                        <span class="special-price">
+                            <span class="price">{{$product->special_price}}₫</span>
+                        </span>
+                        <span class="old-price"><span class="price">{{$product->price}}₫</span></span>
+                    @else
+                        <span class="price"><span class="price">{{$product->price}}₫</span></span>
+                    @endif
                 </span>
             </div>
         </div>

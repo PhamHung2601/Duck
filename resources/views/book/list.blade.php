@@ -29,8 +29,8 @@
             </div>
         </div>
         <div class="products">
-            @foreach([1,2,3,4,5,6] as $item)
-                @include('book.partials.list')
+            @foreach($products as $product)
+                @include('book.partials.list',['product' => $product])
             @endforeach
         </div>
         <div class="pager">
