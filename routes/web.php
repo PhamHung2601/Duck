@@ -32,18 +32,17 @@ Route::get('/about/us', function () {
 Route::get('/about/me', function () {
     return view('landing-page/introduction/about_me');
 });
-Route::get('/home', [
+Route::get('/', [
     'uses' => 'HomeController@index',
     'as' => 'homepage.index'
 ]);
 
-Route::get('/books/reference', function () {
-    return view('book/list');
-});
 Route::get('/books/sach-xu-li-nhanh', function () {
     return view('landing-page/book/book-landing');
 });
 Route::get('/books/detail/{id?}', 'BookController@index');
+Route::get('/books/list', 'BookController@list');
+
 Route::resource('/cart', 'CartController');
 
 Route::resource('/checkout', 'CheckoutController');
