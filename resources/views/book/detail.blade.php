@@ -51,9 +51,9 @@
         </div>
     </div>
 </div>
+@include('book.partials.fb')
 @include('static-block.content-bottom')
 @include('home-page.partials.footer')
-
 @include('home-page.partials.scripts')
 </body>
 
