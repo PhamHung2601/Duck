@@ -33,6 +33,6 @@
         </div>
     </div>
     <button class="hiring-more">
-        <a href="{{url("home")}}/about/hiring">Xem Them</a>
+        <a href="{{url("about/hiring")}}">Xem Them</a>
     </button>
 </section>
