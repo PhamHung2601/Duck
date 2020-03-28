@@ -26,6 +26,7 @@ class ComposerStaticInitc879d37fd6e0613d89e8afde04bed811
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         '0d8253363903f0ac7b0978dcde4e28a0' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/helpers.php',
+        '2678778370ecbdd62f0e4fc70eb072ea' => __DIR__ . '/../..' . '/app/Helper/Helper.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -520,6 +521,8 @@ class ComposerStaticInitc879d37fd6e0613d89e8afde04bed811
         'App\\Banner' => __DIR__ . '/../..' . '/app/Banner.php',
         'App\\Block' => __DIR__ . '/../..' . '/app/Block.php',
         'App\\Category' => __DIR__ . '/../..' . '/app/Category.php',
+        'App\\CmsBlock' => __DIR__ . '/../..' . '/app/CmsBlock.php',
+        'App\\CmsPage' => __DIR__ . '/../..' . '/app/CmsPage.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\CustomerAddress' => __DIR__ . '/../..' . '/app/CustomerAddress.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCategoriesProductsTable extends Migration
+class UpdateCategoriesProductsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,6 +13,7 @@ class CreateCategoriesProductsTable extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('categories_products');
         Schema::create('categories_products', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('category_id')->references('id')->on('categories')->onDelete('cascade');
