@@ -29,8 +29,11 @@ Route::get('/courses/list/offline', function () {
 Route::get('/about/us', function () {
     return view('landing-page/introduction/about');
 });
-Route::get('/about/me', function () {
-    return view('landing-page/introduction/about_me');
+Route::get('/about/students', function () {
+    return view('landing-page/introduction/students');
+});
+Route::get('/about/hiring', function () {
+    return view('landing-page/introduction/hiring');
 });
 Route::get('/', [
     'uses' => 'HomeController@index',
