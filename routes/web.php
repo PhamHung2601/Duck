@@ -56,6 +56,9 @@ Route::get('news/view/{id?}', 'NewsController@view')->name('news.view');
 Route::resource('/test', 'TestController');
 Route::get('test/view/{id?}', 'TestController@view')->name('test.view');
 
+Route::post('/account/contact', 'HomeController@addContactEmail')->name('home.addContactEmail');
+
+
 
 Route::get('/send/email', 'MailController@mail');
 Route::post('/search', 'SearchController@search')->name('search.search');

@@ -1,8 +1,33 @@
+:root {
+    --venia-anim-bounce: cubic-bezier(0.5, 1.8, 0.9, 0.8);
+    --venia-anim-in: cubic-bezier(0, 0, 0.2, 1);
+    --venia-anim-out: cubic-bezier(0.4, 0, 1, 1);
+    --venia-anim-standard: cubic-bezier(0.4, 0, 0.2, 1);
+    --venia-border: 224, 224, 224;
+    --venia-error: 192, 18, 63;
+    --venia-error-alt: 255, 226, 234;
+    --venia-font: Muli, -apple-system, BlinkMacSystemFont, sans-serif;
+    --venia-grey: 246, 246, 246;
+    --venia-grey-dark: 209, 209, 209;
+    --venia-orange: 241, 99, 33;
+    --venia-teal: 0, 115, 120;
+    --venia-teal-alt: 224, 240, 241;
+    --venia-teal-dark: 0, 104, 108;
+    --venia-teal-light: 212, 243, 238;
+    --venia-text: 33, 33, 33;
+    --venia-text-alt: 112, 112, 112;
+    --venia-text-hint: 158, 158, 158;
+    --venia-text-spot: 255, 99, 51;
+    --venia-warning-dark: 249, 93, 94;
+    --venia-warning-light: 254, 229, 232;
+}
+
 @import url("book_list.css");
 /*@import url("landing-navigation.css");*/
 /*@import url("overview-course.css");*/
 /*@import url("side-course.css");*/
 @import url("news-list.css");
+@import url("footer.css");
 
 body{
     font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
@@ -138,6 +163,29 @@ a:hover{
     margin: 20px 0;
 }
 
+.bx-wrapper{
+    border: 0;
+    margin-bottom: 0;
+}
+
+.banner-manager .bx-wrapper .bx-pager{
+    bottom: 20px;
+}
+
+
+.banner-manager .slick-next{
+    right: 22px;
+}
+
+.banner-manager .slick-prev{
+    left: 22px;
+    z-index: 2;
+}
+
+.banner-manager .slick-prev:before,
+.banner-manager .slick-next:before{
+    font-size: 25px;
+}
 
 /*---HEADER---*/
 
@@ -198,6 +246,27 @@ a:hover{
     position: absolute;
     top: -12px;
     left: 30px;
+}
+
+#header-search{
+    width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+#header-search button{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border: 0;
+}
+
+#header-search .input-search{
+    border: 0;
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
 }
 
 .main-content{
@@ -277,19 +346,15 @@ a:hover{
 
 
 .list-books .books{
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -10px;
-    margin-right: -10px;
+
 }
 
 .list-books .books .book-item{
     padding: 0 10px;
-    width: 50%;
+}
+
+.list-books .books .book-item-inner{
+
     margin-bottom: 25px;
     display: -webkit-box;
     display: -moz-box;
@@ -726,4 +791,8 @@ footer.footer {
 .checkout-success-icon{
     font-size: 70px;
     color: #1fa67a;
+}
+
+.banner-manager.all-image ul li{
+    text-align: center;
 }
