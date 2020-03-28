@@ -325,6 +325,21 @@ a:hover{
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.list-courses .courses .course-item > a img{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.list-courses .panel-body{
+    padding: 15px 40px;
 }
 
 .list-courses .courses .course-item > a:hover{
@@ -332,18 +347,34 @@ a:hover{
 }
 
 .list-courses .courses .course-item .course-info{
-    padding-left: 20px;
+    padding: 10px 15px;
 }
 
 .list-courses .courses .course-item .course-info strong{
     display: block;
-    margin-bottom: 15px;
 }
 
-.list-courses .courses .course-item .course-info .teacher{
+.list-courses .courses .course-item .course-info .description{
     color: #666666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    text-align: justify;
+    line-height: 1.6;
+    padding: 0;
 }
 
+
+.list-books .panel-body{
+    padding: 15px 30px;
+}
+
+.list-books .slick-prev:before,.list-books .slick-next:before,
+.list-courses .slick-prev:before,.list-courses .slick-next:before{
+    color: #333;
+}
 
 .list-books .books{
 
@@ -365,6 +396,7 @@ a:hover{
 
 .list-books .books .book-item .book-info{
     padding-left: 20px;
+    width: 65%;
 }
 
 .list-books .books .book-item .book-info .name{
