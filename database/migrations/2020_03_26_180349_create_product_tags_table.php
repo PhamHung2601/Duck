@@ -13,10 +13,10 @@ class CreateProductTagsTable extends Migration
      */
     public function up()
     {
-        Schema::create('product_tags', function (Blueprint $table) {
+        Schema::create('news_tags', function (Blueprint $table) {
             $table->increments('id');
-            $table->increments('product_id');
-            $table->increments('tag_id');
+            $table->integer('new_id')->references('id')->on('news')->onDelete('cascade');
+            $table->integer('tag_id')->references('id')->on('tags')->onDelete('cascade');
             $table->timestamps();
         });
     }
