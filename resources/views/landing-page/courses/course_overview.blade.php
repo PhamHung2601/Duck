@@ -4,5 +4,5 @@
 @endsection
 @section('content')
   @include('landing-page.courses.partials.course_list')
-  @include('landing-page.courses.partials.deal_section')
+{{--  @include('landing-page.courses.partials.deal_section')--}}
 @endsection

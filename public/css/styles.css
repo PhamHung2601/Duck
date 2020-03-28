@@ -792,7 +792,83 @@ footer.footer {
     font-size: 70px;
     color: #1fa67a;
 }
-
 .banner-manager.all-image ul li{
     text-align: center;
+}
+/*--- introduction ----*/
+.about-us-banner-item{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+}
+.about-us-banner-title{
+    color: white;
+    font-size: 30px;
+    margin-left: 10%;
+    padding-top: 20%;
+}
+/*.who-are-we-section{*/
+/*    background-color:#4f805d33;*/
+/*}*/
+.who-are-we-section .content{
+    padding-top: 5%;
+    border: 1px transparent;
+}
+.who-are-we-section .who-are-we-icon{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid #ff8d00;
+}
+.who-are-we-section .who-are-we-icon i{
+   padding-top: 20%;
+    color: #ff8d00;
+}
+.who-are-we-section .who-are-we-content{
+  padding-left: 5%;
+}
+.who-are-we-section .who-are-we-content p{
+  font-size: 25px;
+}
+.who-are-we-section .section-content hr {
+    background-color: #ff8d00;
+    width: 80%;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+.who-I-am-section{
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+}
+.who-I-am-section ul{
+    text-align: left;
+    font-size: 30px;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+.who-I-am-section ul i{
+    color: white;
+    padding-right: 2%;
+}
+.hiring-section{
+    background-color: #91d5fb;
+}
+.hiring-section .card{  
+    box-shadow: 5px 6px #888888;
+}
+.hiring-more{
+    color: #066166!important;
+    border-width: 0px!important;
+    border-color: #e02b20;
+    border-radius: 100px;
+    font-size: 20px;
+    font-weight: 900!important;
+    background-color: #ffd623 !important;
+    padding: .4em 1em;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    box-shadow: 0px 12px 18px -6px rgba(0,0,0,0.3);
+    display: inline-block;
+    transition: all 300ms ease 0ms;
+    margin-left: 45%;
 }
