@@ -42,8 +42,8 @@ class BookController extends Controller
      */
     public function list()
     {
-        $product = Product::select('*')->find($id);
-        return view('book/detail',['product'=>$product]);
+        $products = Product::orderBy('id', 'desc')->get();
+        return view('book/list',['products'=>$products]);
     }
 
 }
