@@ -50,7 +50,7 @@
         </div>
     </div>
 </div>
-
+@include('book.partials.fb')
 @include('home-page.partials.footer')
 
 @include('home-page.partials.scripts')
