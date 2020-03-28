@@ -29,21 +29,23 @@ Route::get('/courses/list/offline', function () {
 Route::get('/about/us', function () {
     return view('landing-page/introduction/about');
 });
-Route::get('/about/me', function () {
-    return view('landing-page/introduction/about_me');
+Route::get('/about/students', function () {
+    return view('landing-page/introduction/students');
 });
-Route::get('/home', [
+Route::get('/about/hiring', function () {
+    return view('landing-page/introduction/hiring');
+});
+Route::get('/', [
     'uses' => 'HomeController@index',
     'as' => 'homepage.index'
 ]);
 
-Route::get('/books/reference', function () {
-    return view('book/list');
-});
 Route::get('/books/sach-xu-li-nhanh', function () {
     return view('landing-page/book/book-landing');
 });
 Route::get('/books/detail/{id?}', 'BookController@index');
+Route::get('/books/list', 'BookController@list');
+
 Route::resource('/cart', 'CartController');
 
 Route::resource('/checkout', 'CheckoutController');
