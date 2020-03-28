@@ -57,11 +57,42 @@ class Helper
     }
 
     /**
+     * @param $page
+     * @param $position
+     * @return string
+     */
+    public static function getStaticBlockPageByPosition($page, $position)
+    {
+        $staticBlock = CmsBlock::where('page', $page)->where('position', $position)->where('is_active', true)->first();
+        if (!empty($staticBlock) && !empty($staticBlock->id)) {
+            return $staticBlock->content;
+        }
+        return '';
+    }
+
+    /**
      * @param $slug
      * @return mixed
      */
     public static function getCmsPageBySlug($slug)
     {
         return CmsPage::where('slug', $slug)->where('is_active', true)->first();
+    }
+
+    /**
+     * @param $uri
+     * @return string
+     */
+    public static function getBaseRouteCurrent($uri)
+    {
+        if (strpos($uri, '/news/view') !== false) {
+            return '/news/view';
+        } elseif (strpos($uri, '/test/view') !== false) {
+            return '/test/view';
+        } elseif (strpos($uri, '/books/detail') !== false) {
+            return '/books/detail';
+        } else {
+            return $uri;
+        }
     }
 }

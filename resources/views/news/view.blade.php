@@ -1,4 +1,7 @@
 @extends('layouts.master')
+@section('content-top')
+    @include('static-block.content-top')
+@endsection
 @section('content')
 <div id="news-{{$news->id}}" class="et_pb_post clearfix news-{{$news->id}} ">
     <div class="et_pb_image_container">
@@ -15,4 +18,7 @@
     <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true"></div>
     <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="" data-numposts="5"></div>
 </div>
+@endsection
+@section('content-bottom')
+    @include('static-block.content-bottom')
 @endsection

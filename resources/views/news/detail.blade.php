@@ -1,3 +1,4 @@
+@include('static-block.content-top')
 <article id="news-{{$new->id}}" class="news-post clearfix news-{{$new->id}} ">
     <div class="et_pb_image_container">
         <a href="https://stepup.edu.vn/blog/cau-truc-spend/" class="entry-featured-image-url">
@@ -12,3 +13,4 @@
         <a href="/news/view/{{$new->id}}" class="more-link">Xem thêm</a>
     </div>
 </article>
+@include('static-block.content-bottom')

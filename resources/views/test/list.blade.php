@@ -1,4 +1,7 @@
 @extends('layouts.master')
+@section('content-top')
+    @include('static-block.content-top')
+@endsection
 @section('content')
     @foreach ($testList as $year => $tests)
         <section>
@@ -16,3 +19,7 @@
         </section>
     @endforeach
 @endsection
+@section('content-bottom')
+    @include('static-block.content-bottom')
+@endsection
+
