@@ -29,6 +29,7 @@
 <body>
 
 @include('home-page.partials.header')
+@include('static-block.content-top')
 <div class="main-content">
     <div class="container">
         <div>
@@ -50,9 +51,9 @@
         </div>
     </div>
 </div>
-
+@include('book.partials.fb')
+@include('static-block.content-bottom')
 @include('home-page.partials.footer')
-
 @include('home-page.partials.scripts')
 </body>
 

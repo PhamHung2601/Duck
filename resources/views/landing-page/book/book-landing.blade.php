@@ -3,6 +3,7 @@
     <div class="landing-banner">
         @include('banner-manager.banner')
     </div>
+    @include('static-block.content-top')
 @endsection
 @section('content')
     <div class="landing-content">
@@ -198,4 +199,7 @@
         @include('landing-page.courses.partials.deal_section')
         </div>
     </div>
+@endsection
+@section('content-bottom')
+    @include('static-block.content-bottom')
 @endsection

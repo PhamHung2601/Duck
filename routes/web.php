@@ -26,7 +26,12 @@ Route::get('/courses/list/online', function () {
 Route::get('/courses/list/offline', function () {
     return view('landing-page/list/offline');
 });
-
+Route::get('/about/us', function () {
+    return view('landing-page/introduction/about');
+});
+Route::get('/about/me', function () {
+    return view('landing-page/introduction/about_me');
+});
 Route::get('/home', [
     'uses' => 'HomeController@index',
     'as' => 'homepage.index'

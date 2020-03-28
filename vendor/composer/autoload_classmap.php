@@ -9,6 +9,8 @@ return array(
     'App\\Banner' => $baseDir . '/app/Banner.php',
     'App\\Block' => $baseDir . '/app/Block.php',
     'App\\Category' => $baseDir . '/app/Category.php',
+    'App\\CmsBlock' => $baseDir . '/app/CmsBlock.php',
+    'App\\CmsPage' => $baseDir . '/app/CmsPage.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\CustomerAddress' => $baseDir . '/app/CustomerAddress.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',

@@ -1,6 +1,7 @@
 @extends('layouts.master')
 @section('content-top')
   @include('banner-manager.banner')
+  @include('static-block.content-top')
 @endsection
 @section('content')
   <div class="row">
@@ -15,4 +16,7 @@
       {{--@include('home-page.partials.chart-major',['course' => $course])--}}
     </div>
   </div>
+@endsection
+@section('content-bottom')
+    @include('static-block.content-bottom')
 @endsection

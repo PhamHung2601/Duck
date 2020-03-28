@@ -1,8 +1,12 @@
 @extends('layouts.landing')
 @section('content-top')
     @include('banner-manager.banner')
+    @include('static-block.content-top')
 @endsection
 @section('content')
   @include('landing-page.courses.partials.course_list')
-  @include('landing-page.courses.partials.deal_section')
+{{--  @include('landing-page.courses.partials.deal_section')--}}
+@endsection
+@section('content-bottom')
+    @include('static-block.content-bottom')
 @endsection

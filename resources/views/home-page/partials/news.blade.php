@@ -9,11 +9,10 @@
                     <div class="course-item">
                         <a href="#">
                             <img src="{{ Voyager::image( $new->media ) }}"
-                                 style="width:70px; height:70px;border-radius:5px">
+                                 style="border-radius:5px">
                             <div class="course-info">
                                 <strong> {{ $new->title }}</strong>
-                                <span class="teacher"><i class="fa fa-user"
-                                                         aria-hidden="true"></i>  {{ $new->description }} </span>
+                                <span class="description">{{ $new->description }} </span>
                             </div>
                         </a>
                     </div>
@@ -22,3 +21,29 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+
+        $('.courses').slick({
+            dots: true,
+            slidesToShow: 2,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 640,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }
+            ]
+        });
+
+    });
+</script>

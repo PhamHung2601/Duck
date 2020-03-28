@@ -5,5 +5,26 @@
     }
     .main-content{
         min-height: 500px;
+        padding-bottom: 50px;
+    }
+}
+
+@media (max-width: 768px){
+    .product-list .products .product-item{
+        width: 33.3333%;
+    }
+}
+
+@media (max-width: 640px){
+    .product-list .products .product-item{
+        width: 50%;
+    }
+}
+
+@media (max-width: 480px){
+    .product-list .products .product-item{
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-bottom: 10px;
     }
 }
