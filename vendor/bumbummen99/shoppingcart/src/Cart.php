@@ -52,6 +52,7 @@ class Cart
      */
     private $taxRate = 0;
 
+
     /**
      * Cart constructor.
      *
@@ -303,9 +304,21 @@ class Cart
      */
     public function totalFloat()
     {
+        $total =  $this->getContent()->reduce(function ($total, CartItem $cartItem) {
+            return $total + $cartItem->total;
+        }, 0);
+        $total = $total - $this->session->get('discount');
+        return $total;
+    }
+
+    public function totalFloatBeforeDiscount(){
         return $this->getContent()->reduce(function ($total, CartItem $cartItem) {
             return $total + $cartItem->total;
         }, 0);
+    }
+
+    public function totalBeforeDiscount($decimals = null, $decimalPoint = null, $thousandSeperator = null){
+        return $this->numberFormat($this->totalFloatBeforeDiscount(), $decimals, $decimalPoint, $thousandSeperator);
     }
 
     /**
@@ -398,6 +411,24 @@ class Cart
     public function discount($decimals = null, $decimalPoint = null, $thousandSeperator = null)
     {
         return $this->numberFormat($this->discountFloat(), $decimals, $decimalPoint, $thousandSeperator);
+    }
+
+    public function subtotalDiscount($decimals = null, $decimalPoint = null, $thousandSeperator = null){
+        return $this->numberFormat($this->session->get('discount'),$decimals, $decimalPoint, $thousandSeperator);
+    }
+
+    public function couponCode(){
+        return $this->session->get('coupon_code');
+    }
+
+    public function setSubtotalDiscount($value,$couponCode){
+        $this->session->put('discount',$value);
+        $this->session->put('coupon_code',$couponCode);
+    }
+
+    public function removeCoupon(){
+        $this->session->put('discount',0);
+        $this->session->put('coupon_code','');
     }
 
     /**
@@ -732,6 +763,8 @@ class Cart
                 return $this->tax();
             case 'subtotal':
                 return $this->subtotal();
+            case 'totalBefore':
+                return $this->totalBeforeDiscount();
             default:
                 return;
         }

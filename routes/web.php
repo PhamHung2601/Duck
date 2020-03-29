@@ -69,5 +69,6 @@ Route::post('/account/contact', 'HomeController@addContactEmail')->name('home.ad
 
 Route::get('/send/email', 'MailController@mail');
 Route::post('/search', 'SearchController@search')->name('search.search');
+Route::post('cart/discount', 'CartController@discount')->name('cart.discount');
 
 
