@@ -29,6 +29,23 @@ $discount = $specialPrice && $specialPrice < $nomalPrice ? ($nomalPrice - $speci
                     @endif
                 </span>
             </div>
+            <form role="form" method="POST" action="{{ route('cart.add') }}">
+                {{ csrf_field() }}
+                <input type="text" name="product_id" value="{{$product->id}}" hidden>
+                <!-- Only for js checking baby milk product -->
+                <div class="item-product-options">
+                    <!-- BEGIN ADD TO CART -->
+                    <div id="add-cart-action">
+                        <div class="add-cart-action" style="display: block">
+                            <div class="cta-box">
+                                <button type="sumit" class="btn btn-danger">
+                                    <span class="glyphicon glyphicon-shopping-cart"></span> Mua sách
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>
