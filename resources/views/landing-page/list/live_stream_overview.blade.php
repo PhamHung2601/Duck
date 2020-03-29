@@ -4,11 +4,10 @@
     @include('static-block.content-top')
 @endsection
 @section('content')
-    @include('landing-page.list.partials.offline.course_list')
-    @include('landing-page.list.partials.offline.about_me')
-    @include('landing-page.list.partials.offline.faq')
+    @include('landing-page.list.partials.online.live_stream_overview')
 @endsection
 @section('content-bottom')
     @include('static-block.content-bottom')
 @endsection
+
 

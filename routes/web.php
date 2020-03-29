@@ -26,6 +26,9 @@ Route::get('/courses', function () {
 Route::get('/courses/list/online', function () {
     return view('landing-page/list/online');
 });
+Route::get('/courses/list/online/live-stream-overview', function () {
+    return view('landing-page/list/live_stream_overview');
+});
 Route::get('/courses/list/offline', function () {
     return view('landing-page/list/offline');
 });

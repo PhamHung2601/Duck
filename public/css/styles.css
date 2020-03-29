@@ -674,6 +674,7 @@ footer.footer {
 }
 .landing-page-section .display-flex-content.display-flex-box > .box{
     margin-left: 5%;
+    border-radius: 15%;
 }
 .landing-page-section .form-register-course input{
     width: 80%;
@@ -692,6 +693,17 @@ footer.footer {
 }
 .landing-page-section .row-content > .row{
     margin-bottom: 5%;
+}
+.landing-page-section .show-more-button{
+    height: 50px;
+    border-radius: 100px;
+    background-color: #2ecc71;
+    margin-left: 39%;
+}
+.landing-page-section .show-more-button a{
+    font-size: 27px;
+    color: white;
+    font-weight: 700;
 }
 .footer-landing.display-flex-content{
     padding: 5%;
@@ -919,7 +931,7 @@ footer.footer {
     color: white;
     font-weight: 800;
 }
-.me-content .display-flex-content div p{
+.me-content .me p{
     color: white;
     font-size: 25px;
     font-weight: 700
@@ -929,14 +941,15 @@ footer.footer {
     margin-left: -75%;
     margin-top: 20%;
 }
-.me-content .display-flex-content div{
+.me-content .me{
     margin-left: 10%;
     font-size: 22px;
     margin-bottom: 7%;
     text-align: center;
 }
-.me-content .display-flex-content div i{
-    margin-bottom: 5%;
+.me-content .me i{
+    margin-left: -55%;
+    position: absolute;
     color: white;
 }
 .news-about-me{
@@ -1137,14 +1150,4 @@ footer.footer {
 
 .related-products .panel-heading{
     background: #91d5fb;
-}
-
-#add-cart-action .btn{
-    width: 200px;
-    margin-top: 20px;
-}
-
-.product-list #add-cart-action .btn{
-    width: 100%;
-    margin-top: 15px;
 }

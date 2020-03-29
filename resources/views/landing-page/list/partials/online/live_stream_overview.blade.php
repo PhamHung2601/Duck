@@ -7,7 +7,7 @@
             <li><p><i class="fa fa-arrow-right"> Mục tiêu từ 8 - 10 điểm</i></p></li>
             <h3>Học phí: 1.000.000đ</h3>
             <button>
-                <a href="{{url("courses/list/online/live-stream-overview")}}">Xem Them</a>
+                <a href="">Xem Them</a>
             </button>
             <button type="button" class="btn btn-success register-course-button"><a href="#">Dang Ky Ngay</a></button>
         </ul>
