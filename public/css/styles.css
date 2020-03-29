@@ -1049,3 +1049,39 @@ footer.footer {
 .pagination .page-item .current{
     line-height: 23px;
 }
+
+/*----product page----*/
+.product-main-info .sku{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.product-main-info .product-attr{
+    color: #333333;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.product-main-info .special-price{
+    font-size: 23px;
+}
+
+.product-media{
+    text-align: center;
+}
+
+.product-top{
+    padding-top: 50px;
+}
+
+.product-bottom{
+    padding-top: 50px;
+}
+
+.related-products{
+    margin-top: 30px;
+}
+
+.related-products .panel-heading{
+    background: #91d5fb;
+}
