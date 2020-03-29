@@ -17,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+Route::get('/home', function () {
+    return view('home-page/home');
+});
 Route::get('/courses', function () {
     return view('landing-page/courses/course_overview');
 });
@@ -35,6 +38,7 @@ Route::get('/about/students', function () {
 Route::get('/about/hiring', function () {
     return view('landing-page/introduction/hiring');
 });
+
 Route::get('/', [
     'uses' => 'HomeController@index',
     'as' => 'homepage.index'
