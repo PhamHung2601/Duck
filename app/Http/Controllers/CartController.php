@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Product;
+use Carbon\Carbon;
 use Cart;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 /**
  * Class CartController
@@ -30,8 +32,13 @@ class CartController extends Controller
         foreach (Cart::content() as $key => $value) {
             $productsInCart[$value->id] = $value;
         }
-
-        return view('layouts.cart', ['products' => $productsInCart]);
+        $cart = [
+            'totalBefore' => Cart::totalBeforeDiscount(),
+            'total' => Cart::total(),
+            'discount' => Cart::subtotalDiscount(),
+            'couponCode' => Cart::couponCode()
+        ];
+        return view('layouts.cart', ['products' => $productsInCart, 'cart' => $cart]);
     }
 
     /**
@@ -110,5 +117,39 @@ class CartController extends Controller
     {
         Cart::remove($id);
         return redirect()->back();
+    }
+
+    public function discount(Request $request)
+    {
+        $validatedData = $request->validate([
+            'coupon_code' => 'required'
+        ]);
+        $couponCode = $validatedData['coupon_code'];
+        $rules = DB::table('sales_rule')
+            ->where('coupon_code', '=', $couponCode)
+            ->whereDate('from_date', '<=', Carbon::today()->toDateString())
+            ->whereDate('to_date', '>=', Carbon::today()->toDateString())
+            ->where('is_active', 1)
+            ->limit(1)
+            ->get();
+        if (count($rules) > 0) {
+            $rule = $rules[0];
+            $discount = 0;
+            $total = Cart::total();
+            if ($rule->discount_type == 1) {
+                $discount = $total * $rule->amount / 100;
+                $discount = floor($discount);
+            } elseif ($rule->discount_type == 2) {
+                $discount = $rule->amount;
+            }
+            Cart::setSubtotalDiscount($discount,$rule->coupon_code,$rule->title);
+        }
+        return redirect()->route('cart.index');
+    }
+
+    public function removeCoupon($coupon)
+    {
+        Cart::removeCoupon();
+        return redirect()->route('cart.index');
     }
 }
