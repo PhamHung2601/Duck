@@ -26,19 +26,26 @@ Route::get('/courses/list/online', function () {
 Route::get('/courses/list/offline', function () {
     return view('landing-page/list/offline');
 });
-
-Route::get('/home', [
+Route::get('/about/us', function () {
+    return view('landing-page/introduction/about');
+});
+Route::get('/about/students', function () {
+    return view('landing-page/introduction/students');
+});
+Route::get('/about/hiring', function () {
+    return view('landing-page/introduction/hiring');
+});
+Route::get('/', [
     'uses' => 'HomeController@index',
     'as' => 'homepage.index'
 ]);
 
-Route::get('/books/reference', function () {
-    return view('book/list');
-});
 Route::get('/books/sach-xu-li-nhanh', function () {
     return view('landing-page/book/book-landing');
 });
 Route::get('/books/detail/{id?}', 'BookController@index');
+Route::get('/books/list', 'BookController@list');
+
 Route::resource('/cart', 'CartController');
 
 Route::resource('/checkout', 'CheckoutController');
@@ -55,6 +62,9 @@ Route::get('news/view/{id?}', 'NewsController@view')->name('news.view');
 
 Route::resource('/test', 'TestController');
 Route::get('test/view/{id?}', 'TestController@view')->name('test.view');
+
+Route::post('/account/contact', 'HomeController@addContactEmail')->name('home.addContactEmail');
+
 
 
 Route::get('/send/email', 'MailController@mail');

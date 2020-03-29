@@ -1,0 +1,1 @@
+{!! $staticBlockTop !!}

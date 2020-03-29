@@ -1,4 +1,7 @@
 @extends('layouts.master')
+@section('content-top')
+    @include('static-block.content-top')
+@endsection
 @section('content')
     <section>
         <div id="main-content" class="content-introduce">
@@ -26,5 +29,7 @@
             </div>
         </div>
     </section>
-    </div>
+@endsection
+@section('content-bottom')
+    @include('static-block.content-bottom')
 @endsection

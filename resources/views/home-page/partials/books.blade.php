@@ -7,25 +7,26 @@
             <div class="books">
                 @foreach($products as $product)
                     <div class="book-item">
-                        <img class="" style="width:100px; border:solid 1px #f2f2f2"
-                             src="{{ Voyager::image( $product->media ) }}">
-                        <div class="book-info">
-                            <a href="http://dac.localhost.com/books/detail/2" class="name"><span> {{ $product->name }}</span></a>
-                            @foreach($product->category as $cate)
-                                <div class="type">
-                                    <span>Môn: <strong> {{ $cate->name }}</strong></span>
-                                    <span class="count-page">Số trang: <strong>300</strong></span>
+                        <div class="book-item-inner">
+                            <img class="" style="width:100px; border:solid 1px #f2f2f2"
+                                 src="{{ Voyager::image( $product->media ) }}">
+                            <div class="book-info">
+                                <a href="{{url("books/detail/".$product->id)}}" class="name"><span> {{ $product->name }}</span></a>
+                                @foreach($product->category as $cate)
+                                    <div class="type">
+                                        <span>Môn: <strong> {{ $cate->name }}</strong></span>
+                                        <span class="count-page">Số trang: <strong>300</strong></span>
+                                    </div>
+                                @endforeach
+                                <div class="stock">
+                                    <span>Kho hàng:</span>
+                                    @if((int)$product->stock > 0)
+                                        <span class="status instock">Còn Sách</span>
+                                    @else
+                                        <span class="status outstock">Hết Sách</span>
+                                    @endif
                                 </div>
-                            @endforeach
-                            <div class="stock">
-                                <span>Kho hàng:</span>
-                                @if((int)$product->stock > 0)
-                                    <span class="status instock">Còn Sách</span>
-                                @else
-                                    <span class="status outstock">Hết Sách</span>
-                                @endif
-                            </div>
-                            <div class="price-box">
+                                <div class="price-box">
                             <span class="price-wrapper">
                                 <span class="special-price">
                                     <span class="price">{{ $product->special_price }} d</span>
@@ -34,7 +35,8 @@
                                     <span class="price">{{ $product->price }} d</span>
                                 </span>
                             </span>
-                                <a href="#" class="btn btn-danger addtocart">Đặt mua</a>
+                                    <a href="#" class="btn btn-danger addtocart">Đặt mua</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -43,3 +45,34 @@
         </div>
     </div>
 </div>
+
+
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+
+        $('.books').slick({
+            dots: true,
+            slidesPerRow: 2,
+            rows: 2,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesPerRow: 2,
+                        rows: 1,
+                    }
+                },
+                {
+                    breakpoint: 640,
+                    settings: {
+                        slidesPerRow: 1,
+                        rows: 1,
+                    }
+                }
+            ]
+        });
+
+    });
+</script>

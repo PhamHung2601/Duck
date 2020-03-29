@@ -1,54 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Landing Page - Start Bootstrap Theme</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="{{ asset('vendor/landing-page/css/bootstrap.min.css') }}" rel="stylesheet">
-
-    <!-- Custom fonts for this template -->
-    <link href="{{ asset('vendor/landing-page/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('vendor/landing-page/css/simple-line-icons.css') }}" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
-    <!-- Custom styles for this template -->
-    <link href="{{ asset('vendor/landing-page/css/landing-page.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/styles.css') }}" rel="stylesheet" type="text/css" >
-    <link href="{{ asset('css/master-navigation.css') }}" rel="stylesheet" type="text/css" >
-    <link href="{{ asset('css/book_list.css') }}" rel="stylesheet" type="text/css" >
-    <script src="{{asset('js/book.js')}}"></script>
-</head>
-
-<body>
-
-@include('home-page.partials.header')
-<div class="main-content">
-    <div class="container">
-        <div>
-            @include('book.partials.top_nav')
+@extends('layouts.master')
+@section('content-top')
+    @include('static-block.content-top')
+@endsection
+@section('content')
+    <div class="breadcrumbs">
+        <ol class="breadcrumb">
+            <li><a href="{{ url('/home') }}">Home</a></li>
+            <li class="active">/ books list</li>
+        </ol>
+    </div>
+    <div class="product-list">
+        <div class="page-title">
+            <h2>BOOKS LIST</h2>
         </div>
-        <div class="divbSachID" id="divbSachId" style="background-color: #f8f8f8">
-            <div class="row">
-                @foreach([1,2,3,4,5,6] as $item)
-                <div class="col-md-6 col-log-6">
-                    @include('book.partials.book_component')
-                </div>
-                @endforeach
+        <div class="toolbar clearfix">
+            <div class="sort-by form-group">
+                <label for="SortBy">Sắp xếp</label>
+                <select class="form-control" name="SortBy" id="SortBy">
+                    <option value="manual">Tùy chọn</option>
+                    <option value="best-selling">Sản phẩm bán chạy</option>
+                    <option value="title-ascending">Theo bảng chữ cái từ A-Z</option>
+                    <option value="title-descending">Theo bảng chữ cái từ Z-A</option>
+                    <option value="price-ascending">Giá từ thấp tới cao</option>
+                    <option value="price-descending">Giá từ cao tới thấp</option>
+                    <option value="created-descending">Mới nhất</option>
+                    <option value="created-ascending">Cũ nhất</option>
+                </select>
             </div>
         </div>
+        <div class="products">
+            @foreach($products as $product)
+                @include('book.partials.list',['product' => $product])
+            @endforeach
+        </div>
+        <div class="pager">
+            <nav aria-label="Page navigation ">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li>
+                    <li class="page-item"><span class="page-link current">1</span> </li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
-</div>
+@endsection
+@section('content-bottom')
+    @include('static-block.content-bottom')
+@endsection
 
-@include('home-page.partials.footer')
-
-@include('home-page.partials.scripts')
-</body>
-
-</html>

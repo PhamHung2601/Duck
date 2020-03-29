@@ -37,4 +37,13 @@ class BookController extends Controller
         return Redirect('home');
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function list()
+    {
+        $products = Product::orderBy('id', 'desc')->get();
+        return view('book/list',['products'=>$products]);
+    }
+
 }
