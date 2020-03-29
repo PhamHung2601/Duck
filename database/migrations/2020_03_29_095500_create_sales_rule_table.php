@@ -19,10 +19,10 @@ class CreateSalesRuleTable extends Migration
             $table->text('description');
             $table->timestamp('from_date')->nullable();
             $table->timestamp('to_date')->nullable();
-            $table->integer('is_active');
-            $table->string('coupon_code', 255);
-            $table->float('subtotal');
-            $table->integer('qty');
+            $table->integer('is_active')->default(1);
+            $table->string('coupon_code', 255)->nullable();
+            $table->float('subtotal')->default(0);
+            $table->integer('qty')->default(0);
             $table->integer('discount_type');
             $table->float(('amount'));
             $table->timestamp('created_at')->nullable();

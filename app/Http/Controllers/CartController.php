@@ -124,18 +124,21 @@ class CartController extends Controller
         $validatedData = $request->validate([
             'coupon_code' => 'required'
         ]);
+        $total = Cart::total();
+        $cartQty = Cart::totalQty();
         $couponCode = $validatedData['coupon_code'];
         $rules = DB::table('sales_rule')
             ->where('coupon_code', '=', $couponCode)
             ->whereDate('from_date', '<=', Carbon::today()->toDateString())
             ->whereDate('to_date', '>=', Carbon::today()->toDateString())
-            ->where('is_active', 1)
+            ->where('is_active','=', 1)
+            ->where('subtotal','<=',$total)
+            ->where('qty','<=',$cartQty)
             ->limit(1)
             ->get();
         if (count($rules) > 0) {
             $rule = $rules[0];
             $discount = 0;
-            $total = Cart::total();
             if ($rule->discount_type == 1) {
                 $discount = $total * $rule->amount / 100;
                 $discount = floor($discount);

@@ -431,6 +431,12 @@ class Cart
         $this->session->put('coupon_code','');
     }
 
+    public function totalQty (){
+        return $this->getContent()->reduce(function ($initial, CartItem $cartItem) {
+            return $initial + $cartItem->qty;
+        }, 0);
+    }
+
     /**
      * Get the price of the items in the cart (not rounded).
      *
