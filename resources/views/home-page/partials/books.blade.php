@@ -11,7 +11,7 @@
                             <img class="" style="width:100px; border:solid 1px #f2f2f2"
                                  src="{{ Voyager::image( $product->media ) }}">
                             <div class="book-info">
-                                <a href="http://dac.localhost.com/books/detail/2" class="name"><span> {{ $product->name }}</span></a>
+                                <a href="{{url("books/detail/".$product->id)}}" class="name"><span> {{ $product->name }}</span></a>
                                 @foreach($product->category as $cate)
                                     <div class="type">
                                         <span>Môn: <strong> {{ $cate->name }}</strong></span>
