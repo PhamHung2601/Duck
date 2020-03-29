@@ -11,11 +11,8 @@
                 </div>
             @else
                 @if(count($products) > 0)
-                    <div class="title"><span>Sách</span></div>
                     @foreach($products as $product)
-                        <div class="col-md-6 col-log-6">
-                            @include('book.partials.book_component')
-                        </div>
+                        @include('book.partials.book_component')
                     @endforeach
                 @endif
                 @if(count($news) > 0)
@@ -26,6 +23,17 @@
                             </div>
                     @endforeach
                 @endif
+                    <div class="pager">
+                        <nav aria-label="Page navigation ">
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li>
+                                <li class="page-item"><span class="page-link current">1</span> </li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </nav>
+                    </div>
             @endif
         </div>
     </div>

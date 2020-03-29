@@ -1122,3 +1122,13 @@ footer.footer {
 .related-products .panel-heading{
     background: #91d5fb;
 }
+
+#add-cart-action .btn{
+    width: 200px;
+    margin-top: 20px;
+}
+
+.product-list #add-cart-action .btn{
+    width: 100%;
+    margin-top: 15px;
+}
