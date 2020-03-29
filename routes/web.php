@@ -17,11 +17,17 @@ use Illuminate\Support\Facades\Route;
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+Route::get('/home', function () {
+    return view('home-page/home');
+});
 Route::get('/courses', function () {
     return view('landing-page/courses/course_overview');
 });
 Route::get('/courses/list/online', function () {
     return view('landing-page/list/online');
+});
+Route::get('/courses/list/online/live-stream-overview', function () {
+    return view('landing-page/list/live_stream_overview');
 });
 Route::get('/courses/list/offline', function () {
     return view('landing-page/list/offline');
@@ -34,6 +40,9 @@ Route::get('/about/students', function () {
 });
 Route::get('/about/hiring', function () {
     return view('landing-page/introduction/hiring');
+});
+Route::get('/about/scholarship', function () {
+    return view('landing-page/introduction/scholarship');
 });
 Route::get('/', [
     'uses' => 'HomeController@index',

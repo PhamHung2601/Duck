@@ -1,73 +1,24 @@
-<section class="landing-page-section bg-success">
-    <h2 class="section-title">CUỐN SÁCH NÀY SẼ PHÙ HỢP VỚI AI?</h2>
+<section class="landing-page-section bg-success offline-course">
+    <h2 class="section-title">KHOÁ HỌC DÀNH CHO AI?</h2>
     <div class="section-content">
         <ul>
-            <li><p><i class="fa fa-location-arrow"> Học sinh cấp 3 đang muốn tăng 1-3 điểm thi THPTQG</i></p></li>
-            <li><p><i class="fa fa-location-arrow"> Học sinh cấp 3 đang muốn tăng 1-3 điểm thi THPTQG</i></p></li>
-            <li><p><i class="fa fa-location-arrow"> Học sinh cấp 3 đang muốn tăng 1-3 điểm thi THPTQG</i></p></li>
+            <li><p><i class="fa fa-2x fa-location-arrow"> Tất cả các bạn có ý định dự thi THPT Quốc gia năm 2020</i></p></li>
+            <li><p><i class="fa fa-2x fa-location-arrow"> Được thiết kế phù hợp với cả những bạn đã mất gốc, chán ghét môn Địa lí; những học sinh thi lại cần hiểu sâu, hiểu chắc vấn đề</i></p></li>
+            <li><p><i class="fa fa-2x fa-location-arrow">  Mục tiêu từ 8 - 10 điểm.</i></p></li>
         </ul>
     </div>
-    <div class="section-add-to-cart-button display-block-content">
-        <a href="#">Tao muon mua luon</a>
-    </div>
-</section>
-<section class="landing-page-section bg-white">
-    <h2 class="section-title">Noi dung ma m se duoc hoc</h2>
-    <div class="section-content display-flex-content">
-        <div class="col-3 course-detail">
-            <div class="card-body">
-                <h4 class="title">Card title</h4>
-                <div class="content">
-                    <p>"She spends a lot of time cleaning her classroom." "It takes me years to learn
-                        to play piano." It take và Spend là hai cấu trúc ngữ pháp tiếng Anh có thể gọi là tương tự gần
-                        như giống nhau được dùng rất nhiều trong những bài thi hay bài kiểm tra của các bạn học
-                        sinh....</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-3 course-detail">
-            <div class="card-body">
-                <h4 class="title">Card title</h4>
-                <div class="content">
-                    <p>"She spends a lot of time cleaning her classroom." "It takes me years to learn
-                        to play piano." It take và Spend là hai cấu trúc ngữ pháp tiếng Anh có thể gọi là tương tự gần
-                        như giống nhau được dùng rất nhiều trong những bài thi hay bài kiểm tra của các bạn học
-                        sinh....</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-3 course-detail">
-            <div class="card-body">
-                <h4 class="title">Card title</h4>
-                <div class="content">
-                    <p>"She spends a lot of time cleaning her classroom." "It takes me years to learn
-                        to play piano." It take và Spend là hai cấu trúc ngữ pháp tiếng Anh có thể gọi là tương tự gần
-                        như giống nhau được dùng rất nhiều trong những bài thi hay bài kiểm tra của các bạn học
-                        sinh....</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-3 course-detail">
-            <div class="card-body">
-                <h4 class="title">Card title</h4>
-                <div class="content">
-                    <p>"She spends a lot of time cleaning her classroom." "It takes me years to learn
-                        to play piano." It take và Spend là hai cấu trúc ngữ pháp tiếng Anh có thể gọi là tương tự gần
-                        như giống nhau được dùng rất nhiều trong những bài thi hay bài kiểm tra của các bạn học
-                        sinh....</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!--<div class="section-add-to-cart-button display-block-content">-->
+    <!--    <a href="#">Tao muon mua luon</a>-->
+    <!--</div>-->
 </section>
 <section class="landing-page-section bg-light">
-    <h2 class="section-title">May duoc gi khi tham gia khoa hoc nay?</h2>
+    <h2 class="section-title">TẠI SAO KHÔNG THỂ BỎ LỠ KHOÁ HỌC NÀY?</h2>
     <div class="section-content display-flex-content">
         <ul class="col-7">
-                <li><p><i class="fa fa-play"> May duoc gi khi tham gia khoa hoc nay?</i></p></li>
-                <li><p><i class="fa fa-play"> May duoc gi khi tham gia khoa hoc nay?</i></p></li>
-                <li><p><i class="fa fa-play"> May duoc gi khi tham gia khoa hoc nay?</i></p></li>
-                <li><p><i class="fa fa-play"> May duoc gi khi tham gia khoa hoc nay?</i></p></li>
+            <h3>Với lộ trình:  Đào kiến thức - Thạo kĩ năng - Luyện đề chuyên sâu, các em sẽ được</h3>
+            <li><p><i class="fa fa-play"> Học lại toàn bộ kiến thức lí thuyết 11 + 12, biểu đồ, atlat, bảng số liệu</i></p></li>
+            <li><p><i class="fa fa-play"> Bài tập củng cố và  luyện đề chuyên sâu  nhằm giúp làm quen với các câu hỏi, dạng đề thường gặp</i></p></li>
+            <li><p><i class="fa fa-play"> Hoàn thiện kĩ năng, phản xạ trong việc xử lí nhanh câu hỏi trắc nghiệm</i></p></li>
         </ul>
         <div class="col-5 join-course">
             <form class="form-register-course">
@@ -75,8 +26,21 @@
                 <input type="text" placeholder="Your Email">
                 <input type="text" placeholder="Your Phone">
                 <textarea placeholder="Your Address"></textarea>
+                <h3>Học phí khoá học: 80.000 VNĐ/buổi. Thời gian: 2 tiếng</h3>
                 <button type="button" class="btn btn-success register-course-button"><a href="#">Dang Ky Ngay</a></button>
             </form>
         </div>
+    </div>
+</section>
+<section class="landing-page-section">
+    <h2 class="section-title">CAM KẾT</h2>
+    <div class="section-content">
+        <ul>
+            <li><p><i class="fa fa-2x fa-location-arrow"> Giảng dạy nhiệt tình</i></p></li>
+            <li><p><i class="fa fa-2x fa-location-arrow">  Chắc chắn hiểu bài, tiến bộ rõ rệt</i></p></li>
+            <li><p><i class="fa fa-2x fa-location-arrow">  Yêu thích học môn Địa lí hơn</i></p></li>
+            <li><p><i class="fa fa-2x fa-location-arrow">  Hơn 90% học sinh theo học có điểm số cao hơn mong muốn</i></p></li>
+            <li><p><i class="fa fa-2x fa-location-arrow">  Được nhận sự hỗ trợ học tập chưa nơi học thêm nào có</i></p></li>
+        </ul>
     </div>
 </section>

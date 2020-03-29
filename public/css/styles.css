@@ -625,7 +625,7 @@ footer.footer {
     text-align: center;
 }
 .landing-page-section > .section-content{
-   text-align: center;
+    text-align: center;
     padding-top: 5%;
     padding-bottom: 5%;
     color: black;
@@ -663,8 +663,8 @@ footer.footer {
 .landing-page-section .display-block-content > a{
     margin-left: 40%;
 }.landing-page-section .display-flex-content{
-    display: flex;
-}
+     display: flex;
+ }
 .landing-page-section .display-flex-content > ul > li{
     margin-top: 7%;
 }
@@ -674,6 +674,34 @@ footer.footer {
 }
 .landing-page-section .display-flex-content.display-flex-box > .box{
     margin-left: 5%;
+    border-radius: 15%;
+}
+.landing-page-section .section-content .display-flex-box{
+   display: flex;
+}
+.landing-page-section .section-content .display-flex-box .box{
+    padding: 0;
+    border: 1px solid;
+    border-radius: 40px;
+    margin-right: 5%;
+    margin-top: 10%;
+}
+.landing-page-section .section-content .display-flex-box span{
+    text-decoration: line-through;
+}
+.landing-page-section .section-content .display-flex-box .box-head{
+    color: white;
+    background-color: #5bc0de;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px
+}
+.landing-page-section .chart-content{
+    border: 1px transparent;
+    background-color: white;
+    border-radius: 100px;
+}
+.landing-page-section .chart-content p{
+   font-size: 27px;
 }
 .landing-page-section .form-register-course input{
     width: 80%;
@@ -692,6 +720,17 @@ footer.footer {
 }
 .landing-page-section .row-content > .row{
     margin-bottom: 5%;
+}
+.landing-page-section .show-more-button{
+    height: 50px;
+    border-radius: 100px;
+    background-color: #2ecc71;
+    margin-left: 39%;
+}
+.landing-page-section .show-more-button a{
+    font-size: 27px;
+    color: white;
+    font-weight: 700;
 }
 .footer-landing.display-flex-content{
     padding: 5%;
@@ -937,14 +976,14 @@ footer.footer {
     border: 1px solid #ff8d00;
 }
 .who-are-we-section .who-are-we-icon i{
-   padding-top: 20%;
+    padding-top: 20%;
     color: #ff8d00;
 }
 .who-are-we-section .who-are-we-content{
-  padding-left: 5%;
+    padding-left: 5%;
 }
 .who-are-we-section .who-are-we-content p{
-  font-size: 25px;
+    font-size: 25px;
 }
 .who-are-we-section .section-content hr {
     background-color: #ff8d00;
@@ -990,19 +1029,25 @@ footer.footer {
     color: white;
     font-weight: 800;
 }
+.me-content .me p{
+    color: white;
+    font-size: 25px;
+    font-weight: 700
+}
 .me-avatar img{
     position: absolute;
     margin-left: -75%;
     margin-top: 20%;
 }
-.me-content .display-flex-content div{
+.me-content .me{
     margin-left: 10%;
     font-size: 22px;
     margin-bottom: 7%;
     text-align: center;
 }
-.me-content .display-flex-content div i{
-    margin-bottom: 5%;
+.me-content .me i{
+    margin-left: -55%;
+    position: absolute;
     color: white;
 }
 .news-about-me{
@@ -1010,7 +1055,7 @@ footer.footer {
 }
 .news-about-me .news{
     margin-top: 15%;
-    height: 500px;
+
     border: 1px transparent;
     background-color: white;
     padding: 5%;
@@ -1203,14 +1248,4 @@ footer.footer {
 
 .related-products .panel-heading{
     background: #91d5fb;
-}
-
-#add-cart-action .btn{
-    width: 200px;
-    margin-top: 20px;
-}
-
-.product-list #add-cart-action .btn{
-    width: 100%;
-    margin-top: 15px;
 }

@@ -5,18 +5,18 @@
         </div>
         <div class="panel-body">
             <div class="courses">
-                @foreach($news as $new)
-                    <div class="course-item">
-                        <a href="#">
-                            <img src="{{ Voyager::image( $new->media ) }}"
-                                 style="border-radius:5px">
-                            <div class="course-info">
-                                <strong> {{ $new->title }}</strong>
-                                <span class="description">{{ $new->description }} </span>
-                            </div>
-                        </a>
-                    </div>
-                @endforeach
+{{--                @foreach($news as $new)--}}
+{{--                    <div class="course-item">--}}
+{{--                        <a href="#">--}}
+{{--                            <img src="{{ Voyager::image( $new->media ) }}"--}}
+{{--                                 style="border-radius:5px">--}}
+{{--                            <div class="course-info">--}}
+{{--                                <strong> {{ $new->title }}</strong>--}}
+{{--                                <span class="description">{{ $new->description }} </span>--}}
+{{--                            </div>--}}
+{{--                        </a>--}}
+{{--                    </div>--}}
+{{--                @endforeach--}}
             </div>
         </div>
     </div>
