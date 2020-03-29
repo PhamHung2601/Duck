@@ -6,4 +6,7 @@
             việc học hành nói chung và học Tiếng Anh nói riêng được tiếp cận các phương pháp, kinh nghiệm học tiếng Anh
             thông minh để trở nên giỏi thực sự.</p>
     </div>
+    <button>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfkhiyp929MFEsWZ2MjvU2bJX0MHRRMZnpG2d481p3swdNK_w/viewform">Tim Hieu Them</a>
+    </button>
 </section>
