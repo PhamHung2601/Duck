@@ -53,37 +53,60 @@
                         @endforeach
                         </tbody>
                     </table>
-                    <div class="cart-total-infomation">
-                        @if(isset($cart['couponCode']) && $cart['couponCode'])
-                            <div class="label">Tiền hàng: {{$cart['totalBefore']}} VND</div>
-                            <div class="label">Giảm giá({{$cart['couponCode']}}): {{$cart['discount']}} VND</div>
-                            <div class="label">Tổng: {{$cart['total']}} VND</div>
-                        @else
-                            <div class="label">Tổng: {{$cart['total']}} VND</div>
-                        @endif
-                    </div>
-                    <div class="form-discount">
-                        <form role="form" method="POST" action="{{ route('cart.discount') }}">
-                            {{ csrf_field() }}
-                            <input type="text" name="coupon_code">
-                            <div class="cart-discount-action" style="display: block">
-                                <div class="cta-box">
-                                    <button type="sumit" class="btn btn-danger">
-                                        <span class="submit-discount">Áp dụng</span>
-                                    </button>
-                                </div>
-                                <div class="cta-box">
-                                    <button type="sumit" class="btn btn-general">
-                                        <span class="submit-discount">gỡ mã giảm giá</span>
-                                    </button>
-                                </div>
-                            </div>
 
-                        </form>
+                <div class="cart-info-bottom clearfix">
+                    <div class="cart-summary">
+                        <div class="form-discount">
+                            <form role="form" method="POST" action="{{ route('cart.discount') }}">
+                                {{ csrf_field() }}
+                                <div class="form-group">
+                                    <input type="text" name="coupon_code" class="form-control">
+                                    <div class="cart-discount-action" style="display: block">
+                                        <button type="sumit" class="btn btn-danger btn-submit">
+                                                <span class="submit-discount">Áp dụng</span>
+                                            </button>
+                                    </div>
+                                </div>
+                                <button type="sumit" class="btn btn-general btn-cancel">
+                                    <span class="submit-discount">gỡ mã giảm giá</span>
+                                </button>
+                            </form>
+                        </div>
+
+                        <div class="cart-total-infomation">
+                            @if(isset($cart['couponCode']) && $cart['couponCode'])
+                            <table class="cart-table-data">
+                                <tbody>
+                                <tr>
+                                    <th>Tiền hàng:</th>
+                                    <td>{{$cart['totalBefore']}} VND</td>
+                                </tr>
+                                <tr>
+                                    <th>Giảm giá( {{$cart['couponCode']}} ):</th>
+                                    <td class="price-discount">- {{$cart['discount']}} VND</td>
+                                </tr>
+                                <tr class="grand-total">
+                                    <th>Tổng:</th>
+                                    <td>{{$cart['total']}} VND</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            @else
+                                <table class="cart-table-data">
+                                    <tbody>
+                                    <tr class="grand-total">
+                                        <th>Tổng:</th>
+                                        <td>{{$cart['total']}} VND</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            @endif
+                        </div>
+                        <div class="box-actions">
+                            <a class="btn btn-danger action-checkout" href="{{ url('checkout') }}">Thanh toán</a>
+                        </div>
                     </div>
-                    <div class="box-actions">
-                        <a class="btn btn-danger" href="{{ url('checkout') }}">Thanh toán</a>
-                    </div>
+                </div>
                 @else
                     <p>You have no items in the shopping cart</p>
                 @endif
