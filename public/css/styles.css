@@ -875,6 +875,7 @@ footer.footer {
 }
 .hiring-section .card{
     box-shadow: 5px 6px #888888;
+    margin-right: 15%;
 }
 .hiring-more{
     color: #066166!important;
@@ -898,18 +899,54 @@ footer.footer {
     margin-top: -20%;
     padding-left: 15%;
 }
+.who-I-am-section{
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*opacity: 0.7;*/
+}
+.who-I-am-section .section-title{
+    color: white;
+    font-weight: 800;
+}
+.me-avatar img{
+    position: absolute;
+    margin-left: -75%;
+    margin-top: 20%;
+}
 .me-content .display-flex-content div{
     margin-left: 10%;
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 7%;
+    text-align: center;
 }
 .me-content .display-flex-content div i{
     margin-bottom: 5%;
-    color: #ef911b8c;
+    color: white;
+}
+.news-about-me{
+    background-image: linear-gradient(to right top, #e1e1c6, #e5e4ad, #eae692, #f0e775, #f6e855);
 }
 .news-about-me .news{
-    margin-top: 10%;
-    height: 300px;
+    margin-top: 15%;
+    height: 500px;
+    border: 1px transparent;
+    background-color: white;
+    padding: 5%;
+    border-radius: 15%;
+    margin-left: 10%;
+}
+.news-about-me .news h4{
+    color: red;
+}
+.news-about-me .news button{
+    background-color: #43c74d9e;
+    height: 50px;
+    border-radius: 100px;
+    bottom: 5%;
+}
+.news-about-me .news a{
+    color: white;
+    font-weight: 700;
 }
 /*----*/
 .breadcrumb{
