@@ -676,6 +676,33 @@ footer.footer {
     margin-left: 5%;
     border-radius: 15%;
 }
+.landing-page-section .section-content .display-flex-box{
+   display: flex;
+}
+.landing-page-section .section-content .display-flex-box .box{
+    padding: 0;
+    border: 1px solid;
+    border-radius: 40px;
+    margin-right: 5%;
+    margin-top: 10%;
+}
+.landing-page-section .section-content .display-flex-box span{
+    text-decoration: line-through;
+}
+.landing-page-section .section-content .display-flex-box .box-head{
+    color: white;
+    background-color: #5bc0de;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px
+}
+.landing-page-section .chart-content{
+    border: 1px transparent;
+    background-color: white;
+    border-radius: 100px;
+}
+.landing-page-section .chart-content p{
+   font-size: 27px;
+}
 .landing-page-section .form-register-course input{
     width: 80%;
     border-radius: 30px 30px 30px 30px;

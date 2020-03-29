@@ -41,7 +41,9 @@ Route::get('/about/students', function () {
 Route::get('/about/hiring', function () {
     return view('landing-page/introduction/hiring');
 });
-
+Route::get('/about/scholarship', function () {
+    return view('landing-page/introduction/scholarship');
+});
 Route::get('/', [
     'uses' => 'HomeController@index',
     'as' => 'homepage.index'

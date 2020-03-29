@@ -1,12 +1,12 @@
 <section class="bg-warning landing-page-section">
     <h2 class="section-title">KHÓA LIVESTREAM: TỔNG ÔN TOÀN DIỆN BEE2020</h2>
     <div class="section-content">
-        <ul  class="col-7">
-            <li><p><i class="fa fa-arrow-right"> Tất cả các bạn có ý định dự thi THPT Quốc gia năm 2020</i></p></li>
-            <li><p><i class="fa fa-arrow-right"> Được thiết kế phù hợp với cả những bạn đã mất gốc, chán ghét môn Địa lí; những học sinh thi lại cần hiểu sâu, hiểu chắc vấn đề</i></p></li>
-            <li><p><i class="fa fa-arrow-right"> Mục tiêu từ 8 - 10 điểm</i></p></li>
+        <ul>
+            <li><p><i class="fa fa-2x fa-arrow-right"> Tất cả các bạn có ý định dự thi THPT Quốc gia năm 2020</i></p></li>
+            <li><p><i class="fa fa-2x fa-arrow-right"> Được thiết kế phù hợp với cả những bạn đã mất gốc, chán ghét môn Địa lí; những học sinh thi lại cần hiểu sâu, hiểu chắc vấn đề</i></p></li>
+            <li><p><i class="fa fa-2x fa-arrow-right"> Mục tiêu từ 8 - 10 điểm</i></p></li>
             <h3>Học phí: 1.000.000đ</h3>
-            <button>
+            <button type="button" class="btn btn-success">
                 <a href="{{url("courses/list/online/live-stream-overview")}}">Xem Them</a>
             </button>
             <button type="button" class="btn btn-success register-course-button"><a href="#">Dang Ky Ngay</a></button>
@@ -14,7 +14,7 @@
     </div>
 </section>
 <section class="bg-success landing-page-section">
-    <h2 class="section-title">KHOÁ LIVESTREAM: LUYỆN ĐỀ CHUYÊN S U </h2>
+    <h2 class="section-title">KHOÁ LIVESTREAM: LUYỆN ĐỀ CHUYÊN SAU </h2>
     <div class="section-content display-flex-content">
         <ul class="col-7">
             <li><p><i class="fa fa-thumbs-up"> Supperrrr fast overview</i></p></li>
