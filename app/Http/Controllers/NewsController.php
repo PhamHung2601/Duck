@@ -32,11 +32,8 @@ class NewsController extends Controller
      * @param Request $request
      * @return \Illuminate\Http\RedirectResponse|string
      */
-    public function view(Request $request,$id)
+    public function view(Request $request, $id)
     {
-
-
-
         $news = News::select('id', 'title', 'description')->find($id);
         if (!isset($news)) {
             return 'Bản tin không tồn tại';

@@ -6,8 +6,15 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendMailable;
 
+/**
+ * Class MailController
+ * @package App\Http\Controllers
+ */
 class MailController extends Controller
 {
+    /**
+     * @return string
+     */
     public function mail()
     {
 //        $name = 'Krunal';
@@ -20,7 +27,6 @@ class MailController extends Controller
         Mail::send('emails.mail', $data, function ($message) use ($toEmail) {
             $message->to($toEmail)->subject("test subject email");
         });
-
         return 'Email was sent';
     }
 }
