@@ -3,11 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Order;
-use App\OrderItem;
-use Illuminate\Http\Request;
 use Cart;
-use Illuminate\Routing\Route;
-use Illuminate\Support\Facades\Redirect;
 
 /**
  * Class CheckoutController
@@ -24,7 +20,7 @@ class SuccessController extends Controller
     }
 
     /**
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector|\Illuminate\View\View
      */
     public function index()
     {

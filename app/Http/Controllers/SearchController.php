@@ -2,12 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use DB;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
+/**
+ * Class SearchController
+ * @package App\Http\Controllers
+ */
 class SearchController extends Controller
 {
-
+    /**
+     * SearchController constructor.
+     */
     public function __construct()
     {
         // $this->middleware('auth');

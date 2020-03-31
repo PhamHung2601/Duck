@@ -86,12 +86,21 @@ class CartController extends Controller
         return redirect()->route('cart.index');
     }
 
+    /**
+     * @param $rowId
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function removeItem($rowId)
     {
         Cart::update($rowId, 0);
         return redirect()->route('cart.index');
     }
 
+    /**
+     * @param Request $request
+     * @param $rowId
+     * @return \Illuminate\Http\RedirectResponse|string
+     */
     public function updateCartItem(Request $request, $rowId)
     {
         $item = Cart::get($rowId);
@@ -119,6 +128,10 @@ class CartController extends Controller
         return redirect()->back();
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function discount(Request $request)
     {
         $validatedData = $request->validate([
@@ -150,6 +163,10 @@ class CartController extends Controller
         return redirect()->route('cart.index');
     }
 
+    /**
+     * @param $coupon
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function removeCoupon($coupon)
     {
         Cart::removeCoupon();
