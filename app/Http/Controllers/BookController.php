@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Product;
 use Cart;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 /**
  * Class CheckoutController
@@ -28,7 +29,19 @@ class BookController extends Controller
     {
         if ($id) {
             $product = Product::select('*')->find($id);
-            return view('book/detail', ['product' => $product]);
+            // get reviews
+            $reviews = DB::table('review')
+                ->where('review.is_approved', '=', '1')
+                ->where('review_product.product_id', '=', $id)
+                ->join('review_product', 'review.id', '=', 'review_product.review_id')
+                ->select('review.*')
+                ->orderBy('review.id', 'desc')
+                ->limit(4)
+                ->get();
+            return view('book/detail', [
+                'product' => $product,
+                'reviews' => $reviews
+            ]);
         }
 
         return Redirect('home');
@@ -49,7 +62,7 @@ class BookController extends Controller
             'price_desc' => 'Giá từ cao tới thấp'
         ];
         $sortBy = $sortBy && isset($options[$sortBy]) ? $sortBy : 'id_desc';
-        list ($sort,$dir) = explode('_',$sortBy);
+        list ($sort, $dir) = explode('_', $sortBy);
         $products = Product::orderBy($sort, $dir)->paginate(12);
         return view('book/list', [
             'products' => $products,

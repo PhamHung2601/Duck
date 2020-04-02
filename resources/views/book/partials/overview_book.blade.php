@@ -14,13 +14,9 @@
             <div class="page-title">
                 <h2 style="font-size:23px; font-weight:bold; margin-bottom:20px">{{$product->name}}</h2>
             </div>
-            <p class="sku">ID: [1500] </p>
-            <ul class="product-attr">
-                <li> <p>- Tác giả: <strong> </strong></p></li>
-                <li> <p>- Số Trang:<strong> </strong></p></li>
-                <li> <p>- Kích thước:<strong> 19x37cm</strong></p></li>
-                <li> <p>- Số lần tra cứu:<strong> Không giới hạn </strong></p></li>
-            </ul>
+            <div class="product-des">
+                {!!html_entity_decode($product->description)!!}
+            </div>
             @if($product->special_price && $product->special_price < $product->price)
                 <p><strong class="special-price" style="color:red"> {{$product->special_price}}đ</strong>
                     <span style="text-decoration:line-through;padding-left:10px"> {{$product->price}}đ</span>
@@ -28,9 +24,6 @@
             @else
                 <p><strong style="color:red"> {{$product->price}}đ</strong>
             @endif
-            <div class="product-des">
-                {!!html_entity_decode($product->description)!!}
-            </div>
             <form role="form" id="add-to-cart" method="POST" action="{{ route('cart.add') }}">
                 {{ csrf_field() }}
                 <input type="text" name="product_id" value="{{$product->id}}" hidden>
