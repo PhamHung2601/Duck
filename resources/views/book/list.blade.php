@@ -49,4 +49,7 @@
 @section('content-bottom')
     @include('static-block.content-bottom')
 @endsection
+@section('content-js')
+
+@endsection
 
