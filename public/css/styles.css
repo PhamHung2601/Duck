@@ -198,6 +198,41 @@ a:hover{
     text-align: center;
 }
 
+.header .header-top .register{
+    text-align: right;
+}
+
+.header .header-top .register a{
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.header .header-top .register a.cart-header{
+    margin-right: 40px;
+}
+
+.header .header-top .register a:hover{
+    color: #fff;
+}
+
+.header .logo{
+    text-align: left;
+}
+
+.header .logo a{
+    color: #023A63;
+    text-align: center;
+    display: inline-block;
+}
+
+.header .logo a h2{
+    display: block;
+    margin-top: 15px;
+    font-weight: 900;
+}
+
+
 .header-content .navbar{
     background: #1786be;
     color: #fff;
@@ -1166,6 +1201,11 @@ footer.footer {
     -webkit-box-orient: vertical;
     line-height: 1.6;
     padding: 0;
+}
+
+.product-list .add-cart-action .btn{
+    width: 100%;
+    cursor: pointer;
 }
 
 .pager{

@@ -1,13 +1,13 @@
 <div class="banner-manager slider-image">
     <ul class="slider">
         <li class="item">
-            <img src="https://cdnstepup.r.worldssl.net/wp-content/uploads/2020/03/banner395_5desktop.jpg"/>
+            <a href="#"><img src="https://cdnstepup.r.worldssl.net/wp-content/uploads/2020/03/banner395_5desktop.jpg"/></a>
         </li>
         <li class="item">
-            <img src="https://cdnstepup.r.worldssl.net/wp-content/uploads/2020/01/banner69-min.jpg"/>
+            <a href="#"><img src="https://cdnstepup.r.worldssl.net/wp-content/uploads/2020/03/banner395_5desktop.jpg"/></a>
         </li>
         <li class="item">
-            <img src="https://cdnstepup.r.worldssl.net/wp-content/uploads/2020/03/banner395_5desktop.jpg"/>
+            <a href="#"><img src="https://cdnstepup.r.worldssl.net/wp-content/uploads/2020/03/banner395_5desktop.jpg"/></a>
         </li>
     </ul>
 </div>
