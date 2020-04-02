@@ -1,4 +1,5 @@
 @extends('layouts.master')
+@section('pageTitle', 'Book List')
 @section('content-top')
     @include('static-block.content-top')
 @endsection

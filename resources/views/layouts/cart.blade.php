@@ -1,4 +1,5 @@
 @extends('layouts.master')
+@section('pageTitle', 'Shopping Cart')
 @section('content')
     <section id="cart_items">
         <div class="container">

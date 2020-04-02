@@ -1,4 +1,5 @@
 @extends('layouts.master')
+@section('pageTitle', $product->name)
 @section('content-top')
     @include('static-block.content-top')
 @endsection

@@ -1,4 +1,5 @@
 @extends('layouts.master')
+@section('pageTitle', 'Đia lí Thầy Tùng')
 @section('content-top')
   @include('static-block.content-top')
 @endsection

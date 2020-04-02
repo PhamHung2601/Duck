@@ -1,4 +1,5 @@
 @extends('layouts.master')
+@section('pageTitle', 'Checkout')
 @section('content')
     <section>
         <div class="container">
