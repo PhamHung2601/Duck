@@ -12,6 +12,7 @@
     @include('book.partials.overview_book')
     <div class="row product-bottom">
         <div class="col-md-8 col-lg-7">
+            @include('book.partials.review')
             @include('book.partials.fb')
             @include('book.partials.related_book')
         </div>

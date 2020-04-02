@@ -43,6 +43,7 @@
     </div>
 </div>
 @yield('content-bottom')
+@yield('content-js')
 @include('home-page.partials.footer')
 
 @include('home-page.partials.scripts')
