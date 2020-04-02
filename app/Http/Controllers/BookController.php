@@ -2,13 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Order;
-use App\OrderItem;
 use App\Product;
-use Illuminate\Http\Request;
 use Cart;
-use Illuminate\Routing\Route;
-use Illuminate\Support\Facades\Redirect;
+use Illuminate\Http\Request;
 
 /**
  * Class CheckoutController
@@ -30,9 +26,9 @@ class BookController extends Controller
      */
     public function index($id)
     {
-        if($id){
+        if ($id) {
             $product = Product::select('*')->find($id);
-            return view('book/detail',['product'=>$product]);
+            return view('book/detail', ['product' => $product]);
         }
 
         return Redirect('home');
@@ -41,10 +37,25 @@ class BookController extends Controller
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function list()
+    public function list(Request $request)
     {
-        $products = Product::orderBy('id', 'desc')->paginate(12);
-        return view('book/list',['products'=>$products]);
+        $sortBy = $request->sortBy;
+        $options = [
+            'id_desc' => 'Mới nhất',
+            'id_asc' => 'Cũ nhất',
+            'name_asc' => 'Theo bảng chữ cái từ A-Z',
+            'name_desc' => 'Theo bảng chữ cái từ Z-A',
+            'price_asc' => 'Giá từ thấp tới cao',
+            'price_desc' => 'Giá từ cao tới thấp'
+        ];
+        $sortBy = $sortBy && isset($options[$sortBy]) ? $sortBy : 'id_desc';
+        list ($sort,$dir) = explode('_',$sortBy);
+        $products = Product::orderBy($sort, $dir)->paginate(12);
+        return view('book/list', [
+            'products' => $products,
+            'options' => $options,
+            'sortBy' => $sortBy
+        ]);
     }
 
 }

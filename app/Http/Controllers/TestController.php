@@ -43,7 +43,7 @@ class TestController extends Controller
     {
         $test = Test::select('id', 'title', 'description', 'link', 'year')->find($id);
         if (!isset($test)) {
-            return 'Đề thi không tồn tại';
+            return Redirect('/');
         }
         return view('test.view', ['test' => $test]);
     }
