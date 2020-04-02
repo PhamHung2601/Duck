@@ -53,7 +53,7 @@
     $(document).ready(function(){
 
         $('.books').slick({
-            dots: true,
+            dots: false,
             slidesPerRow: 2,
             rows: 2,
             responsive: [

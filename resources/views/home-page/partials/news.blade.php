@@ -4,17 +4,16 @@
             <i class="fa fa-list" aria-hidden="true"></i> Tin Tức
         </div>
         <div class="panel-body">
-            <div class="courses">
+            <div class="news">
                 @foreach($news as $new)
-                    <div class="course-item">
-                        <a href="#">
-                            <img src="{{ Voyager::image( $new->media ) }}"
-                                 style="border-radius:5px">
-                            <div class="course-info">
-                                <strong> {{ $new->title }}</strong>
-                                <span class="description">{{ $new->description }} </span>
-                            </div>
+                    <div class="new-item">
+                        <a href="{{ $new->getUrlDetail() }}">
+                            <img src="{{ Voyager::image( $new->media ) }}">
                         </a>
+                        <div class="new-info">
+                            <strong> {{ $new->title }}</strong>
+                            <span class="description">{{ $new->description }} </span>
+                        </div>
                     </div>
                 @endforeach
             </div>
@@ -27,7 +26,7 @@
     $(document).ready(function(){
 
         $('.courses').slick({
-            dots: true,
+            dots: false,
             slidesToShow: 2,
             responsive: [
                 {
