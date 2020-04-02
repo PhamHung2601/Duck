@@ -56,6 +56,10 @@ a:hover{
     text-decoration: none;
 }
 
+iframe{
+    max-width: 100%;
+}
+
 
 .panel {
     margin-bottom: 20px;
@@ -331,18 +335,14 @@ a:hover{
 }
 
 .list-courses .courses{
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    flex-wrap: wrap;
     margin-left: -10px;
     margin-right: -10px;
 }
 
 .list-courses .panel-heading,
-.list-books .panel-heading{
+.list-books .panel-heading,
+.list-testimonial .panel-heading
+{
     font-weight: 700;
     font-size: 16px;
 }
@@ -353,16 +353,12 @@ a:hover{
     margin-bottom: 15px;
 }
 
+.list-courses .slick-track{
+    margin-left: 0;
+}
+
 .list-courses .courses .course-item > a{
     display: block;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
     border: 1px solid #ccc;
     border-radius: 10px;
 }
@@ -408,7 +404,8 @@ a:hover{
 }
 
 .list-books .slick-prev:before,.list-books .slick-next:before,
-.list-courses .slick-prev:before,.list-courses .slick-next:before{
+.list-courses .slick-prev:before,.list-courses .slick-next:before,
+.list-testimonial .slick-prev:before,.list-testimonial .slick-next:before{
     color: #333;
 }
 
@@ -1308,4 +1305,108 @@ footer.footer {
     border-radius: 200px;
     margin-top: 10%;
     margin-bottom: 10%;
+}
+
+.about-teacher{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+/*----testimonial----*/
+.testimonial{
+    text-align: center;
+}
+.list-testimonial .description{
+    color:#656565;
+    font-size: 19px;
+    line-height: 35px;
+    margin-bottom: 30px;
+    padding:0px 11%;
+    position: relative;
+}
+.list-testimonial .description:before{
+    content: "\f10d";
+    font: normal normal normal 14px/1 FontAwesome;
+    font-weight: 900;
+    display: inline-block;
+    position: absolute;
+    top: 8px;
+    left: 2%;
+    color:#3498db;
+    font-size: 30px;
+}
+.list-testimonial .description:after{
+    content: "\f10e";
+    font: normal normal normal 14px/1 FontAwesome;
+    font-weight: 900;
+    display: inline-block;
+    position: absolute;
+    top: 8px;
+    right: 2%;
+    color:#3498db;
+    font-size: 30px;
+}
+.list-testimonial .pic{
+    width: 94px;
+    height: 94px;
+    margin: 0 auto;
+}
+.list-testimonial .pic img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+.list-testimonial .testimonial-title{
+    font-size: 18px;
+    color:#333;
+    font-weight: bolder;
+    text-transform: capitalize;
+    margin: 20px 0;
+}
+.testimonial-title > small{
+    display: block;
+    color:#656565;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+.list-testimonial .panel-body{
+    padding: 20px 45px;
+}
+
+
+
+@media screen and (max-width: 480px) {
+    .list-testimonial .description{
+        font-size:19px;
+        line-height: 29px;
+    }
+    .list-testimonial .description:before,
+    .list-testimonial .description:after{
+        font-size: 25px;
+    }
+}
+
+.list-document ul li{
+    padding: 10px;
+
+}
+
+.list-document ul li:not(:last-child){
+    border-bottom: 1px solid #ddd;
+}
+
+.list-document ul{
+    margin-bottom: 0;
+}
+
+.list-document ul li a{
+    color: #0056b3;
+    font-weight: 700;
+}
+
+.list-document ul li a:hover{
+    text-decoration: underline;
 }
