@@ -39,6 +39,7 @@
 @yield('content-top')
 <div class="main-content">
     <div class="container">
+        @include('layouts.breadcrumb')
         @yield('content')
     </div>
 </div>

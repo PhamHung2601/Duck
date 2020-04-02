@@ -3,12 +3,6 @@
 @section('content')
     <section>
         <div class="container">
-            <div class="breadcrumbs">
-                <ol class="breadcrumb">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
-                    <li class="active">/ Shopping Cart</li>
-                </ol>
-            </div>
             <div class="page-checkout">
                     <form action="{{ url('/checkout/submit') }}" method="post">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">

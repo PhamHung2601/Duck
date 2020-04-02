@@ -3,12 +3,6 @@
 @section('content')
     <section id="cart_items">
         <div class="container">
-            <div class="breadcrumbs">
-                <ol class="breadcrumb">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
-                    <li class="active">/ Shopping Cart</li>
-                </ol>
-            </div>
             <div class="table-responsive cart_info">
                 <div class="page-title">
                     <h2>MY SHOPPING CART</h2>

@@ -4,12 +4,6 @@
     @include('static-block.content-top')
 @endsection
 @section('content')
-    <div class="breadcrumbs">
-        <ol class="breadcrumb">
-            <li><a href="{{ url('/home') }}">Home</a></li>
-            <li class="active">/ {{$product->name}}</li>
-        </ol>
-    </div>
     @include('book.partials.overview_book')
     <div class="row product-bottom">
         <div class="col-md-8 col-lg-7">
