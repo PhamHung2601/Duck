@@ -43,7 +43,7 @@ class BookController extends Controller
      */
     public function list()
     {
-        $products = Product::orderBy('id', 'desc')->get();
+        $products = Product::orderBy('id', 'desc')->paginate(12);
         return view('book/list',['products'=>$products]);
     }
 

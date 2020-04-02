@@ -33,17 +33,7 @@
                 @include('book.partials.list',['product' => $product])
             @endforeach
         </div>
-        <div class="pager">
-            <nav aria-label="Page navigation ">
-                <ul class="pagination">
-                    <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li>
-                    <li class="page-item"><span class="page-link current">1</span> </li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
-                </ul>
-            </nav>
-        </div>
+        {{ $products->links() }}
     </div>
 @endsection
 @section('content-bottom')
