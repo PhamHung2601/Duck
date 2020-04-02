@@ -29,9 +29,11 @@ class NewsController extends Controller
 
     /**
      * @param Request $request
-     * @return \Illuminate\Http\RedirectResponse|string
+     * @param $id
+     * @param $slug
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector|\Illuminate\View\View
      */
-    public function view(Request $request, $id)
+    public function view(Request $request, $id, $slug)
     {
         $news = News::select('id', 'title', 'description')->find($id);
         if (!isset($news)) {

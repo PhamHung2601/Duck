@@ -10,7 +10,7 @@
     <p><span class="time-news">Mar 18, 2020</span></p>
     <div class="post-content">
         <p>{{$new->description}}</p>
-        <a href="/news/view/{{$new->id}}" class="more-link">Xem thêm</a>
+        <a href="{{ $new->getUrlDetail() }}" class="more-link">Xem thêm</a>
     </div>
 </article>
 @include('static-block.content-bottom')

@@ -17,9 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
-Route::get('/home', function () {
-    return view('home-page/home');
-});
 Route::get('/courses', function () {
     return view('landing-page/courses/course_overview');
 });
@@ -35,7 +32,7 @@ Route::get('/courses/list/offline', function () {
 Route::get('/about/us', function () {
     return view('landing-page/introduction/about');
 });
-    Route::get('/about/students', function () {
+Route::get('/about/students', function () {
     return view('landing-page/introduction/students');
 });
 Route::get('/about/hiring', function () {
@@ -52,8 +49,11 @@ Route::get('/', [
 Route::get('/books/sach-xu-li-nhanh', function () {
     return view('landing-page/book/book-landing');
 });
-Route::get('/books/detail/{id?}', 'BookController@index');
-Route::get('/books/list', 'BookController@list');
+Route::get('/book/{id}-{slug?}.html', 'BookController@index')
+    ->where('slug', '[a-zA-Z0-9-_]+')
+    ->where('id', '[0-9]+')->name('book.detail');
+
+Route::get('/books/list', 'BookController@list')->name('books.list');
 
 Route::resource('/cart', 'CartController');
 
@@ -66,14 +66,20 @@ Route::post('cart/updateCart', 'CartController@updateCart')->name('cart.updateCa
 Route::post('cart/deleteCart', 'CartController@deleteCart')->name('cart.deleteCart');
 Route::get('cart/removeItem/{rowId?}', 'CartController@removeItem')->name('cart.removeItem');
 Route::resource('/success', 'SuccessController');
+
 Route::resource('/news', 'NewsController');
-Route::get('news/view/{id?}', 'NewsController@view')->name('news.view');
+Route::get('new/{id}-{slug?}.html', 'NewsController@view')
+    ->where('slug', '[a-zA-Z0-9-_]+')
+    ->where('id', '[0-9]+')
+    ->name('new.view');
 
 Route::resource('/test', 'TestController');
-Route::get('test/view/{id?}', 'TestController@view')->name('test.view');
+Route::get('test/{id}-{slug?}.html', 'TestController@show')
+    ->where('slug', '[a-zA-Z0-9-_]+')
+    ->where('id', '[0-9]+')
+    ->name('test.view');
 
 Route::post('/account/contact', 'HomeController@addContactEmail')->name('home.addContactEmail');
-
 
 
 Route::get('/send/email', 'MailController@mail');

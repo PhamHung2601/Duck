@@ -25,7 +25,7 @@ class BookController extends Controller
      * @param $id
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector|\Illuminate\View\View
      */
-    public function index($id)
+    public function index($id, $slug)
     {
         if ($id) {
             $product = Product::select('*')->find($id);

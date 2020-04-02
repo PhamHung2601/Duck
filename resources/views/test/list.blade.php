@@ -10,7 +10,7 @@
             @foreach ($tests as $key => $test)
                 <p style="padding:8px;margin-bottom: 0px">
                     <span style="color:#666666;padding-right:5px"> {{$key + 1}}. </span>
-                    <a href="/test/view/{{$test->id}}"
+                    <a href="{{ $test->getUrlDetail() }}"
                        title="{{$test->title}}" style="margin-right:15px; color:#007bff">
                         <strong>{{$test->title}}</strong></a>
                     <span style="color:#666666; font-size:12px"><img src="{{url('/img/iconword.png')}}" height="18px" style="margin-right: 5px">{{$test->created_at}}</span>
