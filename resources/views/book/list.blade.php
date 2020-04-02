@@ -1,14 +1,9 @@
 @extends('layouts.master')
+@section('pageTitle', 'Book List')
 @section('content-top')
     @include('static-block.content-top')
 @endsection
 @section('content')
-    <div class="breadcrumbs">
-        <ol class="breadcrumb">
-            <li><a href="{{ url('/home') }}">Home</a></li>
-            <li class="active">/ books list</li>
-        </ol>
-    </div>
     <div class="product-list">
         <div class="page-title">
             <h2>BOOKS LIST</h2>

@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Landing Page - Start Bootstrap Theme</title>
+    <title>@yield('pageTitle')</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('vendor/landing-page/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -39,6 +39,7 @@
 @yield('content-top')
 <div class="main-content">
     <div class="container">
+        @include('layouts.breadcrumb')
         @yield('content')
     </div>
 </div>
