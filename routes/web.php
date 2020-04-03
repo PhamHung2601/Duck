@@ -29,6 +29,7 @@ Route::get('/courses/list/online/live-stream-overview', function () {
 Route::get('/courses/list/offline', function () {
     return view('landing-page/list/offline');
 });
+Route::post('/course/register', 'CourseController@register')->name('course.register');
 Route::get('/about/us', function () {
     return view('landing-page/introduction/about');
 });

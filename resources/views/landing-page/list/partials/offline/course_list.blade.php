@@ -12,6 +12,11 @@
     <!--</div>-->
 </section>
 <section class="landing-page-section bg-light">
+    @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
     <h2 class="section-title">TẠI SAO KHÔNG THỂ BỎ LỠ KHOÁ HỌC NÀY?</h2>
     <div class="section-content display-flex-content">
         <ul class="col-7">
@@ -21,13 +26,26 @@
             <li><p><i class="fa fa-play"> Hoàn thiện kĩ năng, phản xạ trong việc xử lí nhanh câu hỏi trắc nghiệm</i></p></li>
         </ul>
         <div class="col-5 join-course">
-            <form class="form-register-course">
-                <input type="text" placeholder="Your Name">
-                <input type="text" placeholder="Your Email">
-                <input type="text" placeholder="Your Phone">
-                <textarea placeholder="Your Address"></textarea>
+            <form class="form-register-course" action="{{ route('course.register') }}" method="POST">
+                {{ csrf_field() }}
+                <input type="text" id="name" name="name" placeholder="Your Name">
+                @error('name')
+                    <small class="form-text text-muted">{{ $message }}</small>
+                @enderror
+                <input type="text" id="email" name="email" placeholder="Your Email">
+                @error('email')
+                    <small class="form-text text-muted">{{ $message }}</small>
+                @enderror
+                <input type="text" id="phone" name="phone" placeholder="Your Phone">
+                @error('phone')
+                    <small class="form-text text-muted">{{ $message }}</small>
+                @enderror
+                <textarea id="address" name="address" placeholder="Your Address"></textarea>
+                @error('address')
+                    <small class="form-text text-muted">{{ $message }}</small>
+                @enderror
                 <h3>Học phí khoá học: 80.000 VNĐ/buổi. Thời gian: 2 tiếng</h3>
-                <button type="button" class="btn btn-success register-course-button"><a href="#">Dang Ky Ngay</a></button>
+                <button type="submit" id="register-course-button" class="btn btn-success register-course-button">Dang Ky Ngay</button>
             </form>
         </div>
     </div>
