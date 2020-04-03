@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\News;
 
@@ -24,19 +23,21 @@ class NewsController extends Controller
      */
     public function index()
     {
-        $news = DB::table('news')->get();
+        $news = News::orderBy('id', 'desc')->paginate(10);
         return view('news.list', ['news' => $news]);
     }
 
     /**
      * @param Request $request
-     * @return \Illuminate\Http\RedirectResponse|string
+     * @param $id
+     * @param $slug
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector|\Illuminate\View\View
      */
-    public function view(Request $request, $id)
+    public function view(Request $request, $id, $slug)
     {
         $news = News::select('id', 'title', 'description')->find($id);
         if (!isset($news)) {
-            return 'Bản tin không tồn tại';
+            return Redirect('/');
         }
         return view('news.view', ['news' => $news]);
     }

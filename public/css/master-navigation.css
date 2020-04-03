@@ -1,4 +1,4 @@
-.header-top{
+.header{
     background-color: #91d5fb ;
 }
 .header-top a{
@@ -6,6 +6,7 @@
 }
 .header-top .display-flex-content{
    display: flex;
+    padding: 0;
 }
 .header-top #navbarText > ul{
     width: 100%;
@@ -13,4 +14,36 @@
 .header-top #navbarText > ul >li{
      width: 20%;
     margin-left: 5%;
+}
+
+.header .main-menu{
+    background: #238AE6;
+    color: #fff;
+}
+
+.header .main-menu ul.navbar-nav > li > a{
+    color: #fff;
+    padding: 5px 40px;
+    font-size: 15px;
+    display: inline-block;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    font-weight: 700;
+}
+
+.header .main-menu ul.navbar-nav > li > a:hover{
+    color: yellow;
+}
+
+.header .main-menu ul.navbar-nav > li:not(:last-child) > a{
+    border-right: 1px solid #fff;
+}
+
+.header .main-menu ul.navbar-nav > li:first-child > a{
+    padding-left: 0;
+}
+
+.header .main-menu ul.navbar-nav > li:last-child > a{
+    padding-right: 0;
 }

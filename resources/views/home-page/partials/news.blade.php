@@ -1,22 +1,21 @@
 <div class="list-courses">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <i class="fa fa-list" aria-hidden="true"></i> Pro S - Luyện thi THPT Quốc Gia 2020
+            <i class="fa fa-list" aria-hidden="true"></i> Tin Tức
         </div>
         <div class="panel-body">
-            <div class="courses">
-{{--                @foreach($news as $new)--}}
-{{--                    <div class="course-item">--}}
-{{--                        <a href="#">--}}
-{{--                            <img src="{{ Voyager::image( $new->media ) }}"--}}
-{{--                                 style="border-radius:5px">--}}
-{{--                            <div class="course-info">--}}
-{{--                                <strong> {{ $new->title }}</strong>--}}
-{{--                                <span class="description">{{ $new->description }} </span>--}}
-{{--                            </div>--}}
-{{--                        </a>--}}
-{{--                    </div>--}}
-{{--                @endforeach--}}
+            <div class="news">
+                @foreach($news as $new)
+                    <div class="new-item">
+                        <a href="{{ $new->getUrlDetail() }}">
+                            <img src="{{ Voyager::image( $new->media ) }}">
+                        </a>
+                        <div class="new-info">
+                            <strong> {{ $new->title }}</strong>
+                            <span class="description">{{ $new->description }} </span>
+                        </div>
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -27,7 +26,7 @@
     $(document).ready(function(){
 
         $('.courses').slick({
-            dots: true,
+            dots: false,
             slidesToShow: 2,
             responsive: [
                 {

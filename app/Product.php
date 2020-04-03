@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 /**
  * Class Product
@@ -30,10 +31,19 @@ class Product extends Model
     }
 
     /**
+     * @return \Illuminate\Contracts\Routing\UrlGenerator|string
+     */
+    public function getUrlDetail()
+    {
+        return url("/book/{$this->id}-" . Str::slug($this->name) . ".html");
+    }
+
+    /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function category()
     {
-        return $this->belongsToMany(Category::class,'categories_products');
+        return $this->belongsToMany(Category::class, 'categories_products');
     }
+
 }

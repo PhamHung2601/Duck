@@ -54,7 +54,8 @@ class Handler extends ExceptionHandler
                 $slug = str_replace($request->root() . '/', "", $request->fullUrl());
                 $cmsPageContent = \Helper::getCmsPageContentBySlug($slug);
                 if (!empty($cmsPageContent)) {
-                    return response()->view('cms.page', compact('cmsPageContent'));
+                    $cmsPageModel = \Helper::getCmsPageBySlug($slug);
+                    return response()->view('cms.page', compact('cmsPageModel','cmsPageContent'));
                 }
             }
         }

@@ -6,16 +6,16 @@ $discount = $specialPrice && $specialPrice < $nomalPrice ? ($nomalPrice - $speci
 <div class="product-item">
     <div class="product-item-inner">
         <div class="product-img">
-            <a href="/books/detail/{{$product->id}}" class="text-center">
+            <a href="{{ $product->getUrlDetail() }}" class="text-center">
                 <img
-                        src="{{ Voyager::image( $product->media ) }}"
-                        alt="{{ $product->name }}"
+                    src="{{ Voyager::image( $product->media ) }}"
+                    alt="{{ $product->name }}"
                 >
             </a>
         </div>
         <div class="product-info">
             <div class="product-title">
-                <a href="/books/detail/{{$product->id}}">{{$product->name}}</a>
+                <a href="{{ $product->getUrlDetail() }}">{{$product->name}}</a>
             </div>
             <div class="price-box clearfix">
                 <span class="price-wrapper">

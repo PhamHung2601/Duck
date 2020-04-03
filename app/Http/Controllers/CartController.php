@@ -79,7 +79,7 @@ class CartController extends Controller
             $id = Cart::get($rowId)->id;
             $product = Product::select('stock')->find($id);
             if ($product->stock < $qty) {
-                return 'Không đủ số lượng hàng trong kho';
+                return redirect()->route('cart.index')->with('error','Không đủ số lượng hàng trong kho');
             }
             Cart::update($rowId, $qty);
         }
@@ -93,7 +93,7 @@ class CartController extends Controller
     public function removeItem($rowId)
     {
         Cart::update($rowId, 0);
-        return redirect()->route('cart.index');
+        return redirect()->route('cart.index')->with('success','Bạn đã xoá sản phẩm khỏi giỏ hàng');
     }
 
     /**
@@ -112,7 +112,7 @@ class CartController extends Controller
         }
         $product = Product::select('stock')->find($item->id);
         if ($product->stock < $qty) {
-            return 'Không đủ số lượng hàng trong kho';
+            return redirect()->route('cart.index')->with('error','Không đủ số lượng hàng trong kho');
         }
         Cart::update($rowId, $qty);
         return redirect()->route('cart.index');
@@ -159,8 +159,10 @@ class CartController extends Controller
                 $discount = $rule->amount;
             }
             Cart::setSubtotalDiscount($discount,$rule->coupon_code,$rule->title);
+            return redirect()->route('cart.index')->with('success','Bạn đã sử dụng thành công mã gỉảm giá');
+        }else{
+            return redirect()->route('cart.index')->with('error','Mã giảm giá không hợp lệ. Vui lòng thử lại.');
         }
-        return redirect()->route('cart.index');
     }
 
     /**

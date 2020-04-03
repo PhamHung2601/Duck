@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Order;
 use App\OrderItem;
+use App\Product;
 use Illuminate\Http\Request;
 use Cart;
 use Illuminate\Routing\Route;
@@ -49,6 +50,14 @@ class CheckoutController extends Controller
             'phoneNumber' => 'required|digits_between:10,12',
             'payment_method' => 'required'
         ]);
+        if (count($cartInfo) > 0) {
+            foreach ($cartInfo as $key => $item) {
+                $product = Product::select('stock')->find($item->id);
+                if ($product->stock < $item->qty) {
+                    return redirect()->route('cart.index')->with('error','Không đủ số lượng hàng trong kho');
+                }
+            }
+        }
         try {
             $order = new Order();
             $order->customer_name = $validatedData['fullName'];
@@ -62,6 +71,7 @@ class CheckoutController extends Controller
 
             if (count($cartInfo) > 0) {
                 foreach ($cartInfo as $key => $item) {
+                    $product = Product::select('stock')->find($item->id);
                     $orderItem = new OrderItem();
                     $orderItem->order_id = $order->id;
                     $orderItem->product_id = $item->id;
@@ -70,6 +80,8 @@ class CheckoutController extends Controller
                     $orderItem->total = $item->subtotal;
                     $orderItem->qty = $item->qty;
                     $orderItem->save();
+                    $product->stock = $product->stock - $item->qty;
+                    $product->save();
                 }
             }
             Cart::destroy();

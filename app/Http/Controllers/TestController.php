@@ -24,7 +24,7 @@ class TestController extends Controller
      */
     public function index()
     {
-        $tests = DB::table('tests')->get();
+        $tests = Test::all();
         $testList = [];
         foreach ($tests as $test) {
             if (!isset($testList[$test->year])) {
@@ -37,13 +37,15 @@ class TestController extends Controller
 
     /**
      * @param Request $request
-     * @return \Illuminate\Http\RedirectResponse|string
+     * @param $id
+     * @param $slug
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector|\Illuminate\View\View
      */
-    public function view(Request $request,$id)
+    public function show(Request $request, $id)
     {
         $test = Test::select('id', 'title', 'description', 'link', 'year')->find($id);
         if (!isset($test)) {
-            return 'Đề thi không tồn tại';
+            return Redirect('/');
         }
         return view('test.view', ['test' => $test]);
     }
