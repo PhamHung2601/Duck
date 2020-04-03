@@ -93,7 +93,7 @@ class CartController extends Controller
     public function removeItem($rowId)
     {
         Cart::update($rowId, 0);
-        return redirect()->route('cart.index');
+        return redirect()->route('cart.index')->with('success','Bạn đã xoá sản phẩm khỏi giỏ hàng');
     }
 
     /**
