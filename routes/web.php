@@ -16,6 +16,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
+    Route::get('course/register/{id}/sendemail', [
+        'middleware' => 'admin.user',
+        'uses' => 'CourseController@sendEmail',
+        'as' => 'voyager.course-register.sendemail',
+    ]);
 });
 Route::get('/courses', function () {
     return view('landing-page/courses/course_overview');
