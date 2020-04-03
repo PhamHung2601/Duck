@@ -19,7 +19,7 @@
                 <div class="search col-sm-12 col-md-3 col-lg-3 register">
                     <a href="{{ url('cart') }}" class="cart-header" title="view cart">
                         <i class="fa fa-shopping-cart fa-2" aria-hidden="true" style=" font-size: 20px"></i>
-                        <span class="count">(3)</span>
+                        <span class="count">({{Cart::count()}})</span>
                     </a>
                     <a href="{{ url('') }}" class="register-link" title="Đăng Nhập">
                         <i class="fa fa-user-circle-o fa-2" style=" font-size: 20px" aria-hidden="true"></i>
