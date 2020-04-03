@@ -159,8 +159,10 @@ class CartController extends Controller
                 $discount = $rule->amount;
             }
             Cart::setSubtotalDiscount($discount,$rule->coupon_code,$rule->title);
+            return redirect()->route('cart.index')->with('success','Bạn đã sử dụng thành công mã gỉảm giá');
+        }else{
+            return redirect()->route('cart.index')->with('error','Mã giảm giá không hợp lệ. Vui lòng thử lại.');
         }
-        return redirect()->route('cart.index');
     }
 
     /**
