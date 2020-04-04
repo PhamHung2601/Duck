@@ -665,6 +665,7 @@ footer.footer {
 .landing-page-section  .section-title{
     text-align: center;
     font-size: 33px;
+    margin-bottom: 30px;
 }
 .landing-page-section  .section-content{
     text-align: center;
@@ -1368,12 +1369,66 @@ footer.footer {
 .flame-section td{
     font-size: 25px;
 }
+
+.flame-section .header{
+    background-color: #327a81;
+    color: white;
+    font-size: 1.5em;
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.flame-section table{
+    width: 100%;
+}
+
+.flame-section table  tr:nth-child(2n+1){
+    background-color: #edf7f8;
+}
+
+.flame-section table th{
+    background-color: #daeff1;
+    font-weight: 300;
+}
+
+.flame-section table td,.flame-section table th{
+    color: #2b686e;
+    padding: 15px 10px;
+}
+
+.flame-section table tr > th:nth-child(2){
+    width: 30%;
+}
+
+.flame-section table tr > td:nth-child(2){
+    text-align: left;
+}
+
+.flame-section .table-users{
+    border: 1px solid #327a81;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+    margin: 1em auto;
+    overflow: hidden;
+    width: 100%;
+}
+
+.flame-section .table-users .section-title{
+    margin: 0;
+}
+
 .student{
     margin-left: 5%;
 }
 #feeling_section .carousel-item .active{
     border: 5px solid #ffb50a !important;
 }
+
+#feeling_section .section-content{
+    padding: 0 30px;
+}
+
 .carousel-control-prev{
     margin-left: -10%;
 }
@@ -1518,3 +1573,77 @@ footer.footer {
 #service-section ul li{
     margin-bottom: 10px;
 }
+
+
+.landing-testimonials .testimonial{
+    margin: 20px 0;
+}
+.landing-testimonials .testimonial .testimonial-content{
+    width: 20%;
+    display: inline-block;
+    float: left;
+    text-align: center;
+}
+.landing-testimonials .testimonial .pic{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 8px solid rgba(255,255,255,0.15);
+}
+.landing-testimonials .testimonial .pic img{
+    width: 100%;
+    height: auto;
+}
+.landing-testimonials .testimonial .title{
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    margin: 10px 0 0 0;
+}
+.landing-testimonials .testimonial .post{
+    font-size: 12px;
+    color: #fff;
+}
+.landing-testimonials .testimonial .description{
+    display: inline-block;
+    width: 80%;
+    padding: 40px 35px;
+    border: 1px solid rgba(255,255,255,0.5);
+    font-size: 20px;
+    color: #fff;
+    margin: 0;
+    position: relative;
+    text-align: left;
+}
+.landing-testimonials .testimonial .description:before{
+    content: "";
+    border: 10px solid transparent;
+    border-right: 10px solid rgba(255,255,255,0.5);
+    position: absolute;
+    top: 20px;
+    left: -21px;
+}
+
+.landing-testimonials .slick-dots li button{
+    border: 1px solid #fff;
+    background: transparent;
+    opacity: 1;
+    width: 6px;
+    height: 6px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+}
+
+.landing-testimonials .slick-dots li.slick-active button{
+    background: #fff;
+    border: 1px solid #fff;
+
+}
+
+.landing-testimonials .slick-dots li button:before{
+    display: none;
+}
+
