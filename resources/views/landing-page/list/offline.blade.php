@@ -10,5 +10,5 @@
     @include('landing-page.list.partials.offline.faq')
 @endsection
 @section('content-bottom')
-    @include('static-block.content-bottom')
+    @include('landing-page.list.partials.offline.offline-content-bottom')
 @endsection

@@ -8,5 +8,5 @@
 {{--  @include('landing-page.courses.partials.deal_section')--}}
 @endsection
 @section('content-bottom')
-    @include('static-block.content-bottom')
+    @include('landing-page.courses.partials.course-content-bottom')
 @endsection

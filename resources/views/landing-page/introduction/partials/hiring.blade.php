@@ -1,4 +1,5 @@
 <section class="landing-page-section hiring">
+{{--    {!! \Helper::getStaticBlockContentById("hiring-page") !!}--}}
     <div class="hirring-banner">
         <div class="landing-page-section-wrapper">
         <h1 class="section-title">Tuyen Dung</h1>

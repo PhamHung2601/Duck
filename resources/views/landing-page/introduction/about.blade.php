@@ -10,5 +10,5 @@
     {{--  @include('landing-page.courses.partials.deal_section')--}}
 @endsection
 @section('content-bottom')
-    @include('static-block.content-bottom')
+    @include('landing-page.introduction.partials.intro-content-bottom')
 @endsection
