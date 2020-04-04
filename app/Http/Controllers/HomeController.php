@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\News;
 use App\Product;
 use Exception;
+use Artesaos\SEOTools\Facades\SEOMeta;
 
 /**
  * Class HomeController

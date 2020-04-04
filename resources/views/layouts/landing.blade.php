@@ -2,14 +2,11 @@
 <html lang="en">
 
 <head>
-
+    {!! SEOMeta::generate() !!}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
     <meta name="author" content="">
-
     <title>Landing Page - Start Bootstrap Theme</title>
-
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('vendor/landing-page/css/bootstrap.min.css') }}" rel="stylesheet">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

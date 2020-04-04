@@ -175,6 +175,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         TCG\Voyager\VoyagerServiceProvider::class,
+        Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
         Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class
 
     ],
@@ -228,8 +229,14 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Menu' => TCG\Voyager\Models\Menu::class,
-        'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class
-
+        'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
+        'aliases' => [
+            'SEOMeta' => Artesaos\SEOTools\Facades\SEOMeta::class,
+            'OpenGraph' => Artesaos\SEOTools\Facades\OpenGraph::class,
+            'Twitter' => Artesaos\SEOTools\Facades\TwitterCard::class,
+            'JsonLd' => Artesaos\SEOTools\Facades\JsonLd::class,
+            'SEO' => Artesaos\SEOTools\Facades\SEOTools::class
+        ],
     ],
 
 ];
