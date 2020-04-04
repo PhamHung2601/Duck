@@ -6,5 +6,5 @@
     @include("landing-page.introduction.partials.scholarship")
 @endsection
 @section('content-bottom')
-    @include('static-block.content-bottom')
+    @include('landing-page.introduction.partials.scholarship-content-bottom')
 @endsection

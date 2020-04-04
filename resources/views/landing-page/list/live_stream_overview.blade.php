@@ -11,7 +11,7 @@
     @include('landing-page.list.partials.online.scholarship_section')
 @endsection
 @section('content-bottom')
-    @include('static-block.content-bottom')
+    @include('landing-page.list.partials.online.online-1-content-bottom')
 @endsection
 
 
