@@ -1647,3 +1647,27 @@ footer.footer {
     display: none;
 }
 
+.hirring-banner{
+    background: url("../img/slider1.jpg") center center no-repeat;
+    color: #fff;
+}
+
+.hirring-banner .landing-page-section-wrapper{
+    padding: 8% 20px 16% 20px;
+}
+
+.hirring-banner .section-title{
+    margin-bottom: 0;
+}
+
+.hirring-content{
+    border-radius: 20px;
+    background: #fff;
+    margin-top: -10%;
+    -webkit-box-shadow: 0 15px 25px -7px rgba(0,0,0,.09), 0 -12px 10px -10px rgba(0,0,0,.04);
+    -moz-box-shadow: 0 15px 25px -7px rgba(0,0,0,.09), 0 -12px 10px -10px rgba(0,0,0,.04);
+    box-shadow: 0 15px 25px -7px rgba(0,0,0,.09), 0 -12px 10px -10px rgba(0,0,0,.04);
+    margin-bottom: 120px;
+    padding: 5%;
+}
+
