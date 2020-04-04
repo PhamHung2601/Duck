@@ -18,8 +18,13 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
     Route::get('course/register/{id}/sendemail', [
         'middleware' => 'admin.user',
-        'uses' => 'CourseController@sendEmail',
+        'uses' => 'MailController@sendEmailRegister',
         'as' => 'voyager.course-register.sendemail',
+    ]);
+    Route::get('sales/rule/{id}/sendemail', [
+        'middleware' => 'admin.user',
+        'uses' => 'MailController@sendEmailSalesRule',
+        'as' => 'voyager.sales-rule.sendemail',
     ]);
 });
 Route::get('/courses', function () {

@@ -6,12 +6,14 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Actions\\Voyager\\CourseRegisterEmail' => $baseDir . '/app/Actions/Voyager/CourseRegisterEmail.php',
     'App\\Banner' => $baseDir . '/app/Banner.php',
     'App\\Block' => $baseDir . '/app/Block.php',
     'App\\Category' => $baseDir . '/app/Category.php',
     'App\\CmsBlock' => $baseDir . '/app/CmsBlock.php',
     'App\\CmsPage' => $baseDir . '/app/CmsPage.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
+    'App\\CourseRegister' => $baseDir . '/app/CourseRegister.php',
     'App\\CustomerAddress' => $baseDir . '/app/CustomerAddress.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -40,6 +42,7 @@ return array(
     'App\\Http\\Middleware\\TrimStrings' => $baseDir . '/app/Http/Middleware/TrimStrings.php',
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
+    'App\\Http\\Requests\\CourseRegisterRequest' => $baseDir . '/app/Http/Requests/CourseRegisterRequest.php',
     'App\\Mail\\SendMailable' => $baseDir . '/app/Mail/SendMailable.php',
     'App\\News' => $baseDir . '/app/News.php',
     'App\\Order' => $baseDir . '/app/Order.php',

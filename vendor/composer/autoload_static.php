@@ -518,12 +518,14 @@ class ComposerStaticInitc879d37fd6e0613d89e8afde04bed811
     );
 
     public static $classMap = array (
+        'App\\Actions\\Voyager\\CourseRegisterEmail' => __DIR__ . '/../..' . '/app/Actions/Voyager/CourseRegisterEmail.php',
         'App\\Banner' => __DIR__ . '/../..' . '/app/Banner.php',
         'App\\Block' => __DIR__ . '/../..' . '/app/Block.php',
         'App\\Category' => __DIR__ . '/../..' . '/app/Category.php',
         'App\\CmsBlock' => __DIR__ . '/../..' . '/app/CmsBlock.php',
         'App\\CmsPage' => __DIR__ . '/../..' . '/app/CmsPage.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\CourseRegister' => __DIR__ . '/../..' . '/app/CourseRegister.php',
         'App\\CustomerAddress' => __DIR__ . '/../..' . '/app/CustomerAddress.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -552,6 +554,7 @@ class ComposerStaticInitc879d37fd6e0613d89e8afde04bed811
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\Requests\\CourseRegisterRequest' => __DIR__ . '/../..' . '/app/Http/Requests/CourseRegisterRequest.php',
         'App\\Mail\\SendMailable' => __DIR__ . '/../..' . '/app/Mail/SendMailable.php',
         'App\\News' => __DIR__ . '/../..' . '/app/News.php',
         'App\\Order' => __DIR__ . '/../..' . '/app/Order.php',
