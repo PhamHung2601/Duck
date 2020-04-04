@@ -506,6 +506,7 @@ footer.footer {
 .container-landing{
     max-width: 1080px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 .landing-content .section-box{
@@ -1671,3 +1672,8 @@ footer.footer {
     padding: 5%;
 }
 
+.container-landing-2{
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
