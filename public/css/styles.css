@@ -1677,3 +1677,51 @@ footer.footer {
     margin: 0 auto;
     padding: 0 15px;
 }
+
+.online-course .section-title{
+    line-height: 1.5;
+    font-weight: 700;
+    text-align: left;
+    color: #fff;
+}
+
+.online-course{
+    background: #093028;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #237A57, #093028);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #237A57, #093028); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+}
+
+.online-course .section-content{
+    text-align: left;
+    color: #fff;
+}
+
+.online-course .box-action{
+    text-align: left;
+}
+
+.online-course .image-wrapper{
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.online-course .image-container{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.course-register{
+    background: url("../img/dummy-bg.jpg") center center no-repeat fixed;
+    color: #fff;
+}
+
+.course-register .section-content{
+    color: #fff;
+    text-align: left;
+}
+
+.form-register-course{
+    text-align: center;
+}
