@@ -13,12 +13,68 @@
     .product-list .products .product-item{
         width: 33.3333%;
     }
+
+    #et-top-navigation{
+        margin: 0;
+        width: 100%;
+    }
+
+    #et-top-navigation .navbar-toggler{
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+
+    #et-top-navigation .navbar{
+        position: static;
+    }
+
+    #navbarText > ul{
+        padding: 20px 0;
+    }
+
+    #navbarText > ul > li{
+        width: 100%;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    #et-top-navigation .dropdown-menu{
+        width: 100%;
+    }
+
+    .me-avatar img{
+        max-width: 50%;
+    }
+
+    .me-avatar{
+        margin-bottom: 30px;
+    }
+
+    .news-list .news{
+        width: 50%;
+    }
+
+    .hiring-section .card{
+        margin-bottom: 20px;
+    }
+
 }
 
 @media (max-width: 640px){
     .product-list .products .product-item{
         width: 50%;
     }
+
+    .landing-page-section .section-title{
+        font-size: 27px;
+    }
+
+    .news-list .news{
+        width: 100%;
+        padding: 0;
+    }
+
 }
 
 @media (max-width: 480px){
@@ -27,4 +83,26 @@
         padding-right: 5px;
         padding-bottom: 10px;
     }
+
+    .who-are-we-section .section-content > .content{
+        flex-direction: column;
+    }
+
+    .who-are-we-section .who-are-we-icon{
+        margin: 35px auto;
+    }
+
+    .who-are-we-section .who-are-we-content p{
+        font-size: 19px;
+    }
+
+    .me-content .me{
+        font-size: 19px;
+    }
+
+    .logo_container{
+        width: 40%;
+        min-height: 55px;
+    }
+
 }

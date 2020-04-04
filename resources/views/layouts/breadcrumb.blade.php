@@ -13,4 +13,7 @@
         document.getElementById("current-breadcrumb").innerHTML = '/ ' + document.title;
         document.getElementById("home-breadcrumb").innerHTML = 'Home';
     }
+    else {
+        $('#breadcrumbs').hide();
+    }
 </script>

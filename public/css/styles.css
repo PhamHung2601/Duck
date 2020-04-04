@@ -45,6 +45,7 @@ img{
 ul{
     padding: 0;
     list-style-type: none;
+    margin-bottom: 0;
 }
 
 a{
@@ -548,11 +549,11 @@ footer.footer {
     color: #ff0000;
 }
 
-.landing-content .box-action{
+.box-action{
     text-align: center;
 }
 
-.landing-content .action-order{
+.landing-button{
     color: #066166!important;
     border-width: 0px!important;
     border-color: #e02b20;
@@ -569,11 +570,11 @@ footer.footer {
     transition: all 300ms ease 0ms;
 }
 
-.landing-content .action-order:hover{
+.landing-button:hover{
     padding-right: 40px;
 }
 
-.landing-content .action-order:after{
+.landing-button:after{
     content: "\f0da";
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
@@ -596,7 +597,7 @@ footer.footer {
     transition: all 300ms ease 0ms;
 }
 
-.landing-content .action-order:hover:after{
+.landing-button:hover:after{
     margin-left: .3em;
     left: auto;
     margin-left: .3em;
@@ -650,17 +651,24 @@ footer.footer {
     float: right;
     width: 35%;
 }
+
 .landing-page-section{
-    padding: 5% 15% 5% 15%;
+    color: #333;
 }
-.landing-page-section > .section-title{
-    text-align: center;
+
+.landing-page-section-wrapper{
+    padding: 5% 20px;
+    max-width: 1170px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
-.landing-page-section > .section-content{
+.landing-page-section  .section-title{
     text-align: center;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    color: black;
+    font-size: 33px;
+}
+.landing-page-section  .section-content{
+    text-align: center;
+    color: #333;
     font-size: 18px;
 }
 .landing-page-section .course-detail{
@@ -673,7 +681,7 @@ footer.footer {
     border: 1px solid black;
     border-radius: 15%;
 }
-.landing-page-section > .section-content > ul > li{
+.landing-page-section  .section-content > ul > li{
     margin-top: 3%;
 }
 .landing-page-section .section-add-to-cart-button > a{
@@ -984,15 +992,15 @@ footer.footer {
 }
 /*--- introduction ----*/
 .about-us-banner-item{
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 800px;
+    position: relative;
+    display: inline-block;
 }
 .about-us-banner-title{
     color: white;
     font-size: 30px;
-    margin-left: 10%;
-    padding-top: 20%;
+    position: absolute;
+    top: 40%;
+    left: 10%;
 }
 /*.who-are-we-section{*/
 /*    background-color:#4f805d33;*/
@@ -1015,6 +1023,7 @@ footer.footer {
     height: 150px;
     border-radius: 50%;
     border: 1px solid #ff8d00;
+    text-align: center;
 }
 .who-are-we-section .who-are-we-icon i{
     padding-top: 20%;
@@ -1024,7 +1033,9 @@ footer.footer {
     padding-left: 5%;
 }
 .who-are-we-section .who-are-we-content p{
-    font-size: 25px;
+    font-size: 22px;
+    text-align: left;
+    padding: 0;
 }
 .who-are-we-section .section-content hr {
     background-color: #ff8d00;
@@ -1032,12 +1043,23 @@ footer.footer {
     margin-left: 15%;
     margin-top: 5%;
 }
+
+.who-are-we-section .section-content > .content{
+    padding: 5% 0;
+    border-bottom: 1px solid #ff8d00;
+}
+
+.who-are-we-section .section-content > .content:last-child{
+    border-bottom: 0;
+}
+
 .hiring-section{
     background-color: #91d5fb;
 }
 .hiring-section .card{
-    box-shadow: 5px 6px #888888;
-    margin-right: 15%;
+    -webkit-box-shadow: -2px 5px 19px -4px rgba(0,0,0,0.61);
+    -moz-box-shadow: -2px 5px 19px -4px rgba(0,0,0,0.61);
+    box-shadow: -2px 5px 19px -4px rgba(0,0,0,0.61);
 }
 .hiring-more{
     color: #066166!important;
@@ -1061,25 +1083,88 @@ footer.footer {
     margin-top: -20%;
     padding-left: 15%;
 }
+
+.me-avatar{
+    text-align: center;
+}
+
 .me-avatar img{
-    position: absolute;
-    margin-left: -75%;
-    margin-top: 20%;
-    border-radius: 200px;
+    border-radius: 100%;
 }
 .me-content .me{
     display: flex;
-    text-align: center;
-    font-size: 25px;
+    text-align: left;
+    font-size: 20px;
     margin-bottom: 5%;
+    color: #333;
 }
+
+.me-content .me ul li{
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 45px;
+}
+.me-content .me ul li:before{
+    content: "\f061";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #ff8d00;
+    font-size: 25px;
+    position: absolute;
+    left: 0;
+    top: 6px;
+    transition: all 300ms ease 0ms;
+}
+
+/*.me-content .me ul li:hover:before{*/
+    /*left: 10px;*/
+/*}*/
+
 .news-about-me{
     background-image: linear-gradient(to right top, #e1e1c6, #e5e4ad, #eae692, #f0e775, #f6e855);
 }
 .news-about-me .news{
     margin-bottom: 5%;
-    padding: 10%;
 }
+
+.news-list{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.news-list .news{
+    width: 33.3333%;
+    padding: 0 15px;
+}
+
+.news-list .news .card{
+    display: block;
+    height: 100%;
+}
+
+.news-list .news .card-body h5{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.news-list .news .card-body p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
 /*----*/
 .breadcrumb{
     background: transparent;
@@ -1409,4 +1494,27 @@ footer.footer {
 
 .list-document ul li a:hover{
     text-decoration: underline;
+}
+
+
+/*---landings----*/
+
+#about-section{
+    color: #333;
+}
+
+#about-section ul li{
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+#about-section ul li i.fa{
+    position: absolute;
+    left: 0;
+    top: 3px;
+}
+
+#service-section ul li{
+    margin-bottom: 10px;
 }
