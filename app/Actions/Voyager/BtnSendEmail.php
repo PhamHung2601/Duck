@@ -5,10 +5,10 @@ namespace App\Actions\Voyager;
 use TCG\Voyager\Actions\AbstractAction;
 
 /**
- * Class CourseRegisterEmail
+ * Class BtnSendEmail
  * @package App\Actions\Voyager
  */
-class CourseRegisterEmail extends AbstractAction
+class BtnSendEmail extends AbstractAction
 {
     /**
      * @return string
@@ -57,7 +57,7 @@ class CourseRegisterEmail extends AbstractAction
      */
     public function shouldActionDisplayOnDataType()
     {
-        if ($this->dataType->slug == 'course-register') {
+        if ($this->dataType->slug == 'course-register' || $this->dataType->slug == 'sales-rule') {
             return true;
         }
         return false;

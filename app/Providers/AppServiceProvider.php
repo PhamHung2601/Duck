@@ -26,7 +26,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Voyager::addAction(\App\Actions\Voyager\CourseRegisterEmail::class);
+        Voyager::addAction(\App\Actions\Voyager\BtnSendEmail::class);
 
         $staticBlockTop = \Helper::getStaticBlockPageByPosition(\Helper::getBaseRouteCurrent($this->app->request->getRequestUri()), StaticBlock::STATIC_BLOCK_TOP);
         $staticBlockBottom = \Helper::getStaticBlockPageByPosition(\Helper::getBaseRouteCurrent($this->app->request->getRequestUri()), StaticBlock::STATIC_BLOCK_BOTTOM);
