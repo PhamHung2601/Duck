@@ -61,6 +61,38 @@
 
 }
 
+@media only screen and (max-width: 767px){
+    .landing-testimonials .testimonial .testimonial-content{
+        float: none;
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+    .landing-testimonials .testimonial .description{
+        width: 100%;
+    }
+    .landing-testimonials .testimonial .description:before{
+        border: 10px solid transparent;
+        border-bottom: 10px solid rgba(255,255,255,0.15);
+        position: absolute;
+        top: -20px;
+        left: 47.5%;
+    }
+
+    #feeling_section .section-content{
+        padding: 0px 10px;
+    }
+
+    .landing-testimonials .testimonial .description{
+        padding: 40px 25px;
+        font-size: 17px;
+    }
+
+    .flame-section td{
+        font-size: 20px;
+    }
+
+}
+
 @media (max-width: 640px){
     .product-list .products .product-item{
         width: 50%;
@@ -73,6 +105,27 @@
     .news-list .news{
         width: 100%;
         padding: 0;
+    }
+
+    .flame-section table th{
+        display: none;
+    }
+
+    .flame-section .th{
+        width: 100% !important;
+        text-align: left;
+    }
+
+    .flame-section table td{
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    .flame-section table td:before{
+        content: attr(data-title)':';
+        display: inline-block;
+        width: 80px;
     }
 
 }

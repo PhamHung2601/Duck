@@ -141,3 +141,17 @@
 {{--        </div>--}}
 {{--    </div>--}}
 </section>
+<script type="text/javascript">
+
+    $(document).ready(function(){
+
+        $('#testimonial-slider').slick({
+            dots: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 6000,
+        });
+
+    });
+</script>
