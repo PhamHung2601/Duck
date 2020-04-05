@@ -1,4 +1,5 @@
 @extends('layouts.landing')
+@section('pageTitle', 'Các Khóa Học')
 @section('content-top')
     @include('banner-manager.banner')
     @include('static-block.content-top')

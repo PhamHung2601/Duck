@@ -1,4 +1,5 @@
 @extends('layouts.landing')
+@section('pageTitle', 'Học Bổng AT Foundation')
 @section('content-top')
     @include('static-block.content-top')
 @endsection

@@ -27,29 +27,29 @@ Route::group(['prefix' => 'admin'], function () {
         'as' => 'voyager.sales-rule.sendemail',
     ]);
 });
-Route::get('/courses', function () {
+Route::get('/cac-khoa-hoc', function () {
     return view('landing-page/courses/course_overview');
 });
-Route::get('/courses/list/online', function () {
+Route::get('/khoa-hoc/lop-online', function () {
     return view('landing-page/list/online');
 });
-Route::get('/courses/list/online/live-stream-overview', function () {
+Route::get('/khoa-hoc/lop-online/khoa-hoc-live-stream-overview', function () {
     return view('landing-page/list/live_stream_overview');
 });
-Route::get('/courses/list/offline', function () {
+Route::get('/khoa-hoc/lop-offline', function () {
     return view('landing-page/list/offline');
 });
 Route::post('/course/register', 'CourseController@register')->name('course.register');
-Route::get('/about/us', function () {
+Route::get('/gioi-thieu', function () {
     return view('landing-page/introduction/about');
 });
-Route::get('/about/students', function () {
+Route::get('/hoc-sinh', function () {
     return view('landing-page/introduction/students');
 });
-Route::get('/about/hiring', function () {
+Route::get('/tuyen-dung', function () {
     return view('landing-page/introduction/hiring');
 });
-Route::get('/about/scholarship', function () {
+Route::get('/hoc-bong-AT-foundation', function () {
     return view('landing-page/introduction/scholarship');
 });
 Route::get('/', [
@@ -98,4 +98,9 @@ Route::post('/search', 'SearchController@search')->name('search.search');
 Route::post('cart/discount', 'CartController@discount')->name('cart.discount');
 
 Route::post('review/submit', 'ReviewController@submit')->name('review.submit');
+
+Route::get('document/{id}-{slug?}.html', 'DocumentController@view')
+    ->where('slug', '[a-zA-Z0-9-_]+')
+    ->where('id', '[0-9]+')
+    ->name('document.view');
 

@@ -1,4 +1,5 @@
 @extends('layouts.landing')
+@section('pageTitle', 'Học Sinh Của Thầy Tùng')
 @section('content-top')
     {{--    @include('banner-manager.banner')--}}
 @endsection
