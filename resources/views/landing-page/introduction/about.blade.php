@@ -1,4 +1,5 @@
 @extends('layouts.landing')
+@section('pageTitle', 'Giới Thiệu')
 @section('content-top')
     {{--    @include('banner-manager.banner')--}}
     @include('landing-page.introduction.partials.banner')
