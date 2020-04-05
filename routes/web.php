@@ -83,8 +83,8 @@ Route::get('tin-tuc/{id}-{slug?}.html', 'NewsController@show')
     ->where('id', '[0-9]+')
     ->name('news.view');
 
-Route::resource('/test', 'TestController');
-Route::get('test/{id}-{slug?}.html', 'TestController@show')
+Route::resource('/de-thi', 'TestController');
+Route::get('de-thi/{id}-{slug?}.html', 'TestController@show')
     ->where('slug', '[a-zA-Z0-9-_]+')
     ->where('id', '[0-9]+')
     ->name('test.view');
