@@ -32,7 +32,7 @@
         <div class="panel panel-default">
           <div class="panel-body">
             <div class="row">
-              <div class="col-sm-12 col-md-4 col-lg-4">
+              <div class="col-sm-12 col-md-4 col-lg-4 image-box">
                 <img src="http://demo.themexbd.com/wpv/extrat/wp-content/uploads/2020/03/2.jpg" alt="">
               </div>
               <div class="col-sm-12 col-md-8 col-lg-8">

@@ -1,7 +1,7 @@
 <div class="header">
     <div class="header-top">
         <div class="container">
-            <nav class="navbar navbar-light static-top display-flex-content">
+            <nav class="row navbar static-top display-flex-content">
                 <div class="logo col-sm-12 col-md-4 col-lg-4">
                     <a href={{ url('') }}><h2>Địa Lí Thầy Tùng</h2><p>#Team thầy Tùng, chiến thắng đến cùng</p></a>
                 </div>
@@ -30,7 +30,7 @@
     </div>
     <div class="main-menu">
         <div class="container">
-            <nav class="navbar navbar-light navbar-expand-lg main-menu">
+            <nav class="navbar navbar-dark navbar-expand-lg main-menu">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
                         aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>

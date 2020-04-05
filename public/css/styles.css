@@ -416,6 +416,7 @@ iframe{
 
 .list-books .books .book-item{
     padding: 0 10px;
+    vertical-align: top;
 }
 
 .list-books .books .book-item-inner{
@@ -1498,6 +1499,12 @@ footer.footer {
 .about-teacher{
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+
+
+.home-banner{
+    text-align: center;
 }
 
 

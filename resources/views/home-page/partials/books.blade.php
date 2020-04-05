@@ -8,8 +8,10 @@
                 @foreach($products as $product)
                     <div class="book-item">
                         <div class="book-item-inner">
-                            <img class="" style="width:100px; border:solid 1px #f2f2f2"
-                                 src="{{ Voyager::image( $product->media ) }}">
+                            <div class="book-image">
+                                <img class="" style="width:100px; border:solid 1px #f2f2f2"
+                                     src="{{ Voyager::image( $product->media ) }}">
+                            </div>
                             <div class="book-info">
                                 <a href="{{$product->getUrlDetail()}}" class="name"><span> {{ $product->name }}</span></a>
                                 @foreach($product->category as $cate)
