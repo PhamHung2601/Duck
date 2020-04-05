@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\News;
 use App\Product;
+use App\Document;
+use App\Test;
 use Exception;
 use Artesaos\SEOTools\Facades\SEOMeta;
 
@@ -32,7 +34,9 @@ class HomeController extends Controller
         $products = Product::orderBy('id', 'desc')->take(6)->get();
         $month = $this->getStudentWithRankingByMonth();
         $course = $this->getStudentWithRankingByCourse();
-        return view('home-page/home', compact('news', 'products', 'month', 'course'));
+        $tests = Test::orderBy('id','desc')->get();
+        $documents = Document::orderBy('position','desc')->get();
+        return view('home-page/home', compact('news', 'products', 'month', 'course','tests','documents'));
     }
 
     /**
