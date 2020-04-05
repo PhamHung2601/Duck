@@ -91,6 +91,10 @@
         font-size: 20px;
     }
 
+    .landing-page-section .section-content .display-flex-box .box{
+        margin-top: 0;
+    }
+
 }
 
 @media (max-width: 640px){

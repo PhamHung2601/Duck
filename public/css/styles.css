@@ -672,6 +672,7 @@ footer.footer {
     text-align: center;
     color: #333;
     font-size: 18px;
+    word-break: break-word;
 }
 .landing-page-section .course-detail{
     text-align: left;
@@ -724,15 +725,14 @@ footer.footer {
 .landing-page-section .section-content .display-flex-box .box{
     padding: 0;
     border: 1px solid;
-    border-radius: 40px;
-    margin-right: 5%;
-    margin-top: 10%;
-    display: table;
+    border-radius: 25px;
+    display: block;
     height: 100%;
 }
 
 .landing-page-section .section-content .display-flex-box > div{
-    margin-bottom: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .landing-page-section .section-content .display-flex-box span{
@@ -741,16 +741,25 @@ footer.footer {
 .landing-page-section .section-content .display-flex-box .box-head{
     color: white;
     background-color: #5bc0de;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 10px;
 }
+
+.landing-page-section .section-content .display-flex-box .box-head p{
+    margin-bottom: 0;
+}
+
 .landing-page-section .chart-content{
     border: 1px transparent;
     background-color: white;
     border-radius: 100px;
+    padding: 10px;
+    margin: 15px 0;
 }
 .landing-page-section .chart-content p{
-   font-size: 27px;
+   font-size: 22px;
+    margin-bottom: 0;
 }
 .landing-page-section .form-register-course input{
     width: 80%;
@@ -999,6 +1008,37 @@ footer.footer {
 .banner-manager.all-image ul li{
     text-align: center;
 }
+
+.banner-manager .slick-dotted.slick-slider{
+    margin-bottom: 0;
+}
+
+.banner-manager .slick-dots{
+    bottom: 10px;
+}
+
+.banner-manager .slick-dots li button{
+    border: 1px solid #fff;
+    background: transparent;
+    opacity: 1;
+    width: 6px;
+    height: 6px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+}
+
+.banner-manager .slick-dots li.slick-active button{
+    background: #fff;
+    border: 1px solid #fff;
+
+}
+
+.banner-manager .slick-dots li button:before{
+    display: none;
+}
+
+
 /*--- introduction ----*/
 .about-us-banner-item{
     position: relative;
@@ -1757,3 +1797,12 @@ footer.footer {
 .our-commit .section-content i{
     color: #EF4930;
 }
+
+.live-stream-course{
+    background: #7ACEFC;
+}
+
+.live-stream-course .section-content{
+    text-align: left;
+}
+
