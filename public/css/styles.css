@@ -1725,3 +1725,28 @@ footer.footer {
 .form-register-course{
     text-align: center;
 }
+
+.offline-course{
+    background: #FFEFBA;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #000;
+}
+
+.offline-course .section-content{
+    text-align: left;
+}
+
+.bg-yellow{
+    background: #ffd623;
+}
+
+.our-commit .section-content{
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.our-commit .section-content i{
+    color: #EF4930;
+}
