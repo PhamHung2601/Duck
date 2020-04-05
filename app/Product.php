@@ -39,11 +39,18 @@ class Product extends Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function category()
     {
         return $this->belongsToMany(Category::class, 'categories_products');
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function related()
+    {
+        return $this->belongsToMany(Related::class, 'related_products');
+    }
 }
