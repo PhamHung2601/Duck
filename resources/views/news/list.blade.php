@@ -17,7 +17,9 @@
                 @endforeach
             </div>
         </div>
-        {{ $news->links() }}
+        @if(count($news))
+            {{ $news->links() }}
+        @endif
     </section>
 @endsection
 @section('content-bottom')

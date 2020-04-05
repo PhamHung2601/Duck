@@ -32,18 +32,15 @@ class NewsController extends Controller
                 /** @var Tag $tag */
                 $tag = Tag::where('name',$tagParam)->first();
                 $newsList = $tag->news;
-                $newsList = $tag->news()::orderBy('id', 'desc')->paginate(10);
+                if (count($newsList)) {
+                    $newsList = News::whereIn('id', $newsList->pluck('id')->toArray())->orderBy('id', 'desc')->paginate(10);
+                }
             } catch (\Exception $e) {
-
-                        echo '<pre>';print_r($e->getMessage());die('**lk-debug**');
-
-
                 $newsList = News::orderBy('id', 'desc')->paginate(10);
             }
         } else {
             $newsList = News::orderBy('id', 'desc')->paginate(10);
         }
-
         return view('news.list', ['news' => $newsList]);
     }
 
