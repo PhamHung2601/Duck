@@ -95,4 +95,14 @@ class Helper
             return $uri;
         }
     }
+
+    /**
+     * @param $date
+     * @param string $format
+     * @return false|string
+     */
+    public static function formatDate($date,$format = 'd-m-Y')
+    {
+        return date($format, strtotime($date));
+    }
 }

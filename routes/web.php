@@ -78,11 +78,10 @@ Route::post('cart/deleteCart', 'CartController@deleteCart')->name('cart.deleteCa
 Route::get('cart/removeItem/{rowId?}', 'CartController@removeItem')->name('cart.removeItem');
 Route::resource('/success', 'SuccessController');
 
-Route::resource('/news', 'NewsController');
-Route::get('new/{id}-{slug?}.html', 'NewsController@view')
-    ->where('slug', '[a-zA-Z0-9-_]+')
+Route::resource('/tin-tuc', 'NewsController');
+Route::get('tin-tuc/{id}-{slug?}.html', 'NewsController@show')
     ->where('id', '[0-9]+')
-    ->name('new.view');
+    ->name('news.view');
 
 Route::resource('/test', 'TestController');
 Route::get('test/{id}-{slug?}.html', 'TestController@show')

@@ -21,6 +21,19 @@ class News extends Model
      */
     public function getUrlDetail()
     {
-        return url("/new/{$this->id}-" . Str::slug($this->title) . ".html");
+        return url("/tin-tuc/{$this->id}-" . Str::slug($this->title) . ".html");
+    }
+
+    public function getListUrlByTag($tag)
+    {
+        return url("/tin-tuc?tag=" . $tag);
+    }
+
+    /**
+     * The roles that belong to the user.
+     */
+    public function tags()
+    {
+        return $this->belongsToMany('App\Tag');
     }
 }
