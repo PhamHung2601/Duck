@@ -60,11 +60,11 @@ Route::get('/', [
 Route::get('/books/sach-xu-li-nhanh', function () {
     return view('landing-page/book/book-landing');
 });
-Route::get('/book/{id}-{slug?}.html', 'BookController@index')
+Route::get('/sach/{id}-{slug?}.html', 'BookController@index')
     ->where('slug', '[a-zA-Z0-9-_]+')
     ->where('id', '[0-9]+')->name('book.detail');
 
-Route::get('/books/list', 'BookController@list')->name('books.list');
+Route::get('/tat-ca-sach', 'BookController@list')->name('books.list');
 
 Route::resource('/cart', 'CartController');
 
@@ -78,14 +78,13 @@ Route::post('cart/deleteCart', 'CartController@deleteCart')->name('cart.deleteCa
 Route::get('cart/removeItem/{rowId?}', 'CartController@removeItem')->name('cart.removeItem');
 Route::resource('/success', 'SuccessController');
 
-Route::resource('/news', 'NewsController');
-Route::get('new/{id}-{slug?}.html', 'NewsController@view')
-    ->where('slug', '[a-zA-Z0-9-_]+')
+Route::resource('/tin-tuc', 'NewsController');
+Route::get('tin-tuc/{id}-{slug?}.html', 'NewsController@show')
     ->where('id', '[0-9]+')
-    ->name('new.view');
+    ->name('news.view');
 
-Route::resource('/test', 'TestController');
-Route::get('test/{id}-{slug?}.html', 'TestController@show')
+Route::resource('/de-thi', 'TestController');
+Route::get('de-thi/{id}-{slug?}.html', 'TestController@show')
     ->where('slug', '[a-zA-Z0-9-_]+')
     ->where('id', '[0-9]+')
     ->name('test.view');
@@ -94,7 +93,7 @@ Route::post('/account/contact', 'HomeController@addContactEmail')->name('home.ad
 
 
 Route::get('/send/email', 'MailController@mail');
-Route::post('/search', 'SearchController@search')->name('search.search');
+Route::post('/tim-kiem', 'SearchController@search')->name('search.search');
 Route::post('cart/discount', 'CartController@discount')->name('cart.discount');
 
 Route::post('review/submit', 'ReviewController@submit')->name('review.submit');

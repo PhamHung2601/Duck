@@ -54,10 +54,14 @@
 <div class="main-content">
     <div class="container">
         @include('layouts.breadcrumb')
+        @include('layouts.message')
         @yield('content')
     </div>
 </div>
 @yield('content-bottom')
+<div class="form-register-email">
+    @include('home-page.partials.email_form')
+</div>
 @yield('content-js')
 @include('home-page.partials.footer')
 

@@ -13,7 +13,7 @@
             </ul>
         @endif
         <div class="form-wrapper">
-            <form role="form" id="add-to-cart" method="POST" action="{{ route('review.submit') }}">
+            <form role="form" id="submit-review" method="POST" action="{{ route('review.submit') }}">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="input-group">
                     <input type="text" value="" name="nickname"

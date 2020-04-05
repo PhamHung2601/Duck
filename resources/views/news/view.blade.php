@@ -9,23 +9,20 @@
             <h1 class="entry-title text-center">{{$news->title}}</h1>
             <div class="text-left pd-10">
                 <div>
-                    <a href="#" class="tag-item">Thể thao</a>
-                    <a href="#" class="tag-item">Miền trung</a>
-                    <a href="#" class="tag-item">Nam cực</a>
+                    @foreach($news->tags as $tag)
+                        <a href="{{$news->getListUrlByTag($tag->name)}}" class="tag-item">{{$tag->name}}</a>
+                    @endforeach
                 </div>
                 <div>
-                    <a href="https://stepup.edu.vn/blog/cau-truc-spend/" class="entry-featured-image-url">
-                        <img src="https://cdnstepup.r.worldssl.net/wp-content/uploads/2020/03/Cấu-trúc-spend-trong-tiếng-Anh-400x250.png" width="100%" alt="{{$news->title}}">
-                    </a>
+                    <img src="{{Voyager::image($news->media)}}" width="100%" alt="{{$news->title}}">
                 </div>
-                <p class="post-meta mt-1"><span class="published-time">Mar 18, 2020</span></p>
+                <p class="post-meta mt-1"><span class="published-time">{{\Helper::formatDate($news->updated_at)}}</span></p>
             </div>
             <div>
                 <p>{{$news->description}}</p>
             </div>
         </div>
     </div>
-    <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Chia sẻ</a></div>
 </div>
 @endsection
 @section('content-bottom')

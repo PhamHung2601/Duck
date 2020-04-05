@@ -35,7 +35,7 @@ class Product extends Model
      */
     public function getUrlDetail()
     {
-        return url("/book/{$this->id}-" . Str::slug($this->name) . ".html");
+        return url("/sach/{$this->id}-" . Str::slug($this->name) . ".html");
     }
 
     /**

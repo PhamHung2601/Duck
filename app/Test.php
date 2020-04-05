@@ -17,7 +17,7 @@ class Test extends Model
      */
     public function getUrlDetail()
     {
-        return url("/test/{$this->id}-" . Str::slug($this->title) . ".html");
+        return url("/de-thi/{$this->id}-" . Str::slug($this->title) . ".html");
     }
 
 }

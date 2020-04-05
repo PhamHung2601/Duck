@@ -43,7 +43,7 @@ class TestController extends Controller
      */
     public function show(Request $request, $id)
     {
-        $test = Test::select('id', 'title', 'description', 'link', 'year')->find($id);
+        $test = Test::select('*')->find($id);
         if (!isset($test)) {
             return Redirect('/');
         }
