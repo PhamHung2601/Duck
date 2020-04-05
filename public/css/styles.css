@@ -727,7 +727,14 @@ footer.footer {
     border-radius: 40px;
     margin-right: 5%;
     margin-top: 10%;
+    display: table;
+    height: 100%;
 }
+
+.landing-page-section .section-content .display-flex-box > div{
+    margin-bottom: 15px;
+}
+
 .landing-page-section .section-content .display-flex-box span{
     text-decoration: line-through;
 }
