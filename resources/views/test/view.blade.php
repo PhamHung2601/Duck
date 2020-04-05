@@ -20,7 +20,7 @@
         </div>
         <button id="share-button" >Chia sẻ</button>
         <div id="test-link" style="display: none">
-            <a href="{{$test->link}}">{{$test->link}}</a>
+            <a href="{{$test->link}}" target="_blank" >{{$test->link}}</a>
         </div>
     </div>
 @endsection

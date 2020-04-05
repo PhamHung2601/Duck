@@ -2,16 +2,6 @@
 @section('pageTitle', 'Shopping Cart')
 @section('content')
     <section id="cart_items">
-        @if(!empty(session('error')))
-            <div class="alert alert-danger">
-                {{ session('error') }}
-            </div>
-        @endif
-        @if(!empty(session('success')))
-            <div class="alert alert-success">
-                {{ session('success') }}
-            </div>
-        @endif
         <div class="container">
             <div class="table-responsive cart_info">
                 <div class="page-title">

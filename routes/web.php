@@ -60,11 +60,11 @@ Route::get('/', [
 Route::get('/books/sach-xu-li-nhanh', function () {
     return view('landing-page/book/book-landing');
 });
-Route::get('/book/{id}-{slug?}.html', 'BookController@index')
+Route::get('/sach/{id}-{slug?}.html', 'BookController@index')
     ->where('slug', '[a-zA-Z0-9-_]+')
     ->where('id', '[0-9]+')->name('book.detail');
 
-Route::get('/books/list', 'BookController@list')->name('books.list');
+Route::get('/tat-ca-sach', 'BookController@list')->name('books.list');
 
 Route::resource('/cart', 'CartController');
 
@@ -93,7 +93,7 @@ Route::post('/account/contact', 'HomeController@addContactEmail')->name('home.ad
 
 
 Route::get('/send/email', 'MailController@mail');
-Route::post('/search', 'SearchController@search')->name('search.search');
+Route::post('/tim-kiem', 'SearchController@search')->name('search.search');
 Route::post('cart/discount', 'CartController@discount')->name('cart.discount');
 
 Route::post('review/submit', 'ReviewController@submit')->name('review.submit');

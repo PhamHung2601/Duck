@@ -80,17 +80,19 @@ class HomeController extends Controller
      */
     public function addContactEmail(Request $request)
     {
-        $validatedData = $request->validate([
-            'email' => 'required|email'
-        ]);
-
+        if (!$request->isMethod('post'))
+            return back();
+        $email = $request->input('email');
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            return redirect()->back()->with('error','Có lỗi xảy ra.Vui lòng kiểm tra lại email.');
+        }
         try {
             DB::table('contacts')->updateOrInsert(
-                ['email' => $validatedData['email']]
+                ['email' => $email]
             );
-            return response()->json(['success' => 'Bạn đã đăng ký email thành công']);
+            return redirect()->back()->with('success','Bạn đã đăng kí thành công.');
         } catch (Exception $e) {
-            echo $e->getMessage();
+            return redirect()->back()->with('error','Có lỗi xảy ra.Vui lòng kiểm tra lại email.');
         }
     }
 }

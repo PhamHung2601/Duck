@@ -1806,3 +1806,8 @@ footer.footer {
     text-align: left;
 }
 
+.form-register-email {
+    margin: 0 auto;
+    width: 50%;
+}
+
