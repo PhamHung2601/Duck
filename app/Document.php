@@ -21,7 +21,7 @@ class Document extends Model
      */
     public function getUrlDetail()
     {
-        return url("/document/{$this->id}-" . Str::slug($this->title) . ".html");
+        return url("/tai-lieu/{$this->id}-" . Str::slug($this->title) . ".html");
     }
 
 }

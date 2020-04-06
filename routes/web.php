@@ -98,7 +98,8 @@ Route::post('cart/discount', 'CartController@discount')->name('cart.discount');
 
 Route::post('review/submit', 'ReviewController@submit')->name('review.submit');
 
-Route::get('document/{id}-{slug?}.html', 'DocumentController@view')
+Route::get('/tai-lieu', 'DocumentController@index');
+Route::get('tai-lieu/{id}-{slug?}.html', 'DocumentController@view')
     ->where('slug', '[a-zA-Z0-9-_]+')
     ->where('id', '[0-9]+')
     ->name('document.view');
