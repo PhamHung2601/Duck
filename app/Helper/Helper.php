@@ -101,9 +101,21 @@ class Helper
      * @param string $format
      * @return false|string
      */
-    public static function formatDate($date,$format = 'd-m-Y')
+    public static function formatDate($date, $format = 'd-m-Y')
     {
         return date($format, strtotime($date));
+    }
+
+    /**
+     * @return array
+     */
+    public static function getDocumentsCategory()
+    {
+        return [
+            "tai-lieu-on-thi" => "Tài liệu ôn thi",
+            "tai-lieu-mo-rong" => "Tài liệu mở rộng",
+            "kinh-nghiem-on-thi" => "Kinh nghiệm ôn thi"
+        ];
     }
 
     /**

@@ -8,6 +8,9 @@
         <div id="main-content" class="content-introduce">
             {!!\Helper::getStaticBlockContentById("blog_header")!!}
         </div>
+        <div class="side-bar">
+            @include('documents.side-bar-category')
+        </div>
         <div class="mt-3">
             <div class="row">
                 @foreach($documents as $document)

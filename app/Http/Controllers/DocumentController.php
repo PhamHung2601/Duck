@@ -38,6 +38,17 @@ class DocumentController extends Controller
 
     /**
      * @param Request $request
+     * @param $category
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function showByCategory(Request $request, $category)
+    {
+        $documents = Document::where('category', $category)->orderBy('position', 'desc')->paginate(10);
+        return view('documents.list', compact('documents','category'));
+    }
+
+    /**
+     * @param Request $request
      * @param $id
      * @param $slug
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector|\Illuminate\View\View
