@@ -35,9 +35,16 @@
                                         </div>
                                         <div class="input-field form-group">
                                             <label for="address">Địa chỉ</label>
-                                            <input id="address" class="form-control" name="address" type="text" value="{{ old('address') }}"
+                                            <input id="destination" class="form-control" name="address" type="text" value="{{ old('address') }}"
                                                    placeholder="Địa Chỉ *">
                                         </div>
+
+                                        <div class="input-field form-group">
+                                            <label for="shippingFee">Phí ship (Tự động tính theo quãng đường)</label>
+                                            <input id="shippingFee" class="form-control" name="shippingFee" type="number" value="" readonly
+                                                   placeholder="Phí ship">
+                                        </div>
+
                                         <p style="color: red; font-size: 14px">(*) Thông tin quý khách phải nhập đầy đủ</p>
                                     </div>
                                     <div class="form-two">
@@ -127,6 +134,95 @@
                         </div>
                     </form>
                 </div>
+            <div id="warnings"></div>
+            <div id="instructions"></div>
+            <div id="map"></div>
+            <div id="panel">
+                <b>Xuất phát: </b>
+                <select id="source" class="d-none">
+                    <option value="Công viên thống nhất, vi">Công viên thống nhất</option>  // Value của các option là từ khóa để Google tìm kiếm địa điểm.
+                </select>
+                {{--<b>Đích: </b>--}}
+                {{--<input type="text" id="destination">--}}
+                <b>Phương tiện: </b>
+                <select id="mode" class="d-none">
+                    <option value="DRIVING">Xe máy</option>
+                </select>
+            </div>
         </div>
     </section>
+@endsection
+@section('content-js')
+    <script src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap&key=AIzaSyAHWG8LpTxDNKS7yjrCziJkXAbYp9CjLAQ" async defer></script>
+    <script>
+        var map;
+        var directionsDisplay;
+        var directionsService;
+        var stepDisplay;
+        var markerArray = [];
+
+        function initMap() {
+            var lat_lng = {lat: 20.9769427, lng: 105.8921285};
+            map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 16,
+                center: lat_lng
+            });
+            directionsService = new google.maps.DirectionsService();
+            directionsDisplay = new google.maps.DirectionsRenderer({map: map});
+
+            var onChangeHandler = function() {
+                calculateAndDisplayRoute(directionsService, directionsDisplay);
+            };
+            document.getElementById('source').addEventListener('change', onChangeHandler);
+            document.getElementById('destination').addEventListener('change', onChangeHandler);
+            document.getElementById('mode').addEventListener('change', onChangeHandler);
+        }
+
+        function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+            // console.log($("#destination").val())
+            directionsService.route({
+                origin: $("#source").val(),
+                destination: $("#destination").val(),
+                travelMode: document.getElementById('mode').value,
+            }, function(response, status) {
+                if (status === google.maps.DirectionsStatus.OK) {
+                    directionsDisplay.setDirections(response);
+                    showSteps(response);
+                } else {
+                    window.alert('Bạn phải nhập đủ cả điểm đầu và điểm đích!');
+                }
+            });
+        }
+
+        function showSteps(directionResult) {
+            var myRoute = directionResult.routes[0].legs[0];
+            var instructions = '<h3 class="distance">Quãng đường: ' + myRoute.distance.text + '</h3><br>';
+
+            var distance = parseFloat(myRoute.distance.text);
+            var shippingFee = calculateShippingFee(distance);
+            $('#shippingFee').val(shippingFee);
+            document.getElementById("instructions").innerHTML = instructions;
+        }
+
+        function calculateShippingFee(distance) {
+            const openPrice = 10000;
+            var shippingFee;
+            distance = Math.ceil(distance);
+            if (distance <= 5) {
+                shippingFee = openPrice + distance * 1000;
+            } else if (distance > 5 && distance <= 10) {
+                shippingFee = openPrice + (distance - 5) * 2000 + 5000;
+            } else {
+                shippingFee = openPrice + (distance - 10) * 3000 + 15000;
+            }
+            return shippingFee;
+        }
+
+        function attachInstructionText(marker, text) {
+            google.maps.event.addListener(marker, 'click', function() {
+                stepDisplay.setContent(text);
+                stepDisplay.open(map, marker);
+            });
+        }
+    </script>
 @endsection

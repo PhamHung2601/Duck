@@ -42,14 +42,15 @@ class CheckoutController extends Controller
     public function saveOrder(Request $request)
     {
         $cartInfo = Cart::content();
-
         $validatedData = $request->validate([
             'fullName' => 'required',
             'email' => 'required|email',
             'address' => 'required',
             'phoneNumber' => 'required|digits_between:10,12',
-            'payment_method' => 'required'
+            'payment_method' => 'required',
+            'shippingFee' => 'required',
         ]);
+
         if (count($cartInfo) > 0) {
             foreach ($cartInfo as $key => $item) {
                 $product = Product::select('stock')->find($item->id);
@@ -64,7 +65,7 @@ class CheckoutController extends Controller
             $order->customer_email = $validatedData['email'];
             $order->address = $validatedData['address'];
             $order->phone = $validatedData['phoneNumber'];
-            $order->total = Cart::total();
+            $order->total = Cart::total() + $validatedData['shippingFee'] ?? 0;
             $order->message = $request->message ? : '';
             $order->payment_method = isset($validatedData['payment_method']) ? $validatedData['payment_method'] : '';
             $order->save();
