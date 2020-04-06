@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Review;
 use Illuminate\Http\Request;
 use Mockery\Exception;
+use Illuminate\Support\Facades\DB;
 
 /**
  * Class ReviewController
@@ -34,10 +35,16 @@ class ReviewController extends Controller
         $review->content = $request->input('content');
         try {
             $review->save();
+            DB::table('review_product')->insert(
+                [
+                    'review_id' => $review->id,
+                    'product_id' => $request->input('productId')
+                ]
+            );
         } catch (Exception $e) {
             return redirect()->back()->with('error','Có lỗi xảy ra.Vui lòng kiểm tra lại.');
         }
-        return redirect()->back()->with('success','Bạn đã gửi đánh giá thành công');
+        return redirect()->back()->with('success','Bạn đã gửi đánh giá thành công.');
     }
 
 }

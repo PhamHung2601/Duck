@@ -15,11 +15,15 @@
         <div class="form-wrapper">
             <form role="form" id="submit-review" method="POST" action="{{ route('review.submit') }}">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                <input type="hidden" name="productId" value="{{$product->id}}">
                 <div class="input-group">
+                    Nick name :
                     <input type="text" value="" name="nickname"
                            class="form-control" required>
+                    Summary :
                     <input type="text" value="" name="summary"
                            class="form-control" required>
+                    Content :
                     <input type="text" value="" name="content"
                            class="form-control" required>
                     <button type="submit" class="btn btn-primary">Submit</button>
