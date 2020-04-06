@@ -35,9 +35,9 @@ class ReviewController extends Controller
         try {
             $review->save();
         } catch (Exception $e) {
-
+            return redirect()->back()->with('error','Có lỗi xảy ra.Vui lòng kiểm tra lại.');
         }
-        return back();
+        return redirect()->back()->with('success','Bạn đã gửi đánh giá thành công');
     }
 
 }

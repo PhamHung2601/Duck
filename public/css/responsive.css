@@ -13,12 +13,189 @@
     .product-list .products .product-item{
         width: 33.3333%;
     }
+
+    #et-top-navigation{
+        margin: 0;
+        width: 100%;
+    }
+
+    #et-top-navigation .navbar-toggler{
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+
+    #et-top-navigation .navbar{
+        position: static;
+    }
+
+    #navbarText > ul{
+        padding: 20px 0;
+    }
+
+    #navbarText > ul > li{
+        width: 100%;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    #et-top-navigation .dropdown-menu{
+        width: 100%;
+    }
+
+    .me-avatar img{
+        max-width: 50%;
+    }
+
+    .me-avatar{
+        margin-bottom: 30px;
+    }
+
+    .news-list .news{
+        width: 50%;
+    }
+
+    .hiring-section .card{
+        margin-bottom: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 767px){
+    .landing-testimonials .testimonial .testimonial-content{
+        float: none;
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+    .landing-testimonials .testimonial .description{
+        width: 100%;
+    }
+    .landing-testimonials .testimonial .description:before{
+        border: 10px solid transparent;
+        border-bottom: 10px solid rgba(255,255,255,0.15);
+        position: absolute;
+        top: -20px;
+        left: 47.5%;
+    }
+
+    #feeling_section .section-content{
+        padding: 0px 10px;
+    }
+
+    .landing-testimonials .testimonial .description{
+        padding: 40px 25px;
+        font-size: 17px;
+    }
+
+    .flame-section td{
+        font-size: 20px;
+    }
+
+    .landing-page-section .section-content .display-flex-box .box{
+        margin-top: 0;
+    }
+
+    .header-top a{
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .header .header-top .register{
+        top: 42px;
+        z-index: 2;
+    }
+
+    .main-menu .navbar-toggler{
+        position: relative;
+        z-index: 3;
+    }
+
+    .header .logo{
+        text-align: center;
+    }
+
+    .header .main-menu ul.navbar-nav > li:first-child > a{
+        padding-left: 10px;
+    }
+
+    .header .main-menu ul.navbar-nav > li:not(:last-child) > a{
+        border-right: 0;
+        border-bottom: 1px solid #fff;
+    }
+
+    .header .main-menu ul.navbar-nav > li{
+        margin-bottom: 0;
+    }
+
+    .header .main-menu ul.navbar-nav > li > a{
+        display: block;
+        padding: 5px 10px;
+    }
+
+    .home-banner img{
+        max-width: 290px;
+    }
+
+    .about-teacher .image-box{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
 }
 
 @media (max-width: 640px){
     .product-list .products .product-item{
         width: 50%;
     }
+
+    .landing-page-section .section-title{
+        font-size: 27px;
+    }
+
+    .news-list .news{
+        width: 100%;
+        padding: 0;
+    }
+
+    .flame-section table th{
+        display: none;
+    }
+
+    .flame-section .th{
+        width: 100% !important;
+        text-align: left;
+    }
+
+    .flame-section table td{
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    .flame-section table td:before{
+        content: attr(data-title)':';
+        display: inline-block;
+        width: 80px;
+    }
+
+    .list-books .books .book-item-inner{
+        flex-direction: column;
+
+    }
+
+    .list-books .books .book-image img{
+        display: inline-block;
+    }
+
+    .list-books .books .book-image{
+        text-align: center;
+    }
+
+    .list-books .books .book-item .book-info{
+        margin: 0;
+        padding: 0;
+        margin-top: 20px;
+    }
+
 }
 
 @media (max-width: 480px){
@@ -27,4 +204,26 @@
         padding-right: 5px;
         padding-bottom: 10px;
     }
+
+    .who-are-we-section .section-content > .content{
+        flex-direction: column;
+    }
+
+    .who-are-we-section .who-are-we-icon{
+        margin: 35px auto;
+    }
+
+    .who-are-we-section .who-are-we-content p{
+        font-size: 19px;
+    }
+
+    .me-content .me{
+        font-size: 19px;
+    }
+
+    .logo_container{
+        width: 40%;
+        min-height: 55px;
+    }
+
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProductTagsTable extends Migration
+class CreateTagTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateProductTagsTable extends Migration
      */
     public function up()
     {
-        Schema::create('news_tags', function (Blueprint $table) {
+        Schema::create('tag', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('new_id')->references('id')->on('news')->onDelete('cascade');
-            $table->integer('tag_id')->references('id')->on('tags')->onDelete('cascade');
+            $table->string('name')->unique();
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ class CreateProductTagsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('product_tags');
+        Schema::dropIfExists('tag');
     }
 }

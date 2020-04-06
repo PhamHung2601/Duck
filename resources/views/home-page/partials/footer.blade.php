@@ -15,9 +15,6 @@
                 <p></p></div>
             <div class="col-lg-5 col-sm-5 portfolio-item">
                 <div class="row">
-                    <div class="col-12">
-                        @include('home-page.partials.email_form')
-                    </div>
                     <div class="col-12 mt-5">
                         <a rel="nofollow" href="#"> <span style="color:#dddddd"> Chính sách và quy định chung</span></a>
                         <a rel="nofollow" href="#"> <span style="color:#dddddd"> Chính sách bảo mật thông tin </span></a>

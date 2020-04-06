@@ -18,33 +18,38 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
     Route::get('course/register/{id}/sendemail', [
         'middleware' => 'admin.user',
-        'uses' => 'CourseController@sendEmail',
+        'uses' => 'MailController@sendEmailRegister',
         'as' => 'voyager.course-register.sendemail',
     ]);
+    Route::get('sales/rule/{id}/sendemail', [
+        'middleware' => 'admin.user',
+        'uses' => 'MailController@sendEmailSalesRule',
+        'as' => 'voyager.sales-rule.sendemail',
+    ]);
 });
-Route::get('/courses', function () {
+Route::get('/cac-khoa-hoc', function () {
     return view('landing-page/courses/course_overview');
 });
-Route::get('/courses/list/online', function () {
+Route::get('/khoa-hoc/lop-online', function () {
     return view('landing-page/list/online');
 });
-Route::get('/courses/list/online/live-stream-overview', function () {
+Route::get('/khoa-hoc/lop-online/khoa-hoc-live-stream-overview', function () {
     return view('landing-page/list/live_stream_overview');
 });
-Route::get('/courses/list/offline', function () {
+Route::get('/khoa-hoc/lop-offline', function () {
     return view('landing-page/list/offline');
 });
 Route::post('/course/register', 'CourseController@register')->name('course.register');
-Route::get('/about/us', function () {
+Route::get('/gioi-thieu', function () {
     return view('landing-page/introduction/about');
 });
-Route::get('/about/students', function () {
+Route::get('/hoc-sinh', function () {
     return view('landing-page/introduction/students');
 });
-Route::get('/about/hiring', function () {
+Route::get('/tuyen-dung', function () {
     return view('landing-page/introduction/hiring');
 });
-Route::get('/about/scholarship', function () {
+Route::get('/hoc-bong-AT-foundation', function () {
     return view('landing-page/introduction/scholarship');
 });
 Route::get('/', [
@@ -55,11 +60,11 @@ Route::get('/', [
 Route::get('/books/sach-xu-li-nhanh', function () {
     return view('landing-page/book/book-landing');
 });
-Route::get('/book/{id}-{slug?}.html', 'BookController@index')
+Route::get('/sach/{id}-{slug?}.html', 'BookController@index')
     ->where('slug', '[a-zA-Z0-9-_]+')
     ->where('id', '[0-9]+')->name('book.detail');
 
-Route::get('/books/list', 'BookController@list')->name('books.list');
+Route::get('/tat-ca-sach', 'BookController@list')->name('books.list');
 
 Route::resource('/cart', 'CartController');
 
@@ -73,14 +78,13 @@ Route::post('cart/deleteCart', 'CartController@deleteCart')->name('cart.deleteCa
 Route::get('cart/removeItem/{rowId?}', 'CartController@removeItem')->name('cart.removeItem');
 Route::resource('/success', 'SuccessController');
 
-Route::resource('/news', 'NewsController');
-Route::get('new/{id}-{slug?}.html', 'NewsController@view')
-    ->where('slug', '[a-zA-Z0-9-_]+')
+Route::resource('/tin-tuc', 'NewsController');
+Route::get('tin-tuc/{id}-{slug?}.html', 'NewsController@show')
     ->where('id', '[0-9]+')
-    ->name('new.view');
+    ->name('news.view');
 
-Route::resource('/test', 'TestController');
-Route::get('test/{id}-{slug?}.html', 'TestController@show')
+Route::resource('/de-thi', 'TestController');
+Route::get('de-thi/{id}-{slug?}.html', 'TestController@show')
     ->where('slug', '[a-zA-Z0-9-_]+')
     ->where('id', '[0-9]+')
     ->name('test.view');
@@ -89,8 +93,13 @@ Route::post('/account/contact', 'HomeController@addContactEmail')->name('home.ad
 
 
 Route::get('/send/email', 'MailController@mail');
-Route::post('/search', 'SearchController@search')->name('search.search');
+Route::post('/tim-kiem', 'SearchController@search')->name('search.search');
 Route::post('cart/discount', 'CartController@discount')->name('cart.discount');
 
 Route::post('review/submit', 'ReviewController@submit')->name('review.submit');
+
+Route::get('document/{id}-{slug?}.html', 'DocumentController@view')
+    ->where('slug', '[a-zA-Z0-9-_]+')
+    ->where('id', '[0-9]+')
+    ->name('document.view');
 

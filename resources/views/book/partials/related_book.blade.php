@@ -5,26 +5,49 @@
         </div>
         <div class="panel-body">
             <div class="books">
-                @foreach([1,2,3,4,5,6] as $item)
+                @foreach($product->related as $item)
                     <div class="book-item">
                         <div class="book-item-inner">
-                            <img class="" style="width:100px; border:solid 1px #f2f2f2" src="http://duck.localhost.com/storage/products/March2020/LzoQhLQ5lCXa3a0bwEoY.png">
+                            <img class="" style="width:100px; border:solid 1px #f2f2f2"
+                                 src="{{Voyager::image($item->media)}}">
                             <div class="book-info">
-                                <a href="http://dac.localhost.com/books/detail/2" class="name" tabindex="0"><span> landing-main</span></a>
+                                <a href="{{$item->getUrlDetail()}}" class="name" tabindex="0"><span>{{$item->name}}</span></a>
                                 <div class="stock">
                                     <span>Kho hàng:</span>
-                                    <span class="status instock">Còn Sách</span>
+                                    @if($item->stocck > 0)
+                                        <span class="status instock">Còn Sách</span>
+                                    @else
+                                        <span class="status outstock">Hết Sách</span>
+                                    @endif
                                 </div>
                                 <div class="price-box">
                             <span class="price-wrapper">
-                                <span class="special-price">
-                                    <span class="price"> d</span>
-                                </span>
-                                   <span class="old-price">
-                                    <span class="price">250000 d</span>
-                                </span>
+                                @if($item->special_price && $item->special_price < $item->price)
+                                    <p><strong class="special-price"
+                                               style="color:red"> {{$item->special_price}}đ</strong>
+                    <span style="text-decoration:line-through;padding-left:10px"> {{$item->price}}đ</span>
+                </p>
+                                @else
+                                    <p><strong style="color:red"> {{$item->price}}đ</strong>
+                                @endif
                             </span>
-                                    <a href="#" class="btn btn-danger addtocart" tabindex="0">Đặt mua</a>
+                                    <form role="form" id="add-to-cart" method="POST" action="{{ route('cart.add') }}">
+                                        {{ csrf_field() }}
+                                        <input type="text" name="product_id" value="{{$item->id}}" hidden>
+                                        <!-- Only for js checking baby milk product -->
+                                        <div class="item-product-options">
+                                            <!-- BEGIN ADD TO CART -->
+                                            <div id="add-cart-action">
+                                                <div class="add-cart-action" style="display: block">
+                                                    <div class="cta-box">
+                                                        <button type="sumit" class="btn btn-danger">
+                                                            <span class="glyphicon glyphicon-shopping-cart"></span> Mua sách
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -36,10 +59,9 @@
 </div>
 
 
-
 <script type="text/javascript">
 
-    $(document).ready(function(){
+    $(document).ready(function () {
 
         $('.related-products .books').slick({
             dots: true,

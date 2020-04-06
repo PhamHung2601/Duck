@@ -1,4 +1,5 @@
 @extends('layouts.landing')
+@section('pageTitle', 'Khóa Học Offline')
 @section('content-top')
     @include('banner-manager.banner')
     @include('static-block.content-top')
@@ -10,5 +11,5 @@
     @include('landing-page.list.partials.offline.faq')
 @endsection
 @section('content-bottom')
-    @include('static-block.content-bottom')
+    @include('landing-page.list.partials.offline.offline-content-bottom')
 @endsection

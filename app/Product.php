@@ -35,15 +35,22 @@ class Product extends Model
      */
     public function getUrlDetail()
     {
-        return url("/book/{$this->id}-" . Str::slug($this->name) . ".html");
+        return url("/sach/{$this->id}-" . Str::slug($this->name) . ".html");
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function category()
     {
         return $this->belongsToMany(Category::class, 'categories_products');
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function related()
+    {
+        return $this->belongsToMany(Related::class, 'related_products');
+    }
 }

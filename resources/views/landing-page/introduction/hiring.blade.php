@@ -1,4 +1,5 @@
 @extends('layouts.landing')
+@section('pageTitle', 'Tuyển Dụng')
 @section('content-top')
     @include('static-block.content-top')
 @endsection
@@ -6,5 +7,5 @@
     @include("landing-page.introduction.partials.hiring")
 @endsection
 @section('content-bottom')
-    @include('static-block.content-bottom')
+    @include('landing-page.introduction.partials.hiring-content-bottom')
 @endsection

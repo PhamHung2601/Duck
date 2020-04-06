@@ -6,18 +6,11 @@
         <div class="panel-body">
             <div class="courses">
                 <ul>
-                    <li>
-                        <a href="#"><span>Gợi Ý Đáp Án Môn  Địa lí THPT Quốc Gia 2019</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><span>Gợi Ý Đáp Án Môn  Địa lí THPT Quốc Gia 2019</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><span>Gợi Ý Đáp Án Môn  Địa lí THPT Quốc Gia 2019</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><span>Gợi Ý Đáp Án Môn  Địa lí THPT Quốc Gia 2019</span></a>
-                    </li>
+                    @foreach($documents as $document)
+                        <li>
+                            <a href="{{ $document->getUrlDetail() }}"><span>{{ $document->title }}</span></a>
+                        </li>
+                    @endforeach
                 </ul>
             </div>
         </div>

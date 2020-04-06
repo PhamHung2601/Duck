@@ -1,4 +1,5 @@
 @extends('layouts.landing')
+@section('pageTitle', 'Các Khóa Học')
 @section('content-top')
     @include('banner-manager.banner')
     @include('static-block.content-top')
@@ -8,5 +9,5 @@
 {{--  @include('landing-page.courses.partials.deal_section')--}}
 @endsection
 @section('content-bottom')
-    @include('static-block.content-bottom')
+    @include('landing-page.courses.partials.course-content-bottom')
 @endsection

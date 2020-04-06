@@ -8,10 +8,12 @@
                 @foreach($products as $product)
                     <div class="book-item">
                         <div class="book-item-inner">
-                            <img class="" style="width:100px; border:solid 1px #f2f2f2"
-                                 src="{{ Voyager::image( $product->media ) }}">
+                            <div class="book-image">
+                                <img class="" style="width:100px; border:solid 1px #f2f2f2"
+                                     src="{{ Voyager::image( $product->media ) }}">
+                            </div>
                             <div class="book-info">
-                                <a href="{{url("books/detail/".$product->id)}}" class="name"><span> {{ $product->name }}</span></a>
+                                <a href="{{$product->getUrlDetail()}}" class="name"><span> {{ $product->name }}</span></a>
                                 @foreach($product->category as $cate)
                                     <div class="type">
                                         <span>Môn: <strong> {{ $cate->name }}</strong></span>
@@ -35,7 +37,23 @@
                                     <span class="price">{{ $product->price }} d</span>
                                 </span>
                             </span>
-                                    <a href="#" class="btn btn-danger addtocart">Đặt mua</a>
+                                    <form role="form" id="add-to-cart" method="POST" action="{{ route('cart.add') }}">
+                                        {{ csrf_field() }}
+                                        <input type="text" name="product_id" value="{{$product->id}}" hidden>
+                                        <!-- Only for js checking baby milk product -->
+                                        <div class="item-product-options">
+                                            <!-- BEGIN ADD TO CART -->
+                                            <div id="add-cart-action">
+                                                <div class="add-cart-action" style="display: block">
+                                                    <div class="cta-box">
+                                                        <button type="sumit" class="btn btn-danger">
+                                                            <span class="glyphicon glyphicon-shopping-cart"></span> Mua sách
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>

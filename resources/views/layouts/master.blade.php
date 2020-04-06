@@ -2,10 +2,9 @@
 <html lang="en">
 
 <head>
-
+    {!! SEOMeta::generate() !!}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
     <meta name="author" content="">
 
     <title>@yield('pageTitle')</title>
@@ -55,10 +54,14 @@
 <div class="main-content">
     <div class="container">
         @include('layouts.breadcrumb')
+        @include('layouts.message')
         @yield('content')
     </div>
 </div>
 @yield('content-bottom')
+<div class="form-register-email">
+    @include('home-page.partials.email_form')
+</div>
 @yield('content-js')
 @include('home-page.partials.footer')
 

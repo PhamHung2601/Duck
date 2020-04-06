@@ -95,4 +95,49 @@ class Helper
             return $uri;
         }
     }
+
+    /**
+     * @param $date
+     * @param string $format
+     * @return false|string
+     */
+    public static function formatDate($date,$format = 'd-m-Y')
+    {
+        return date($format, strtotime($date));
+    }
+
+    /**
+     * @return \Illuminate\Support\Collection
+     */
+    public static function getStudentWithRankingByMonth()
+    {
+        $month = date('m');
+        $student = DB::table('students')
+            ->join('rank_points', 'students.id', '=', 'rank_points.student_id')
+            ->select('students.*', 'rank_points.*')
+            ->orderBy('rank_points.point', 'desc')
+            ->where('rank_points.type', '=', '0')
+            ->where('rank_points.type_id', '=', $month)
+            ->limit(10)
+            ->get();
+        return $student;
+    }
+
+    /**
+     * @return \Illuminate\Support\Collection
+     */
+    public static function getStudentWithRankingByCourse()
+    {
+        $course = 3;
+        $student = DB::table('students')
+            ->where('rank_points.type', '=', '1')
+            ->where('rank_points.type_id', '=', $course)
+            ->join('rank_points', 'students.id', '=', 'rank_points.student_id')
+            ->select('students.*', 'rank_points.*')
+            ->orderBy('rank_points.point', 'desc')
+            ->limit(4)
+            ->get();
+
+        return $student;
+    }
 }
