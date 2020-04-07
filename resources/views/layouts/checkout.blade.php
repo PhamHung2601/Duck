@@ -139,18 +139,17 @@
                     </div>
                 </form>
             </div>
-            <div id="warnings"></div>
-            <div id="instructions"></div>
+            <div id="instructions" class="d-none"></div>
             <div id="map"></div>
             <div id="panel">
-                <b>Xuất phát: </b>
+                <b class="d-none">Xuất phát: </b>
                 <select id="source" class="d-none">
                     <option value="Công viên thống nhất, vi">Công viên thống nhất</option>
                     // Value của các option là từ khóa để Google tìm kiếm địa điểm.
                 </select>
                 {{--<b>Đích: </b>--}}
                 {{--<input type="text" id="destination">--}}
-                <b>Phương tiện: </b>
+                <b class="d-none">Phương tiện: </b>
                 <select id="mode" class="d-none">
                     <option value="DRIVING">Xe máy</option>
                 </select>
