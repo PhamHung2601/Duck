@@ -1841,3 +1841,9 @@ html, body {
     line-height: 0px;
     padding-left: 10px;
 }
+a.more-link {
+    color: #0056b3!important;
+}
+a.more-link:hover {
+    color: #007bff!important;
+}
