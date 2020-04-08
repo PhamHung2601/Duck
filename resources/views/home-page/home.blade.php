@@ -7,7 +7,7 @@
   <div class="row">
     <div class="col-sm-12 col-md-8 col-lg-8 column-main">
       @include('banner-manager.banner')
-{{--      @include('home-page.partials.events')--}}
+      @include('home-page.partials.events')
       @include('home-page.partials.books')
       <div class="home-banner">
         <div class="row">

@@ -1,12 +1,3 @@
-<div style="width:100%;  margin-bottom:20px;   background-color:#d1ebf3; padding:15px">
-    <div style="padding-bottom:15px; "><b> Tư vấn (TV) qua facebook hoặc điện thoại</b></div>
-
-    <p><i class="fa fa-user" aria-hidden="true"></i> <a href="#" target="_blank"> <b>
-                facebook.com/user</b></a></p>
-    <p><i class="fa fa-mobile" aria-hidden="true"></i> <b style="color:red"> 01689930943</b></p>
-
-
-</div>
 
 <div style="width:100%; background-color:#d1ebf3; padding:15px; margin-bottom:20px; overflow: hidden">
     <p> <img src="{{ asset('img/iconfinder_facebook_313103.png')}}" height="30px">
