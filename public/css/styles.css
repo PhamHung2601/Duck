@@ -1394,7 +1394,41 @@ footer.footer {
 .related-products .panel-heading{
     background: #91d5fb;
 }
-/*-- student page --*/
+
+.review-section{
+    margin-top: 50px;
+    padding: 30px 20px;
+    background: #f2f2f2;
+}
+
+.review-section .form-wrapper{
+    max-width: 600px;
+    margin-top: 30px;
+}
+
+.review-section .form-wrapper .input-group{
+    margin-bottom: 15px;
+}
+
+.review-section textarea{
+    height: 100px;
+}
+
+.review-section .review-list ul li{
+    padding: 15px 0;
+}
+
+.review-section .review-list ul li:not(:last-child){
+    border-bottom: 1px solid #ddd;
+}
+
+.review-section .btn-submit{
+    width: 120px;
+    text-align: center;
+    cursor: pointer;
+}
+
+    /*-- student page --*/
 .flame-section .section-table-head ul{
     display: flex;
     border: 1px solid;
