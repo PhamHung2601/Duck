@@ -71,7 +71,10 @@
     border-right: none;
 }
 .detail-test-container {
-    border: solid 1px #8b949d;
+    border: solid 1px #f1f1f2;
+    -moz-box-shadow: 1px 1px #f1f1f2;
+    -webkit-box-shadow: 1px 1px #f1f1f2;
+    box-shadow: 1px 1px #f1f1f2;
 }
 .panel-default {
     border-color: #ddd;

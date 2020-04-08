@@ -18,9 +18,11 @@
                 </div>
             </div>
         </div>
-        <button id="share-button" >Chia sẻ</button>
-        <div id="test-link" style="display: none">
-            <a href="{{$test->link}}" target="_blank" >{{$test->link}}</a>
+        <div class="mt-3">
+            <button class="button btn-primary" id="share-button" >Chia sẻ</button>
+            <div id="test-link" style="display: none" class="mt-2">
+                <a href="{{$test->link}}" target="_blank" class="more-link">{{$test->link}}</a>
+            </div>
         </div>
     </div>
 @endsection
