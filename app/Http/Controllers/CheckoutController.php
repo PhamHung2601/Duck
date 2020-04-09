@@ -5,10 +5,8 @@ namespace App\Http\Controllers;
 use App\Order;
 use App\OrderItem;
 use App\Product;
-use Illuminate\Http\Request;
 use Cart;
-use Illuminate\Routing\Route;
-use Illuminate\Support\Facades\Redirect;
+use Illuminate\Http\Request;
 
 /**
  * Class CheckoutController
@@ -55,24 +53,27 @@ class CheckoutController extends Controller
             foreach ($cartInfo as $key => $item) {
                 $product = Product::select('stock')->find($item->id);
                 if ($product->stock < $item->qty) {
-                    return redirect()->route('cart.index')->with('error','Không đủ số lượng hàng trong kho');
+                    return redirect()->route('cart.index')->with('error', 'Không đủ số lượng hàng trong kho');
                 }
             }
         }
         try {
             $order = new Order();
+            $shippingFee = (float)$validatedData['shippingFee'];
             $order->customer_name = $validatedData['fullName'];
             $order->customer_email = $validatedData['email'];
             $order->address = $validatedData['address'];
             $order->phone = $validatedData['phoneNumber'];
-            $order->total = Cart::total() + $validatedData['shippingFee'] ?? 0;
-            $order->message = $request->message ? : '';
+            $order->total = Cart::subtotalFloat();
+            $order->grand_total = Cart::subtotalFloat() + $shippingFee ?? 0;
+            $order->shipping_fee = $shippingFee;
+            $order->message = $request->message ?: '';
             $order->payment_method = isset($validatedData['payment_method']) ? $validatedData['payment_method'] : '';
             $order->save();
 
             if (count($cartInfo) > 0) {
                 foreach ($cartInfo as $key => $item) {
-                    $product = Product::select('stock')->find($item->id);
+                    $product = Product::find($item->id);
                     $orderItem = new OrderItem();
                     $orderItem->order_id = $order->id;
                     $orderItem->product_id = $item->id;
@@ -81,8 +82,7 @@ class CheckoutController extends Controller
                     $orderItem->total = $item->subtotal;
                     $orderItem->qty = $item->qty;
                     $orderItem->save();
-                    $product->stock = $product->stock - $item->qty;
-                    $product->save();
+                    $product->decrement('stock',$item->qty);
                 }
             }
             Cart::destroy();
@@ -91,4 +91,5 @@ class CheckoutController extends Controller
             echo $e->getMessage();
         }
     }
+
 }
