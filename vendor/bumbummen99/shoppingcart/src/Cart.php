@@ -12,6 +12,7 @@ use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Database\DatabaseManager;
 use Illuminate\Session\SessionManager;
 use Illuminate\Support\Collection;
+use TCG\Voyager\Facades\Voyager;
 
 class Cart
 {
@@ -307,7 +308,7 @@ class Cart
         $total =  $this->getContent()->reduce(function ($total, CartItem $cartItem) {
             return $total + $cartItem->total;
         }, 0);
-        $total = $total - $this->session->get('discount');
+        $total = $total - $this->session->get('discount') + $this->shippingFee();
         return $total;
     }
 
@@ -902,5 +903,20 @@ class Cart
         }
 
         return number_format($value, $decimals, $decimalPoint, $thousandSeperator);
+    }
+
+    public function shippingFee()
+    {
+        $qty = $this->count();
+        if ($qty == 1) {
+            return Voyager::setting('site.shipping_fee_1',32000);
+        }
+        if ($qty == 2) {
+            return Voyager::setting('site.shipping_fee_2',20000);
+        }
+        if ($qty == 1) {
+            return Voyager::setting('site.shipping_fee_3',15000);
+        }
+        return 0;
     }
 }
