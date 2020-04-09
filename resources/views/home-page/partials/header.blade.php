@@ -9,8 +9,8 @@
                     <div class="input-group">
                         <form role="form" id="header-search" method="POST" action="{{ route('search.search') }}">
                             {{ csrf_field() }}
-                            <input name="search_text" type="text" class="form-control input-search" placeholder="Tìm ID" aria-label="Search">
-                            <button class="btn btn-light" type="submit">
+                            <input id="search-input" name="search_text" type="text" class="form-control input-search" placeholder="Tìm ID" aria-label="Search">
+                            <button id="button-search" disabled class="btn btn-light" type="submit">
                                 <span style="cursor:pointer; "> <span class="fa fa-search" style="font-size:15px;font-weight:100"></span> </span>
                             </button>
                         </form>
@@ -42,3 +42,12 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    $('#search-input').on('keyup',function(){
+        var value = $(this).val();
+        if(value && value != ''){
+            $('#button-search').prop('disabled', false);
+        }
+    })
+    $.ajaxSetup({ headers: { 'csrftoken' : '{{ csrf_token() }}' } });
+</script>

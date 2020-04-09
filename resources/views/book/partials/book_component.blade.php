@@ -1,19 +1,4 @@
 <div class="product-list">
-    <div class="toolbar clearfix">
-        <div class="sort-by form-group">
-            <label for="SortBy">Sắp xếp</label>
-            <select class="form-control" name="SortBy" id="SortBy">
-                <option value="manual">Tùy chọn</option>
-                <option value="best-selling">Sản phẩm bán chạy</option>
-                <option value="title-ascending">Theo bảng chữ cái từ A-Z</option>
-                <option value="title-descending">Theo bảng chữ cái từ Z-A</option>
-                <option value="price-ascending">Giá từ thấp tới cao</option>
-                <option value="price-descending">Giá từ cao tới thấp</option>
-                <option value="created-descending">Mới nhất</option>
-                <option value="created-ascending">Cũ nhất</option>
-            </select>
-        </div>
-    </div>
     <div class="products">
         <div class="product-item">
             <div class="product-item-inner">
@@ -29,7 +14,7 @@
                 </div>
                 <div class="product-info">
                     <div class="product-title">
-                        <a href="{{ url('books/detail', [$product->id]) }}">
+                        <a href="{{$product->getUrlDetail()}}">
                             <strong>{{$product->name}}</strong>
                         </a>
                     </div>
