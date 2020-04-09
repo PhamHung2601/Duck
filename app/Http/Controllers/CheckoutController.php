@@ -30,6 +30,7 @@ class CheckoutController extends Controller
         $this->data['title'] = 'Checkout';
         $this->data['cart'] = Cart::content();
         $this->data['total'] = Cart::total();
+        $this->data['shippingFee'] = Cart::shippingFee();
         return view('layouts.checkout', $this->data);
     }
 
@@ -45,8 +46,7 @@ class CheckoutController extends Controller
             'email' => 'required|email',
             'address' => 'required',
             'phoneNumber' => 'required|digits_between:10,12',
-            'payment_method' => 'required',
-            'shippingFee' => 'required',
+            'payment_method' => 'required'
         ]);
 
         if (count($cartInfo) > 0) {
@@ -59,14 +59,13 @@ class CheckoutController extends Controller
         }
         try {
             $order = new Order();
-            $shippingFee = (float)$validatedData['shippingFee'];
             $order->customer_name = $validatedData['fullName'];
             $order->customer_email = $validatedData['email'];
             $order->address = $validatedData['address'];
             $order->phone = $validatedData['phoneNumber'];
             $order->total = Cart::subtotalFloat();
-            $order->grand_total = Cart::subtotalFloat() + $shippingFee ?? 0;
-            $order->shipping_fee = $shippingFee;
+            $order->grand_total = Cart::totalFloat();
+            $order->shipping_fee = Cart::shippingFee();
             $order->message = $request->message ?: '';
             $order->payment_method = isset($validatedData['payment_method']) ? $validatedData['payment_method'] : '';
             $order->save();

@@ -80,6 +80,10 @@
                                             <th>Giảm giá( {{$cart['couponCode']}} ):</th>
                                             <td class="price-discount">- {{$cart['discount']}} VND</td>
                                         </tr>
+                                        <tr>
+                                            <th>Giá vận chuyển:</th>
+                                            <td>{{$cart['shippingFee']}} VND</td>
+                                        </tr>
                                         <tr class="grand-total">
                                             <th>Tổng:</th>
                                             <td>{{$cart['total']}} VND</td>
@@ -89,6 +93,10 @@
                                 @else
                                     <table class="cart-table-data">
                                         <tbody>
+                                        <tr>
+                                            <th>Giá vận chuyển:</th>
+                                            <td>{{$cart['shippingFee']}} VND</td>
+                                        </tr>
                                         <tr class="grand-total">
                                             <th>Tổng:</th>
                                             <td>{{$cart['total']}} VND</td>
