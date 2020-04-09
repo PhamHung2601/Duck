@@ -13,7 +13,7 @@ return [
             'titleBefore'  => false, // Put defaults.title before page title, like 'It's Over 9000! - Dashboard'
             'description'  => '#Team thầy Tùng, chiến thắng đến cùng', // set false to total remove
             'separator'    => ' - ',
-            'keywords'     => [],
+            'keywords'     => ['địa lí','địa lý','địa lí thầy Tùng','địa lý thầy Tùng','thầy Tùng'],
             'canonical'    => false, // Set null for using Url::current(), set false to total remove
             'robots'       => false, // Set to 'all', 'none' or any combination of index/noindex and follow/nofollow
         ],
