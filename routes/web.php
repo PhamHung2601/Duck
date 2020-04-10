@@ -91,8 +91,6 @@ Route::get('de-thi/{id}-{slug?}.html', 'TestController@show')
 
 Route::post('/account/contact', 'HomeController@addContactEmail')->name('home.addContactEmail');
 
-
-Route::get('/send/email', 'MailController@mail');
 Route::post('/tim-kiem', 'SearchController@search')->name('search.search');
 Route::post('cart/discount', 'CartController@discount')->name('cart.discount');
 
