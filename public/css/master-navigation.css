@@ -1,8 +1,8 @@
 .header{
-    background-color: #91d5fb ;
+    background-color: #e41b13 ;
 }
 .header-top a{
-    color: #000;
+    color: #fff;
 }
 .header-top .display-flex-content{
    display: flex;
@@ -17,7 +17,7 @@
 }
 
 .header .main-menu{
-    background: #238AE6;
+    background: #294d98;
     color: #fff;
 }
 
@@ -46,4 +46,23 @@
 
 .header .main-menu ul.navbar-nav > li:last-child > a{
     padding-right: 0;
+}
+
+.header .main-menu  ul.navbar-nav > li > ul.dropdown-menu{
+    padding: 0;
+}
+
+.header .main-menu  ul.navbar-nav > li > ul.dropdown-menu > li a{
+    padding: 10px 15px;
+    display: block;
+    width: 100%;
+    font-size: 14px;
+}
+
+.header .main-menu  ul.navbar-nav > li > ul.dropdown-menu > li a:hover{
+    text-decoration: underline;
+}
+
+.header .main-menu  ul.navbar-nav > li > ul.dropdown-menu > li:not(:last-child) a{
+    border-bottom: 1px solid #ccc;
 }
