@@ -7,37 +7,38 @@
             <div class="row">
                     <div class="col-md-12">
                         <div id="testimonial-slider">
-                                <div class="testimonial">
-                                    <p class="description">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec velit dui. Pellentesque volutpat faucibus risus, ac accumsan purus.
-                                    </p>
+                            {!!Helper::getStaticBlockContentById("home-student-feeling")!!}
+{{--                                <div class="testimonial">--}}
+{{--                                    <p class="description">--}}
+{{--                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec velit dui. Pellentesque volutpat faucibus risus, ac accumsan purus.--}}
+{{--                                    </p>--}}
 
-                                    <div class="testimonial-review">
-                                        <div class="pic">
-                                            <img src="{{ asset('img/img-3.jpg')}}" alt=""/>
-                                        </div>
-                                        <h4 class="testimonial-title">
-                                            williamson
-                                            <small>Web Developer</small>
-                                        </h4>
-                                    </div>
-                                </div>
+{{--                                    <div class="testimonial-review">--}}
+{{--                                        <div class="pic">--}}
+{{--                                            <img src="{{ asset('img/img-3.jpg')}}" alt=""/>--}}
+{{--                                        </div>--}}
+{{--                                        <h4 class="testimonial-title">--}}
+{{--                                            williamson--}}
+{{--                                            <small>Web Developer</small>--}}
+{{--                                        </h4>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
 
-                                <div class="testimonial">
-                                    <p class="description">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec velit dui. Pellentesque volutpat faucibus risus, ac accumsan purus.
-                                    </p>
+{{--                                <div class="testimonial">--}}
+{{--                                    <p class="description">--}}
+{{--                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec velit dui. Pellentesque volutpat faucibus risus, ac accumsan purus.--}}
+{{--                                    </p>--}}
 
-                                    <div class="testimonial-review">
-                                        <div class="pic">
-                                            <img src="{{ asset('img/img-3.jpg')}}" alt=""/>
-                                        </div>
-                                        <h4 class="testimonial-title">
-                                            kristiana
-                                            <small>Web Desginer</small>
-                                        </h4>
-                                    </div>
-                                </div>
+{{--                                    <div class="testimonial-review">--}}
+{{--                                        <div class="pic">--}}
+{{--                                            <img src="{{ asset('img/img-3.jpg')}}" alt=""/>--}}
+{{--                                        </div>--}}
+{{--                                        <h4 class="testimonial-title">--}}
+{{--                                            kristiana--}}
+{{--                                            <small>Web Desginer</small>--}}
+{{--                                        </h4>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
                             </div>
                     </div>
                 </div>

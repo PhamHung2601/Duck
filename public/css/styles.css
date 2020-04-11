@@ -1898,3 +1898,31 @@ a.more-link:hover {
 .search-result .news-list{
     padding: 30px 0;
 }
+/* document side bar*/
+.document-sidebar{
+    height: 35px;
+}
+.document-row ul li{
+    background-color: #7acefc57;
+    margin-bottom: 5%;
+    padding: 2%;
+}
+.document-row ul li:hover{
+    border: 1px solid #91d5fb;
+    background-color: #61a7ce57;
+}
+.document-row{
+    margin-top: 100px;
+}
+.document-cate-sidebar .active{
+    background-color: #5bc0de;
+    height: 35px;
+    border: 3px white;
+}
+.document-cate-sidebar .active .document-cate-name{
+    color: white;
+}
+.document-cate-sidebar .document-cate-name{
+    font-size: 25px;
+    padding: 5%;
+}

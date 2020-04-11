@@ -47,3 +47,28 @@
 .header .main-menu ul.navbar-nav > li:last-child > a{
     padding-right: 0;
 }
+.header .main-menu .dropdown-menu{
+    z-index: 9999;
+    width: 240px;
+    border-top: 3px solid #7cc68d;
+    background: #fff;
+    -webkit-box-shadow: 0 2px 5px rgba(0,0,0,.1);
+    -moz-box-shadow: 0 2px 5px rgba(0,0,0,.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,.1);
+    padding: 20px 0;
+    border-radius: 0;
+}
+.header .main-menu .dropdown-menu li{
+    margin: 0;
+}
+
+
+.header .main-menu .dropdown-menu li a{
+    padding: 6px 20px;
+    display: block;
+}
+
+.header .main-menu .dropdown-menu li a:hover{
+    opacity: .7;
+    background-color: rgba(0,0,0,.03);
+}

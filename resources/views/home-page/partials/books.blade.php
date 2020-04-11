@@ -30,12 +30,18 @@
                                 </div>
                                 <div class="price-box">
                             <span class="price-wrapper">
+                                @if($product->special_price)
                                 <span class="special-price">
                                     <span class="price">{{ $product->special_price }} d</span>
                                 </span>
-                                   <span class="old-price">
+                                    <span class="old-price">
                                     <span class="price">{{ $product->price }} d</span>
                                 </span>
+                                    @else
+                                    <span class="product-price">
+                                    <span class="price">{{ $product->price }} d</span>
+                                </span>
+                                @endif
                             </span>
                                     <form role="form" id="add-to-cart" method="POST" action="{{ route('cart.add') }}">
                                         {{ csrf_field() }}
@@ -59,6 +65,9 @@
                         </div>
                     </div>
                 @endforeach
+                    <div>
+                        <button style="margin-left:80%" class="btn btn-info"><a href="{{url('tat-ca-sach')}}">Xem Thêm</a></button>
+                    </div>
             </div>
         </div>
     </div>
