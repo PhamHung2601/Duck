@@ -6,7 +6,7 @@
 @endsection
 @section('content')
     @include('landing-page.list.partials.offline.course_list')
-    @include('landing-page.list.partials.offline.popup-offline')
+    @include('landing-page.list.partials.popup.popup-offline')
     @include('landing-page.list.partials.offline.about_me')
     @include('landing-page.list.partials.offline.scholarship_section')
     @include('landing-page.list.partials.offline.faq')

@@ -8,7 +8,7 @@
     <div class="news-title">{{$document->title}}</div>
     <p><span class="time-news">{{\Helper::formatDate($document->updated_at)}}</span></p>
     <div class="post-content">
-        <p>{!!$document->content!!}</p>
+        <p>{!!$document->short_description!!}</p>
         <a href="{{ $document->getUrlDetail() }}" class="more-link">Xem thêm</a>
     </div>
 </article>

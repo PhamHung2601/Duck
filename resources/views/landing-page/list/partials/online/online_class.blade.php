@@ -1,33 +1,52 @@
 <section class="bg-warning landing-page-section">
-    {!!\Helper::getStaticBlockContentById("online-block-1")!!}
-    {{--<div class="online-course">--}}
-    {{--<div class="landing-page-section-wrapper">--}}
-    {{--<div class="row">--}}
-    {{--<div class="col-sm-12 col-md-6 col-lg-6">--}}
-    {{--<h2 class="section-title"><span style="display: block">KHÓA LIVESTREAM:</span> TỔNG ÔN TOÀN DIỆN BEE2020</h2>--}}
-    {{--<div class="section-content">--}}
-    {{--<ul>--}}
-    {{--<li><p><i class="fa fa-arrow-right"></i> Tất cả các bạn có ý định dự thi THPT Quốc gia năm 2020</p></li>--}}
-    {{--<li><p><i class="fa fa-arrow-right"></i> Được thiết kế phù hợp với cả những bạn đã mất gốc, chán ghét môn Địa lí; những học sinh thi lại cần hiểu sâu, hiểu chắc vấn đề</p></li>--}}
-    {{--<li><p><i class="fa fa-arrow-right"></i> Mục tiêu từ 8 - 10 điểm</p></li>--}}
-    {{--<h3 style="color: #ffd623">Học phí: 1.000.000đ</h3>--}}
-    {{--<div class="box-action">--}}
-    {{--<a class="landing-button" style="margin-right: 10px" href="{{url("courses/list/online/live-stream-overview")}}">Xem Them</a>--}}
-    {{--<a class="landing-button" href="#">Dang Ky Ngay</a>--}}
-    {{--</div>--}}
-    {{--</ul>--}}
-    {{--</div>--}}
-    {{--</div>--}}
-    {{--<div class="col-sm-12 col-md-6 col-lg-6">--}}
-    {{--<div class="image-wrapper">--}}
-    {{--<div class="image-container">--}}
-    {{--<img src="{{ asset('img/study-online.png')}}" alt="onl-img">--}}
-    {{--</div>--}}
-    {{--</div>--}}
-    {{--</div>--}}
-    {{--</div>--}}
-    {{--</div>--}}
-    {{--</div>--}}
+    <div class="online-course">
+        <div class="landing-page-section-wrapper">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    {!!Helper::getStaticBlockContentById("online-block-1")!!}
+{{--                    <h2 class="section-title"><span style="display: block">KHÓA LIVESTREAM:</span> TỔNG ÔN TOÀN DIỆN BEE2020</h2>--}}
+{{--                    <div class="section-content">--}}
+{{--                    <ul>--}}
+{{--                    <li><p><i class="fa fa-arrow-right"></i> Tất cả các bạn có ý định dự thi THPT Quốc gia năm 2020</p></li>--}}
+{{--                    <li><p><i class="fa fa-arrow-right"></i> Được thiết kế phù hợp với cả những bạn đã mất gốc, chán ghét môn Địa lí; những học sinh thi lại cần hiểu sâu, hiểu chắc vấn đề</p></li>--}}
+{{--                    <li><p><i class="fa fa-arrow-right"></i> Mục tiêu từ 8 - 10 điểm</p></li>--}}
+{{--                    <h3 style="color: #ffd623">Học phí: 1.000.000đ</h3>--}}
+{{--                    <div class="box-action">--}}
+{{--                    <a class="landing-button" style="margin-right: 10px" href="{{url("courses/list/online/live-stream-overview")}}">Xem Them</a>--}}
+{{--                    <a class="landing-button" href="#">Dang Ky Ngay</a>--}}
+{{--                    </div>--}}
+{{--                    </ul>--}}
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <form class="form-register-course" action="{{ route('course.register') }}" method="POST">
+                            {{ csrf_field() }}
+                            <input type="text" id="name" name="name" placeholder="Your Name">
+                            @error('name')
+                            <small class="form-text text-muted">{{ $message }}</small>
+                            @enderror
+                            <input type="text" id="email" name="email" placeholder="Your Email">
+                            @error('email')
+                            <small class="form-text text-muted">{{ $message }}</small>
+                            @enderror
+                            <input type="text" id="phone" name="phone" placeholder="Your Phone">
+                            @error('phone')
+                            <small class="form-text text-muted">{{ $message }}</small>
+                            @enderror
+                            <textarea id="address" name="address" placeholder="Your Address"></textarea>
+                            @error('address')
+                            <small class="form-text text-muted">{{ $message }}</small>
+                            @enderror
+                            <div class="box-action">
+                                <button id="register-course-button"
+                                        class="btn btn-success register-course-button landing-button" type="submit" style="margin-top: 15%; margin-left: 35%">
+                                    Dang Ky Ngay
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 </section>
 <section class="landing-page-section course-register">
     <div class="landing-page-section-wrapper">
@@ -61,7 +80,8 @@
                     <small class="form-text text-muted">{{ $message }}</small>
                     @enderror
                     <div class="box-action">
-                        <button id="register-course-button" class="btn btn-success register-course-button landing-button" type="submit">
+                        <button id="register-course-button"
+                                class="btn btn-success register-course-button landing-button" type="submit">
                             Dang Ky Ngay
                         </button>
                     </div>

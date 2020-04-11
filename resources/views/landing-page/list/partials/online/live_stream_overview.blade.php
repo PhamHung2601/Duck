@@ -1,30 +1,50 @@
 <section class="landing-page-section live-stream-course">
-    {!!Helper::getStaticBlockContentById("online-1-block-1")!!}
-    {{--<div class="landing-page-section-wrapper">--}}
-        {{--<div class="row">--}}
-            {{--<div class="col-sm-12 col-md-6 col-lg-6">--}}
-                {{--<div class="section-content">--}}
-                    {{--<h2 class="section-title">KHOÁ HỌC DÀNH CHO AI?</h2>--}}
-                    {{--<ul>--}}
-                        {{--<li><p><i class="fa fa-2x fa-location-arrow"></i> Tất cả các bạn có ý định dự thi THPT Quốc gia--}}
-                                {{--năm--}}
-                                {{--2020</p></li>--}}
-                        {{--<li><p><i class="fa fa-2x fa-location-arrow"></i> Được thiết kế phù hợp với cả những bạn đã mất--}}
-                                {{--gốc,--}}
-                                {{--chán ghét môn Địa lí; những học sinh thi lại cần hiểu sâu, hiểu chắc vấn đề</p></li>--}}
-                        {{--<li><p><i class="fa fa-2x fa-location-arrow"></i> Mục tiêu từ 8 - 10 điểm.</p></li>--}}
-                    {{--</ul>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-            {{--<div class="col-sm-12 col-md-6 col-lg-6">--}}
-                {{--<div class="image-wrapper">--}}
-                    {{--<div class="image-container">--}}
-                        {{--<img src="{{ asset('img/live-steam-img.png')}}" alt="live-steam-img">--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</div>--}}
+    <div class="landing-page-section-wrapper">
+        <div class="row">
+            {!!Helper::getStaticBlockContentById("online-1-block-1")!!}
+{{--            <div class="col-sm-12 col-md-6 col-lg-6">--}}
+{{--                <div class="section-content">--}}
+{{--                    <h2 class="section-title">KHOÁ HỌC DÀNH CHO AI?</h2>--}}
+{{--                    <ul>--}}
+{{--                        <li><p><i class="fa fa-2x fa-location-arrow"></i> Tất cả các bạn có ý định dự thi THPT Quốc gia--}}
+{{--                                năm--}}
+{{--                                2020</p></li>--}}
+{{--                        <li><p><i class="fa fa-2x fa-location-arrow"></i> Được thiết kế phù hợp với cả những bạn đã mất--}}
+{{--                                gốc,--}}
+{{--                                chán ghét môn Địa lí; những học sinh thi lại cần hiểu sâu, hiểu chắc vấn đề</p></li>--}}
+{{--                        <li><p><i class="fa fa-2x fa-location-arrow"></i> Mục tiêu từ 8 - 10 điểm.</p></li>--}}
+{{--                    </ul>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <form class="form-register-course" action="{{ route('course.register') }}" method="POST">
+                    {{ csrf_field() }}
+                    <input type="text" id="name" name="name" placeholder="Your Name">
+                    @error('name')
+                    <small class="form-text text-muted">{{ $message }}</small>
+                    @enderror
+                    <input type="text" id="email" name="email" placeholder="Your Email">
+                    @error('email')
+                    <small class="form-text text-muted">{{ $message }}</small>
+                    @enderror
+                    <input type="text" id="phone" name="phone" placeholder="Your Phone">
+                    @error('phone')
+                    <small class="form-text text-muted">{{ $message }}</small>
+                    @enderror
+                    <textarea id="address" name="address" placeholder="Your Address"></textarea>
+                    @error('address')
+                    <small class="form-text text-muted">{{ $message }}</small>
+                    @enderror
+                    <div class="box-action">
+                        <button id="register-course-button"
+                                class="btn btn-success register-course-button landing-button" type="submit" style="margin-top: 15%; margin-left: 35%">
+                            Dang Ky Ngay
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </section>
 <section class="landing-page-section bg-light">
     {!!Helper::getStaticBlockContentById("online-1-block-2")!!}
