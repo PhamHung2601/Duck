@@ -36,7 +36,8 @@ class CartController extends Controller
             'totalBefore' => Cart::totalBeforeDiscount(),
             'total' => Cart::total(),
             'discount' => Cart::subtotalDiscount(),
-            'couponCode' => Cart::couponCode()
+            'couponCode' => Cart::couponCode(),
+            'shippingFee' => Cart::shippingFee(),
         ];
         return view('layouts.cart', ['products' => $productsInCart, 'cart' => $cart]);
     }

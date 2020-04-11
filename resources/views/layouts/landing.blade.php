@@ -40,6 +40,7 @@
 @yield('content')
 @yield('content-bottom')
 @include('layouts.block.footer')
+@yield('content-js')
 @include('home-page.partials.scripts')
 
 </body>

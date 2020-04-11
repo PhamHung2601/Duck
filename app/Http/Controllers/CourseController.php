@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\CourseRegister;
 use App\Http\Requests\CourseRegisterRequest;
-use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Session;
 
 /**
  * Class CourseController
@@ -32,7 +32,11 @@ class CourseController extends Controller
 //        } catch (\Exception $e) {
 //            \Log::info($e->getMessage());
 //        }
-        return redirect('/courses/list/offline')->with('success', 'Bạn đã đăng ký email thành công');
+        Session::put('register-success', 'Bạn đã đăng ký email thành công');
+        return redirect()->back()->with([
+            'message' => __('Bạn đã đăng ký email thành công'),
+            'alert-type' => 'success'
+        ]);
 
     }
 

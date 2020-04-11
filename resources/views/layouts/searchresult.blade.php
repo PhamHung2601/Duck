@@ -11,29 +11,21 @@
                 </div>
             @else
                 @if(count($products) > 0)
+                    <div class="title"><span>Sách</span></div>
                     @foreach($products as $product)
                         @include('book.partials.book_component')
                     @endforeach
                 @endif
                 @if(count($news) > 0)
                     <div class="title"><span>Tin tức</span></div>
-                    @foreach($news as $new)
+                    <div class="news-list">
+                        @foreach($news as $new)
                             <div class="col-md-4 col-lg-4">
                                 @include('news.detail',['new' => $new])
                             </div>
-                    @endforeach
-                @endif
-                    <div class="pager">
-                        <nav aria-label="Page navigation ">
-                            <ul class="pagination">
-                                <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li>
-                                <li class="page-item"><span class="page-link current">1</span> </li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </nav>
+                        @endforeach
                     </div>
+                @endif
             @endif
         </div>
     </div>

@@ -1887,3 +1887,14 @@ a.more-link {
 a.more-link:hover {
     color: #007bff!important;
 }
+.search-result{
+    padding: 30px;
+}
+.search-result .title{
+    font-size: 20px;
+    font-weight:bold ;
+}
+
+.search-result .news-list{
+    padding: 30px 0;
+}

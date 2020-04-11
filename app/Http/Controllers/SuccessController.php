@@ -30,7 +30,7 @@ class SuccessController extends Controller
             return view('layouts.success', ['order' => $order]);
         }
 
-        return Redirect('home');
+        return Redirect('/');
     }
 
 }
