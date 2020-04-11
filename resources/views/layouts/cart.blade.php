@@ -2,6 +2,22 @@
 @section('pageTitle', 'Shopping Cart')
 @section('content')
     <section id="cart_items">
+        @if(!empty(session('cart-error')))
+            <div class="alert alert-danger error-message">
+                {{ session('cart-error') }}
+            </div>
+        @endif
+        @if(!empty(session('cart-success')))
+            <div class="alert alert-success success-message">
+                {{ session('cart-success') }}
+            </div>
+        @endif
+        <script>
+            $(document).ready(function(){
+                $(".success-message").delay(5000).slideUp(300);
+                $(".error-message").delay(5000).slideUp(300);
+            });
+        </script>
         <div class="table-responsive cart_info">
                 <div class="page-title">
                     <h2>MY SHOPPING CART</h2>

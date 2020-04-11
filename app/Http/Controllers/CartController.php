@@ -33,6 +33,7 @@ class CartController extends Controller
         foreach (Cart::content() as $key => $value) {
             $productsInCart[$value->id] = $value;
         }
+        $this->updateSalesRule(Cart::couponCode());
         $cart = [
             'totalBefore' => Cart::totalBeforeDiscount(),
             'total' => Cart::total(),
@@ -69,7 +70,6 @@ class CartController extends Controller
             'price' => $price,
             'weight' => 1
         ]);
-        $this->updateSalesRule();
         return redirect()->route('cart.index');
     }
 
@@ -80,8 +80,7 @@ class CartController extends Controller
     public function removeItem($rowId)
     {
         Cart::update($rowId, 0);
-        $this->updateSalesRule();
-        return redirect()->route('cart.index')->with('success', 'Bạn đã xoá sản phẩm khỏi giỏ hàng');
+        return redirect()->route('cart.index')->with('cart-success', 'Bạn đã xoá sản phẩm khỏi giỏ hàng');
     }
 
     /**
@@ -100,10 +99,9 @@ class CartController extends Controller
         }
         $product = Product::select('stock')->find($item->id);
         if ($product->stock < $qty) {
-            return redirect()->route('cart.index')->with('error', 'Không đủ số lượng hàng trong kho');
+            return redirect()->route('cart.index')->with('cart-error', 'Không đủ số lượng hàng trong kho');
         }
         Cart::update($rowId, $qty);
-        $this->updateSalesRule();
         return redirect()->route('cart.index');
     }
 
@@ -117,9 +115,9 @@ class CartController extends Controller
         return redirect()->back();
     }
 
-    public function updateSalesRule(){
+    public function updateSalesRule($coupon){
         Cart::removeCoupon();
-        $rule = $this->getRule();
+        $rule = $this->getRule($coupon);
         if ($rule) {
             $discount = 0;
             if ($rule->discount_type == 1) {
@@ -130,7 +128,7 @@ class CartController extends Controller
                 $discount = $rule->amount;
             }
             Cart::setSubtotalDiscount($discount, $rule->coupon_code, $rule->title);
-            return redirect()->route('cart.index')->with('success', 'Bạn đã được hưởng khuyến mại '.$rule->title);
+            return redirect()->route('cart.index')->with('cart-success', 'Bạn đã được hưởng khuyến mại '.$rule->title);
         }
     }
 
@@ -142,7 +140,7 @@ class CartController extends Controller
     {
         if($request->remove){
             Cart::removeCoupon();
-            return redirect()->route('cart.index')->with('success', 'Bạn đã gỡ mã giảm giá');
+            return redirect()->route('cart.index')->with('cart-success', 'Bạn đã gỡ mã giảm giá');
         }
         $validatedData = $request->validate([
             'coupon_code' => 'required'
@@ -159,9 +157,9 @@ class CartController extends Controller
                 $discount = $rule->amount;
             }
             Cart::setSubtotalDiscount($discount, $rule->coupon_code, $rule->title);
-            return redirect()->route('cart.index')->with('success', 'Bạn đã sử dụng thành công mã gỉảm giá');
+            return redirect()->route('cart.index')->with('cart-success', 'Bạn đã sử dụng thành công mã gỉảm giá');
         } else {
-            return redirect()->route('cart.index')->with('error', 'Mã giảm giá không hợp lệ. Vui lòng thử lại.');
+            return redirect()->route('cart.index')->with('cart-error', 'Mã giảm giá không hợp lệ. Vui lòng thử lại.');
         }
     }
 
