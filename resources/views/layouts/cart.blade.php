@@ -2,8 +2,7 @@
 @section('pageTitle', 'Shopping Cart')
 @section('content')
     <section id="cart_items">
-        <div class="container">
-            <div class="table-responsive cart_info">
+        <div class="table-responsive cart_info">
                 <div class="page-title">
                     <h2>MY SHOPPING CART</h2>
                 </div>
@@ -138,7 +137,6 @@
                     <p>You have no items in the shopping cart</p>
                 @endif
             </div>
-        </div>
     </section> <!--/#cart_items-->
 
 @endsection

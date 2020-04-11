@@ -1,6 +1,4 @@
-<div class="product-list">
-    <div class="products">
-        <div class="product-item">
+<div class="product-item">
             <div class="product-item-inner">
                 <div class="product-img">
                     <a class="thumbnail" href="{{ url('books/detail', [$product->id]) }}" data-image-id="1" data-toggle="modal"
@@ -57,5 +55,4 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
+
