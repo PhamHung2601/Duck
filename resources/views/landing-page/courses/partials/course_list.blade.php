@@ -50,36 +50,36 @@
 </section>
 <section class="landing-page-section bg-light landing-content">
             {!!\Helper::getStaticBlockContentById("courses-3")!!}
-    {{--<div class="section-3 section-box box-bg-light">--}}
-        {{--<div class="container-landing">--}}
-            {{--<h2 class="title-box"><span>TẠI SAO CUỐN SÁCH TIẾNG ANH NÀY HIỆU QUẢ?</span></h2>--}}
-            {{--<p style="text-align: center; color: #666; font-size: 17px; max-width: 800px; margin: 0 auto">Các phương pháp trong sách Hack Não 1500 giúp phát huy 80% năng lực não bộ và mọi giác quan, thay vì 8% như các các học truyền thống</p>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-    {{--<div class="section-4 section-box bg-grey">--}}
-        {{--<div class="container-landing">--}}
-            {{--<div class="row">--}}
-                {{--<div class="col-sm-12 col-md-7 col-lg-7">--}}
-                    {{--<img src="https://cdnstepup.r.worldssl.net/wp-content/uploads/2020/01/43979360-0-IMG-3293.png"/>--}}
-                {{--</div>--}}
-                {{--<div class="col-sm-12 col-md-5 col-lg-5">--}}
-                    {{--<div class="box-content">--}}
-                        {{--<ul>--}}
-                            {{--<li>--}}
-                                {{--<h4><strong>ÂM THANH TƯƠNG TỰ</strong></h4>--}}
-                                {{--<p>Phương pháp dựa trên nguyên lý “bắc cầu tạm” từ tiếng Anh sang tiếng mẹ đẻ, sáng tạo câu chuyện liên kết giữa nghĩa và cách đọc của từ đó. Với phương pháp này bạn sẽ học được 1 từ chỉ trong vòng 30s.</p>--}}
-                            {{--</li>--}}
-                            {{--<li>--}}
-                                {{--<h4><strong>TRUYỆN CHÊM</strong></h4>--}}
-                                {{--<p>Nạp từ vựng tự nhiên qua câu chuyện và tình huống, không cần cố gắng ghi nhớ. Giống như khi học từ vựng tiếng Việt vậy. Các câu chuyện đều chuẩn văn phong giao tiếp người bản xứ và đảm bảo tính hấp dẫn, khỏi lo buồn ngủ bạn nhé.</p>--}}
-                            {{--</li>--}}
-                        {{--</ul>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-            {{--<div class="box-action">--}}
-                {{--<a href="#" class="action-order landing-button"><span>MÌNH MUỐN ĐẶT MUA</span></a>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</div>--}}
+{{--    <div class="section-3 section-box box-bg-light">--}}
+{{--        <div class="container-landing">--}}
+{{--            <h2 class="title-box"><span>TẠI SAO CUỐN SÁCH TIẾNG ANH NÀY HIỆU QUẢ?</span></h2>--}}
+{{--            <p style="text-align: center; color: #666; font-size: 17px; max-width: 800px; margin: 0 auto">Các phương pháp trong sách Hack Não 1500 giúp phát huy 80% năng lực não bộ và mọi giác quan, thay vì 8% như các các học truyền thống</p>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--    <div class="section-4 section-box bg-grey">--}}
+{{--        <div class="container-landing">--}}
+{{--            <div class="row">--}}
+{{--                <div class="col-sm-12 col-md-7 col-lg-7">--}}
+{{--                    <img src="https://cdnstepup.r.worldssl.net/wp-content/uploads/2020/01/43979360-0-IMG-3293.png"/>--}}
+{{--                </div>--}}
+{{--                <div class="col-sm-12 col-md-5 col-lg-5">--}}
+{{--                    <div class="box-content">--}}
+{{--                        <ul>--}}
+{{--                            <li>--}}
+{{--                                <h4><strong>ÂM THANH TƯƠNG TỰ</strong></h4>--}}
+{{--                                <p>Phương pháp dựa trên nguyên lý “bắc cầu tạm” từ tiếng Anh sang tiếng mẹ đẻ, sáng tạo câu chuyện liên kết giữa nghĩa và cách đọc của từ đó. Với phương pháp này bạn sẽ học được 1 từ chỉ trong vòng 30s.</p>--}}
+{{--                            </li>--}}
+{{--                            <li>--}}
+{{--                                <h4><strong>TRUYỆN CHÊM</strong></h4>--}}
+{{--                                <p>Nạp từ vựng tự nhiên qua câu chuyện và tình huống, không cần cố gắng ghi nhớ. Giống như khi học từ vựng tiếng Việt vậy. Các câu chuyện đều chuẩn văn phong giao tiếp người bản xứ và đảm bảo tính hấp dẫn, khỏi lo buồn ngủ bạn nhé.</p>--}}
+{{--                            </li>--}}
+{{--                        </ul>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="box-action">--}}
+{{--                <a href="#" class="action-order landing-button"><span>MÌNH MUỐN ĐẶT MUA</span></a>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
 </section>
