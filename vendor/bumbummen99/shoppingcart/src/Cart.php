@@ -422,14 +422,20 @@ class Cart
         return $this->session->get('coupon_code');
     }
 
-    public function setSubtotalDiscount($value,$couponCode){
+    public function discountTitle(){
+        return $this->session->get('discount_title');
+    }
+
+    public function setSubtotalDiscount($value,$couponCode,$discountTitle){
         $this->session->put('discount',$value);
         $this->session->put('coupon_code',$couponCode);
+        $this->session->put('discount_title',$discountTitle);
     }
 
     public function removeCoupon(){
         $this->session->put('discount',0);
         $this->session->put('coupon_code','');
+        $this->session->put('discount_title','');
     }
 
     public function totalQty (){

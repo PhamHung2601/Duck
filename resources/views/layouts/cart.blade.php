@@ -54,32 +54,56 @@
                             <div class="form-discount">
                                 <form role="form" method="POST" action="{{ route('cart.discount') }}">
                                     {{ csrf_field() }}
-                                    <div class="form-group">
-                                        <input type="text" name="coupon_code" class="form-control">
-                                        <div class="cart-discount-action" style="display: block">
-                                            <button type="sumit" class="btn btn-danger btn-submit">
-                                                <span class="submit-discount">Áp dụng</span>
-                                            </button>
+
+                                    @if(isset($cart['couponCode']) && $cart['couponCode'])
+                                        <div class="form-group">
+                                            <input type="hidden" name="remove" value="1"/>
+                                            <input type="text" value="{{$cart['couponCode']}}" name="coupon_code"
+                                                   class="form-control">
+                                            <div class="cart-discount-action" style="display: block">
+                                                <button disabled type="sumit" class="btn btn-danger btn-submit">
+                                                    <span class="submit-discount">Áp dụng</span>
+                                                </button>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <button type="sumit" class="btn btn-general btn-cancel">
-                                        <span class="submit-discount">gỡ mã giảm giá</span>
-                                    </button>
+                                        <button type="sumit" class="btn btn-general btn-cancel">
+                                            <span class="submit-discount">gỡ mã giảm giá</span>
+                                        </button>
+                                    @else
+                                        <div class="form-group">
+                                            <input type="text" name="coupon_code" class="form-control">
+                                            <div class="cart-discount-action" style="display: block">
+                                                <button type="sumit" class="btn btn-danger btn-submit">
+                                                    <span class="submit-discount">Áp dụng</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <button type="sumit" disabled class="btn btn-general btn-cancel">
+                                            <span class="submit-discount">gỡ mã giảm giá</span>
+                                        </button>
+                                    @endif
                                 </form>
                             </div>
 
                             <div class="cart-total-infomation">
-                                @if(isset($cart['couponCode']) && $cart['couponCode'])
+                                @if(isset($cart['discount']) && $cart['discount'])
                                     <table class="cart-table-data">
                                         <tbody>
                                         <tr>
                                             <th>Tiền hàng:</th>
                                             <td>{{$cart['totalBefore']}} VND</td>
                                         </tr>
-                                        <tr>
-                                            <th>Giảm giá( {{$cart['couponCode']}} ):</th>
-                                            <td class="price-discount">- {{$cart['discount']}} VND</td>
-                                        </tr>
+                                        @if(isset($cart['couponCode']) && $cart['couponCode'])
+                                            <tr>
+                                                <th>Giảm giá( {{$cart['couponCode']}} ):</th>
+                                                <td class="price-discount">- {{$cart['discount']}} VND</td>
+                                            </tr>
+                                        @else
+                                            <tr>
+                                                <th>Giảm giá( {{$cart['discount_title']}} ):</th>
+                                                <td class="price-discount">- {{$cart['discount']}} VND</td>
+                                            </tr>
+                                        @endif
                                         <tr>
                                             <th>Giá vận chuyển:</th>
                                             <td>{{$cart['shippingFee']}} VND</td>
