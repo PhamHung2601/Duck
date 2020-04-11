@@ -12,9 +12,13 @@
             @else
                 @if(count($products) > 0)
                     <div class="title"><span>Sách</span></div>
-                    @foreach($products as $product)
-                        @include('book.partials.book_component')
-                    @endforeach
+                    <div class="product-list">
+                        <div class="products">
+                            @foreach($products as $product)
+                                @include('book.partials.book_component')
+                            @endforeach
+                        </div>
+                    </div>
                 @endif
                 @if(count($news) > 0)
                     <div class="title"><span>Tin tức</span></div>

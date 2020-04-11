@@ -140,6 +140,10 @@
         margin-bottom: 20px;
     }
 
+    .cart-summary{
+        width: 100%;
+    }
+
 }
 
 @media (max-width: 640px){
