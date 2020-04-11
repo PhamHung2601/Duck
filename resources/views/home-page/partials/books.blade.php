@@ -65,9 +65,9 @@
                         </div>
                     </div>
                 @endforeach
-                    <div>
-                        <button style="margin-left:80%" class="btn btn-info"><a href="{{url('tat-ca-sach')}}">Xem Thêm</a></button>
-                    </div>
+            </div>
+            <div>
+                <button style="margin-left:80%" class="btn btn-info"><a href="{{url('tat-ca-sach')}}">Xem Thêm</a></button>
             </div>
         </div>
     </div>
