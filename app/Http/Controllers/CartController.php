@@ -117,18 +117,29 @@ class CartController extends Controller
 
     public function updateSalesRule($coupon){
         Cart::removeCoupon();
-        $rule = $this->getRule($coupon);
-        if ($rule) {
-            $discount = 0;
-            if ($rule->discount_type == 1) {
-                $total = Cart::subtotalFloat();
-                $discount = $total * $rule->amount / 100;
-                $discount = floor($discount);
-            } elseif ($rule->discount_type == 2) {
-                $discount = $rule->amount;
+        $rules = $this->getRule($coupon);
+        if ($rules && count($rules) > 0) {
+            $discountTotal = 0;
+            $coupon = '';
+            $title = '';
+            foreach ($rules as $rule){
+                $discount = 0;
+                if ($rule->discount_type == 1) {
+                    $total = Cart::subtotalFloat();
+                    $discount = $total * $rule->amount / 100;
+                    $discount = floor($discount);
+                } elseif ($rule->discount_type == 2) {
+                    $discount = $rule->amount;
+                }
+                $discountTotal += (float)$discount;
+                if($rule->coupon_code && $rule->coupon_code != ''){
+                    $coupon = $rule->coupon_code;
+                }
+                $title .= $rule->title .', ';
             }
-            Cart::setSubtotalDiscount($discount, $rule->coupon_code, $rule->title);
-            return redirect()->route('cart.index')->with('cart-success', 'Bạn đã được hưởng khuyến mại '.$rule->title);
+
+            Cart::setSubtotalDiscount($discountTotal, $coupon, $title);
+            return redirect()->route('cart.index')->with('cart-success', 'Bạn đã được hưởng khuyến mại '.$title);
         }
     }
 
@@ -147,17 +158,29 @@ class CartController extends Controller
         ]);
         $total = Cart::subtotalFloat();
         $couponCode = $validatedData['coupon_code'];
-        $rule = $this->getRule($couponCode);
-        if ($rule) {
-            $discount = 0;
-            if ($rule->discount_type == 1) {
-                $discount = $total * $rule->amount / 100;
-                $discount = floor($discount);
-            } elseif ($rule->discount_type == 2) {
-                $discount = $rule->amount;
+        $rules = $this->getRule($couponCode);
+        if ($rules && count($rules) > 0) {
+            $discountTotal = 0;
+            $coupon = '';
+            $title = '';
+            foreach ($rules as $rule){
+                $discount = 0;
+                if ($rule->discount_type == 1) {
+                    $total = Cart::subtotalFloat();
+                    $discount = $total * $rule->amount / 100;
+                    $discount = floor($discount);
+                } elseif ($rule->discount_type == 2) {
+                    $discount = $rule->amount;
+                }
+                $discountTotal += (float)$discount;
+                if($rule->coupon_code && $rule->coupon_code != ''){
+                    $coupon = $rule->coupon_code;
+                }
+                $title .= $rule->title .', ';
             }
-            Cart::setSubtotalDiscount($discount, $rule->coupon_code, $rule->title);
-            return redirect()->route('cart.index')->with('cart-success', 'Bạn đã sử dụng thành công mã gỉảm giá');
+
+            Cart::setSubtotalDiscount($discountTotal, $coupon, $title);
+            return redirect()->route('cart.index')->with('cart-success', 'Bạn đã được hưởng khuyến mại '.$rule->title);
         } else {
             return redirect()->route('cart.index')->with('cart-error', 'Mã giảm giá không hợp lệ. Vui lòng thử lại.');
         }
@@ -165,20 +188,16 @@ class CartController extends Controller
 
     public function getRule($code = null)
     {
-        $rule = null;
         $total = Cart::subtotalFloat();
         $cartQty = Cart::totalQty();
         $sql = "SELECT * FROM sales_rule WHERE date(`from_date`) <= '".Carbon::today()->toDateTimeString()."' AND date(`to_date`) >= '".Carbon::today()->toDateTimeString()."' AND is_active = 1
 AND ((subtotal <= ".$total." AND qty <= ".$cartQty." AND operator = 1) OR ((subtotal <= ".$total." OR qty <=  ".$cartQty.") AND operator = 2))";
         if($code && $code != ''){
-            $sql .= "AND coupon_code='" . $code ."'";
+            $sql .= "AND (coupon_code='" . $code ."' OR coupon_code is null)";
         }else{
             $sql .= "AND coupon_code is null";
         }
         $rules = DB::select($sql);
-        if($rules && count($rules) > 0){
-            $rule = $rules[0];
-        }
-        return $rule;
+        return $rules;
     }
 }
