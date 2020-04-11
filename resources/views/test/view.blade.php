@@ -13,7 +13,7 @@
                     </div>
                     <p class="post-meta"><span class="published">{{\Helper::formatDate($test->updated_at)}}</span></p>
                     <div>
-                        <p>{{$test->description}}</p>
+                        <p>{!!$test->description!!}</p>
                     </div>
                 </div>
             </div>
