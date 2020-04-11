@@ -920,7 +920,7 @@ class Cart
         if ($qty == 2) {
             return Voyager::setting('site.shipping_fee_2',20000);
         }
-        if ($qty == 1) {
+        if ($qty == 3) {
             return Voyager::setting('site.shipping_fee_3',15000);
         }
         return 0;

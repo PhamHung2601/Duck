@@ -20,13 +20,13 @@
                         <tbody>
                         @foreach($products as $item)
                             <tr>
-                                <td class="cart_description">
+                                <td class="cart_description" data-title="Tên sản phẩm">
                                     <span><a href="">{{ $item->name }}</a></span>
                                 </td>
-                                <td class="cart_price">
+                                <td class="cart_price" data-title="Giá">
                                     <p>{{ number_format($item->price)}} VNĐ</p>
                                 </td>
-                                <td class="cart_quantity">
+                                <td class="cart_quantity" data-title="Số lượng">
                                     <div class="cart_quantity_button">
                                         <a class="cart_quantity_down qty-control minus"
                                            href="{{url("cart/updateCartItem/$item->rowId?increment=0")}}"> - </a>
@@ -36,10 +36,10 @@
                                            href="{{url("cart/updateCartItem/$item->rowId?increment=1")}}"> + </a>
                                     </div>
                                 </td>
-                                <td class="cart_total">
+                                <td class="cart_total" data-title="Thành tiền">
                                     <p class="cart_total_price">{{ number_format($item->subtotal)}} VNĐ</p>
                                 </td>
-                                <td class="cart_delete">
+                                <td class="cart_delete" data-title="Xóa sản phẩm">
                                     <a class="cart_quantity_delete" href="{{ url("cart/removeItem/$item->rowId") }}"
                                        title="remove item"><i class="fa fa-times"></i></a>
                                 </td>

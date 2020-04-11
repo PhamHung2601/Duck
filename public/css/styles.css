@@ -226,9 +226,10 @@ iframe{
 }
 
 .header .logo a{
-    color: #023A63;
+    color: #fff;
     text-align: center;
     display: inline-block;
+    font-weight: 900;
 }
 
 .header .logo a h2{
@@ -1311,6 +1312,7 @@ footer.footer {
 .product-list .add-cart-action .btn{
     width: 100%;
     cursor: pointer;
+    margin-top: 20px;
 }
 
 .pager{
