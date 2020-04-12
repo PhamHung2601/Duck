@@ -827,6 +827,8 @@ footer.footer {
 .cart-table thead > tr > td{
     padding: 15px 0;
     vertical-align: top;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .cart-table tbody > tr:first-child > td{
@@ -960,6 +962,10 @@ footer.footer {
 
 .cart-total-infomation .price-discount{
     color: red;
+}
+
+.cart_description{
+    width: 30%;
 }
 
 
