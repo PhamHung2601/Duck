@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Product;
-use App\SalesRule;
 use Carbon\Carbon;
 use Cart;
 use Illuminate\Http\Request;
@@ -28,12 +27,13 @@ class CartController extends Controller
      */
     public function index()
     {
+        $this->updateSalesRule(Cart::couponCode());
+
         $productsInCart = [];
 
         foreach (Cart::content() as $key => $value) {
             $productsInCart[$value->id] = $value;
         }
-        $this->updateSalesRule(Cart::couponCode());
         $cart = [
             'totalBefore' => Cart::totalBeforeDiscount(),
             'total' => Cart::total(),
@@ -117,11 +117,17 @@ class CartController extends Controller
 
     public function updateSalesRule($coupon){
         Cart::removeCoupon();
+        foreach (Cart::content() as $value) {
+            if (!empty($value->options['is_gift'])) {
+                Cart::remove($value->rowId);
+            }
+        }
         $rules = $this->getRule($coupon);
         if ($rules && count($rules) > 0) {
             $discountTotal = 0;
             $coupon = '';
             $title = '';
+            $appliedGift = false;
             foreach ($rules as $rule){
                 $discount = 0;
                 if ($rule->discount_type == 1) {
@@ -136,8 +142,23 @@ class CartController extends Controller
                     $coupon = $rule->coupon_code;
                 }
                 $title .= $rule->title .', ';
+                if ($rule->gift_id && !$appliedGift) {
+                    $product = Product::select('id', 'name', 'stock','is_gift')->find($rule->gift_id);
+                    if ($product && $product->stock && $product->is_gift) {
+                        Cart::add([
+                            'id' => $product->id,
+                            'name' => $product->name,
+                            'qty' => 1,
+                            'price' => 0,
+                            'weight' => 1,
+                            'options' => [
+                                'is_gift' => 1
+                            ],
+                        ]);
+                        $appliedGift = true;
+                    }
+                }
             }
-
             Cart::setSubtotalDiscount($discountTotal, $coupon, $title);
             return redirect()->route('cart.index')->with('cart-success', 'Bạn đã được hưởng khuyến mại '.$title);
         }
