@@ -827,8 +827,6 @@ footer.footer {
 .cart-table thead > tr > td{
     padding: 15px 0;
     vertical-align: top;
-    padding-left: 10px;
-    padding-right: 10px;
 }
 
 .cart-table tbody > tr:first-child > td{
@@ -962,10 +960,6 @@ footer.footer {
 
 .cart-total-infomation .price-discount{
     color: red;
-}
-
-.cart_description{
-    width: 30%;
 }
 
 
@@ -1938,6 +1932,12 @@ a.more-link:hover {
 .document-cate-sidebar .document-cate-name{
     font-size: 25px;
     padding: 5%;
+}
+.document-detail {
+    margin-bottom: 10px;
+    /* padding: 9px; */
+    border: solid 1px #999;
+    padding: 10px;
 }
 
 .ducument-category{
