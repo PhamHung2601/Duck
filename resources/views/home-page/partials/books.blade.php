@@ -66,8 +66,8 @@
                     </div>
                 @endforeach
             </div>
-            <div>
-                <button style="margin-left:80%" class="btn btn-info"><a href="{{url('tat-ca-sach')}}">Xem Thêm</a></button>
+            <div class="clearfix">
+                <button style="float: right" class="btn btn-info"><a class="text-light" href="{{url('tat-ca-sach')}}">Xem Thêm</a></button>
             </div>
         </div>
     </div>

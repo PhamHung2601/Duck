@@ -6,20 +6,22 @@
 @section('content')
     <div id="news-{{$test->id}}" class="news-{{$test->id}} ">
         <div class="row">
-            <div class="col-8">
+            <div class="col-sm-12 col-md-12 col-lg-8">
                 <div class="detail-test-container">
                     <div class="test-title">
                         <span class="entry-title">{{$test->title}}</span>
                     </div>
-                    <p class="post-meta"><span class="published">{{\Helper::formatDate($test->updated_at)}}</span></p>
-                    <div>
-                       {!!$test->description!!}
+                    <div class="test-detail-content">
+                        <p class="post-meta"><span class="published">{{\Helper::formatDate($test->updated_at)}}</span></p>
+                        <div>
+                            {!!$test->description!!}
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="mt-3">
-            <button class="button btn-primary" id="share-button" >Chia sẻ</button>
+            <button class="button btn btn-primary text-light" id="share-button" ><i class="fa fa-share-alt" aria-hidden="true"></i>  Chia sẻ</button>
             <div id="test-link" style="display: none" class="mt-2">
                 <a href="{{$test->link}}" target="_blank" class="more-link">{{$test->link}}</a>
             </div>
