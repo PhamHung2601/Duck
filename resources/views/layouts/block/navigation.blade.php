@@ -2,7 +2,7 @@
     <div class="container-landing">
         <div class="logo_container">
             <a href="{{ url('') }}">
-                <img src="https://cdnstepup.r.worldssl.net/Images/common/logo-master-1.png" data-lazy-src="https://cdnstepup.r.worldssl.net/Images/common/logo-master-1.png" alt="Step Up English" id="logo" data-height-percentage="55" /><noscript><img src="https://cdnstepup.r.worldssl.net/Images/common/logo-master-1.png" alt="Step Up English" id="logo" data-height-percentage="55" /></noscript>
+                {!! \Helper::getStaticBlockContentById("landing-logo") !!}
             </a>
         </div>
         <div id="et-top-navigation">
