@@ -4,7 +4,8 @@
     @include('static-block.content-top')
 @endsection
 @section('content')
-    <section>
+    <div class="row">
+    <div class="col-sm-12 col-md-8 col-lg-8 column-main">
         <div id="main-content" class="content-introduce">
             {!!\Helper::getStaticBlockContentById("blog_header")!!}
         </div>
@@ -20,7 +21,11 @@
         @if(count($news))
             {{ $news->links() }}
         @endif
-    </section>
+    </div>
+    <div class="col-sm-12 col-md-4 col-lg-4 sidebar">
+        @include('news.sidebar-info')
+    </div>
+    </div>
 @endsection
 @section('content-bottom')
     @include('static-block.content-bottom')
