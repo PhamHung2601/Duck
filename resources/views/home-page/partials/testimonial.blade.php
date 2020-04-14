@@ -1,7 +1,7 @@
 <div class="list-testimonial">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <i class="fa fa-list" aria-hidden="true"></i> Cảm nhận học sinh
+            {!!Helper::getStaticBlockContentById("home-student-feeling-section-title")!!}
         </div>
         <div class="panel-body">
             <div class="row">

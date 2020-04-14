@@ -1,7 +1,7 @@
 <div class="list-books">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <i class="fa fa-list" aria-hidden="true"></i> Sách bộ đề minh họa Luyện thi 2020
+            {!!\Helper::getStaticBlockContentById("home-book-section-title")!!}
         </div>
         <div class="panel-body">
             <div class="books">
