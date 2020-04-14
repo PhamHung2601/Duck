@@ -1,29 +1,33 @@
-<footer class="footer-landing bg-light">
-    <div class="landing-page-section-wrapper">
+<footer class="footer">
+    <div class="container">
         <div class="row">
-            <div class="col-sm-12 col-md-1 col-lg-1"></div>
-            <div class="col-sm-12 col-md-4 col-lg-4" id="about-section">
-                <h3>Mr.Tung's Geography</h3>
-                <ul>
-                    <li><i class="fa fa-map-marker"></i> Địa chỉ: Tầng 5, nhà A24 ngõ 120 Hoàng Quốc Việt, P.Cổ Nhuế, Q.Cầu Giấy, Hà Nội</li>
-                    <li><i class="fa fa-phone"></i> SĐT: </li>
-                    <li><i class="fa fa-envelope"></i> Email: dialyat2013@gmail.com</li>
-                    <li><i class="fa fa-facebook"></i> Facebook: </li>
-                    <li><i class="fa fa-youtube-play"></i> Youtube: </li>
-                </ul>
+            <div class="col-lg-7 col-sm-7 portfolio-item">
+                {!!Helper::getStaticBlockContentById("footer-content")!!}
             </div>
-            <div class="col-sm-12 col-md-4 col-lg-4" id="service-section">
-                <h3>Customer Service</h3>
-                <ul>
-                    <li>Địa chỉ: Tầng 5, nhà A24 ngõ 120 Hoàng Quốc Việt, P.Cổ Nhuế, Q.Cầu Giấy, Hà Nội</li>
-                    <li>SĐT: </li>
-                    <li>Email: dialyat2013@gmail.com</li>
-                    <li>Facebook:</li>
-                    <li>Youtube:</li>
-                </ul>
-            </div>
-            <div class="col-sm-12 col-md-3 col-lg-3" id="footer-logo">
-                <img src="">
+            <div class="col-lg-5 col-sm-5 form-register-email">
+                <div class="row form-register-email-wrapper">
+                    <div class="grid__item large--one-half medium--one-half small--one-whole">
+                        <div class="ft-subscribe">
+                            {!!Helper::getStaticBlockContentById("sale-register")!!}
+                            {{--                            <h3>Đăng ký nhận tin</h3>--}}
+                            {{--                            <div class="ft-sub-desc">--}}
+                            {{--                                Hãy nhập địa chỉ email của bạn vào ô dưới đây để có thể nhận được tất cả các tin tức mới nhất. Chúng tôi đảm--}}
+                            {{--                                bảo sẽ không gửi mail spam tới bạn.--}}
+                            {{--                            </div>--}}
+                            <div class="form-wrapper">
+                                <form role="form" id="register-form" method="POST" action="{{ route('home.addContactEmail') }}" >
+                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                    <div class="input-group">
+                                        <input required type="email" value="" placeholder="Nhập email của bạn..." name="email"
+                                               class="form-control" aria-label="email@example.com">
+                                        <button class="submit-email" name="subscribe" type="submit">Đăng ký</button>
+                                    </div>
+                                    <p class="alert"></p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

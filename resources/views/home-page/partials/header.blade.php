@@ -3,13 +3,16 @@
         <div class="container">
             <nav class="row navbar static-top display-flex-content">
                 <div class="logo col-sm-12 col-md-4 col-lg-4">
-                    <a href={{ url('') }}><h2>Địa Lí Thầy Tùng</h2><p>#Team thầy Tùng, chiến thắng đến cùng</p></a>
+                    <a href="https://dialithaytung.com/">
+                        {!!\Helper::getStaticBlockContentById("header-logo")!!}
+                        {{--                    <h2>Địa Lí Thầy Tùng</h2><p>#Team thầy Tùng, chiến thắng đến cùng</p></a>--}}
+                    </a>
                 </div>
                 <div class="col-sm-12 col-md-5 col-lg-5 search">
                     <div class="input-group">
                         <form role="form" id="header-search" method="POST" action="{{ route('search.search') }}">
                             {{ csrf_field() }}
-                            <input id="search-input" name="search_text" type="text" class="form-control input-search" placeholder="Tìm ID" aria-label="Search">
+                            <input id="search-input" name="search_text" type="text" class="form-control input-search" placeholder="Tìm Kiếm ..." aria-label="Search">
                             <button id="button-search" disabled class="btn btn-light" type="submit">
                                 <span style="cursor:pointer; "> <span class="fa fa-search" style="font-size:15px;font-weight:100"></span> </span>
                             </button>
@@ -20,9 +23,6 @@
                     <a href="{{ url('cart') }}" class="cart-header" title="view cart">
                         <i class="fa fa-shopping-cart fa-2" aria-hidden="true" style=" font-size: 20px"></i>
                         <span class="count">({{Cart::count()}})</span>
-                    </a>
-                    <a href="{{ url('') }}" class="register-link" title="Đăng Nhập">
-                        <i class="fa fa-user-circle-o fa-2" style=" font-size: 20px" aria-hidden="true"></i>
                     </a>
                 </div>
             </nav>
@@ -48,6 +48,6 @@
         if(value && value != ''){
             $('#button-search').prop('disabled', false);
         }
-    })
+    });
     $.ajaxSetup({ headers: { 'csrftoken' : '{{ csrf_token() }}' } });
 </script>

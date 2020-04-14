@@ -1,7 +1,7 @@
 <div class="list-books">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <i class="fa fa-list" aria-hidden="true"></i> Sách bộ đề minh họa Luyện thi 2020
+            {!!\Helper::getStaticBlockContentById("home-book-section-title")!!}
         </div>
         <div class="panel-body">
             <div class="books">
@@ -66,8 +66,8 @@
                     </div>
                 @endforeach
             </div>
-            <div>
-                <button style="margin-left:80%" class="btn btn-info"><a href="{{url('tat-ca-sach')}}">Xem Thêm</a></button>
+            <div class="clearfix">
+                <button style="float: right" class="btn btn-info"><a class="text-light" href="{{url('tat-ca-sach')}}">Xem Thêm</a></button>
             </div>
         </div>
     </div>

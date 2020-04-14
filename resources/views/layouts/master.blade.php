@@ -59,11 +59,6 @@
     </div>
 </div>
 @yield('content-bottom')
-<div class="form-register-email">
-    <div class="form-register-email-wrapper">
-        @include('home-page.partials.email_form')
-    </div>
-</div>
 @yield('content-js')
 @include('home-page.partials.footer')
 

@@ -6,7 +6,7 @@
 @endsection
 @section('content')
     @include('landing-page.list.partials.online.online_class')
-    @include('landing-page.list.partials.online.popup-online')
+    @include('landing-page.list.partials.popup.popup-online')
 @endsection
 @section('content-bottom')
     @include('landing-page.list.partials.online.online-content-bottom')
