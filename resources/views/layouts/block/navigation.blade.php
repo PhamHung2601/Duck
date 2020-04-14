@@ -2,10 +2,12 @@
     <div class="header-top">
         <div class="container">
             <nav class="row navbar static-top display-flex-content">
-                {!!\Helper::getStaticBlockContentById("header-logo")!!}
-                {{--                <div class="logo col-sm-12 col-md-4 col-lg-4">--}}
-                {{--                    <a href={{ url('') }}><h2>Địa Lí Thầy Tùng</h2><p>#Team thầy Tùng, chiến thắng đến cùng</p></a>--}}
-                {{--                </div>--}}
+                <div class="logo col-sm-12 col-md-4 col-lg-4">
+                    <a href="https://dialithaytung.com/">
+                        {!!\Helper::getStaticBlockContentById("header-logo")!!}
+                        {{--                    <h2>Địa Lí Thầy Tùng</h2><p>#Team thầy Tùng, chiến thắng đến cùng</p></a>--}}
+                    </a>
+                </div>
                 <div class="col-sm-12 col-md-5 col-lg-5 search">
                     <div class="input-group">
                         <form role="form" id="header-search" method="POST" action="{{ route('search.search') }}">
@@ -34,7 +36,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarText">
-                    <?= Menu::display('landing-main', 'bootstrap');?>
+                    <?= Menu::display('main', 'bootstrap');?>
                 </div>
             </nav>
         </div>
@@ -46,6 +48,6 @@
         if(value && value != ''){
             $('#button-search').prop('disabled', false);
         }
-    })
+    });
     $.ajaxSetup({ headers: { 'csrftoken' : '{{ csrf_token() }}' } });
 </script>
