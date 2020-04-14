@@ -372,4 +372,23 @@
         padding: 0;
     }
 
+    .product-tabs .nav-tabs>li{
+        width: 100%;
+        margin: 0;
+    }
+
+    .product-tabs .nav-tabs>li>a{
+        border: 1px solid #ddd;
+        border-radius: 0;
+        margin: 0;
+    }
+
+    .product-tabs .nav-tabs>li>a.active, .product-tabs .nav-tabs>li>a.active:hover, .product-tabs .nav-tabs>li>a.active:focus{
+        background: #f5f5f5;
+    }
+
+    .related-products.list-books .books .book-item .book-info{
+        width: 100%;
+    }
+
 }

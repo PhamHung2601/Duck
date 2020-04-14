@@ -47,7 +47,7 @@
                                         {{ csrf_field() }}
                                         <input type="text" name="product_id" value="{{$product->id}}" hidden>
                                         <!-- Only for js checking baby milk product -->
-                                        <div class="item-product-options">
+                                        <div class="item-product-options" style="margin-top: 20px;">
                                             <!-- BEGIN ADD TO CART -->
                                             <div id="add-cart-action">
                                                 <div class="add-cart-action" style="display: block">

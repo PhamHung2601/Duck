@@ -1,3 +1,18 @@
+@import url("footer.css");
+
+@font-face {
+    font-family: 'UVF-ProductSans-Regular';
+    src: url("//theme.hstatic.net/1000245066/1000433415/14/UVF-ProductSans-Regular.eot?v=807?#iefix") format("embedded-opentype"), url("//theme.hstatic.net/1000245066/1000433415/14/UVF-ProductSans-Regular.woff?v=807") format("woff"), url("//theme.hstatic.net/1000245066/1000433415/14/UVF-ProductSans-Regular.ttf?v=807") format("truetype"), url("//theme.hstatic.net/1000245066/1000433415/14/UVF-ProductSans-Regular.svg?v=807#UVF-ProductSans-Regular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Baomoi-SemiBold';
+    src: url("//theme.hstatic.net/1000245066/1000433415/14/Baomoi-SemiBold.eot?v=807?#iefix") format("embedded-opentype"), url("//theme.hstatic.net/1000245066/1000433415/14/Baomoi-SemiBold.woff?v=807") format("woff"), url("//theme.hstatic.net/1000245066/1000433415/14/Baomoi-SemiBold.ttf?v=807") format("truetype"), url("//theme.hstatic.net/1000245066/1000433415/14/Baomoi-SemiBold.svg?v=807#Baomoi-SemiBold") format("svg");
+    font-weight: normal;
+    font-style: normal; }
+
 :root {
     --venia-anim-bounce: cubic-bezier(0.5, 1.8, 0.9, 0.8);
     --venia-anim-in: cubic-bezier(0, 0, 0.2, 1);
@@ -30,7 +45,7 @@
 @import url("footer.css");
 
 body{
-    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-family: 'Baomoi-SemiBold', 'Helvetica Neue',Helvetica,Arial,sans-serif;
     font-size: 14px;
 }
 
@@ -518,7 +533,6 @@ footer.footer {
 }
 
 .landing-content .section-box .title-box{
-    font-size: 26px;
     text-align: center;
     padding-bottom: 15px;
 }
@@ -613,7 +627,6 @@ footer.footer {
 }
 
 .landing-content .section-box.section-4 .box-content h4{
-    font-size: 20px;
     color: #07580e;
 }
 
@@ -668,14 +681,13 @@ footer.footer {
 }
 .landing-page-section  .section-title{
     text-align: center;
-    font-size: 33px;
     margin-bottom: 30px;
 }
 .landing-page-section  .section-content{
     text-align: center;
     color: #333;
-    font-size: 18px;
     word-break: break-word;
+    font-size: 16px;
 }
 .landing-page-section .course-detail{
     text-align: left;
@@ -1091,7 +1103,6 @@ footer.footer {
     padding-left: 5%;
 }
 .who-are-we-section .who-are-we-content p{
-    font-size: 22px;
     text-align: left;
     padding: 0;
 }
@@ -1152,7 +1163,6 @@ footer.footer {
 .me-content .me{
     display: flex;
     text-align: left;
-    font-size: 20px;
     margin-bottom: 5%;
     color: #333;
 }
@@ -1401,11 +1411,11 @@ footer.footer {
 }
 
 .related-products .panel-heading{
-    background: #91d5fb;
+    background: #e41b13;
+    color: #fff;
 }
 
 .review-section{
-    margin-top: 50px;
     padding: 30px 20px;
     background: #f2f2f2;
 }
@@ -1435,6 +1445,51 @@ footer.footer {
     width: 120px;
     text-align: center;
     cursor: pointer;
+}
+
+
+.product-tabs .nav-tabs {
+    border-bottom: 1px solid #ddd;
+}
+
+.product-tabs .nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 60px;
+}
+
+.product-tabs .nav-tabs>li>a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+}
+
+.product-tabs .nav-tabs>li>a:hover {
+    border-color: #eee #eee #ddd;
+}
+.product-tabs .nav>li>a:hover,.product-tabs .nav>li>a:focus {
+    text-decoration: none;
+    background-color: #eee;
+}
+
+.product-tabs .nav-tabs>li>a.active,.product-tabs .nav-tabs>li>a.active:hover,.product-tabs .nav-tabs>li>a.active:focus {
+    color: #555;
+    cursor: default;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+
+.product-tabs .nav-tabs>li {
+    float: left;
+    margin-bottom: -1px;
+}
+
+.product-tabs .tab-content{
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-top: 0;
 }
 
     /*-- student page --*/
@@ -1557,9 +1612,7 @@ footer.footer {
 }
 .list-testimonial .description{
     color:#656565;
-    font-size: 19px;
     line-height: 35px;
-    margin-bottom: 30px;
     padding:0px 11%;
     position: relative;
 }
@@ -1570,9 +1623,9 @@ footer.footer {
     display: inline-block;
     position: absolute;
     top: 8px;
-    left: 2%;
+    left: 5%;
     color:#3498db;
-    font-size: 30px;
+    font-size: 20px;
 }
 .list-testimonial .description:after{
     content: "\f10e";
@@ -1709,7 +1762,6 @@ footer.footer {
     width: 80%;
     padding: 40px 35px;
     border: 1px solid rgba(255,255,255,0.5);
-    font-size: 20px;
     color: #fff;
     margin: 0;
     position: relative;

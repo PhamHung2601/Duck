@@ -15,7 +15,8 @@
                 <h2 style="font-size:23px; font-weight:bold; margin-bottom:20px">{{$product->name}}</h2>
             </div>
             <div class="product-des">
-                {!!html_entity_decode($product->description)!!}
+                {{--short des--}}
+{{--                {!!html_entity_decode($product->description)!!}--}}
             </div>
             @if($product->special_price && $product->special_price < $product->price)
                 <p><strong class="special-price" style="color:red"> {{$product->special_price}}đ</strong>
@@ -33,7 +34,7 @@
                     <div id="add-cart-action">
                         <div class="add-cart-action" style="display: block">
                             <div class="cta-box">
-                                <button type="sumit" class="btn btn-danger">
+                                <button type="sumit" class="btn btn-danger" style="width: 200px; max-width: 100%">
                                     <span class="glyphicon glyphicon-shopping-cart"></span> Mua sách
                                 </button>
                             </div>

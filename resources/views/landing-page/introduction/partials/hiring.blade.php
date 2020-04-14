@@ -1,6 +1,8 @@
 <section class="landing-page-section hiring">
     {!! \Helper::getStaticBlockContentById("hiring-page-header") !!}
-    {!! \Helper::getStaticBlockContentById("hiring-page-content") !!}
+    <div class="landing-page-section-wrapper">
+        {!! \Helper::getStaticBlockContentById("hiring-page-content") !!}
+    </div>
     {{--<div class="hirring-banner">--}}
 {{--    <div class="landing-page-section-wrapper">--}}
     {{--<h1 class="section-title">Tuyen Dung</h1>--}}

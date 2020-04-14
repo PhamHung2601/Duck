@@ -8,8 +8,10 @@
                 @foreach($product->related as $item)
                     <div class="book-item">
                         <div class="book-item-inner">
-                            <img class="" style="width:100px; border:solid 1px #f2f2f2"
-                                 src="{{Voyager::image($item->media)}}">
+                            <div class="book-image">
+                                <img class="" style="width:100px; border:solid 1px #f2f2f2"
+                                     src="{{Voyager::image($item->media)}}">
+                            </div>
                             <div class="book-info">
                                 <a href="{{$item->getUrlDetail()}}" class="name" tabindex="0"><span>{{$item->name}}</span></a>
                                 <div class="stock">
@@ -35,7 +37,7 @@
                                         {{ csrf_field() }}
                                         <input type="text" name="product_id" value="{{$item->id}}" hidden>
                                         <!-- Only for js checking baby milk product -->
-                                        <div class="item-product-options">
+                                        <div class="item-product-options" style="margin-top: 20px">
                                             <!-- BEGIN ADD TO CART -->
                                             <div id="add-cart-action">
                                                 <div class="add-cart-action" style="display: block">

@@ -22,6 +22,7 @@
     <link href="{{ asset('css/slick-theme.css') }}" rel="stylesheet" type="text/css" >
     <link rel="stylesheet" href="<?php echo asset('css/styles.css')?>" type="text/css">
     <link rel="stylesheet" href="<?php echo asset('css/landing-navigation.css')?>" type="text/css">
+    <link rel="stylesheet" href="<?php echo asset('css/master-navigation.css')?>" type="text/css">
     <link href="{{ asset('css/responsive.css') }}" rel="stylesheet" type="text/css" >
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
