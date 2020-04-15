@@ -16,8 +16,7 @@
                                 <a href="{{$product->getUrlDetail()}}" class="name"><span> {{ $product->name }}</span></a>
                                 @foreach($product->category as $cate)
                                     <div class="type">
-                                        <span>Môn: <strong> {{ $cate->name }}</strong></span>
-                                        <span class="count-page">Số trang: <strong>300</strong></span>
+                                        <span>Loại: <strong> {{ $cate->name }}</strong></span>
                                     </div>
                                 @endforeach
                                 <div class="stock">
