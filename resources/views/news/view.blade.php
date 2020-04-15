@@ -26,6 +26,7 @@
                     </div>
                 </div>
             </div>
+            @include('book.partials.fb')
         </div>
         <div class="col-sm-12 col-md-4 col-lg-4 sidebar">
             @include('news.sidebar-info')
