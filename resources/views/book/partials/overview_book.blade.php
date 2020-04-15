@@ -38,11 +38,11 @@
             @endif
             <hr>
             @if($product->special_price && $product->special_price < $product->price)
-                <p><strong class="special-price" style="color:red"> {{$product->special_price}}đ</strong>
-                    <span style="text-decoration:line-through;padding-left:10px">{{$product->price}}đ</span>
+                <p><strong class="special-price" style="color:red"> {{number_format($product->special_price)}}đ</strong>
+                    <span style="text-decoration:line-through;padding-left:10px">{{number_format($product->price)}}đ</span>
                 </p>
             @else
-                <p><strong style="color:red"> {{$product->price}}đ</strong>
+                <p class="product-price" style="font-size: 25px"><strong style="color:red"> {{number_format($product->price)}}đ</strong>
             @endif
             <form role="form" id="add-to-cart" method="POST" action="{{ route('cart.add') }}">
                 {{ csrf_field() }}
