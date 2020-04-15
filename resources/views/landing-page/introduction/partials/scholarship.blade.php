@@ -18,7 +18,7 @@
     {{--        </div>--}}
     {{--    </div>--}}
 </section>
-<section class="landing-page-section scholarship-page-content">
+<section class="landing-page-section scholarship-page-content bg-grey">
     <div class="landing-page-section-wrapper scholarship-content">
         <div class="section-content">
             <p>Mỗi khóa học của ĐỊA LÍ THẦY TÙNG có một mức giá khác nhau. Dựa trên khả năng
@@ -27,7 +27,7 @@
             <table class="table">
                 <thead>
                 <tr>
-                    <th scope="col">Khóa H</th>
+                    <th scope="col">Khóa Học</th>
                     <th scope="col">TỔNG ÔN TOÀN DIỆN</th>
                     <th scope="col">Luyện ĐỀ 9+</th>
                 </tr>
@@ -35,14 +35,12 @@
                 <tbody>
                 <tr>
                     <td>Mức giảm tối thiểu</td>
-                    <td>Mức giảm tối</td>
-                </tr>
-                <tr>
                     <td>100,000 VND</td>
-                    <td>600,000 VND</td>
+                    <td>10% học phí</td>
                 </tr>
                 <tr>
-                    <td>10% học phí</td>
+                    <td>Mức giảm tối</td>
+                    <td>600,000 VND</td>
                     <td>50% học phí</td>
                 </tr>
                 </tbody>
@@ -62,14 +60,13 @@
         </div>
     </div>
 </section>
-<section class="landing-page-section scholarship-page-content">
+<section class="landing-page-section scholarship-page-content bg-danger" style="color:white">
     <div class="landing-page-section-wrapper scholarship-content">
         <h2 class="section-title">Quy Trình Đăng Ký</h2>
-        <div class="section-content">
+        <div class="section-content" style="color:white">
             <div class="row">
                 <div class="col-sm-12 col-md-8 col-lg-8">
-                    <h3>Quy trình đăng ký</h3>
-                    <ul>
+                    <ul style="text-align: left;padding: 3%">
                         <li>Bước 1: Đăng kí theo mẫu.</li>
                         <li>Bước 2: Nhận thông báo kết quả qua email trong vòng 5 ngày kể từ lúc đăng kí.</li>
                         <li>Bước 3: Hoàn thành số tiền còn lại (sau khi được giảm) thông qua hình thức Chuyển
@@ -78,7 +75,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="col-sm-12 col-md-4 col-lg-4" style="border: 1px solid white;border-radius: 100px;padding: 3%">
                     <p>Tổng số học sinh nhận học bổng: 101.</p>
                     <p>Tổng số tiền đã tài trợ: 58.325.000 VNĐ</p>
                 </div>
