@@ -7,6 +7,7 @@ use App\OrderItem;
 use App\Product;
 use Cart;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 /**
  * Class CheckoutController
@@ -84,6 +85,14 @@ class CheckoutController extends Controller
                     $product->decrement('stock',$item->qty);
                 }
             }
+            $data = [
+                "name" => $order->customer_name,
+                "order" => $order
+            ];
+            $toEmail = $order->customer_email;
+            Mail::send('emails.sales_order_email', $data, function ($message) use ($toEmail) {
+                $message->to($toEmail)->subject("Đặt hàng thành công!");
+            });
             Cart::destroy();
             return redirect('success')->with('order_id', $order->id);
         } catch (Exception $e) {
