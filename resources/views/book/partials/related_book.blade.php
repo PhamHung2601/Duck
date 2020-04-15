@@ -16,7 +16,7 @@
                                 <a href="{{$item->getUrlDetail()}}" class="name" tabindex="0"><span>{{$item->name}}</span></a>
                                 <div class="stock">
                                     <span>Kho hàng:</span>
-                                    @if($item->stocck > 0)
+                                    @if($item->stock > 0)
                                         <span class="status instock">Còn Sách</span>
                                     @else
                                         <span class="status outstock">Hết Sách</span>
