@@ -21,11 +21,11 @@ $discount = $specialPrice && $specialPrice < $nomalPrice ? ($nomalPrice - $speci
                 <span class="price-wrapper">
                    @if($discount)
                         <span class="special-price">
-                            <span class="price">{{$product->special_price}}₫</span>
+                            <span class="price">{{number_format($product->special_price)}}₫</span>
                         </span>
-                        <span class="old-price"><span class="price">{{$product->price}}₫</span></span>
+                        <span class="old-price"><span class="price">{{number_format($product->price)}}₫</span></span>
                     @else
-                        <span class="price"><span class="price">{{$product->price}}₫</span></span>
+                        <span class="price"><span class="price">{{number_format($product->price)}}₫</span></span>
                     @endif
                 </span>
             </div>
