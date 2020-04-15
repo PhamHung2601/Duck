@@ -1,11 +1,11 @@
 <footer class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-lg-7 col-sm-7 portfolio-item">
+            <div class="col-lg-8 col-sm-8 portfolio-item">
                 {!!Helper::getStaticBlockContentById("footer-content")!!}
             </div>
-            <div class="col-lg-5 col-sm-5 form-register-email">
-                <div class="row form-register-email-wrapper">
+            <div class="col-lg-4 col-sm-4">
+                <div class="row form-register-email form-register-email-wrapper">
                     <div class="grid__item large--one-half medium--one-half small--one-whole">
                         <div class="ft-subscribe">
                             {!!Helper::getStaticBlockContentById("sale-register")!!}

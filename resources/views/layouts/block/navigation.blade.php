@@ -7,6 +7,7 @@
                         {!!\Helper::getStaticBlockContentById("header-logo")!!}
                         {{--                    <h2>Địa Lí Thầy Tùng</h2><p>#Team thầy Tùng, chiến thắng đến cùng</p></a>--}}
                     </a>
+                    {!!\Helper::getStaticBlockContentById("header-logo-side-img")!!}
                 </div>
                 <div class="col-sm-12 col-md-5 col-lg-5 search">
                     <div class="input-group">
@@ -21,7 +22,7 @@
                 </div>
                 <div class="search col-sm-12 col-md-3 col-lg-3 register">
                     <a href="{{ url('cart') }}" class="cart-header" title="view cart">
-                        <i class="fa fa-shopping-cart fa-2" aria-hidden="true" style=" font-size: 20px"></i>
+                        <i class="fa fa-shopping-cart fa-4" aria-hidden="true" style=" font-size: 20px"></i>
                         <span class="count">({{Cart::count()}})</span>
                     </a>
                 </div>

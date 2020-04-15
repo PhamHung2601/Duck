@@ -809,6 +809,13 @@ footer.footer {
     padding: 5%;
     display: flex;
 }
+.footer ul{
+    padding: 1%;
+}
+.footer ul >li{
+    font-size: 1.1rem;
+    margin-top: 3%;
+}
 #deal-detail > ul{
     margin-top: 10%;
 }
@@ -1397,6 +1404,12 @@ footer.footer {
 .product-media{
     text-align: center;
 }
+.product-media img{
+    padding: 10%;
+}
+.product-media-small img{
+    padding: 5%;
+}
 
 .product-top{
     padding-top: 50px;
@@ -1909,7 +1922,6 @@ footer.footer {
 }
 
 .form-register-email{
-    background: #f2f2f2;
     padding: 30px 0;
 }
 
@@ -2046,4 +2058,11 @@ a.more-link:hover {
 .document-list .document-item{
     margin-bottom: 20px;
 }
-
+.fb-block-link{
+    animation: glowing 1500ms infinite;
+}
+@keyframes glowing {
+    0% {color: #004A7F;}
+    50% {color: rgba(47, 165, 194, 0.89);}
+    100% {color: #004A7F;}
+}

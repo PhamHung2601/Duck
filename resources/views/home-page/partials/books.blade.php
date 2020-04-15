@@ -16,8 +16,7 @@
                                 <a href="{{$product->getUrlDetail()}}" class="name"><span> {{ $product->name }}</span></a>
                                 @foreach($product->category as $cate)
                                     <div class="type">
-                                        <span>Môn: <strong> {{ $cate->name }}</strong></span>
-                                        <span class="count-page">Số trang: <strong>300</strong></span>
+                                        <span>Loại: <strong> {{ $cate->name }}</strong></span>
                                     </div>
                                 @endforeach
                                 <div class="stock">
@@ -32,14 +31,14 @@
                             <span class="price-wrapper">
                                 @if($product->special_price)
                                 <span class="special-price">
-                                    <span class="price">{{ $product->special_price }} d</span>
+                                    <span class="price">{{ number_format($product->special_price)}} d</span>
                                 </span>
                                     <span class="old-price">
-                                    <span class="price">{{ $product->price }} d</span>
+                                    <span class="price">{{ number_format($product->price) }} d</span>
                                 </span>
                                     @else
                                     <span class="product-price">
-                                    <span class="price">{{ $product->price }} d</span>
+                                    <span class="price">{{ number_format($product->price) }} d</span>
                                 </span>
                                 @endif
                             </span>
