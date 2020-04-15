@@ -26,11 +26,11 @@
                             <span class="price-wrapper">
                                 @if($item->special_price && $item->special_price < $item->price)
                                     <p><strong class="special-price"
-                                               style="color:red"> {{$item->special_price}}đ</strong>
-                    <span style="text-decoration:line-through;padding-left:10px"> {{$item->price}}đ</span>
+                                               style="color:red"> {{number_format($item->special_price)}}đ</strong>
+                    <span style="text-decoration:line-through;padding-left:10px"> {{number_format($item->price)}}đ</span>
                 </p>
                                 @else
-                                    <p><strong style="color:red"> {{$item->price}}đ</strong>
+                                    <p><strong style="color:red"> {{number_format($item->price)}}đ</strong>
                                 @endif
                             </span>
                                     <form role="form" id="add-to-cart" method="POST" action="{{ route('cart.add') }}">
