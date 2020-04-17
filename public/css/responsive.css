@@ -65,7 +65,22 @@
     .hiring-section .card{
         margin-bottom: 20px;
     }
-
+    .logo > p{
+        display:none;
+    }
+    .events-banner{
+        display:none;
+    }
+    .home-banner{
+        display:none;
+    }
+    .list-books .books .book-item .book-info{
+        margin: 0;
+        text-align: center;
+    }
+    .list-books .books .book-image{
+        text-align:center;
+    }
 }
 
 @media only screen and (max-width: 767px){
@@ -154,7 +169,9 @@
     .document-list .document-item{
         margin-bottom: 15px;
     }
-
+    .product-media-small{
+        display:none;
+    }
 }
 
 @media (max-width: 640px){
@@ -207,9 +224,8 @@
     }
 
     .list-books .books .book-item .book-info{
-        margin: 0;
+        margin: 18%;
         padding: 0;
-        margin-top: 20px;
     }
 
     .cart-table thead{
@@ -370,25 +386,6 @@
     .ducument-category ul li{
         width: 100%;
         padding: 0;
-    }
-
-    .product-tabs .nav-tabs>li{
-        width: 100%;
-        margin: 0;
-    }
-
-    .product-tabs .nav-tabs>li>a{
-        border: 1px solid #ddd;
-        border-radius: 0;
-        margin: 0;
-    }
-
-    .product-tabs .nav-tabs>li>a.active, .product-tabs .nav-tabs>li>a.active:hover, .product-tabs .nav-tabs>li>a.active:focus{
-        background: #f5f5f5;
-    }
-
-    .related-products.list-books .books .book-item .book-info{
-        width: 100%;
     }
 
 }
