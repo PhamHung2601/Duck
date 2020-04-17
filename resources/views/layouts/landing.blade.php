@@ -64,9 +64,8 @@
 <!-- Your customer chat code -->
 <div class="fb-customerchat"
      attribution=setup_tool
-     page_id="110310680466394"
+     page_id="626709247724423"
      theme_color="#0c958f">
 </div>
 </body>
-
 </html>

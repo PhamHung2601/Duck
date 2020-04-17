@@ -41,7 +41,7 @@
                             </div>
                             <div class="input-group">
                                 <input type="text" value="" name="summary" placeholder="Tiêu đề"
-                                       class="form-control" required>
+                                       class="form-control" hidden>
                             </div>
                             <div class="input-group">
                     <textarea type="text" value="" name="content" placeholder="Nội dung"

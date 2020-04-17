@@ -1,8 +1,8 @@
 @extends('layouts.landing')
 @section('pageTitle', 'Các Khóa Học')
 @section('content-top')
-    @include('banner-manager.banner')
-    @include('static-block.content-top')
+    @include('landing-page.courses.partials.banner')
+{{--    @include('static-block.content-top')--}}
 @endsection
 @section('content')
   @include('landing-page.courses.partials.course_list')

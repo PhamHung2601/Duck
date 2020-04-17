@@ -1,7 +1,7 @@
 @extends('layouts.landing')
 @section('pageTitle', 'Khóa Học Online')
 @section('content-top')
-    @include('banner-manager.banner')
+    @include('landing-page.list.partials.online.banner')
     @include('static-block.content-top')
 @endsection
 @section('content')

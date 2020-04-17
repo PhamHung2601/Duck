@@ -42,6 +42,8 @@
         @include('layouts.message')
         @yield('content')
     </div>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v6.0&appId=558515475069251&autoLogAppEvents=1"></script>
 </div>
 @yield('content-bottom')
 @yield('content-js')
@@ -69,7 +71,7 @@
 <!-- Your customer chat code -->
 <div class="fb-customerchat"
      attribution=setup_tool
-     page_id="110310680466394"
+     page_id="626709247724423"
      theme_color="#0c958f">
 </div>
 </body>
