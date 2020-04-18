@@ -22,8 +22,8 @@
                 </a>
             @endif
         @endcan
-        <a href="{{ route('voyager.'.$dataType->slug.'.order') }}" class="btn btn-primary btn-add-new">
-            <i class="voyager-list"></i> <span>Charlie</span>
+        <a id="bulk_update_status_btn" class="btn btn-primary btn-add-new">
+            <i class="voyager-list"></i> <span>Update Status</span>
         </a>
         @can('delete', app($dataType->model_name))
             @if($usesSoftDeletes)
@@ -310,6 +310,42 @@
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
+
+    {{-- Single update status modal is null --}}
+    <div class="modal modal-danger fade" tabindex="-1" id="update_status_modal_notify" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="{{ __('voyager::generic.close') }}"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Notify</h4>
+                </div>
+                <div class="content"><h4 style="margin-left: 20px">Please select item.</h4></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-right" data-dismiss="modal">OK</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    {{-- Single update status modal --}}
+    <div class="modal modal-success fade" tabindex="-1" id="update_status_modal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="{{ __('voyager::generic.close') }}"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title"><i class="voyager-shop"></i> Are you sure?</h4>
+                </div>
+                <div class="modal-footer">
+                    <form action="{{ route('voyager.orders.status') }}" id="update_status_form" method="POST">
+                        {{ csrf_field() }}
+                        <input type="hidden" id="ids_order" name="ids_order" value="">
+                        <input type="submit" class="btn btn-success pull-right delete-confirm" value="Yes">
+                    </form>
+                    <button type="button" class="btn btn-default pull-right" data-dismiss="modal">{{ __('voyager::generic.cancel') }}</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 @stop
 
 @section('css')
@@ -389,6 +425,20 @@
                 }
             });
             $('.selected_ids').val(ids);
+        });
+        $("#bulk_update_status_btn").on('click',function () {
+            var ids = [];
+            $('input[name="row_id"]').each(function() {
+                if ($(this).is(':checked')) {
+                    ids.push($(this).val());
+                }
+            });
+            if(ids.length > 0){
+                $("#ids_order").val(JSON.stringify(ids));
+                $('#update_status_modal').modal('show');
+            }else{
+                $('#update_status_modal_notify').modal('show');
+            }
         });
     </script>
 @stop
