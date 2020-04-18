@@ -23,7 +23,7 @@
             @endif
         @endcan
         <a id="bulk_update_status_btn" class="btn btn-primary btn-add-new">
-            <i class="voyager-list"></i> <span>Update Status</span>
+            <i class="voyager-list"></i> <span>Paid</span>
         </a>
         @can('delete', app($dataType->model_name))
             @if($usesSoftDeletes)

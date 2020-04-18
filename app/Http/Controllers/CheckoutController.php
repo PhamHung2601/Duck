@@ -65,6 +65,7 @@ class CheckoutController extends Controller
             $order->address = $validatedData['address'];
             $order->phone = $validatedData['phoneNumber'];
             $order->total = Cart::subtotalFloat();
+            $order->status = 'pending';
             $order->grand_total = Cart::totalFloat();
             $order->shipping_fee = Cart::shippingFee();
             $order->message = $request->message ?: '';
