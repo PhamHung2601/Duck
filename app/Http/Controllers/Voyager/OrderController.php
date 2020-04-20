@@ -32,7 +32,7 @@ class OrderController extends Controller
                             "order" => $order
                         ];
                         $toEmail = $order->customer_email;
-                        Mail::send('emails.sales_order_email', $data, function ($message) use ($toEmail) {
+                        Mail::send('emails.order_updated_email', $data, function ($message) use ($toEmail) {
                             $message->to($toEmail)->subject("Đơn hàng thanh toán thành công!");
                         });
                     }

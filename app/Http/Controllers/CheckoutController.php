@@ -91,7 +91,7 @@ class CheckoutController extends Controller
                 "order" => $order
             ];
             $toEmail = $order->customer_email;
-            Mail::send('emails.sales_order_email', $data, function ($message) use ($toEmail) {
+            Mail::send('emails.order_success_email', $data, function ($message) use ($toEmail) {
                 $message->to($toEmail)->subject("Đặt hàng thành công!");
             });
             Cart::destroy();
