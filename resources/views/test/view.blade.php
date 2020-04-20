@@ -5,7 +5,7 @@
 @endsection
 @section('content')
     <div class="row">
-        <div class="col-sm-12 col-md-8 col-lg-8 column-main">
+        <div class="col-sm-12 col-md-9 col-lg-9 column-main">
             <div id="news-{{$test->id}}" class="news-{{$test->id}} ">
                 <div class="row">
                     <div class="detail-test-container">
@@ -29,8 +29,8 @@
             </div>
             @include('book.partials.fb')
         </div>
-        <div class="col-sm-12 col-md-4 col-lg-4 sidebar">
-            @include('news.sidebar-info')
+        <div class="col-sm-12 col-md-3 col-lg-3 sidebar">
+            @include('test.sidebar-info')
         </div>
     </div>
 @endsection

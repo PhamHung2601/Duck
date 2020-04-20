@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Document;
+use App\Test;
 use Illuminate\Http\Request;
 use App\News;
 use App\Tag;
@@ -26,6 +28,8 @@ class NewsController extends Controller
      */
     public function index(Request $request)
     {
+        $tests = Test::orderBy('id','desc')->get();
+        $documents = Document::orderBy('position','desc')->get();
         $tagParam = $request->tag;
         if ($tagParam) {
             try {
@@ -41,7 +45,7 @@ class NewsController extends Controller
         } else {
             $newsList = News::orderBy('id', 'desc')->paginate(10);
         }
-        return view('news.list', ['news' => $newsList]);
+        return view('news.list', ['news' => $newsList],compact('tests','documents'));
     }
 
     /**

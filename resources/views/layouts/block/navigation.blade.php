@@ -4,10 +4,10 @@
             <nav class="row navbar static-top display-flex-content">
                 <div class="logo col-sm-12 col-md-4 col-lg-4">
                     <a href="https://dialithaytung.com/">
-                        {!!\Helper::getStaticBlockContentById("header-logo")!!}
-                        {{--                    <h2>Địa Lí Thầy Tùng</h2><p>#Team thầy Tùng, chiến thắng đến cùng</p></a>--}}
+{{--                        {!!\Helper::getStaticBlockContentById("header-logo")!!}--}}
+                                            <h2>Địa Lí Thầy Tùng</h2><p>#Team thầy Tùng, chiến thắng đến cùng</p>
                     </a>
-                    {!!\Helper::getStaticBlockContentById("header-logo-side-img")!!}
+{{--                    {!!\Helper::getStaticBlockContentById("header-logo-side-img")!!}--}}
                 </div>
                 <div class="col-sm-12 col-md-5 col-lg-5 search">
                     <div class="input-group">

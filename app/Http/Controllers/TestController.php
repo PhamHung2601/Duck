@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Document;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Test;
@@ -24,6 +25,7 @@ class TestController extends Controller
      */
     public function index()
     {
+        $documents = Document::orderBy('position','desc')->get();
         $tests = Test::all();
         $testList = [];
         foreach ($tests as $test) {
@@ -32,7 +34,7 @@ class TestController extends Controller
             }
             $testList[$test->year][] = $test;
         }
-        return view('test.list', ['testList' => $testList]);
+        return view('test.list', ['testList' => $testList],compact('test','documents'));
     }
 
     /**

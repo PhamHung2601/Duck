@@ -4,25 +4,27 @@
             <nav class="row navbar static-top display-flex-content">
                 <div class="logo col-sm-12 col-md-4 col-lg-4">
                     <a href="https://dialithaytung.com/">
-                        {!!\Helper::getStaticBlockContentById("header-logo")!!}
-                        {{--                    <h2>Địa Lí Thầy Tùng</h2><p>#Team thầy Tùng, chiến thắng đến cùng</p></a>--}}
-                    </a>
-                    {!!\Helper::getStaticBlockContentById("header-logo-side-img")!!}
+                    {{--                        {!!\Helper::getStaticBlockContentById("header-logo")!!}--}}
+                        <h2>Địa Lí Thầy Tùng</h2>
+                        <p>#Team thầy Tùng, chiến thắng đến cùng</p></a>
+{{--                    {!!Helper::getStaticBlockContentById("header-logo-side-img")!!}--}}
                 </div>
-                <div class="col-sm-12 col-md-5 col-lg-5 search">
+                <div class="col-sm-12 col-md-6 col-lg-6 search">
                     <div class="input-group">
                         <form role="form" id="header-search" method="POST" action="{{ route('search.search') }}">
                             {{ csrf_field() }}
-                            <input id="search-input" name="search_text" type="text" class="form-control input-search" placeholder="Tìm Kiếm ..." aria-label="Search">
+                            <input id="search-input" name="search_text" type="text" class="form-control input-search"
+                                   placeholder="Tìm Kiếm ..." aria-label="Search">
                             <button id="button-search" disabled class="btn btn-light" type="submit">
-                                <span style="cursor:pointer; "> <span class="fa fa-search" style="font-size:15px;font-weight:100"></span> </span>
+                                <span style="cursor:pointer; "> <span class="fa fa-search"
+                                                                      style="font-size:15px;font-weight:100"></span> </span>
                             </button>
                         </form>
                     </div>
                 </div>
-                <div class="search col-sm-12 col-md-3 col-lg-3 register">
+                <div class="search col-sm-12 col-md-2 col-lg-2 register">
                     <a href="{{ url('cart') }}" class="cart-header" title="view cart">
-                        <i class="fa fa-shopping-cart fa-4" aria-hidden="true" style=" font-size: 20px"></i>
+                        <i class="fa fa-shopping-cart fa-4" aria-hidden="true" style=" font-size: 40px"></i>
                         <span class="count">({{Cart::count()}})</span>
                     </a>
                 </div>
@@ -44,11 +46,11 @@
     </div>
 </div>
 <script type="text/javascript">
-    $('#search-input').on('keyup',function(){
+    $('#search-input').on('keyup', function () {
         var value = $(this).val();
-        if(value && value != ''){
+        if (value && value != '') {
             $('#button-search').prop('disabled', false);
         }
     });
-    $.ajaxSetup({ headers: { 'csrftoken' : '{{ csrf_token() }}' } });
+    $.ajaxSetup({headers: {'csrftoken': '{{ csrf_token() }}'}});
 </script>

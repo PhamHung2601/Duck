@@ -36,11 +36,11 @@
 
 <body>
 
-@include('layouts.block.navigation')
+@include('home-page.partials.header')
 @yield('content-top')
 @yield('content')
 @yield('content-bottom')
-@include('layouts.block.footer')
+@include('home-page.partials.footer')
 @yield('content-js')
 @include('home-page.partials.scripts')
 <!-- Load Facebook SDK for JavaScript -->

@@ -1,11 +1,11 @@
 @extends('layouts.master')
-@section('pageTitle', 'Đia lí Thầy Tùng')
+@section('pageTitle', 'Địa lí Thầy Tùng')
 @section('content-top')
   @include('static-block.content-top')
 @endsection
 @section('content')
   <div class="row">
-    <div class="col-sm-12 col-md-8 col-lg-8 column-main">
+    <div class="col-sm-12 col-md-9 col-lg-9 column-main">
       @include('home-page.partials.slider-banner')
       @include('home-page.partials.events')
       @include('home-page.partials.books')
@@ -48,7 +48,7 @@
       </div>
       @include('home-page.partials.testimonial')
     </div>
-    <div class="col-sm-12 col-md-4 col-lg-4 sidebar">
+    <div class="col-sm-12 col-md-3 col-lg-3 sidebar">
       @include('home-page.partials.sidebar-info')
     </div>
   </div>

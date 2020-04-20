@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\News;
 use App\Tag;
+use App\Test;
 use Illuminate\Http\Request;
 use App\Document;
 
@@ -18,6 +20,7 @@ class DocumentController extends Controller
      */
     public function index(Request $request)
     {
+        $tests = Test::orderBy('id','desc')->get();
         $tagParam = $request->tag;
         if ($tagParam) {
             try {
@@ -33,7 +36,7 @@ class DocumentController extends Controller
         } else {
             $documents = Document::orderBy('position', 'desc')->paginate(10);
         }
-        return view('documents.list', compact('documents'));
+        return view('documents.list', compact('documents','tests'));
     }
 
     /**

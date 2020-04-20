@@ -32,4 +32,3 @@
 
 @include('home-page.partials.document')
 
-@include('home-page.partials.tests')

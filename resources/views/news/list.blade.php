@@ -5,7 +5,7 @@
 @endsection
 @section('content')
     <div class="row">
-    <div class="col-sm-12 col-md-8 col-lg-8 column-main">
+    <div class="col-sm-12 col-md-9 col-lg-9 column-main">
         <div id="main-content" class="content-introduce">
             {!!\Helper::getStaticBlockContentById("blog_header")!!}
         </div>
@@ -22,7 +22,7 @@
             {{ $news->links() }}
         @endif
     </div>
-    <div class="col-sm-12 col-md-4 col-lg-4 sidebar">
+    <div class="col-sm-12 col-md-3 col-lg-3 sidebar">
         @include('news.sidebar-info')
     </div>
     </div>
