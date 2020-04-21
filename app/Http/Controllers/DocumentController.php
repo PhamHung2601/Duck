@@ -49,7 +49,6 @@ class DocumentController extends Controller
         $documents = Document::where('category', $category)->orderBy('position', 'desc')->paginate(10);
         return view('documents.list', compact('documents','category'));
     }
-
     /**
      * @param Request $request
      * @param $id
@@ -58,10 +57,11 @@ class DocumentController extends Controller
      */
     public function view(Request $request, $id, $slug)
     {
+        $tests = Test::orderBy('id','desc')->get();
         $document = Document::find($id);
         if (empty($document) || empty($document->id)) {
             return Redirect('/');
         }
-        return view('documents.view', compact('document'));
+        return view('documents.view', compact('document','tests'));
     }
 }
