@@ -46,8 +46,9 @@ class DocumentController extends Controller
      */
     public function showByCategory(Request $request, $category)
     {
+        $tests = Test::orderBy('id','desc')->get();
         $documents = Document::where('category', $category)->orderBy('position', 'desc')->paginate(10);
-        return view('documents.list', compact('documents','category'));
+        return view('documents.list', compact('documents',['category','tests']));
     }
     /**
      * @param Request $request
