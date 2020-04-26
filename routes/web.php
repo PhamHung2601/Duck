@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 
 /*
 |--------------------------------------------------------------------------
@@ -112,3 +113,38 @@ Route::get('/tai-lieu/{id}-{slug}.html', 'DocumentController@view')
     ->where('id', '[0-9]+')
     ->name('document.view');
 
+Route::get('/config-clear', function () {
+    try {
+        Artisan::call('config:clear');
+        return 'success';
+    } catch (\Exception $e) {
+        return $e->getMessage();
+    }
+});
+
+Route::get('/config-cache', function () {
+    try {
+        Artisan::call('config:cache');
+        return 'success';
+    } catch (\Exception $e) {
+        return $e->getMessage();
+    }
+});
+
+Route::get('/cache-clear', function () {
+    try {
+        Artisan::call('cache:clear');
+        return 'success';
+    } catch (\Exception $e) {
+        return $e->getMessage();
+    }
+});
+
+Route::get('/view-clear', function () {
+    try {
+        Artisan::call('view:clear');
+        return 'success';
+    } catch (\Exception $e) {
+        return $e->getMessage();
+    }
+});
