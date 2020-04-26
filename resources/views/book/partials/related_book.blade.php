@@ -13,9 +13,9 @@
                                      src="{{Voyager::image($item->media)}}">
                             </div>
                             <div class="book-info">
-                                <a href="{{$item->getUrlDetail()}}" class="name" tabindex="0"><span>{{$item->name}}</span></a>
+                                <a href="{{$item->getUrlDetail()}}" class="name"
+                                   tabindex="0"><span>{{$item->name}}</span></a>
                                 <div class="stock">
-                                    <span>Kho hàng:</span>
                                     @if($item->stock > 0)
                                         <span class="status instock">Còn Sách</span>
                                     @else
@@ -27,7 +27,8 @@
                                 @if($item->special_price && $item->special_price < $item->price)
                                     <p><strong class="special-price"
                                                style="color:red"> {{number_format($item->special_price)}}đ</strong>
-                    <span style="text-decoration:line-through;padding-left:10px"> {{number_format($item->price)}}đ</span>
+                    <span
+                        style="text-decoration:line-through;padding-left:10px"> {{number_format($item->price)}}đ</span>
                 </p>
                                 @else
                                     <p><strong style="color:red"> {{number_format($item->price)}}đ</strong>
@@ -42,8 +43,10 @@
                                             <div id="add-cart-action">
                                                 <div class="add-cart-action" style="display: block">
                                                     <div class="cta-box">
-                                                        <button type="sumit" class="btn btn-danger">
-                                                            <span class="glyphicon glyphicon-shopping-cart"></span> Mua sách
+                                                        <button type="sumit" class="btn" style="border-radius: 100px;color:white;background-image: linear-gradient(to right top, #f64131, #f84a3f, #f9544d, #f95d5a, #f96666);">
+                                                                    <span
+                                                                        class="glyphicon glyphicon-shopping-cart" style="font-weight: 700"></span>
+                                                            Mua sách <i class="fa fa-cart-arrow-down"></i>
                                                         </button>
                                                     </div>
                                                 </div>
@@ -67,8 +70,8 @@
 
         $('.related-products .books').slick({
             dots: true,
-            slidesPerRow: 2,
-            rows: 2,
+            slidesPerRow: 3,
+            rows: 3,
             responsive: [
                 {
                     breakpoint: 1024,

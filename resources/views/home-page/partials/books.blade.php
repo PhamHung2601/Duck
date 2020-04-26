@@ -1,82 +1,90 @@
 <div class="list-books">
     <div class="panel panel-default">
         <div class="panel-heading">
-            {!!\Helper::getStaticBlockContentById("home-book-section-title")!!}
+            {!!Helper::getStaticBlockContentById("home-book-section-title")!!}
         </div>
         <div class="panel-body">
             <div class="books">
                 @foreach($products as $product)
-                    <div class="book-item">
-                        <div class="book-item-inner">
-                            <div class="book-image">
-                                <img class="" style="width:100px; border:solid 1px #f2f2f2"
-                                     src="{{ Voyager::image( $product->media ) }}">
-                            </div>
-                            <div class="book-info">
-                                <a href="{{$product->getUrlDetail()}}" class="name"><span> {{ $product->name }}</span></a>
-                                @foreach($product->category as $cate)
-                                    <div class="type">
-                                        <span>Loại: <strong> {{ $cate->name }}</strong></span>
+                    @foreach($product->category as $cate)
+                        @if($cate->id !=4)
+                            <div class="book-item">
+                                <div class="book-item-inner">
+                                    <div class="book-image">
+                                        <img class="" style="width: 150px;border: solid 1px #f2f2f2"
+                                             src="{{ Voyager::image( $product->media ) }}">
                                     </div>
-                                @endforeach
-                                <div class="stock">
-                                    <span>Kho hàng:</span>
-                                    @if((int)$product->stock > 0)
-                                        <span class="status instock">Còn Sách</span>
-                                    @else
-                                        <span class="status outstock">Hết Sách</span>
-                                    @endif
-                                </div>
-                                <div class="price-box">
+                                    <div class="book-info">
+                                        <a href="{{$product->getUrlDetail()}}"
+                                           class="name"><span> {{ $product->name }}</span></a>
+                                        @foreach($product->category as $cate)
+                                            <div class="type">
+                                                <span>Loại: <strong> {{ $cate->name }}</strong></span>
+                                            </div>
+                                        @endforeach
+                                        <div class="stock">
+                                            <span>Kho hàng:</span>
+                                            @if((int)$product->stock > 0)
+                                                <span class="status instock">Còn Sách</span>
+                                            @else
+                                                <span class="status outstock">Hết Sách</span>
+                                            @endif
+                                        </div>
+                                        <div class="price-box">
                             <span class="price-wrapper">
                                 @if($product->special_price)
-                                <span class="special-price">
+                                    <span class="special-price">
                                     <span class="price">{{ number_format($product->special_price)}} d</span>
                                 </span>
                                     <span class="old-price">
                                     <span class="price">{{ number_format($product->price) }} d</span>
                                 </span>
-                                    @else
+                                @else
                                     <span class="product-price">
                                     <span class="price">{{ number_format($product->price) }} d</span>
                                 </span>
                                 @endif
                             </span>
-                                    <form role="form" id="add-to-cart" method="POST" action="{{ route('cart.add') }}">
-                                        {{ csrf_field() }}
-                                        <input type="text" name="product_id" value="{{$product->id}}" hidden>
-                                        <!-- Only for js checking baby milk product -->
-                                        <div class="item-product-options" style="margin-top: 20px;">
-                                            <!-- BEGIN ADD TO CART -->
-                                            <div id="add-cart-action">
-                                                <div class="add-cart-action" style="display: block">
-                                                    <div class="cta-box">
-                                                        <button type="sumit" class="btn btn-danger">
-                                                            <span class="glyphicon glyphicon-shopping-cart"></span> Mua sách
-                                                        </button>
+                                            <form role="form" id="add-to-cart" method="POST"
+                                                  action="{{ route('cart.add') }}">
+                                                {{ csrf_field() }}
+                                                <input type="text" name="product_id" value="{{$product->id}}" hidden>
+                                                <!-- Only for js checking baby milk product -->
+                                                <div class="item-product-options" style="margin-top: 20px;">
+                                                    <!-- BEGIN ADD TO CART -->
+                                                    <div id="add-cart-action">
+                                                        <div class="add-cart-action" style="display: block">
+                                                            <div class="cta-box">
+                                                                <button type="sumit" class="btn" style="border-radius: 100px;color:white;background-image: linear-gradient(to right top, #f64131, #f84a3f, #f9544d, #f95d5a, #f96666);">
+                                                                    <span
+                                                                        class="glyphicon glyphicon-shopping-cart" style="font-weight: 700"></span>
+                                                                    Mua sách <i class="fa fa-cart-arrow-down"></i>
+                                                                </button>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </form>
                                         </div>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        @endif
+                    @endforeach
                 @endforeach
             </div>
             <div class="clearfix">
-                <button style="float: right" class="btn btn-info"><a class="text-light" href="{{url('tat-ca-sach')}}">Xem Thêm</a></button>
+                <button style="float: right;margin-top: 5%;" class="btn btn-info"><a class="text-light" href="{{url('tat-ca-sach')}}">Xem
+                        Thêm</a></button>
             </div>
         </div>
     </div>
 </div>
 
 
-
 <script type="text/javascript">
 
-    $(document).ready(function(){
+    $(document).ready(function () {
 
         $('.books').slick({
             dots: false,

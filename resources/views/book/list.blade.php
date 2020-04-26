@@ -17,7 +17,11 @@
         </div>
         <div class="products">
             @foreach($products as $product)
+                @foreach($product->category as $cate)
+                    @if($cate->id != 4)
                 @include('book.partials.list',['product' => $product])
+                @endif
+                @endforeach
             @endforeach
         </div>
         {{ $products->links() }}

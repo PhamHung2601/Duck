@@ -9,7 +9,7 @@
     <p><span class="time-news">{{\Helper::formatDate($document->updated_at)}}</span></p>
     <div class="post-content">
         <p>{!!$document->short_description!!}</p>
-        <a href="{{ $document->getUrlDetail() }}" class="more-link">Xem thêm</a>
     </div>
+    <a href="{{ $document->getUrlDetail() }}" class="more-link">Xem thêm</a>
 </article>
 @include('static-block.content-bottom')
