@@ -55,13 +55,17 @@ class NewsController extends Controller
      */
     public function show(Request $request, $id)
     {
+        $documents= Document::orderBy('id','desc')->get();
+        $tests = Test::orderBy('id','desc')->get();
+        $allNews = News::orderBy('id','desc')->get();
         /** @var News $news $news */
         $news = News::select('*')->find($id);
         if (!isset($news)) {
             return Redirect('/');
         }
         return view('news.view', [
-            'news' => $news
+            'news' => $news,
+            'tests' => $tests,'documents'=>$documents,'all'=>$allNews
         ]);
     }
 

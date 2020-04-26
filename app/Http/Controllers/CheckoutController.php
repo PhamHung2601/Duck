@@ -46,6 +46,7 @@ class CheckoutController extends Controller
             'fullName' => 'required',
             'email' => 'required|email',
             'address' => 'required',
+            'fb'=> 'required',
             'phoneNumber' => 'required|digits_between:10,12',
             'payment_method' => 'required'
         ]);
@@ -66,6 +67,7 @@ class CheckoutController extends Controller
             $order->phone = $validatedData['phoneNumber'];
             $order->total = Cart::subtotalFloat();
             $order->status = 'pending';
+            $order->fb= $validatedData['fb'];
             $order->grand_total = Cart::totalFloat();
             $order->shipping_fee = Cart::shippingFee();
             $order->message = $request->message ?: '';

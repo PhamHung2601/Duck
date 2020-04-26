@@ -6,14 +6,13 @@
 @section('content')
     @include('book.partials.overview_book')
     <div class="row product-bottom">
-        <div class="col-md-8 col-lg-7">
-            @include('book.partials.fb')
-        </div>
-        <div class="col-md-5 col-lg-5">
+        <div class="col-md-9 col-lg-9">
             @include('book.partials.related_book')
         </div>
+        <div class="col-md-3 col-lg-3">
+            @include('book.partials.fb')
+        </div>
     </div>
-    @include('book.partials.review')
 @endsection
 @section('content-bottom')
     @include('static-block.content-bottom')

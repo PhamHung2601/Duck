@@ -8,7 +8,7 @@
         <div class="col-sm-12 col-md-9 col-lg-9 column-main">
             <div id="news-{{$test->id}}" class="news-{{$test->id}} ">
                 <div class="row">
-                    <div class="detail-test-container">
+                    <div class="detail-test-container col-sm-12 col-md-12 col-lg-12">
                         <div class="test-title">
                             <span class="entry-title">{{$test->title}}</span>
                         </div>

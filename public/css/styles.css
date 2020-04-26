@@ -45,7 +45,7 @@
     @import url("footer.css");
 
     body{
-        font-family: 'Baomoi-SemiBold', 'Helvetica Neue',Helvetica,Arial,sans-serif;
+        font-family: montserrat,sans-serif,-apple-system,system-ui,BlinkMacSystemFont,Helvetica,helvetica neue;
         font-size: 14px;
     }
 
@@ -321,8 +321,8 @@
 
     #header-search .input-search{
         border: 0;
-        border-top-left-radius: .25rem;
-        border-bottom-left-radius: .25rem;
+        border-top-left-radius: 1.25rem;
+        border-bottom-left-radius: 1.25rem;
     }
 
     .main-content{
@@ -418,6 +418,7 @@
 
     .list-books .panel-body{
         padding: 15px 30px;
+        border: transparent;
     }
 
     .list-books .slick-prev:before,.list-books .slick-next:before,
@@ -426,17 +427,23 @@
         color: #333;
     }
 
-    .list-books .books{
-
-    }
-
     .list-books .books .book-item{
         padding: 0 10px;
         vertical-align: top;
+        border: 2px solid transparent;
     }
-
+    .list-books:not(.related-products) .books .book-item:hover{
+        border: 2px solid #acaeb1c9;
+        border-radius: 50px;
+    }
+    .list-books .books .book-item .add-cart-action .btn{
+        visibility: hidden;
+    }
+    .list-books .books .book-item:hover .add-cart-action .btn{
+        visibility: visible;
+    }
     .list-books .books .book-item-inner{
-
+        margin: 5%;
         margin-bottom: 25px;
         display: -webkit-box;
         display: -moz-box;
@@ -1423,9 +1430,31 @@
     }
 
     .related-products .panel-heading{
-        background: #e41b13;
+        background-image: linear-gradient(to right top, #051937, #004368, #007293, #00a4b0, #2cd6bf);
         color: #fff;
     }
+    /*.related-products .book-item{*/
+    /*   border: 1px solid lightgrey;*/
+    /*    height: 189px;*/
+    /*    margin-bottom: 2%;*/
+    /*}*/
+    /*.related-products .book-item .stock{*/
+    /*    visibility: hidden;*/
+    /*}*/
+    /*.related-products .book-item:hover .book-info*/
+    /*{*/
+    /*    display: block;*/
+    /*    margin: 2%;*/
+    /*    display: -webkit-box;*/
+    /*    display: -moz-box;*/
+    /*    display: -ms-flexbox;*/
+    /*    display: -webkit-flex;*/
+    /*    display: flex;*/
+    /*}*/
+    /*.related-products .book-item:hover .stock*/
+    /*{*/
+    /*    visibility: visible;*/
+    /*}*/
 
     .review-section{
         padding: 30px 20px;
@@ -1467,7 +1496,7 @@
     .product-tabs .nav>li>a {
         position: relative;
         display: block;
-        padding: 10px 60px;
+        padding: 10px;
     }
 
     .product-tabs .nav-tabs>li>a {
@@ -1636,7 +1665,7 @@
         position: absolute;
         top: 8px;
         left: 5%;
-        color:#3498db;
+        color:#fb4419a8;
         font-size: 20px;
     }
     .list-testimonial .description:after{
@@ -1647,7 +1676,7 @@
         position: absolute;
         top: 8px;
         right: 2%;
-        color:#3498db;
+        color:#fb4419a8;
         font-size: 30px;
     }
     .list-testimonial .pic{
@@ -1706,7 +1735,7 @@
     }
 
     .list-document ul li a{
-        color: #0056b3;
+        color: #0b6f13c9;
         font-weight: 700;
     }
 
@@ -1748,8 +1777,8 @@
         text-align: center;
     }
     .landing-testimonials .testimonial .pic{
-        width: 100px;
-        height: 100px;
+        width: 200px;
+        height: 200px;
         border-radius: 50%;
         margin: 0 auto;
         overflow: hidden;
@@ -1848,8 +1877,7 @@
 
     .online-course{
         background: #093028;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #237A57, #093028);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #237A57, #093028); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-image: linear-gradient(to right top, #0b00f9, #006eff, #009eff, #00c5ff, #00e6f0);
         color: #fff;
     }
 
@@ -1955,6 +1983,9 @@
     }
     a.more-link {
         color: #0056b3!important;
+        position: absolute;
+        bottom: 5%;
+        left: 40%;
     }
     a.more-link:hover {
         color: #007bff!important;
@@ -2060,8 +2091,17 @@
     .fb-block-link{
         animation: glowing 1500ms infinite;
     }
+    .fb-block-link:hover{
+        animation: glowing_hover 1500ms infinite;
+    }
+    @keyframes glowing_hover {
+        0% {color: rgba(142, 203, 231, 0.89)
+        }
+        50% {color: rgba(73, 156, 220, 0.89);}
+        100% {color: #2049db;}
+    }
     @keyframes glowing {
-        0% {color: #004A7F;}
-        50% {color: rgba(47, 165, 194, 0.89);}
-        100% {color: #004A7F;}
+        0% {color: rgba(231, 142, 142, 0.89)}
+        50% {color: rgba(220, 73, 73, 0.89);}
+        100% {color: #db2620;}
     }

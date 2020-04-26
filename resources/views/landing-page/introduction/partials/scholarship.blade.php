@@ -61,7 +61,7 @@
 {{--        </div>--}}
     </div>
 </section>
-<section class="landing-page-section scholarship-page-content bg-danger" style="color:white">
+<section class="landing-page-section scholarship-page-content" style="color:white;background-color: #0c958f">
     <div class="landing-page-section-wrapper scholarship-content">
         {!! Helper::getStaticBlockContentById("scholarship-content-2") !!}
 {{--        <h2 class="section-title">Quy Trình Đăng Ký</h2>--}}

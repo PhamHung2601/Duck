@@ -5,11 +5,12 @@
                 <div class="logo col-sm-12 col-md-4 col-lg-4">
                     <a href="https://dialithaytung.com/">
                     {{--                        {!!\Helper::getStaticBlockContentById("header-logo")!!}--}}
-                        <h2>Địa Lí Thầy Tùng</h2>
-                        <p>#Team thầy Tùng, chiến thắng đến cùng</p></a>
+                        <p style="font-size: 30px; padding-top: 5%"><b>ĐỊA LÍ THẦY TÙNG</b></p>
+                        <p><b>TEAM THẦY TÙNG, CHIẾN ĐẾN CÙNG</b></p>
+                    </a>
 {{--                    {!!Helper::getStaticBlockContentById("header-logo-side-img")!!}--}}
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-6 search">
+                <div class="col-sm-12 col-md-4 col-lg-4 search">
                     <div class="input-group">
                         <form role="form" id="header-search" method="POST" action="{{ route('search.search') }}">
                             {{ csrf_field() }}
@@ -21,6 +22,8 @@
                             </button>
                         </form>
                     </div>
+                </div>
+                <div class="col-sm-12 col-md-2 col-lg-2 search">
                 </div>
                 <div class="search col-sm-12 col-md-2 col-lg-2 register">
                     <a href="{{ url('cart') }}" class="cart-header" title="view cart">

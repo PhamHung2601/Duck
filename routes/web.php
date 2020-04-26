@@ -54,7 +54,7 @@ Route::get('/thanh-tich', function () {
     return view('landing-page/introduction/students');
 });
 Route::get('/hoc-sinh', function () {
-    return view('landing-page/introduction/students');
+    return view('landing-page/introduction/achive');
 });
 Route::get('/tuyen-dung', function () {
     return view('landing-page/introduction/hiring');

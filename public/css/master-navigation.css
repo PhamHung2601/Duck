@@ -17,7 +17,7 @@
 }
 
 .header .main-menu{
-    background: #a2e8e894;
+    background: #ffffff94;
     color: #fff;
 }
 
@@ -32,11 +32,13 @@
 }
 
 .header .main-menu ul.navbar-nav > li > a:hover{
-    color:#fff;
+    color:#ff6c23b5;
 }
-
+.header .main-menu ul.navbar-nav > li:hover > a {
+    border-color:#ff6c23b5;
+}
 .header .main-menu ul.navbar-nav > li:not(:last-child) > a{
-    border-right: 1px solid #fff;
+    border-right: 1px solid #2a79da;
 }
 
 .header .main-menu ul.navbar-nav > li:first-child > a{

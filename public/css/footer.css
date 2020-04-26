@@ -3,11 +3,16 @@
     height: 40px;
     line-height: 40px;
     outline: 0px;
-    border: 0px;
+    border: 1px solid orange;
     color: #fff;
-    background: #ce3333;
+    background: transparent;
     font-size: 14px;
 }
 .form-wrapper {
     margin-top: 20px;
+}
+.ft-subscribe input::placeholder{
+color: #6583b9;
+    font-size: 0.7rem;
+    font-weight: 700;
 }

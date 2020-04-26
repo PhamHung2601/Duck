@@ -23,5 +23,11 @@ class Document extends Model
     {
         return url("/tai-lieu/{$this->id}-" . Str::slug($this->title) . ".html");
     }
-
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function related()
+    {
+        return $this->belongsToMany(RelatedDocuments::class, 'related_documents');
+    }
 }

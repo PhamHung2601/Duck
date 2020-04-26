@@ -45,11 +45,12 @@ class TestController extends Controller
      */
     public function show(Request $request, $id)
     {
+        $documents= Document::orderBy('id','desc')->get();
         $test = Test::select('*')->find($id);
         if (!isset($test)) {
             return Redirect('/');
         }
-        return view('test.view', ['test' => $test]);
+        return view('test.view', ['test' => $test],['documents'=>$documents]);
     }
 
 }

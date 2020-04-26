@@ -10,8 +10,7 @@
     padding-top: 12px;
     padding-bottom: 12px;
     font-weight: 500!important;
-    text-transform: uppercase!important;
-    color: #0bb7b4!important;
+    color: #d60000!important;
 }
 .time-news {
     color: rgba(0,0,0,0.23)!important;
@@ -27,7 +26,8 @@
 }
 .post-content {
     padding-left: 20px;
-    padding-right: 20px
+    padding-right: 20px;
+    padding-bottom: 15%;
 }
 .entry-title {
     font-size: 33px;
@@ -47,9 +47,9 @@
     padding: 8px 13px;
     font-weight: 700;
     letter-spacing: -.4px;
-    background-color: #f4f4f4;
-    color: #8b949d;
-    border-radius: 2px;
+    background-color: #c4e2f1;
+    color: #e80606;
+    border-radius: 50px;
     margin: 0 3px 7px 0;
 }
 .tag-item:hover {
