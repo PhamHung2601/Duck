@@ -14,12 +14,12 @@
                 </div>
             </div>
             <div id="news-{{$news->id}}" class="et_pb_post clearfix news-{{$news->id}}">
+                <p class="entry-title text-center"><b>{{$news->title}}</b></p>
+                <p class="post-meta mt-1" style="color: black !important; font-size: 15px;font-weight: 700 !important;">{{\Helper::formatDate($news->updated_at)}}
+                </p>
                 <div class="image-container-blog">
                     <div  style="background-image: url('{{Voyager::image($news->media)}}');background-repeat: no-repeat;background-size: cover;
                         height: 500px;">
-                        <p class="entry-title text-center" style="color: white !important; font-size: 25px;position: absolute;margin-top: 40%;margin-left: 5%;font-weight: 700 !important;"><b>{{$news->title}}</b></p>
-                        <p class="post-meta mt-1" style="color: white !important; font-size: 15px;position: absolute;margin-top: 45% !important;margin-left: 5%;font-weight: 700 !important;">{{\Helper::formatDate($news->updated_at)}}
-                        </p>
                     </div>
                     <blockquote class="article-quote" style="padding: .2rem .6rem; margin-left:5%;margin-top:5%;border-left: .15rem solid orange;font-size: .9rem;">
                         <p><i>{!!$news->short_description!!}</i></p>

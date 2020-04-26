@@ -36,4 +36,11 @@ class News extends Model
     {
         return $this->belongsToMany('App\Tag');
     }
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function related()
+    {
+        return $this->belongsToMany(RelatedNews::class, 'related_news');
+    }
 }
