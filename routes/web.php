@@ -148,3 +148,15 @@ Route::get('/view-clear', function () {
         return $e->getMessage();
     }
 });
+
+Route::get('/master-clear', function () {
+    try {
+        Artisan::call('view:clear');
+        Artisan::call('cache:clear');
+        Artisan::call('config:cache');
+        Artisan::call('config:clear');
+        return 'success';
+    } catch (\Exception $e) {
+        return $e->getMessage();
+    }
+});
