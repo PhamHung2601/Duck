@@ -17,24 +17,34 @@
                                 @endif
                                 <div class="form-one">
                                     <div class="input-field form-group">
-                                        <label for="full_name">Họ và Tên</label>
+                                        <label for="full_name">Họ và Tên <span style="color:red">*</span></label>
                                         <input id="full_name" class="form-control" name="fullName" type="text" value="{{ old('fullName') }}"
-                                               placeholder="Họ và Tên *">
+                                               placeholder="Họ và Tên">
+                                        <small><i>VD: Nguyễn Văn A</i></small>
                                     </div>
                                     <div class="input-field form-group">
-                                        <label for="email">Email</label>
+                                        <label for="email">Email <span style="color:red">*</span></label>
                                         <input id="email" class="form-control" name="email" type="text" value="{{ old('email') }}"
-                                               placeholder="Email *">
+                                               placeholder="Email">
+                                        <small><i>VD: nguyenvana@gmail.com</i></small>
                                     </div>
                                     <div class="input-field form-group">
-                                        <label for="phone">Số điện thoại</label>
+                                        <label for="phone">Số điện thoại <span style="color:red">*</span></label>
                                         <input id="phone" class="form-control" name="phoneNumber" type="text"
-                                               value="{{ old('phoneNumber') }}" placeholder="Số điện thoại *">
+                                               value="{{ old('phoneNumber') }}" placeholder="Số điện thoại">
+                                        <small><i>VD: 01123487456</i></small>
                                     </div>
                                     <div class="input-field form-group">
-                                        <label for="address">Địa chỉ</label>
+                                        <label for="address">Địa chỉ <span style="color:red">*</span></label>
                                         <input id="address" class="form-control" name="address" type="text" value="{{ old('address') }}"
-                                               placeholder="Địa Chỉ *">
+                                               placeholder="Địa Chỉ">
+                                        <small><i>VD: Số nhà 123, đường Abc, tỉnh Xyz</i></small>
+                                    </div>
+                                    <div class="input-field form-group">
+                                        <label for="address">Link Facebook cá nhân <span style="color:red">*</span></label>
+                                        <input id="address" class="form-control" name="fb" type="text" value="{{ old('address') }}"
+                                               placeholder="Link Facebook cá nhân">
+                                        <small><i>VD: https://www.facebook.com/abcd.xyz</i></small>
                                     </div>
                                     <p style="color: red; font-size: 14px">(*) Thông tin quý khách phải nhập đầy đủ</p>
                                 </div>

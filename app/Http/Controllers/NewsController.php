@@ -57,6 +57,7 @@ class NewsController extends Controller
     {
         $documents= Document::orderBy('id','desc')->get();
         $tests = Test::orderBy('id','desc')->get();
+        $allNews = News::orderBy('id','desc')->get();
         /** @var News $news $news */
         $news = News::select('*')->find($id);
         if (!isset($news)) {
@@ -64,7 +65,7 @@ class NewsController extends Controller
         }
         return view('news.view', [
             'news' => $news,
-            'tests' => $tests,'documents'=>$documents
+            'tests' => $tests,'documents'=>$documents,'all'=>$allNews
         ]);
     }
 
