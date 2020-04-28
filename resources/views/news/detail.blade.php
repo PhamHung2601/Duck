@@ -5,7 +5,7 @@
             <img src="{{Voyager::image($new->media)}}" width="100%" alt="{{$new->title}}">
         </a>
     </div>
-    <div class="news-title">{{$new->title}}</div>
+    <div class="news-title"><b>{{$new->title}}</b></div>
     <p><span class="time-news">{{\Helper::formatDate($new->updated_at)}}</span></p>
     <div class="post-content"  style="max-height: 150px;">
         <p>{!!$new->short_description!!}</p>

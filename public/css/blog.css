@@ -4,13 +4,17 @@
     font-size: 18px;
     padding: 20px 80px;
 }
+p{
+    margin-bottom: 0.5rem !important;
+}
 .news-title {
-    text-align: center;
-    font-size: 22px;
+    padding-left: 7%;
+    padding-right: 5%;
+    text-align: left;
+    font-size: 15px;
     padding-top: 12px;
-    padding-bottom: 12px;
     font-weight: 500!important;
-    color: #d60000!important;
+    color: #095598!important;
 }
 .time-news {
     color: rgba(0,0,0,0.23)!important;

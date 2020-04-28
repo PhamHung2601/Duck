@@ -27,7 +27,7 @@
             <hr>
             @include('book.partials.review')
             @if($product->review_book !="#")
-            <button class="btn" style="width:200px;border-radius: 100px;color:white;background-image: linear-gradient(to right top, #f64131, #f84a3f, #f9544d, #f95d5a, #f96666);margin-top: 5%">
+            <button class="btn" style="width:200px;border-radius: 100px;color:white;background-image: linear-gradient(to right top, #fd8503, #fa9400, #f5a200, #f0af00, #ebbc12);margin-top: 5%">
                 <a href="{!!html_entity_decode($product->review_book)!!}" target="_blank">
                     <span style="color: white; font-weight: 700">Đọc Thử Ngay</span>
                 </a>
@@ -50,10 +50,9 @@
                     <div id="add-cart-action">
                         <div class="add-cart-action" style="display: block">
                             <div class="cta-box">
-                                <button type="sumit" class="btn" style="width:200px;border-radius: 100px;color:white;background-image: linear-gradient(to right top, #f64131, #f84a3f, #f9544d, #f95d5a, #f96666);">
+                                <button type="sumit" class="btn" style="width:200px;border-radius: 100px;color:white;background-image: linear-gradient(to right top, #fd8503, #fa9400, #f5a200, #f0af00, #ebbc12);">
                                                                     <span
                                                                         class="glyphicon glyphicon-shopping-cart" style="font-weight: 700">Mua sách </span>
-                                    <i class="fa fa-cart-arrow-down"></i>
                                 </button>
                             </div>
                         </div>

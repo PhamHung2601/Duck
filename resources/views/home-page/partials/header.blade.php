@@ -4,18 +4,19 @@
             <nav class="row navbar static-top display-flex-content">
                 <div class="logo col-sm-12 col-md-4 col-lg-4">
                     <a href="https://dialithaytung.com/">
-                    {{--                        {!!\Helper::getStaticBlockContentById("header-logo")!!}--}}
+                        {{--                        {!!\Helper::getStaticBlockContentById("header-logo")!!}--}}
                         <p style="font-size: 30px; padding-top: 5%"><b>ĐỊA LÍ THẦY TÙNG</b></p>
                         <p><b>TEAM THẦY TÙNG, CHIẾN ĐẾN CÙNG</b></p>
                     </a>
-{{--                    {!!Helper::getStaticBlockContentById("header-logo-side-img")!!}--}}
+                    {{--                    {!!Helper::getStaticBlockContentById("header-logo-side-img")!!}--}}
                 </div>
-                <div class="col-sm-12 col-md-4 col-lg-4 search">
+
+                <div class="col-sm-12 col-md-5 col-lg-5 search">
                     <div class="input-group">
                         <form role="form" id="header-search" method="POST" action="{{ route('search.search') }}">
                             {{ csrf_field() }}
                             <input id="search-input" name="search_text" type="text" class="form-control input-search"
-                                   placeholder="Tìm Kiếm ..." aria-label="Search">
+                                   placeholder="Tìm kiếm sản phẩm, danh mục,..." aria-label="Search">
                             <button id="button-search" disabled class="btn btn-light" type="submit">
                                 <span style="cursor:pointer; "> <span class="fa fa-search"
                                                                       style="font-size:15px;font-weight:100"></span> </span>
@@ -23,12 +24,12 @@
                         </form>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-2 col-lg-2 search">
+                <div class="col-sm-12 col-md-1 col-lg-1">
                 </div>
-                <div class="search col-sm-12 col-md-2 col-lg-2 register">
+                <div class="search col-sm-12 col-md-2 col-lg-2 register"  style="height:40px;text-align:center; border-radius:0.25rem">
                     <a href="{{ url('cart') }}" class="cart-header" title="view cart">
-                        <i class="fa fa-shopping-cart fa-4" aria-hidden="true" style=" font-size: 40px"></i>
-                        <span class="count">({{Cart::count()}})</span>
+                        <i class="fa fa-shopping-cart fa-2" aria-hidden="true" style=" font-size: 27px;padding-top: 2%;"></i> <span style=" font-size: 21px">Giỏ hàng</span>
+                        <span style=" font-size: 21px" class="count">({{Cart::count()}})</span>
                     </a>
                 </div>
             </nav>

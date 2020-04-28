@@ -22,11 +22,12 @@
                     </div>
                 </div>
             </div>
+            @include('book.partials.fb')
         </div>
         <div class="col-sm-12 col-md-3 col-lg-3 sidebar">
             @include('documents.sidebar-info')
             @include('documents.related')
-            @include('book.partials.fb')
+
         </div>
     </div>
 @endsection

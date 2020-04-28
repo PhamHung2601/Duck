@@ -1,7 +1,7 @@
 <div class="list-courses">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <i class="fa fa-list" aria-hidden="true"></i> Tài Liệu Liên Quan
+            <strong>Tài Liệu Liên Quan</strong>
         </div>
         <div class="panel-body">
             <div class="news">
@@ -19,3 +19,33 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $('.news').slick({
+            dots: false,
+            slidesPerRow: 1,
+            rows: 1,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesPerRow: 2,
+                        rows: 1,
+                    }
+                },
+                {
+                    breakpoint: 640,
+                    settings: {
+                        slidesPerRow: 1,
+                        rows: 1,
+                    }
+                }
+            ]
+        });
+
+    });
+</script>

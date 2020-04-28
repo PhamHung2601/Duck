@@ -55,10 +55,10 @@
                                                     <div id="add-cart-action">
                                                         <div class="add-cart-action" style="display: block">
                                                             <div class="cta-box">
-                                                                <button type="sumit" class="btn" style="border-radius: 100px;color:white;background-image: linear-gradient(to right top, #f64131, #f84a3f, #f9544d, #f95d5a, #f96666);">
+                                                                <button type="sumit" class="btn" style="border-radius: 100px;color:white;background-image: linear-gradient(to right top, #fd8503, #fa9400, #f5a200, #f0af00, #ebbc12);height: 30px; padding: 0.1rem .75rem !important;">
                                                                     <span
-                                                                        class="glyphicon glyphicon-shopping-cart" style="font-weight: 700"></span>
-                                                                    Mua sách <i class="fa fa-cart-arrow-down"></i>
+                                                                        class="glyphicon glyphicon-shopping-cart" style="font-weight: 700"><b>Mua sách</b></span>
+
                                                                 </button>
                                                             </div>
                                                         </div>
@@ -90,6 +90,8 @@
             dots: false,
             slidesPerRow: 2,
             rows: 2,
+            autoplay: true,
+            autoplaySpeed: 6000,
             responsive: [
                 {
                     breakpoint: 1024,
