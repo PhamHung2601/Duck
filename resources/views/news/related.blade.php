@@ -5,7 +5,7 @@
         </div>
         <div class="panel-body">
             <div class="news">
-                @foreach($new->related as $related)
+                @foreach($news->related as $related)
                     <div class="new-item">
                         <a href="{{ $related->getUrlDetail() }}">
                             <img src="{{ Voyager::image( $related->media ) }}">

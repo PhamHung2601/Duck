@@ -20,19 +20,19 @@
                 <div class="col-sm-12 col-md-6 col-lg-6">
                     <form class="form-register-course" action="{{ route('cart.add') }}" method="POST" id="add-to-cart">
                         {{ csrf_field() }}
-                        <input type="text" id="name" name="name" placeholder="Your Name">
+                        <input type="text" id="name" name="name" placeholder="Họ tên *">
                         @error('name')
                         <small class="form-text text-muted">{{ $message }}</small>
                         @enderror
-                        <input type="text" id="email" name="email" placeholder="Your Email">
+                        <input type="text" id="email" name="email" placeholder="Email của bạn *">
                         @error('email')
                         <small class="form-text text-muted">{{ $message }}</small>
                         @enderror
-                        <input type="text" id="phone" name="phone" placeholder="Your Phone">
+                        <input type="text" id="phone" name="phone" placeholder="Số điện thoại">
                         @error('phone')
                         <small class="form-text text-muted">{{ $message }}</small>
                         @enderror
-                        <textarea id="address" name="address" placeholder="Your Address"></textarea>
+                        <textarea id="address" name="address" placeholder="Địa chỉ *"></textarea>
                         @error('address')
                         <small class="form-text text-muted">{{ $message }}</small>
                         @enderror

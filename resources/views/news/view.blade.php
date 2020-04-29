@@ -33,6 +33,7 @@
         </div>
         <div class="col-sm-12 col-md-3 col-lg-3 sidebar">
             @include('news.sidebar-info')
+            @include('news.related')
         </div>
     </div>
 @endsection
