@@ -6,6 +6,7 @@
 @endsection
 @section('content')
     @include('landing-page.list.partials.online.online_class')
+    @include('landing-page.list.partials.offline.scholarship_section')
     @include('landing-page.list.partials.popup.popup-online')
 @endsection
 @section('content-bottom')

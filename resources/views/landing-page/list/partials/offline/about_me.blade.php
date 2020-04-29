@@ -1,4 +1,4 @@
-<section class="landing-page-section">
+<section class="landing-page-section" style="background-color: #45f78c40;">
     {!!Helper::getStaticBlockContentById("offline-block-4")!!}
     {{--<div class="landing-page-section-wrapper">--}}
         {{--<h2 class="section-title">THẦY TÙNG LÀ AI?</h2>--}}
