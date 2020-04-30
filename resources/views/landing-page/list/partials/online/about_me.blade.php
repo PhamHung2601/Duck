@@ -1,4 +1,4 @@
-<section class="landing-page-section bg-warning">
+<section class="landing-page-section bg-white">
     {!!\Helper::getStaticBlockContentById("online-1-block-8")!!}
     {{--<div class="landing-page-section-wrapper">--}}
         {{--<h2 class="section-title">THẦY TÙNG LÀ AI?</h2>--}}

@@ -31,7 +31,7 @@
                 @error('address')
                 <small class="form-text text-muted">{{ $message }}</small>
                 @enderror
-                <div class="box-action" style="padding-bottom: 5%"><button id="register-course-button" class="btn btn-success register-course-button landing-button" type="submit">Đăng Ký </button></div>
+                <div class="box-action" style="padding-bottom: 5%"><button id="register-course-button" class="btn btn-success register-course-button landing-button" type="submit">Đăng ký </button></div>
             </form>
         </div>
     </section>

@@ -28,7 +28,19 @@
                         @error('email')
                         <small class="form-text text-muted">{{ $message }}</small>
                         @enderror
-                        <input type="text" id="phone" name="phone" placeholder="Số điện thoại">
+                        <input type="text" id="phone" name="phone" placeholder="Số điện thoại *">
+                        @error('phone')
+                        <small class="form-text text-muted">{{ $message }}</small>
+                        @enderror
+                        <input type="text" id="phone" name="fb" placeholder="Link Facebook cá nhân *">
+                        @error('phone')
+                        <small class="form-text text-muted">{{ $message }}</small>
+                        @enderror
+                        <input type="text" id="phone" name="fb" placeholder="Trường THPT đang theo học *">
+                        @error('phone')
+                        <small class="form-text text-muted">{{ $message }}</small>
+                        @enderror
+                        <input type="text" id="phone" name="fb" placeholder="Tỉnh/Thành phố *">
                         @error('phone')
                         <small class="form-text text-muted">{{ $message }}</small>
                         @enderror
@@ -43,7 +55,7 @@
                                     <button type="sumit" class="btn landing-button">
                                         <span
                                             class="glyphicon glyphicon-shopping-cart">
-                                            Đăng Ký Ngay
+                                            Đăng ký ngay
                                         </span>
                                     </button>
                                 </div>

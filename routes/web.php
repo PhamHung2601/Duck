@@ -43,6 +43,9 @@ Route::get('/khoa-hoc/lop-online', function () {
 Route::get('/khoa-hoc/lop-online/khoa-hoc-live-stream-overview', function () {
     return view('landing-page/list/live_stream_overview');
 });
+Route::get('/khoa-hoc/lop-online/khoa-hoc-live-stream-luyen-de-chuyen-sau', function () {
+    return view('landing-page/list/live_stream_super');
+});
 Route::get('/khoa-hoc/lop-offline', function () {
     return view('landing-page/list/offline');
 });
