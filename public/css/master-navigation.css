@@ -19,11 +19,19 @@
 .header .main-menu{
     background: #ffffff94;
     color: #fff;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.header .main-menu ul.navbar-nav{
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .header .main-menu ul.navbar-nav > li > a{
     color: #1c618a;
-    padding: 5px 38px;
+    padding: 5px 36px;
     display: inline-block;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -39,14 +47,6 @@
 }
 .header .main-menu ul.navbar-nav > li:not(:last-child) > a{
     border-right: 1px solid #2a79da;
-}
-
-.header .main-menu ul.navbar-nav > li:first-child > a{
-    padding-left: 0;
-}
-
-.header .main-menu ul.navbar-nav > li:last-child > a{
-    padding-right: 0;
 }
 
 .header .main-menu  ul.navbar-nav > li > ul.dropdown-menu{

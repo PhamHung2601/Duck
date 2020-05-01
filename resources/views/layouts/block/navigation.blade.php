@@ -31,7 +31,7 @@
     </div>
     <div class="main-menu">
         <div class="container">
-            <nav class="navbar navbar-dark navbar-expand-lg main-menu">
+            <nav class="navbar navbar-light navbar-expand-lg main-menu">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
                         aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
