@@ -54,6 +54,7 @@ class BookController extends Controller
     {
         $sortBy = $request->sortBy;
         $options = [
+            'position_asc'=>'',
             'id_desc' => 'Mới nhất',
             'id_asc' => 'Cũ nhất',
             'name_asc' => 'Theo bảng chữ cái từ A-Z',
@@ -61,7 +62,7 @@ class BookController extends Controller
             'price_asc' => 'Giá từ thấp tới cao',
             'price_desc' => 'Giá từ cao tới thấp'
         ];
-        $sortBy = $sortBy && isset($options[$sortBy]) ? $sortBy : 'id_desc';
+        $sortBy = $sortBy && isset($options[$sortBy]) ? $sortBy : 'position_asc';
         list ($sort, $dir) = explode('_', $sortBy);
         $products = Product::orderBy($sort, $dir)->paginate(12);
         return view('book/list', [

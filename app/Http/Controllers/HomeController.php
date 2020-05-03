@@ -31,7 +31,7 @@ class HomeController extends Controller
     public function index()
     {
         $news = News::orderBy('id', 'desc')->take(6)->get();
-        $products = Product::orderBy('id', 'desc')->take(6)->get();
+        $products = Product::orderBy('position', 'asc')->take(10)->get();
 
         $tests = Test::orderBy('id','desc')->get();
         $documents = Document::orderBy('position','desc')->get();
