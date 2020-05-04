@@ -39,29 +39,6 @@
 @endsection
 @section('content-js')
     <script type="text/javascript">
-        window.fbAsyncInit = function () {
-            window.facebookShare = function( callback ) {
-                var options = ({
-                        method : 'share',
-                        href   : 'https://dialithaytung.com'
-                    }),
-                    status = '';
-                FB.ui(options, function( response ){
-                    if (response && !response.error_code) {
-                        status = 'success';
-                        $.event.trigger('fb-share.success');
-                    } else {
-                        status = 'error';
-                        $.event.trigger('fb-share.error');
-                    }
-                    if(callback && typeof callback === "function") {
-                        callback.call(this, status);
-                    } else {
-                        return response;
-                    }
-                });
-            }
-        };
         $('#share-button').on('click', function( e ) {
             e.preventDefault();
             facebookShare(function( response ) {
