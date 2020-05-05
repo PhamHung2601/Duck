@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer" style="background-color: #0c958f;">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-sm-8 portfolio-item">

@@ -610,7 +610,7 @@ footer.footer {
     margin-left: -1em;
     opacity: 0;
     text-shadow: none;
-    font-size: 32px;
+    font-size: 25px;
     font-weight: 400;
     font-style: normal;
     font-variant: none;
@@ -1625,9 +1625,6 @@ footer.footer {
 .carousel-indicators{
     bottom: -30% !important;
 }
-#feeling_section{
-    background-color: #3dae7d;
-}
 #feeling_section .card-img-top{
     border-radius: 200px;
     margin-top: 10%;
@@ -1644,7 +1641,9 @@ footer.footer {
 .home-banner{
     text-align: center;
 }
-
+#middle-banner-button:hover{
+    background-color: #0c958f9e !important;
+}
 
 /*----testimonial----*/
 .testimonial{
@@ -1653,7 +1652,7 @@ footer.footer {
 .list-testimonial .description{
     color:#656565;
     line-height: 35px;
-    padding:0px 11%;
+    padding:0px 10%;
     position: relative;
 }
 .list-testimonial .description:before{
@@ -1781,7 +1780,7 @@ footer.footer {
     border-radius: 50%;
     margin: 0 auto;
     overflow: hidden;
-    border: 8px solid rgba(255,255,255,0.15);
+    border: 10px solid #3dae7d;
 }
 .landing-testimonials .testimonial .pic img{
     width: 100%;
@@ -1810,14 +1809,14 @@ footer.footer {
 .landing-testimonials .testimonial .description:before{
     content: "";
     border: 10px solid transparent;
-    border-right: 10px solid rgba(255,255,255,0.5);
+    border-right: 10px solid #3dae7d;
     position: absolute;
     top: 20px;
     left: -21px;
 }
 
 .landing-testimonials .slick-dots li button{
-    border: 1px solid #fff;
+    border: 1px solid #3dae7d;;
     background: transparent;
     opacity: 1;
     width: 6px;
@@ -1828,7 +1827,7 @@ footer.footer {
 }
 
 .landing-testimonials .slick-dots li.slick-active button{
-    background: #fff;
+    background: #3dae7d;;
     border: 1px solid #fff;
 
 }
@@ -1983,8 +1982,7 @@ html, body {
 a.more-link {
     color: #0056b3!important;
     position: absolute;
-    bottom: 5%;
-    left: 40%;
+    left: 10%;
 }
 a.more-link:hover {
     color: #007bff!important;

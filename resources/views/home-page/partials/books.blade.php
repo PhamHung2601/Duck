@@ -1,7 +1,7 @@
 <div class="list-books">
     <div class="panel panel-default">
         <div class="panel-heading">
-            {!!Helper::getStaticBlockContentById("home-book-section-title")!!}
+            <span style="color:#095598">CỬA HÀNG SÁCH</span>
         </div>
         <div class="panel-body">
             <div class="books">
@@ -17,31 +17,31 @@
                                     <div class="book-info">
                                         <a href="{{$product->getUrlDetail()}}"
                                            class="name"><span> {{ $product->name }}</span></a>
-                                        @foreach($product->category as $cate)
-                                            <div class="type">
-                                                <span>Loại: <strong> {{ $cate->name }}</strong></span>
-                                            </div>
-                                        @endforeach
-                                        <div class="stock">
-                                            <span>Kho hàng:</span>
-                                            @if((int)$product->stock > 0)
-                                                <span class="status instock">Còn Sách</span>
-                                            @else
-                                                <span class="status outstock">Hết Sách</span>
-                                            @endif
-                                        </div>
+{{--                                        @foreach($product->category as $cate)--}}
+{{--                                            <div class="type">--}}
+{{--                                                <span>Loại: <strong> {{ $cate->name }}</strong></span>--}}
+{{--                                            </div>--}}
+{{--                                        @endforeach--}}
+{{--                                        <div class="stock">--}}
+{{--                                            <span>Kho hàng:</span>--}}
+{{--                                            @if((int)$product->stock > 0)--}}
+{{--                                                <span class="status instock">Còn Sách</span>--}}
+{{--                                            @else--}}
+{{--                                                <span class="status outstock">Hết Sách</span>--}}
+{{--                                            @endif--}}
+{{--                                        </div>--}}
                                         <div class="price-box">
                             <span class="price-wrapper">
                                 @if($product->special_price)
                                     <span class="special-price">
-                                    <span class="price">{{ number_format($product->special_price)}} d</span>
+                                    <span class="price">{{ number_format($product->special_price)}} đ</span>
                                 </span>
                                     <span class="old-price">
-                                    <span class="price">{{ number_format($product->price) }} d</span>
+                                    <span class="price">{{ number_format($product->price) }} đ</span>
                                 </span>
                                 @else
                                     <span class="product-price">
-                                    <span class="price">{{ number_format($product->price) }} d</span>
+                                    <span class="price">{{ number_format($product->price) }} đ</span>
                                 </span>
                                 @endif
                             </span>
@@ -76,9 +76,10 @@
                 @endforeach
             </div>
             <div class="clearfix">
-                <button style="float: right;margin-top: 5%;" class="btn btn-info"><a class="text-light"
-                                                                                     href="{{url('tat-ca-sach')}}">Xem
-                        thêm</a></button>
+                <a href="{{url('tat-ca-sach')}}" style="float:right">
+                    <span style="color: #0c958f;font-weight: 700">Xem thêm</span>
+{{--                    <button id="middle-banner-button" style="border-radius:25px;width: 100px;height: 35px;background-color: #0c958f"></button>--}}
+                </a>
             </div>
         </div>
     </div>

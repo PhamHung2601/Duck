@@ -52,12 +52,16 @@
 .header .main-menu  ul.navbar-nav > li > ul.dropdown-menu{
     padding: 0;
 }
-
+.header .main-menu  ul.navbar-nav > li > ul.dropdown-menu > li{
+    background-color: #d4f0f32e;
+}
 .header .main-menu  ul.navbar-nav > li > ul.dropdown-menu > li a{
     padding: 10px 15px;
     display: block;
     width: 100%;
     font-size: 14px;
+    color: #1c618a;
+    font-weight: 600;
 }
 
 .header .main-menu  ul.navbar-nav > li > ul.dropdown-menu > li a:hover{

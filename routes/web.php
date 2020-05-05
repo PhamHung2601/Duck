@@ -53,7 +53,7 @@ Route::post('/course/register', 'CourseController@register')->name('course.regis
 Route::get('/gioi-thieu', function () {
     return view('landing-page/introduction/about');
 });
-Route::get('/thanh-tich', function () {
+Route::get('/hoc-vien', function () {
     return view('landing-page/introduction/students');
 });
 Route::get('/hoc-sinh', function () {

@@ -18,13 +18,18 @@
                                 {!!$test->description!!}
                             </div>
                         </div>
+                        <div id="test-link" style="display: none">
+                            <p>Link đề thi: <a href="{{$test->link}}" target="_blank" class="more-link">{{$test->link}}</a>
+                            </p>
+                            @if ($test->answer)
+                            <p>Link đáp án: <a href="{{$test->answer}}" target="_blank" class="more-link">{{$test->answer}}</a>
+                            </p>
+                            @endif
+                        </div>
                     </div>
                 </div>
                 <div class="mt-3">
                     <button class="button btn btn-primary text-light" id="share-button" ><i class="fa fa-share-alt" aria-hidden="true"></i>  Chia sẻ</button>
-                    <div id="test-link" style="display: none" class="mt-2">
-                        <a href="{{$test->link}}" target="_blank" class="more-link">{{$test->link}}</a>
-                    </div>
                 </div>
             </div>
             @include('book.partials.fb')
