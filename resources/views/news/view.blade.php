@@ -6,13 +6,6 @@
 @section('content')
     <div class="row">
         <div class="col-sm-12 col-md-9 col-lg-9 column-main">
-            <div class="text-left">
-                <div>
-                    @foreach($news->tags as $tag)
-                        <a href="{{$news->getListUrlByTag($tag->name)}}" class="tag-item">{{$tag->name}}</a>
-                    @endforeach
-                </div>
-            </div>
             <div id="news-{{$news->id}}" class="et_pb_post clearfix news-{{$news->id}}">
                 <p class="entry-title text-center"><b>{{$news->title}}</b></p>
                 <p class="post-meta mt-1" style="color: black !important; font-size: 15px;font-weight: 700 !important;">{{\Helper::formatDate($news->updated_at)}}
@@ -27,6 +20,13 @@
                     <div>
                         <p>{!!$news->description!!}</p>
                     </div>
+                </div>
+            </div>
+            <div class="text-left">
+                <div>
+                    @foreach($news->tags as $tag)
+                        <a href="{{$news->getListUrlByTag($tag->name)}}" class="tag-item">{{$tag->name}}</a>
+                    @endforeach
                 </div>
             </div>
             @include('book.partials.fb')

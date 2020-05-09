@@ -1,19 +1,19 @@
 <div class="product-tabs" style="margin-top: 40px">
     <ul class="nav nav-tabs">
-        <li><a class="active"  href="#short_description" data-toggle="tab">Thông Tin Sản Phẩm</a></li>
-        <li><a href="#description" data-toggle="tab">Chi Tiết</a></li>
+        <li><a class="active" href="#description" data-toggle="tab">Chi Tiết</a></li>
+        <li><a href="#short_description" data-toggle="tab">Thông Tin Sản Phẩm</a></li>
         <li><a href="#review" data-toggle="tab">Nhận Xét</a></li>
     </ul>
 
     <div class="tab-content ">
-        <div class="tab-pane active" id="short_description">
-            <div class="product-des">
-                {!!html_entity_decode($product->short_des)!!}
-            </div>
-        </div>
-        <div class="tab-pane" id="description">
+        <div class="tab-pane active" id="description">
             <div class="product-des" style="font-size: 15px !important;">
                 {!!html_entity_decode($product->description)!!}
+            </div>
+        </div>
+        <div class="tab-pane" id="short_description">
+            <div class="product-des">
+                {!!html_entity_decode($product->short_des)!!}
             </div>
         </div>
         <div class="tab-pane" id="review">

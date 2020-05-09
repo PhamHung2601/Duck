@@ -70,8 +70,8 @@
 
         $('.related-products .books').slick({
             dots: true,
-            slidesPerRow: 3,
-            rows: 2,
+            slidesPerRow: 2,
+            rows: 1,
             autoplay: true,
             autoplaySpeed: 3000,
             responsive: [
