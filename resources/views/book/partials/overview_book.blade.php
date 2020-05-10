@@ -1,43 +1,47 @@
 <div class="product-top">
     <div class="row">
-        <div class="col-md-2 col-lg-2 product-media-small">
-            <?php
-            function multiexplode($delimiters, $data)
-            {
-                $MakeReady = str_replace($delimiters, $delimiters[0], $data);
-                $Return = explode($delimiters[0], $MakeReady);
-                return $Return;
-            }
-            $small_medias = multiexplode(array('[', ']','"', ','), $product->small_media);
-            ?>
-            @foreach($small_medias as $small_media)
-                @if(!empty($small_media))
-                    <a class="small-thumbnail" href="#" data-image-id="1" data-toggle="modal"
+        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+            <div class="page-title" style="margin-top:5%">
+                <h2 style="font-size:23px; font-weight:bold; margin-bottom:20px;text-align: center">{{$product->name}}</h2>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-4 col-lg-4 product-media-small" style="margin-top: 10%;">
+                    <?php
+                    function multiexplode($delimiters, $data)
+                    {
+                        $MakeReady = str_replace($delimiters, $delimiters[0], $data);
+                        $Return = explode($delimiters[0], $MakeReady);
+                        return $Return;
+                    }
+                    $small_medias = multiexplode(array('[', ']','"', ','), $product->small_media);
+                    ?>
+                    @foreach($small_medias as $small_media)
+                        @if(!empty($small_media))
+                            <a class="small-thumbnail" href="#" data-image-id="1" data-toggle="modal"
+                               data-title="{{$product->name}}"
+                               data-image="{{Voyager::image($small_media)}}" data-target="#image-gallery">
+                                <img id="myImg" width="100%" src="{{Voyager::image($small_media)}}" class="responsive"
+                                     style="width:100%; border:solid 1px #f2f2f2; "
+                                     alt="{{$product->name}}"
+                                     title="{{$product->name}}">
+                            </a>
+                        @endif
+                    @endforeach
+                </div>
+                <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 product-media" style="margin-top: 10%;">
+                    <a class="thumbnail" href="#" data-image-id="1" data-toggle="modal"
                        data-title="{{$product->name}}"
-                       data-image="{{Voyager::image($small_media)}}" data-target="#image-gallery">
-                        <img id="myImg" width="100%" src="{{Voyager::image($small_media)}}" class="responsive"
+                       data-image="{{Voyager::image($product->media)}}" data-target="#image-gallery">
+                        <img id="myImg" width="100%" src="{{Voyager::image($product->media)}}" class="responsive"
                              style="width:100%; border:solid 1px #f2f2f2; "
                              alt="{{$product->name}}"
                              title="{{$product->name}}">
                     </a>
-                @endif
-            @endforeach
-        </div>
-        <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 product-media">
-            <a class="thumbnail" href="#" data-image-id="1" data-toggle="modal"
-               data-title="{{$product->name}}"
-               data-image="{{Voyager::image($product->media)}}" data-target="#image-gallery">
-                <img id="myImg" width="100%" src="{{Voyager::image($product->media)}}" class="responsive"
-                     style="width:100%; border:solid 1px #f2f2f2; "
-                     alt="{{$product->name}}"
-                     title="{{$product->name}}">
-            </a>
+                </div>
+            </div>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-5 col-lg-5 product-main-info">
-            <div class="page-title">
-                <h2 style="font-size:23px; font-weight:bold; margin-bottom:20px">{{$product->name}}</h2>
-            </div>
-            <hr>
             @include('book.partials.review')
             @if($product->review_book !="#")
                 <button class="btn"

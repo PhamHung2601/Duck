@@ -40,7 +40,7 @@
                     </div>
                 </div>
             </div>
-            <div class="box-action"><a class="landing-button" style="margin-right: 10px; background-color: #0c958f !important; color: white !important; font-size: 17px !important;" href="https://dialithaytung.com/thanh-tich">Xem thêm</a></div>
+            <div class="box-action"><a class="landing-button" style="margin-right: 10px; background-color: #0c958f !important; color: white !important; font-size: 17px !important;" href="https://dialithaytung.com/hoc-vien" target="_blank">Xem thêm</a></div>
         </div>
     </div>
 </div>

@@ -20,16 +20,16 @@
         </script>
         <div class="table-responsive cart_info">
                 <div class="page-title">
-                    <h2>MY SHOPPING CART</h2>
+                    <h2>Giỏ hàng</h2>
                 </div>
                 @if(count($products))
                     <table class="table table-condensed cart-table">
                         <thead>
                         <tr class="cart_menu">
-                            <td class="image">Item</td>
-                            <td class="price">Price</td>
-                            <td class="quantity">Quantity</td>
-                            <td class="total">Total</td>
+                            <td class="image">Sản Phẩm</td>
+                            <td class="price">Gía</td>
+                            <td class="quantity">Số Lượng</td>
+                            <td class="total">Tổng</td>
                             <td></td>
                         </tr>
                         </thead>

@@ -76,7 +76,7 @@
                 @endforeach
             </div>
             <div class="clearfix">
-                <a href="{{url('tat-ca-sach')}}" style="float:right">
+                <a href="{{url('tat-ca-sach')}}" style="float:right" target="_blank">
                     <span style="color: #0c958f;font-weight: 700">Xem thêm</span>
 {{--                    <button id="middle-banner-button" style="border-radius:25px;width: 100px;height: 35px;background-color: #0c958f"></button>--}}
                 </a>

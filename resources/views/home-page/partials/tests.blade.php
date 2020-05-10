@@ -19,7 +19,7 @@
 
                 </ul>
             </div>
-            <div style="margin-top: 5%;"> <a href="{{url("de-thi")}}" style="color: #757575;font-weight: 700;margin-left: 40%"><span>Xem thêm</span></a></div>
+            <div style="margin-top: 5%;"> <a href="{{url("de-thi")}}" style="color: #757575;font-weight: 700;margin-left: 40%" target="_blank"><span>Xem thêm</span></a></div>
         </div>
     </div>
 </div>
