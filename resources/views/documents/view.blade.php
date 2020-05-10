@@ -10,7 +10,7 @@
                 <p class="entry-title text-center"><b>{{$document->title}}</b></p>
                 <div class="image-container-blog">
                     <div
-                        style="background-image: url('{{Voyager::image($document->cover_media)}}');background-repeat: no-repeat;background-size: cover;
+                        style="background-image: url('{{Voyager::image($document->media)}}');background-repeat: no-repeat;background-size: cover;
                             height: 500px;">
                     </div>
                     <blockquote class="article-quote"
@@ -30,7 +30,7 @@
                     $documentTags = explode(' ', $tags);
                     ?>
                     @foreach($documentTags as $tag)
-                        @if($tag != 0)
+                        @if($tag != "0")
                             <a href="" class="tag-item"><?= $tag?></a>
                         @endif
                     @endforeach

@@ -7,8 +7,8 @@
     </div>
     <div class="news-title"><b>{{$document->title}}</b></div>
     <p><span class="time-news">{{\Helper::formatDate($document->updated_at)}}</span></p>
-    <div class="post-content" style="max-height: 150px;">
-        <p>{!!$document->short_description!!}</p>
+    <div class="post-content" style="max-height: 150px;display: -webkit-box">
+        <p style="overflow: hidden">{!!$document->short_description!!}</p>
     </div>
     <a href="{{ $document->getUrlDetail() }}" class="more-link" target="_blank"  style="bottom: 0;">Xem thêm</a>
 </article>

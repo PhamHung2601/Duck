@@ -1,4 +1,4 @@
-<div class="events-banner" style="margin: 20px 0">
+<div class="events-banner" style="margin: 6% 0">
     {!!\Helper::getStaticBlockContentById("home-event")!!}
 {{--    <div class="banner-item">--}}
 {{--        <a href="#">--}}

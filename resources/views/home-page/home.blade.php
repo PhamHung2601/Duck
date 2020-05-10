@@ -15,7 +15,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="home-banner col-sm-12 col-md-12 col-lg-12 column-main" style="border: 1px solid gainsboro;margin-left: 15px;">
+        <div class="home-banner col-sm-12 col-md-12 col-lg-12 column-main" style="border: 1px solid gainsboro;margin-left: 15px; max-width: 1220px;">
             {!!Helper::getStaticBlockContentById("home-middle-banner")!!}
 {{--            <div class="row">--}}
 {{--                <div class="col-sm-12 col-md-4 col-lg-4">--}}
