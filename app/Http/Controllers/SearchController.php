@@ -6,6 +6,7 @@ use App\News;
 use App\Product;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use function Psy\debug;
 
 /**
  * Class SearchController
@@ -35,7 +36,11 @@ class SearchController extends Controller
         $news = News::select('*')
             ->join('news_tag', 'news.id', '=', 'news_tag.news_id')
             ->join('tag','tag.id','=','news_tag.tag_id')
-            ->where('tag.name', 'LIKE', '%' .$searchText. '%')->get();
+            ->where('tag.name', 'LIKE', '%' .$searchText. '%')
+            ->orWhere('news.title', 'LIKE', '%' .$searchText. '%')
+            ->orWhere('news.description', 'LIKE', '%' .$searchText. '%')
+            ->get();
+
         return view('layouts.searchresult', ['products' => $products,'news'=>$news]);
     }
 }
