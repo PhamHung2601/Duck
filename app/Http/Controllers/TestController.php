@@ -26,14 +26,8 @@ class TestController extends Controller
     public function index()
     {
         $documents = Document::orderBy('position','desc')->get();
-        $tests = Test::all();
-        $testList = [];
-        foreach ($tests as $test) {
-            if (!isset($testList[$test->year])) {
-                $testList[$test->year] = [];
-            }
-            $testList[$test->year][] = $test;
-        }
+        $testList = Test::orderBy('created_at','desc')->paginate(10);
+
         return view('test.list', ['testList' => $testList],compact('test','documents'));
     }
 

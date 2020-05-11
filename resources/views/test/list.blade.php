@@ -14,26 +14,23 @@
                         </div>
                         <div class="panel-body">
                             <ul>
-                                @foreach ($testList as $year => $tests)
-                                    @foreach ($tests as $key => $test)
-                                        <li>
-                                            <span style="color:#666666; font-size:12px"><img
-                                                    src="{{url('/img/iconword.png')}}" height="18px"
-                                                    style="margin-right: 5px"></span>
-                                            <a href="{{ $test->getUrlDetail() }}"
-                                               title="{{$test->title}}" style="margin-right:15px; color:#095598">
-                                                <strong>{{$test->title}}</strong></a>
-                                        </li>
-                                    @endforeach
+                                @foreach ($testList as $key => $test)
+                                    <li>
+                                        <span style="color:#666666; font-size:12px"><img
+                                                src="{{url('/img/iconword.png')}}" height="18px"
+                                                style="margin-right: 5px"></span>
+                                        <a href="{{ $test->getUrlDetail() }}"
+                                           title="{{$test->title}}" style="margin-right:15px; color:#095598">
+                                            <strong>{{$test->title}}</strong></a>
+                                    </li>
                                 @endforeach
-{{--                                    @if(count($tests))--}}
-{{--                                        {{ $test->links() }}--}}
-{{--                                    @endif--}}
                             </ul>
                         </div>
                     </div>
                 </div>
-
+                @if(count($testList))
+                    {{ $testList->links() }}
+                @endif
             </div>
         </div>
         <div class="col-sm-12 col-md-4 col-lg-4 sidebar">
