@@ -95,6 +95,7 @@ class ComposerStaticInitc879d37fd6e0613d89e8afde04bed811
             'Prophecy\\' => 9,
             'PhpParser\\' => 10,
             'PhpOption\\' => 10,
+            'PHPMailer\\PHPMailer\\' => 20,
         ),
         'O' => 
         array (
@@ -347,6 +348,10 @@ class ComposerStaticInitc879d37fd6e0613d89e8afde04bed811
         array (
             0 => __DIR__ . '/..' . '/phpoption/phpoption/src/PhpOption',
         ),
+        'PHPMailer\\PHPMailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
+        ),
         'Opis\\Closure\\' => 
         array (
             0 => __DIR__ . '/..' . '/opis/closure/src',
@@ -554,6 +559,7 @@ class ComposerStaticInitc879d37fd6e0613d89e8afde04bed811
         'App\\Http\\Controllers\\StudentController' => __DIR__ . '/../..' . '/app/Http/Controllers/StudentController.php',
         'App\\Http\\Controllers\\SuccessController' => __DIR__ . '/../..' . '/app/Http/Controllers/SuccessController.php',
         'App\\Http\\Controllers\\TestController' => __DIR__ . '/../..' . '/app/Http/Controllers/TestController.php',
+        'App\\Http\\Controllers\\Voyager\\OrderController' => __DIR__ . '/../..' . '/app/Http/Controllers/Voyager/OrderController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -575,6 +581,8 @@ class ComposerStaticInitc879d37fd6e0613d89e8afde04bed811
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\RankPoints' => __DIR__ . '/../..' . '/app/RankPoints.php',
         'App\\Related' => __DIR__ . '/../..' . '/app/Related.php',
+        'App\\RelatedDocuments' => __DIR__ . '/../..' . '/app/RelatedDocuments.php',
+        'App\\RelatedNews' => __DIR__ . '/../..' . '/app/RelatedNews.php',
         'App\\Review' => __DIR__ . '/../..' . '/app/Review.php',
         'App\\SalesRule' => __DIR__ . '/../..' . '/app/SalesRule.php',
         'App\\Source\\StaticBlock' => __DIR__ . '/../..' . '/app/Source/StaticBlock.php',
@@ -3255,6 +3263,11 @@ class ComposerStaticInitc879d37fd6e0613d89e8afde04bed811
         'Opis\\Closure\\SecurityProvider' => __DIR__ . '/..' . '/opis/closure/src/SecurityProvider.php',
         'Opis\\Closure\\SelfReference' => __DIR__ . '/..' . '/opis/closure/src/SelfReference.php',
         'Opis\\Closure\\SerializableClosure' => __DIR__ . '/..' . '/opis/closure/src/SerializableClosure.php',
+        'PHPMailer\\PHPMailer\\Exception' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/Exception.php',
+        'PHPMailer\\PHPMailer\\OAuth' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/OAuth.php',
+        'PHPMailer\\PHPMailer\\PHPMailer' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/PHPMailer.php',
+        'PHPMailer\\PHPMailer\\POP3' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/POP3.php',
+        'PHPMailer\\PHPMailer\\SMTP' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/SMTP.php',
         'PHPUnit\\Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert.php',
         'PHPUnit\\Framework\\AssertionFailedError' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/AssertionFailedError.php',

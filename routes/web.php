@@ -163,3 +163,5 @@ Route::get('/master-clear', function () {
         return $e->getMessage();
     }
 });
+
+Route::get('/send1', 'TestEmail@send1')->name('search.send1');
