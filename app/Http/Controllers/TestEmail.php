@@ -29,12 +29,8 @@ class TestEmail extends Controller
 
             //Recipients
             $mail->setFrom('dialithaytung@gmail.com', 'Mailer');
+            $mail->addReplyTo('dialithaytung@gmail.com', 'Information');
             $mail->addAddress('sam@tigren.com', 'Joe User');
-            $mail->addAddress('ellen@example.com');
-            $mail->addReplyTo('info@example.com', 'Information');
-            $mail->addCC('cc@example.com');
-            $mail->addBCC('bcc@example.com');
-
             // Content
             $mail->isHTML(true);
             $mail->Subject = 'Here is the subject';
