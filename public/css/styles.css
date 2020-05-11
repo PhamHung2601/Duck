@@ -1998,7 +1998,10 @@ a.more-link:hover {
 .search-result .news-list{
     padding: 30px 0;
 }
-/* document side bar*/
+.search-result .news-list .news-post{
+    height:410px;
+}
+    /* document side bar*/
 .document-sidebar{
     height: 35px;
 }

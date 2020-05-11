@@ -5,7 +5,7 @@
             <h2>Kết quả tìm kiếm</h2>
         </div>
         <div class="search-result">
-            @if(count($products) == 0 && count($news) == 0)
+            @if(count($products) == 0 && count($news) == 0 && count($documents))
                 <div class="search-no-result">
                     <span>Không có kết quả nào được tìm thấy. Vui lòng tìm kiếm với từ khoá khác.</span>
                 </div>
@@ -30,6 +30,16 @@
                         @endforeach
                     </div>
                 @endif
+                    @if(count($documents) > 0)
+                        <div class="title"><span>Tài Liệu</span></div>
+                        <div class="news-list">
+                            @foreach($documents as $document)
+                                <div class="col-md-4 col-lg-4">
+                                    @include('documents.detail',['document' => $document])
+                                </div>
+                            @endforeach
+                        </div>
+                    @endif
             @endif
         </div>
     </div>

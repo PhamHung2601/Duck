@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Document;
 use App\News;
 use App\Product;
 use Illuminate\Support\Facades\DB;
@@ -40,7 +41,13 @@ class SearchController extends Controller
             ->orWhere('news.title', 'LIKE', '%' .$searchText. '%')
             ->orWhere('news.description', 'LIKE', '%' .$searchText. '%')
             ->get();
+        $documents = Document::select('*')
+            ->where('tag', 'LIKE', '%' .$searchText. '%')
+            ->orWhere('title', 'LIKE', '%' .$searchText. '%')
+            ->orWhere('short_description', 'LIKE', '%' .$searchText. '%')
+            ->orWhere('content', 'LIKE', '%' .$searchText. '%')
+            ->get();
 
-        return view('layouts.searchresult', ['products' => $products,'news'=>$news]);
+        return view('layouts.searchresult', ['products' => $products,'news'=>$news,'documents'=>$documents]);
     }
 }
