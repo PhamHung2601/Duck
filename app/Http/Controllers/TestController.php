@@ -28,7 +28,7 @@ class TestController extends Controller
         $documents = Document::orderBy('position','desc')->get();
         $testList = Test::orderBy('created_at','desc')->paginate(10);
 
-        return view('test.list', ['testList' => $testList],compact('test','documents'));
+        return view('test.list', ['testList' => $testList],compact('testList','documents'));
     }
 
     /**
