@@ -1,6 +1,6 @@
 
 <div style="width:100%; background-color:#d1ebf3; padding:15px; margin-bottom:20px; overflow: hidden">
-    {!!\Helper::getStaticBlockContentById("home-sidebar-fb")!!}
+    {!!\Helper::getStaticBlockContentById("small-sidebar-fb")!!}
     {{--    <p><img src="{{ asset('img/iconfinder_facebook_313103.png')}}" height="30px">--}}
     {{--        <a href="#" target="_blank"><strong>Tham gia Hội học sinh Moon.vn</strong> </a></p>--}}
 

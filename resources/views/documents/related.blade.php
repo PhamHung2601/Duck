@@ -6,13 +6,13 @@
         <div class="panel-body">
             <div class="news">
                 @foreach($document->related as $related)
-                    <div class="new-item">
-                        <a href="{{ $related->getUrlDetail() }}">
-                            <img src="{{ Voyager::image( $related->media ) }}">
-                            <div class="new-info">
-                                <strong> {{ $related->title }}</strong>
+                    <div class="new-item" style="top: 0 !important;">
+                        <div class="content" style="width: 90%;margin-left: 5%">
+                            <img src="{{ Voyager::image( $related->media ) }}" height="150px" width="85%">
+                            <div class="new-info" style="width: 85%;">
+                                <a href="{{ $related->getUrlDetail() }}"><strong> {{ $related->title }}</strong> </a>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 @endforeach
             </div>
@@ -25,10 +25,10 @@
 
         $('.news').slick({
             dots: false,
-            slidesPerRow: 1,
-            rows: 1,
+            slidesToShow: 3,
+            slidesToScroll: 1,
             autoplay: true,
-            autoplaySpeed: 4000,
+            autoplaySpeed: 2000,
             responsive: [
                 {
                     breakpoint: 1024,
