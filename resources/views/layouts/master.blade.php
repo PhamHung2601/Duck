@@ -61,7 +61,7 @@
         window.facebookShare = function( callback ) {
             var options = ({
                     method : 'share',
-                    href   : 'https://dialithaytung.com'
+                    href   : window.location.href
                 }),
                 status = '';
             FB.ui(options, function( response ){
