@@ -34,7 +34,7 @@ class DocumentController extends Controller
                 $documents = Document::orderBy('id', 'desc')->paginate(10);
             }
         } else {
-            $documents = Document::orderBy('position', 'desc')->paginate(10);
+            $documents = Document::orderBy('id', 'desc')->paginate(10);
         }
         return view('documents.list', compact('documents','tests'));
     }
