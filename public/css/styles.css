@@ -1265,7 +1265,22 @@ footer.footer {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    float: right;
+    float: left;
+}
+
+.noti-cart {
+    font-size: 21px;
+    width: 27px;
+    height: 25px;
+    position: absolute;
+    margin-left: 70%;
+    margin-top: -13%;
+    border-radius: 25px;
+    background-color: #f9a747;
+}
+
+.join-course {
+    margin-left: -18%;
 }
 
 .toolbar .sort-by label{

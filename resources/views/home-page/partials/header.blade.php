@@ -32,7 +32,7 @@
                         <a href="{{ url('cart') }}" class="cart-header" title="view cart">
                             <i class="fa fa-shopping-cart fa-2" aria-hidden="true"
                                style=" font-size: 27px;padding-top: 2%;"></i> <span style=" font-size: 17px">Giỏ hàng</span>
-                            <div style="font-size: 21px;width: 27px;height: 25px;position: absolute;margin-left: 70%; margin-top: -13%;border-radius: 25px;background-color: #f9a747;" class="count">
+                            <div class="count noti-cart">
                                 <span style="margin-top: -13%;position: absolute;padding-left: -10%;margin-left: -21%;">{{Cart::count()}}</span>
                             </div>
                         </a>

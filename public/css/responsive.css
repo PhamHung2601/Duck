@@ -182,6 +182,14 @@
 }
 
 @media (max-width: 640px){
+    .noti-cart {
+        margin-left: 62%;
+        margin-top: -8%;
+    }
+    .join-course {
+        margin-left: 0;
+    }
+
     .product-list .products .product-item{
         width: 50%;
         padding: 0 10px;
@@ -379,6 +387,7 @@
 
     .me-content .me{
         font-size: 19px;
+        margin-left: 10%;
     }
 
     .logo_container{
